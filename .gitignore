@@ -1,5 +1,7 @@
+www/bitrix/
 www/bitrix/*.php
 www/bitrix/*.log
+www/robots.txt
 /*.dt
 /*.tar.gz
 /*.gz
