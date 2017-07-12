@@ -10,7 +10,7 @@
 	$TEMPLATE_SLIDER_HEIGHT = "default"; // default / middle / small
 
 	//тема сайта
-	$TEMPLATE_THEME_NAME = "default"; // цветовая гамма сайта (/themes/)
+	$TEMPLATE_THEME_NAME = "green"; // цветовая гамма сайта (/themes/)
 
 	// /themes/
 	//arctic - голубой
