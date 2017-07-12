@@ -1,3 +1,5 @@
+www/bitrix/*.php
+www/bitrix/*.log
 /*.dt
 /*.tar.gz
 /*.gz
@@ -40,6 +42,7 @@ www/bitrix/sounds/
 www/bitrix/spread.php
 www/bitrix/stop_redirect.php
 www/bitrix/template/
+
 www/bitrix/themes/
 www/bitrix/tmp/
 www/bitrix/tools/
