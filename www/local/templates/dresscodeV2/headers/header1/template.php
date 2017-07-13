@@ -17,12 +17,6 @@
 			false
 		);?>
 		<ul id="topService"<?if($TEMPLATE_SUBHEADER_COLOR != "default"):?> class="color_<?=$TEMPLATE_SUBHEADER_COLOR?>"<?endif;?>>
-			<?$APPLICATION->IncludeComponent("dresscode:sale.geo.positiion", "", array(),
-				false,
-				array(
-				"ACTIVE_COMPONENT" => "Y"
-				)
-			);?>
 			<?$APPLICATION->IncludeComponent("bitrix:system.auth.form", "top", Array(
 				"REGISTER_URL" => "",
 					"FORGOT_PASSWORD_URL" => "",
@@ -62,23 +56,6 @@
 								false
 							);?>
 						</div>
-					</div>
-				</li>
-				<li class="wishlist">
-					<div id="flushTopwishlist">
-						<?$APPLICATION->IncludeComponent("dresscode:favorite.line", ".default", Array(
-							),
-							false
-						);?>
-					</div>
-				</li>
-				<li class="compare">
-					<div id="flushTopCompare">
-						<?$APPLICATION->IncludeComponent("dresscode:compare.line", ".default", Array(
-
-							),
-							false
-						);?>
 					</div>
 				</li>
          	 	<li class="cart">
@@ -125,23 +102,27 @@
 	</div>
 </div>
 <div class="menuContainerColor<?if(!empty($TEMPLATE_CATALOG_MENU_COLOR) && $TEMPLATE_CATALOG_MENU_COLOR != "default"):?> color_<?=$TEMPLATE_CATALOG_MENU_COLOR?><?endif;?>">
-	<?$APPLICATION->IncludeComponent("bitrix:menu", "catalogMenu", array(
+	<?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"catalogMenu2", 
+	array(
 		"ROOT_MENU_TYPE" => "left",
-			"MENU_CACHE_TYPE" => "N",
-			"MENU_CACHE_TIME" => "3600",
-			"MENU_CACHE_USE_GROUPS" => "Y",
-			"MENU_CACHE_GET_VARS" => "",
-			"MAX_LEVEL" => "4",
-			"CHILD_MENU_TYPE" => "top",
-			"USE_EXT" => "Y",
-			"DELAY" => "N",
-			"ALLOW_MULTI_SELECT" => "N",
-			"CACHE_SELECTED_ITEMS" => "N",
-			"COMPONENT_TEMPLATE" => "catalogMenu"
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
 		),
-		false,
-		array(
+		"MAX_LEVEL" => "4",
+		"CHILD_MENU_TYPE" => "top",
+		"USE_EXT" => "Y",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N",
+		"CACHE_SELECTED_ITEMS" => "N",
+		"COMPONENT_TEMPLATE" => "catalogMenu2"
+	),
+	false,
+	array(
 		"ACTIVE_COMPONENT" => "Y"
-		)
-	);?>
+	)
+);?>
 </div>
