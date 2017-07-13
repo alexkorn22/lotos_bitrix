@@ -421,8 +421,20 @@ if($this->startResultCache(false, array($arrFilter, ($arParams["CACHE_GROUPS"]==
     $arrFilter["IBLOCK_ACTIVE"] = "Y";
     $arrFilter["ACTIVE_DATE"] = "Y";
     $arrFilter["ACTIVE"] = "Y";
-    $arrFilter["CHECK_PERMISSIONS"] = "Y";
-    $arrFilter["PROPERTY_TOP_SALES_VALUE"] = "Да";
+
+
+    $arrFilterProp = array(
+        "IBLOCK_ID"=>$arParams["IBLOCK_ID"],
+        "PROPERTY_ID"=>"TOP_SALES",
+        "XML_ID"=>1);
+
+    $property_enums = CIBlockPropertyEnum::GetList(Array("DEF"=>"DESC", "SORT"=>"ASC"), $arrFilterProp);
+
+    if($enum_fields = $property_enums->GetNext())
+    {
+        $arrFilter["PROPERTY_TOP_SALES"] = $enum_fields["ID"];
+    }
+
     //ORDER BY
 
     $arSort = array();

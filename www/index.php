@@ -1,4 +1,6 @@
-<?define("INDEX_PAGE", "Y");?> <?define("MAIN_PAGE", true);?> <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+<?if (!defined('INDEX_PAGE')) define('INDEX_PAGE', 'Y');?>
+<?define("MAIN_PAGE", true);?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
 $APPLICATION->SetPageProperty("keywords", "DELUXE");
 $APPLICATION->SetPageProperty("description", "DELUXE");
