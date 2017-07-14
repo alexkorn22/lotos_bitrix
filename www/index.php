@@ -56,7 +56,7 @@ Array(
     <div class="wrapper">
         <div class="items">
             <?$APPLICATION->IncludeComponent(
-                "artorg:catalog_top",
+                "artorg:catalog.top",
                 ".default",
                 array(
                     "COMPONENT_TEMPLATE" => ".default",
