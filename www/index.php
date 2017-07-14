@@ -18,7 +18,7 @@ $APPLICATION->SetTitle("DELUXE");?> <?$APPLICATION->IncludeComponent(
 	)
 );?>
 <div id="infoAbout">
-    <p style="font-size: 70px; text-align: center">О компании</p>
+    <img src="http://lotos.zp.ua/upload/iblock/62b/goddess_main_banner.png" alt="О компании">
 </div>
 <?$APPLICATION->IncludeComponent(
 	"dresscode:offers.product",
@@ -142,7 +142,7 @@ Array(
 </div>
 
 <div id="infoPromo1">
-    <p style="font-size: 70px; text-align: center">Промоблок</p>
+    <img src="http://lotos.zp.ua/upload/iblock/916/Banner_Ariel_07_17.png" alt="промоблок">
 </div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

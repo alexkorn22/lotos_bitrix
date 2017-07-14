@@ -1,1 +1,15 @@
 @import "sass/_variables";
+#logo img{
+  background-color: #27c148;
+}
+
+#infoAbout, #infoPromo1{
+  width: 1215px;
+  display: block;
+  margin: 10px auto;
+
+  img{
+    width: 1215px;
+    border: 1px solid #b2af9a;
+  }
+}
