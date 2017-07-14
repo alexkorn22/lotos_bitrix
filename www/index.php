@@ -17,9 +17,14 @@ $APPLICATION->SetTitle("DELUXE");?> <?$APPLICATION->IncludeComponent(
 		"PICTURE_WIDTH" => "1920"
 	)
 );?>
-<div id="infoAbout">
-    <img src="http://lotos.zp.ua/upload/iblock/62b/goddess_main_banner.png" alt="О компании">
-</div>
+
+    <div id="infoAbout">
+        <div class="wrapper">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/AboutUs.png" alt="промоблок">
+        </div>
+    </div>
+
+
 <?$APPLICATION->IncludeComponent(
 	"dresscode:offers.product",
 	".default",
@@ -48,7 +53,7 @@ Array(
 <div id="footerTabsCaption">
     <div class="wrapper">
         <div class="items">
-            <?$APPLICATION->ShowViewContent("catalog_top_view_content_tab");?>
+            <p>ХИТЫ ПРОДАЖ</p>
         </div>
     </div>
 </div>
@@ -141,8 +146,10 @@ Array(
     </div>
 </div>
 
-<div id="infoPromo1">
-    <img src="http://lotos.zp.ua/upload/iblock/916/Banner_Ariel_07_17.png" alt="промоблок">
+<div id="infoPromo1" >
+    <div class="wrapper">
+    <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo.png" alt="промоблок">
+        </div>
 </div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
