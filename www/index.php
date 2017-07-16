@@ -26,7 +26,7 @@ $APPLICATION->SetTitle("DELUXE");?> <?$APPLICATION->IncludeComponent(
 
 
 <?$APPLICATION->IncludeComponent(
-	"dresscode:offers.product",
+	"artorg:offers.product",
 	".default",
 	Array(
 		"CACHE_TIME" => "3600000",
