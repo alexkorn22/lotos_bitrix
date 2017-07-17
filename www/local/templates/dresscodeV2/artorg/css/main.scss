@@ -1,6 +1,6 @@
 @import "sass/_variables";
 
-#infoAbout, #infoPromo1{
+#infoAbout{
   border: 1px solid #b2af9a;
   img{
     margin-top: 10px;
@@ -13,6 +13,7 @@
 
 #footerTabsCaption{
   text-align: center;
+  margin-top: 36px;
   .wrapper {
     max-width: 1480px;
     min-width: 320px;
@@ -42,6 +43,7 @@
     line-height: 50px;
     color: #000000;
     margin-right: 0px;
+    margin-top: 10px;
   }
 }
 .cItem{
@@ -69,4 +71,8 @@
   .minCatalogButton{
     background-color: #1a1a1a;
   }
+}
+
+#infoPromo{
+  margin-top: 36px;
 }

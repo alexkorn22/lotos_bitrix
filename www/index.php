@@ -26,7 +26,7 @@ $APPLICATION->SetTitle("DELUXE");?> <?$APPLICATION->IncludeComponent(
 
 
 <?$APPLICATION->IncludeComponent(
-	"artorg:offers.product",
+	"dresscode:offers.product",
 	".default",
 	Array(
 		"CACHE_TIME" => "3600000",
@@ -139,17 +139,52 @@ Array(
                 ),
                 false
             );?>
-
-
-
         </div>
     </div>
 </div>
 
-<div id="infoPromo1" >
-    <div class="wrapper">
-    <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo.png" alt="промоблок">
-        </div>
+
+<div id="infoPromo">
+    <div class="limiter">
+        <ul class="productList">
+            <li>
+                <div class="item product">
+                    <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo1.png" alt="промоблок1">
+                </div>
+            </li>
+            <li>
+                <div class="item product">
+                    <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo2.png" alt="промоблок2">
+                </div>
+            </li>
+            <li>
+                <div class="item product">
+                    <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo3.png" alt="промоблок3">
+                </div>
+            </li>
+            <li>
+                <div class="item product">
+                    <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo4.png" alt="промоблок4">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $("#infoPromo").dwCarousel({
+            leftButton: ".topBtnLeft",
+            rightButton: ".topBtnRight",
+            countElement: 5,
+            resizeElement: true,
+            resizeAutoParams: {
+                1920: 5,
+                1500: 4,
+                1200: 3,
+                850: 2,
+                480: 1
+            }
+        });
+    </script>
 </div>
+
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
