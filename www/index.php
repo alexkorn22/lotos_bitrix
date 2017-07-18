@@ -20,35 +20,89 @@ $APPLICATION->SetTitle("DELUXE");?> <?$APPLICATION->IncludeComponent(
 
 <div id="infoAbout">
     <div class="limiter">
-        <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/AboutUs.png" alt="промоблок">
+        <div class="infoAbouthHeader">
+            <h1>Интернет-магазин ЛОТОС: бытовая химия и косметика</h1>
+        </div>
+        <div class="item">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout1.png" alt="промоблок 1">
+            <h2 class="tapTitle">Широкий ассортимент</h2>
+            <div class="descriptionTitle">
+                <p >Более <strong>15000</strong>
+                    хозяйственных товаров,
+                    бытовой химии и косметики,
+                    которые регулярно обновляются.</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout2.png" alt="промоблок 2">
+            <h2 class="tapTitle">Удобная оплата</h2>
+            <div class="descriptionTitle"><p>Расплачивайтесь за покупку
+                    <strong>любым способом</strong>: онлайн,
+                    наличными, безналичным
+                    расчётом, переводом на карту.</p></div>
+        </div>
+        <div class="item">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout3.png" alt="промоблок 3">
+            <h2 class="tapTitle">Доставка за 3 часа</h2>
+            <div class="descriptionTitle"><p>для жителей городов, где
+                    интернет-магазин ЛОТОС
+                    имеет офлайн
+                    представительства, и 1-2 дня
+                    по Украине транспортными
+                    компаниями.</p></div>
+        </div>
+        <div class="item">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout4.png" alt="промоблок 4">
+            <h2 class="tapTitle">Самовывоз</h2>
+            <div class="descriptionTitle"><p>Оформляйте заказ и
+                    самостоятельно забирайте его
+                    в одной из 50 точек
+                    в 19 населённых пунктах
+                    Украины.</p></div>
+        </div>
+        <div class="item">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout5.png" alt="промоблок 5">
+            <h2  class="tapTitle">Довольные покупатели</h2>
+           <div class="descriptionTitle">
+               <p>За последний год число
+                   наших клиентов достигло
+                   отметки 40 000.
+                   Они доверяют нам, а мы
+                   благодарны им за это.</p>
+           </div>
+        </div>
+        <!--<img src="--><?//=(SITE_TEMPLATE_PATH);?><!--/artorg/images/AboutUs.png" alt="промоблок">-->
     </div>
 </div>
 
 
 <?$APPLICATION->IncludeComponent(
-	"dresscode:offers.product",
-	".default",
-	Array(
+	"dresscode:offers.product", 
+	".default", 
+	array(
 		"CACHE_TIME" => "3600000",
 		"CACHE_TYPE" => "Y",
 		"COMPONENT_TEMPLATE" => ".default",
-		"ELEMENTS_COUNT" => "10",
+		"ELEMENTS_COUNT" => "6",
 		"HIDE_MEASURES" => "N",
 		"HIDE_NOT_AVAILABLE" => "N",
 		"IBLOCK_ID" => "10",
 		"IBLOCK_TYPE" => "catalog",
 		"PICTURE_HEIGHT" => "200",
 		"PICTURE_WIDTH" => "220",
-		"PRODUCT_PRICE_CODE" => array(),
+		"PRODUCT_PRICE_CODE" => array(
+		),
 		"PROP_NAME" => "OFFERS",
-		"PROP_VALUE" => array(0=>"_9",),
+		"PROP_VALUE" => array(
+			0 => "_9",
+		),
 		"SORT_PROPERTY_NAME" => "SORT",
 		"SORT_VALUE" => "ASC"
 	),
-false,
-Array(
-	'ACTIVE_COMPONENT' => 'Y'
-)
+	false,
+	array(
+		"ACTIVE_COMPONENT" => "Y"
+	)
 );?>
 <div id="footerTabsCaption">
     <div class="wrapper">
