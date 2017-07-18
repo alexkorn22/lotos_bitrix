@@ -1,19 +1,20 @@
 @import "sass/_variables";
 
 #infoAbout{
-  border: 1px solid #b2af9a;
   img{
     margin-top: 10px;
     margin-bottom: 10px;
     height: auto;
     max-width: 100%;
+    border: 1px solid #b2af9a;
   }
 }
 
 
 #footerTabsCaption{
   text-align: center;
-  margin-top: 36px;
+  //margin-top: 36px;
+  background-color: #f3f3f3;
   .wrapper {
     max-width: 1480px;
     min-width: 320px;
@@ -38,7 +39,7 @@
     font-family: 'robotobold';
     text-decoration: none;
     padding-bottom: 8px;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     line-height: 50px;
     color: #000000;
@@ -50,20 +51,23 @@
   width: 100%!important;
 }
 #homeCatalog{
+  background-color: #f9f9f9;
   .caption.selected {
     background-color: #f9f9f9;
-    a{
-      transition: all 0.2s ease-in-out!important;
-      text-transform: uppercase!important;
-      font-family: 'robotobold'!important;
-      text-decoration: none!important;
-      padding-bottom: 8px!important;
-      font-size: 16px!important;
-      text-align: center!important;
-      line-height: 50px!important;
-      color: #000000!important;
-      margin-right: 0px!important;
-    }
+    transition: all 0.2s ease-in-out!important;
+    text-transform: uppercase!important;
+    font-family: 'robotobold'!important;
+    text-decoration: none!important;
+    padding-bottom: 8px!important;
+    font-size: 18px!important;
+    text-align: center!important;
+    line-height: 50px!important;
+    color: #000000!important;
+    margin-right: 0px!important;
+  }
+  #captionCarousel{
+   border: none!important;
+   background-color: #f9f9f9!important;
   }
 }
 
@@ -73,6 +77,29 @@
   }
 }
 
-#infoPromo{
-  margin-top: 36px;
+
+#infoPromo {
+  display: block;
+  padding-top: 36px;
+  background-color: #f9f9f9;
+  .limiter {
+    .item {
+      height: 100%;
+      display: inline-block;
+      box-sizing: content-box;
+      width: 24%;
+      img{
+        width: 100%;
+      }
+      margin-right: 10px;
+      &:last-child{
+        margin-right: 0px;
+      }
+    }
+
+  }
+}
+
+.topSales #footerTabs{
+  background-color: #f3f3f3;
 }

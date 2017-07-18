@@ -15,7 +15,7 @@
 								<?foreach ($arResult["PROPERTY_ENUM"] as $ipe => $arPropEnum):?>
 									<?if(!empty($arResult["GROUPS"][$ipe]["ITEMS"])):?>
 										<li class="cItem">
-											<div class="caption<?if($arPropEnum["SELECTED"] == "Y"):?> selected<?endif;?>"><a href="#" data-name="<?=$arPropEnum["PROP_NAME"]?>" data-group="<?=$arPropEnum["ID"]?>" data-page="1" data-sheet="N" class="getProductByGroup"><?=$arPropEnum["VALUE"]?></a></div>
+                                            <div class="caption<?if($arPropEnum["SELECTED"] == "Y"):?> selected<?endif;?>"><?=$arPropEnum["VALUE"]?></div>
 										</li>	
 									<?endif;?>
 								<?endforeach;?>
