@@ -133,27 +133,6 @@
 						<div class="row">
 							<a href="#" class="fastBack label changeID<?if(empty($arResult["PRICE"]) || $arResult["CATALOG_AVAILABLE"] != "Y"):?> disabled<?endif;?>" data-id="<?=$arResult["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="<?=GetMessage("FAST_VIEW_FASTBACK_LABEL")?>" class="icon"><?=GetMessage("FAST_VIEW_FASTBACK_LABEL")?></a>
 						</div>
-						<div class="row">
-							<a href="#" class="addWishlist label" data-id="<?=!empty($arResult["~ID"]) ? $arResult["~ID"] : $arResult["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/wishlist.png" alt="<?=GetMessage("FAST_VIEW_WISHLIST_LABEL")?>" class="icon"><?=GetMessage("FAST_VIEW_WISHLIST_LABEL")?></a>
-						</div>
-						<div class="row">
-							<a href="#" class="addCompare label changeID" data-id="<?=$arResult["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/compare.png" alt="<?=GetMessage("FAST_VIEW_COMPARE_LABEL")?>" class="icon"><?=GetMessage("FAST_VIEW_COMPARE_LABEL")?></a>
-						</div>
-						<div class="row">
-							<?if($arResult["CATALOG_QUANTITY"] > 0):?>
-								<?if(!empty($arResult["STORES"])):?>
-									<a href="#" data-id="<?=$arResult["ID"]?>" class="inStock label changeAvailable getStoresWindow"><img src="<?=SITE_TEMPLATE_PATH?>/images/inStock.png" alt="<?=GetMessage("FAST_VIEW_AVAILABLE")?>" class="icon"><span><?=GetMessage("FAST_VIEW_AVAILABLE")?></span></a>
-								<?else:?>
-									<span class="inStock label changeAvailable"><img src="<?=SITE_TEMPLATE_PATH?>/images/inStock.png" alt="<?=GetMessage("FAST_VIEW_AVAILABLE")?>" class="icon"><span><?=GetMessage("FAST_VIEW_AVAILABLE")?></span></span>
-								<?endif;?>
-							<?else:?>
-								<?if($arResult["CATALOG_AVAILABLE"] == "Y"):?>
-									<span class="onOrder label changeAvailable"><img src="<?=SITE_TEMPLATE_PATH?>/images/onOrder.png" alt="<?=GetMessage("FAST_VIEW_ON_ORDER")?>" class="icon"><?=GetMessage("FAST_VIEW_ON_ORDER")?></span>
-								<?else:?>
-									<span class="outOfStock label changeAvailable"><img src="<?=SITE_TEMPLATE_PATH?>/images/outOfStock.png" alt="<?=GetMessage("FAST_VIEW_NO_AVAILABLE")?>" class="icon"><?=GetMessage("FAST_VIEW_NO_AVAILABLE")?></span>
-								<?endif;?>
-							<?endif;?>
-						</div>	
 					</div>
 				</div>
 			</div>
