@@ -3,8 +3,10 @@
 
 class Debug {
 
-    public static function d($value, $die = false) {
-        $bt = debug_backtrace();
+    public function d($value, $die = false, $bt = false) {
+        if (!$bt) {
+            $bt = debug_backtrace();
+        }
         $bt = $bt[0];
         $dRoot = $_SERVER["DOCUMENT_ROOT"];
         $dRoot = str_replace("/","\\",$dRoot);
@@ -21,8 +23,9 @@ class Debug {
         }
     }
 
-    public static function dDie($value) {
-        self::d($value, true);
+    public function dDie($value) {
+        $bt = debug_backtrace();
+        $this->d($value, true,$bt);
     }
 
 

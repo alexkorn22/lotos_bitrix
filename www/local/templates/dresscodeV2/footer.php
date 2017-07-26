@@ -1,10 +1,11 @@
 <?require_once($_SERVER["DOCUMENT_ROOT"]."/settings.php");?>
-<?IncludeTemplateLangFile(__FILE__);?>
+<?IncludeTemplateLangFile(__FILE__);
+?>
 
 
 			<?if (INDEX_PAGE != "Y"):?></div><?endif;?>
 		</div>
-        <?if (INDEX_PAGE != "Y"):?>
+        <?if (INDEX_PAGE != "Y" && App::$ds->useFooterTabs):?>
             <?$APPLICATION->IncludeComponent(
                 "bitrix:main.include",
                 ".default",

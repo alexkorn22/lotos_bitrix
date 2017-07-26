@@ -5,6 +5,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <?require_once($_SERVER["DOCUMENT_ROOT"]."/settings.php"); // site settings?>
 <?
 IncludeTemplateLangFile(__FILE__);
+App::Init();
+App::$ds->useFooterTabs = true;
 ?>
 <!DOCTYPE html>
 <html lang="<?=LANGUAGE_ID?>">

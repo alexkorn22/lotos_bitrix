@@ -1,6 +1,7 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);?>
 	<?
+	App::$ds->useFooterTabs = false;
 		if (CModule::IncludeModule("iblock")){
 		   $arFilter = array(
 		      "ACTIVE" => "Y",
