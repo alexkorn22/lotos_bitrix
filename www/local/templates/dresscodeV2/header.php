@@ -6,7 +6,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <?
 IncludeTemplateLangFile(__FILE__);
 App::Init();
-App::$ds->useFooterTabs = true;
 ?>
 <!DOCTYPE html>
 <html lang="<?=LANGUAGE_ID?>">
