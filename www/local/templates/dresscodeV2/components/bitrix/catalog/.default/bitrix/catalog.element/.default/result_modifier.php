@@ -118,44 +118,48 @@
 
 	$arProductProperties = array();
 
-//	if(!empty($arResult["PROPERTIES"]["RELATED_PRODUCT"]["VALUE"])){
-//
-//		$arSelect = Array("ID");
-//		$arFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE_DATE" => "Y", "ACTIVE" => "Y", "ID" => $arResult["PROPERTIES"]["RELATED_PRODUCT"]["VALUE"]);
-//		$gRelated = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
-//		$arResult["RELATED_COUNT"] = $gRelated->SelectedRowsCount();
-//
-//		if (intval($arResult["RELATED_COUNT"]) > 0){
-//			$arResult["SHOW_RELATED"] = "Y";
-//		}
-//
-//	}
-	$arResult["SHOW_RELATED"] = "N";
+	if(!empty($arResult["PROPERTIES"]["RELATED_PRODUCT"]["VALUE"])){
+
+		$arSelect = Array("ID");
+		$arFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE_DATE" => "Y", "ACTIVE" => "Y", "ID" => $arResult["PROPERTIES"]["RELATED_PRODUCT"]["VALUE"]);
+		$gRelated = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
+		$arResult["RELATED_COUNT"] = $gRelated->SelectedRowsCount();
+
+		if (intval($arResult["RELATED_COUNT"]) > 0){
+			$arResult["SHOW_RELATED"] = "Y";
+		}
+
+	}
+		$arResult["SHOW_RELATED"] = "N";
+
 	//similar filter
 
-//	if(!empty($arResult["IBLOCK_SECTION_ID"]) || !empty($arResult["PROPERTIES"]["SIMILAR_PRODUCT"]["VALUE"])){
-//		global $similarFilter;
-//		$arSelect = Array("ID");
-//		if(empty($arResult["PROPERTIES"]["SIMILAR_PRODUCT"]["VALUE"])){
-//			$db_old_groups = CIBlockElement::GetElementGroups($arResult["ID"], true);
-//			while($ar_group = $db_old_groups->Fetch()){
-//				$arResult["SECTIONS_ROW"][$ar_group["DEPTH_LEVEL"]] = $ar_group["ID"];
-//			}
-//			krsort($arResult["SECTIONS_ROW"]);
-//			$similarFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE_DATE" => "Y", "ACTIVE" => "Y", "SECTION_ID" => array_slice($arResult["SECTIONS_ROW"], 0, 1), "!ID" => $arResult["OFFERS_ARRAY_ID"]);
-//			$gSimilar = CIBlockElement::GetList(array(), $similarFilter, false, false, $arSelect);
-//		}else{
-//			$similarFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE_DATE" => "Y", "ACTIVE" => "Y", "ID" => $arResult["PROPERTIES"]["SIMILAR_PRODUCT"]["VALUE"]);
-//			$gSimilar = CIBlockElement::GetList(array(), $similarFilter, false, false, $arSelect);
-//		}
-//
-//		$arResult["SIMILAR_COUNT"] = $gSimilar->SelectedRowsCount();
-//
-//		if (intval($arResult["SIMILAR_COUNT"]) > 0){
-//			$arResult["SHOW_SIMILAR"] = "Y";
-//		}
-//	}
-	$arResult["SHOW_SIMILAR"] = 'N';
+	if(!empty($arResult["IBLOCK_SECTION_ID"]) || !empty($arResult["PROPERTIES"]["SIMILAR_PRODUCT"]["VALUE"])){
+		global $similarFilter;
+		$arSelect = Array("ID");
+		if(empty($arResult["PROPERTIES"]["SIMILAR_PRODUCT"]["VALUE"])){
+			$db_old_groups = CIBlockElement::GetElementGroups($arResult["ID"], true);
+			while($ar_group = $db_old_groups->Fetch()){
+				$arResult["SECTIONS_ROW"][$ar_group["DEPTH_LEVEL"]] = $ar_group["ID"];
+			}
+			krsort($arResult["SECTIONS_ROW"]);
+			$similarFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE_DATE" => "Y", "ACTIVE" => "Y", "SECTION_ID" => array_slice($arResult["SECTIONS_ROW"], 0, 1), "!ID" => $arResult["OFFERS_ARRAY_ID"]);
+			$similarFilter[] = array(">CATALOG_QUANTITY" => 0);
+			$gSimilar = CIBlockElement::GetList(array(), $similarFilter, false, false, $arSelect);
+		}else{
+			$similarFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE_DATE" => "Y", "ACTIVE" => "Y", "ID" => $arResult["PROPERTIES"]["SIMILAR_PRODUCT"]["VALUE"]);
+			$gSimilar = CIBlockElement::GetList(array(), $similarFilter, false, false, $arSelect);
+		}
+
+		$arResult["SIMILAR_COUNT"] = $gSimilar->SelectedRowsCount();
+
+		if (intval($arResult["SIMILAR_COUNT"]) > 0){
+			$arResult["SHOW_SIMILAR"] = "Y";
+		}
+	}
+	if ($arResult['CATALOG_QUANTITY'] > 0) {
+		$arResult["SHOW_SIMILAR"] = "N";
+	}
 
 	$COLOR_PROPERTY_NANE = "COLOR";
 	$SKU_INFO = CCatalogSKU::GetInfoByProductIBlock($arParams["IBLOCK_ID"]);

@@ -293,6 +293,5 @@ var flushTimeout;
 		$(document).on("click", "#showallReviews", showReview);
 		$(document).on("click", "#newReview .submit", reviewSubmit);
 		$(document).on("click", "#elementErrorClose, #elementError .close", windowClose);
-		$(document).on("click", ".reviewAddButton", showReviewForm);
 		$(document).on("click", ".countReviewsTools", scrollToReviews);
 	});

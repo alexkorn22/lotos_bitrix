@@ -10,7 +10,7 @@ $APPLICATION->SetTitle("Каталог товаров");
 		"IBLOCK_TYPE" => "catalog",
 		"IBLOCK_ID" => "10",
 		"TEMPLATE_THEME" => "site",
-		"HIDE_NOT_AVAILABLE" => "N",
+		"HIDE_NOT_AVAILABLE" => "Y",
 		"BASKET_URL" => "/personal/cart/",
 		"ACTION_VARIABLE" => "action",
 		"PRODUCT_ID_VARIABLE" => "id",
