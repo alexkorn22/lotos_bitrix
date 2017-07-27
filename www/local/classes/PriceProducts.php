@@ -36,7 +36,6 @@ class PriceProducts {
                 $product["PRICE"]["DISCOUNT"][] = $oldPrice;
                 $product["PRICE"]["RESULT_PRICE"]["BASE_PRICE"] = $oldPrice;
                 $product["PRICE"]["motherClub"] = true;
-                App::$debug->inF($product["PRICE"]);
             }
         }
 
@@ -46,7 +45,6 @@ class PriceProducts {
 
     protected function getOldPrice($idProduct) {
         $res = CPrice::GetBasePrice($idProduct);
-        App::$debug->inF($res);
         return $res['PRICE'];
     }
 
