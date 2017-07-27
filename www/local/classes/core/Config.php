@@ -4,7 +4,7 @@
 /**
  * Class Config
  * @property bool debug;
- * @property string param;
+ * @property array typeMotherClub;
  */
 class Config {
     protected $data = [];

@@ -42,7 +42,10 @@ $ds = new DataStore();
 						<span class="getFastView" data-id="<?=$arElement["ID"]?>"><?=GetMessage("FAST_VIEW_PRODUCT_LABEL")?></span>
 					</a>
 					<a href="<?=$arElement["DETAIL_PAGE_URL"]?>" class="name"><span class="middle"><?=$arElement["NAME"]?></span></a>
-
+					<?
+					//$arElement["MIN_PRICE"]["PRINT_DISCOUNT_DIFF"] = "10 грн";
+					$tmpArElement = $arElement["MIN_PRICE"];
+					?>
 					<?if(!empty($arElement["MIN_PRICE"])):?>
 						<?if($arElement["COUNT_PRICES"] > 1):?>
 							<a href="#" class="price getPricesWindow" data-id="<?=$arElement["ID"]?>">
@@ -145,3 +148,6 @@ $ds = new DataStore();
 		);?>
 	</div>
 <?endif;?>
+<?
+
+?>

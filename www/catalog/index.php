@@ -46,6 +46,7 @@ $APPLICATION->SetTitle("Каталог товаров");
 		),
 		"FILTER_PRICE_CODE" => array(
 			0 => "BASE",
+			1 => "mClub",
 		),
 		"FILTER_OFFERS_FIELD_CODE" => array(
 			0 => "PREVIEW_PICTURE",
@@ -69,6 +70,7 @@ $APPLICATION->SetTitle("Каталог товаров");
 		"USE_COMPARE" => "N",
 		"PRICE_CODE" => array(
 			0 => "BASE",
+			1 => "mClub",
 		),
 		"USE_PRICE_COUNT" => "N",
 		"SHOW_PRICE_COUNT" => "1",
