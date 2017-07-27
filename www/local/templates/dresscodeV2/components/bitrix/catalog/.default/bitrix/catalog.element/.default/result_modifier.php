@@ -1,6 +1,7 @@
 <?
 	global $USER;
 
+
 	CModule::IncludeModule('highloadblock');
 	use Bitrix\Highloadblock as HL;
 	use Bitrix\Main\Entity;
@@ -54,32 +55,32 @@
 	}
 
 	// video and files
-	foreach ($arResult["PROPERTIES"] as $ips => $arProperty) {
-		if($arProperty["PROPERTY_TYPE"] == "F" && $arProperty["CODE"] != "MORE_PHOTO" && !empty($arProperty["VALUE"])){
-			if(is_array($arProperty["VALUE"])){
-				foreach ($arProperty["VALUE"] as $ipv => $arPropertyValue) {
-					$arTmpFile = CFile::GetByID($arPropertyValue)->Fetch();
-					$arTmpFile["PARENT_NAME"] = $arProperty["NAME"];
-					$arTmpFile["SRC"] = CFile::GetPath($arTmpFile["ID"]);
-					$arResult["FILES"][] = $arTmpFile;
-				}
-			}else{
-				$arTmpFile = CFile::GetByID($arProperty["VALUE"])->Fetch();
-				$arTmpFile["PARENT_NAME"] = $arProperty["NAME"];
-				$arTmpFile["SRC"] = CFile::GetPath($arTmpFile["ID"]);
-				$arResult["FILES"][] = $arTmpFile;
-			}
-		}elseif($arProperty["CODE"] == "VIDEO" && !empty($arProperty["VALUE"])){
-			if(is_array($arProperty["VALUE"])){
-				foreach ($arProperty["VALUE"] as $ipv => $arPropertyValue) {
-					$arResult["VIDEO"][] = $arPropertyValue;
-				}
-			}else{
-				$arResult["VIDEO"][] = $arProperty["VALUE"];
-			}
-			unset($arResult["DISPLAY_PROPERTIES"][$ips]);
-		}
-	}
+//	foreach ($arResult["PROPERTIES"] as $ips => $arProperty) {
+//		if($arProperty["PROPERTY_TYPE"] == "F" && $arProperty["CODE"] != "MORE_PHOTO" && !empty($arProperty["VALUE"])){
+//			if(is_array($arProperty["VALUE"])){
+//				foreach ($arProperty["VALUE"] as $ipv => $arPropertyValue) {
+//					$arTmpFile = CFile::GetByID($arPropertyValue)->Fetch();
+//					$arTmpFile["PARENT_NAME"] = $arProperty["NAME"];
+//					$arTmpFile["SRC"] = CFile::GetPath($arTmpFile["ID"]);
+//					$arResult["FILES"][] = $arTmpFile;
+//				}
+//			}else{
+//				$arTmpFile = CFile::GetByID($arProperty["VALUE"])->Fetch();
+//				$arTmpFile["PARENT_NAME"] = $arProperty["NAME"];
+//				$arTmpFile["SRC"] = CFile::GetPath($arTmpFile["ID"]);
+//				$arResult["FILES"][] = $arTmpFile;
+//			}
+//		}elseif($arProperty["CODE"] == "VIDEO" && !empty($arProperty["VALUE"])){
+//			if(is_array($arProperty["VALUE"])){
+//				foreach ($arProperty["VALUE"] as $ipv => $arPropertyValue) {
+//					$arResult["VIDEO"][] = $arPropertyValue;
+//				}
+//			}else{
+//				$arResult["VIDEO"][] = $arProperty["VALUE"];
+//			}
+//			unset($arResult["DISPLAY_PROPERTIES"][$ips]);
+//		}
+//	}
 
 	$dbPriceType = CCatalogGroup::GetList(
 	        array("SORT" => "ASC"),
@@ -117,43 +118,44 @@
 
 	$arProductProperties = array();
 
-	if(!empty($arResult["PROPERTIES"]["RELATED_PRODUCT"]["VALUE"])){
-
-		$arSelect = Array("ID");
-		$arFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE_DATE" => "Y", "ACTIVE" => "Y", "ID" => $arResult["PROPERTIES"]["RELATED_PRODUCT"]["VALUE"]);
-		$gRelated = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
-		$arResult["RELATED_COUNT"] = $gRelated->SelectedRowsCount();
-
-		if (intval($arResult["RELATED_COUNT"]) > 0){
-			$arResult["SHOW_RELATED"] = "Y";
-		}
-
-	}
-
+//	if(!empty($arResult["PROPERTIES"]["RELATED_PRODUCT"]["VALUE"])){
+//
+//		$arSelect = Array("ID");
+//		$arFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE_DATE" => "Y", "ACTIVE" => "Y", "ID" => $arResult["PROPERTIES"]["RELATED_PRODUCT"]["VALUE"]);
+//		$gRelated = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
+//		$arResult["RELATED_COUNT"] = $gRelated->SelectedRowsCount();
+//
+//		if (intval($arResult["RELATED_COUNT"]) > 0){
+//			$arResult["SHOW_RELATED"] = "Y";
+//		}
+//
+//	}
+	$arResult["SHOW_RELATED"] = "N";
 	//similar filter
 
-	if(!empty($arResult["IBLOCK_SECTION_ID"]) || !empty($arResult["PROPERTIES"]["SIMILAR_PRODUCT"]["VALUE"])){
-		global $similarFilter;
-		$arSelect = Array("ID");
-		if(empty($arResult["PROPERTIES"]["SIMILAR_PRODUCT"]["VALUE"])){
-			$db_old_groups = CIBlockElement::GetElementGroups($arResult["ID"], true);
-			while($ar_group = $db_old_groups->Fetch()){
-				$arResult["SECTIONS_ROW"][$ar_group["DEPTH_LEVEL"]] = $ar_group["ID"];
-			}
-			krsort($arResult["SECTIONS_ROW"]);
-			$similarFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE_DATE" => "Y", "ACTIVE" => "Y", "SECTION_ID" => array_slice($arResult["SECTIONS_ROW"], 0, 1), "!ID" => $arResult["OFFERS_ARRAY_ID"]);
-			$gSimilar = CIBlockElement::GetList(array(), $similarFilter, false, false, $arSelect);
-		}else{
-			$similarFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE_DATE" => "Y", "ACTIVE" => "Y", "ID" => $arResult["PROPERTIES"]["SIMILAR_PRODUCT"]["VALUE"]);
-			$gSimilar = CIBlockElement::GetList(array(), $similarFilter, false, false, $arSelect);
-		}
-
-		$arResult["SIMILAR_COUNT"] = $gSimilar->SelectedRowsCount();
-
-		if (intval($arResult["SIMILAR_COUNT"]) > 0){
-			$arResult["SHOW_SIMILAR"] = "Y";
-		}
-	}
+//	if(!empty($arResult["IBLOCK_SECTION_ID"]) || !empty($arResult["PROPERTIES"]["SIMILAR_PRODUCT"]["VALUE"])){
+//		global $similarFilter;
+//		$arSelect = Array("ID");
+//		if(empty($arResult["PROPERTIES"]["SIMILAR_PRODUCT"]["VALUE"])){
+//			$db_old_groups = CIBlockElement::GetElementGroups($arResult["ID"], true);
+//			while($ar_group = $db_old_groups->Fetch()){
+//				$arResult["SECTIONS_ROW"][$ar_group["DEPTH_LEVEL"]] = $ar_group["ID"];
+//			}
+//			krsort($arResult["SECTIONS_ROW"]);
+//			$similarFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE_DATE" => "Y", "ACTIVE" => "Y", "SECTION_ID" => array_slice($arResult["SECTIONS_ROW"], 0, 1), "!ID" => $arResult["OFFERS_ARRAY_ID"]);
+//			$gSimilar = CIBlockElement::GetList(array(), $similarFilter, false, false, $arSelect);
+//		}else{
+//			$similarFilter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE_DATE" => "Y", "ACTIVE" => "Y", "ID" => $arResult["PROPERTIES"]["SIMILAR_PRODUCT"]["VALUE"]);
+//			$gSimilar = CIBlockElement::GetList(array(), $similarFilter, false, false, $arSelect);
+//		}
+//
+//		$arResult["SIMILAR_COUNT"] = $gSimilar->SelectedRowsCount();
+//
+//		if (intval($arResult["SIMILAR_COUNT"]) > 0){
+//			$arResult["SHOW_SIMILAR"] = "Y";
+//		}
+//	}
+	$arResult["SHOW_SIMILAR"] = 'N';
 
 	$COLOR_PROPERTY_NANE = "COLOR";
 	$SKU_INFO = CCatalogSKU::GetInfoByProductIBlock($arParams["IBLOCK_ID"]);

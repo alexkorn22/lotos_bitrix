@@ -112,32 +112,6 @@
 					</div>
 				</div>
 			</div>
-			<div id="footerBottom">
-				<div class="limiter">
-					<div class="creator">
-						<?if(!empty($TEMPLATE_FOOTER_VARIANT) && ($TEMPLATE_FOOTER_VARIANT == "6" || $TEMPLATE_FOOTER_VARIANT == "7")):?>
-							<a href="http://dw24.su/"><img src="<?=SITE_TEMPLATE_PATH?>/images/dwC.png" alt="Digital Web"></a>
-						<?elseif(!empty($TEMPLATE_FOOTER_VARIANT) && ($TEMPLATE_FOOTER_VARIANT == "4" || $TEMPLATE_FOOTER_VARIANT == "5" || $TEMPLATE_FOOTER_VARIANT == "6")):?>
-							<a href="http://dw24.su/"><img src="<?=SITE_TEMPLATE_PATH?>/images/dwW.png" alt="Digital Web"></a>
-						<?else:?>
-							<a href="http://dw24.su/"><img src="<?=SITE_TEMPLATE_PATH?>/images/dw.png" alt="Digital Web"></a>
-						<?endif;?>
-					</div>
-					<div class="social">
-						<?$APPLICATION->IncludeComponent(
-							"bitrix:main.include",
-							".default",
-							array(
-								"AREA_FILE_SHOW" => "sect",
-								"AREA_FILE_SUFFIX" => "sn",
-								"AREA_FILE_RECURSIVE" => "Y",
-								"EDIT_TEMPLATE" => ""
-							),
-							false
-						);?>
-					</div>
-				</div>
-			</div>
 		</div>
 		<div id="footerLine"<?if(!empty($TEMPLATE_FOOTER_LINE_COLOR) && $TEMPLATE_FOOTER_LINE_COLOR != "default"):?> class="color_<?=$TEMPLATE_FOOTER_LINE_COLOR?>"<?endif;?>>
 			<div class="limiter">
