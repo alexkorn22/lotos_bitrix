@@ -300,11 +300,19 @@
 
 				$arResult["CURRENCY"] = CCurrency::GetBaseCurrency();
 
+                $products = array($arResult);
+                $prices = new PriceProducts($products);
+                $prices->fillMotherClub();
+                $arResult = $products[0];
+
 				$this->setResultCacheKeys(array());
 				$this->IncludeComponentTemplate();
 
 			}
 		}
 	}
+
+?>
+<?
 
 ?>

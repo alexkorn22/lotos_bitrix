@@ -877,4 +877,9 @@
 	}
 
 ?>
-
+<?
+$products = array($arResult);
+$prices = new PriceProducts($products);
+$prices->fillMotherClub();
+$arResult = $products[0];
+?>

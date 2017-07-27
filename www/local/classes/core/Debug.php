@@ -3,10 +3,23 @@
 
 class Debug {
 
+    protected $pathFile = '/bitrix/art_debug.html';
+
+    public function __construct(){
+        $this->pathFile = $_SERVER['DOCUMENT_ROOT'] . $this->pathFile;
+    }
+
     public function d($value, $die = false, $bt = false) {
         if (!$bt) {
             $bt = debug_backtrace();
         }
+        echo $this->render($bt, $value);
+        if ($die) {
+            die();
+        }
+    }
+
+    protected function render($bt,$value) {
         $bt = $bt[0];
         $dRoot = $_SERVER["DOCUMENT_ROOT"];
         $dRoot = str_replace("/","\\",$dRoot);
@@ -17,10 +30,7 @@ class Debug {
         $res .= "<div style=\"padding: 3px 5px; background: #99CCFF; font-weight: bold;\">File: " . $bt["file"] . " [" . $bt["line"] . "]</div>";
         $res .= " <pre style=\"padding: 10px;\">" . print_r($value,true) . "</pre>";
         $res .= "</div>";
-        echo $res;
-        if ($die) {
-            die();
-        }
+        return $res;
     }
 
     public function dDie($value) {
@@ -28,5 +38,24 @@ class Debug {
         $this->d($value, true,$bt);
     }
 
+    public function inF($value, $clearFile = false, $die = false, $bt = false){
+        if (!$bt) {
+            $bt = debug_backtrace();
+        }
+        $render = " <hr>" . date("Y-m-d H:i:s") . " <br>" . $this->render($bt, $value);
+
+        if (!$clearFile) {
+            $render .= file_get_contents($this->pathFile);
+        }
+        file_put_contents($this->pathFile, $render);
+        if ($die) {
+            die();
+        }
+    }
+
+    public function inFR($value, $die = false){
+        $bt = debug_backtrace();
+        $this->inF($value,true,$die,$bt);
+    }
 
 }
