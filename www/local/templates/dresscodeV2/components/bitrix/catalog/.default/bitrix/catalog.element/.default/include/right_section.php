@@ -46,18 +46,9 @@
 			</div>
 	    <?endif;?>	
 	    <?if($arParams["SHOW_REVIEW_FORM"]):?>
-	   	<div class="row">
-	   		<a href="#" class="reviewAddButton label"><img src="<?=SITE_TEMPLATE_PATH?>/images/addReviewSmall.png" alt="<?=GetMessage("REVIEWS_ADD")?>" class="icon"><?=GetMessage("REVIEWS_ADD")?></a>
-	   	</div>
 	    <?endif;?>
 		<div class="row">
 			<a href="#" class="fastBack label changeID<?if(empty($arResult["MIN_PRICE"]) || $arResult["CAN_BUY"] === "N" || $arResult["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arResult["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="<?=GetMessage("FASTBACK_LABEL")?>" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>
-		</div>
-		<div class="row">
-			<a href="#" class="addWishlist label" data-id="<?=$arResult["~ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/wishlist.png" alt="<?=GetMessage("WISHLIST_LABEL")?>" class="icon"><?=GetMessage("WISHLIST_LABEL")?></a>
-		</div>
-		<div class="row">
-			<a href="#" class="addCompare label changeID" data-id="<?=$arResult["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/compare.png" alt="<?=GetMessage("COMPARE_LABEL")?>" class="icon"><?=GetMessage("COMPARE_LABEL")?></a>
 		</div>
 		<div class="row">
 			<?if($arResult["CATALOG_QUANTITY"] > 0):?>
@@ -74,8 +65,8 @@
 				<?endif;?>
 			<?endif;?>
 		</div>
-		<div class="row">
-			<div class="ya-share-label"><?=GetMessage("SHARE_LABEL")?></div>
-			<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,twitter,telegram"></div>
-		</div>
+<!--		<div class="row">-->
+<!--			<div class="ya-share-label">--><?//=GetMessage("SHARE_LABEL")?><!--</div>-->
+<!--			<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,twitter,telegram"></div>-->
+<!--		</div>-->
 	</div>
