@@ -30,6 +30,6 @@ function getArClasses($path,$arResult = array()){
 	}
 	return $arResult;
 }
-
-
+App::Init();
+include_once $_SERVER['DOCUMENT_ROOT'] . '/local/files/events.php';
 ?>
