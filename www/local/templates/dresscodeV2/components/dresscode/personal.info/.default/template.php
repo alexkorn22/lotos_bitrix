@@ -2,12 +2,18 @@
 <script>
     var ajaxDir = "<?=$this->GetFolder();?>";
 </script>
+<?
+$dataUser = $arResult['USER'];
+?>
 <div id="mainProfile">
 	<form action="" method="GET" id="personalForm">
 		<ul class="profileSettings">
             <li>
                 <label><?=GetMessage('PROFILE_LAST_NAME')?> <?=GetMessage('PROFILE_NAME')?> <?=GetMessage('PROFILE_SECOND_NAME')?></label>
-                <input type="text" name="FIO" value="<?=$arResult["USER"]["NAME"]?> <?=$arResult["USER"]["LAST_NAME"]?> <?=$arResult["USER"]["SECOND_NAME"]?>" class="inputText">
+                <?
+                $fio = [$arResult["USER"]["LAST_NAME"],$arResult["USER"]["NAME"], $arResult["USER"]["SECOND_NAME"]];
+                ?>
+                <input type="text" name="FIO" value="<?=implode(' ', $fio)?>" class="inputText">
                 <label><?=GetMessage('EMAIL')?></label>
                 <input type="text" name="EMAIL" value="<?=$arResult["USER"]["EMAIL"]?>" class="inputText">
                 <label><?=GetMessage('USER_MOBILE')?></label>
@@ -25,7 +31,12 @@
                     <input type="text" name="USER_PASSWORD" value="" class="inputTel">
                     <label><?=GetMessage("REPASS")?></label>
                     <input type="text" name="USER_PASSWORD_CONFIRM" value="" class="inputTel">
-                    <a href="#" class="submit"><?=GetMessage("SAVE")?></a>
+            </li>
+            <li>
+                <? App::$view->render('personal/infoMClub',['dataUser' => $dataUser])?>
+            </li>
+            <li>
+                <a href="#" class="submit"><?=GetMessage("SAVE")?></a>
             </li>
         </ul>
 	</form>

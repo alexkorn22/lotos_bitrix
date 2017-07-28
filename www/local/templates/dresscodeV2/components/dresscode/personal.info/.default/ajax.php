@@ -7,7 +7,8 @@
 	   isset($_GET["USER_CITY"]) &&
 	   isset($_GET["USER_ZIP"]) &&
 	   isset($_GET["EMAIL"]) &&
-	   isset($_GET["FIO"])
+	   isset($_GET["FIO"]) &&
+	   isset($_GET["UF_NUMBER_MCLUB"])
 	){
 		global $USER;
 		$userID = $USER->GetID();
@@ -20,11 +21,19 @@
 			$PERSONAL_MOBILE = htmlspecialchars($_GET["USER_MOBILE"]);
 			$PERSONAL_CITY   = htmlspecialchars($_GET["USER_CITY"]);
 			$PERSONAL_ZIP    = htmlspecialchars($_GET["USER_ZIP"]);
-			
+
+			$numberMClub 	 = htmlspecialchars($_GET["UF_NUMBER_MCLUB"]);
+
+			$tools = new UserTools($USER);
+			$dataMClub = $tools->getDataMClub();
+			$checkMClub = $dataMClub["UF_CHECK_M_CLUB"];
+			$isMClub = $dataMClub["UF_IS_MCLUB"];
+//			$mClub = $dataMClub["UF_NUMBER_MCLUB"];
+
 			$user = new CUser;
 			$fields = Array(
-			  "NAME"              => BX_UTF === true ? $NAME[0] : iconv("UTF-8","windows-1251//IGNORE", $NAME[0]),
-			  "LAST_NAME"         => BX_UTF === true ? $NAME[1] : iconv("UTF-8","windows-1251//IGNORE", $NAME[1]),
+			  "NAME"              => BX_UTF === true ? $NAME[1] : iconv("UTF-8","windows-1251//IGNORE", $NAME[1]),
+			  "LAST_NAME"         => BX_UTF === true ? $NAME[0] : iconv("UTF-8","windows-1251//IGNORE", $NAME[0]),
 			  "SECOND_NAME"       => BX_UTF === true ? $NAME[2] : iconv("UTF-8","windows-1251//IGNORE", $NAME[2]),
 			  "PERSONAL_STREET"   => BX_UTF === true ? $PERSONAL_STREET : iconv("UTF-8","windows-1251//IGNORE", $PERSONAL_STREET),
 			  "PERSONAL_CITY"	  => BX_UTF === true ? $PERSONAL_CITY : iconv("UTF-8","windows-1251//IGNORE", $PERSONAL_CITY),
@@ -32,14 +41,43 @@
 			  "PERSONAL_MOBILE"   => BX_UTF === true ? $PERSONAL_MOBILE : iconv("UTF-8","windows-1251//IGNORE", $PERSONAL_MOBILE),			  
 			  "EMAIL"             => $EMAIL,
 			  "PASSWORD"          => $PASSWORD,
-			  "CONFIRM_PASSWORD"  => $REPASSWORD
+			  "CONFIRM_PASSWORD"  => $REPASSWORD,
 			);
+
+			//если пользователь впервые вводит номер Мама клуб
+			if (!empty($numberMClub) && !$isMClub && !$checkMClub) {
+				if (empty($PERSONAL_MOBILE)) {
+					$result = array(
+						"message" => "Требуется заполнение телефона для участия в Мама клуб",
+						"heading" => "Ошибка",
+						"reload" => false
+					);
+					echo jsonEn($result);
+					exit();
+				}
+				$checkMClub = 1;
+			}
+			if ($isMClub || $checkMClub) {
+				if (empty($PERSONAL_MOBILE)) {
+					$result = array(
+						"message" => "Требуется заполнение телефона для участия в Мама клуб",
+						"heading" => "Ошибка",
+						"reload" => false
+					);
+					echo jsonEn($result);
+					exit();
+				}
+			}
+			$fields["UF_CHECK_M_CLUB"] = $checkMClub;
+			if (!empty($numberMClub) && empty($dataMClub['UF_NUMBER_MCLUB'])) {
+				$fields["UF_NUMBER_MCLUB"] = $numberMClub;
+			}
+
 
 			if(empty($PASSWORD)){
 				unset($fields["PASSWORD"]);
 				unset($fields["REPASSWORD"]);
 			}
-
 			if(!$user->Update($userID, $fields)){
 				$result = array(
 					"message" => strip_tags($user->LAST_ERROR),

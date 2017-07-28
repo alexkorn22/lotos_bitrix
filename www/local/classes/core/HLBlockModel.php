@@ -43,7 +43,13 @@ abstract class HLBlockModel {
         static::$dataBlock = $res;
     }
 
-    public static function getList($arSelect = array('*'),$arFilter = array(),$arOrder = array("ID"=>"ASC")) {
+    /**
+     * @param array $arSelect
+     * @param array $arFilter
+     * @param array $arOrder
+     * @return HLBlockModel[]
+     */
+    public static function getList($arSelect = array('*'), $arFilter = array(), $arOrder = array("ID"=>"ASC")) {
         static::init();
         $list = array();
         $dataCurBlock = static::$dataBlock;
