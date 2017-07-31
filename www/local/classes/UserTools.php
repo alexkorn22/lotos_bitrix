@@ -8,8 +8,13 @@ class UserTools
 {
     public $user;
     protected $data;
-    public function __construct($user){
-        $this->user = $user;
+    public function __construct($user = false){
+        if (!$user) {
+            global $USER;
+            $this->user = $USER;
+        } else {
+            $this->user = $user;
+        }
     }
 
     protected function getDataUser($field) {
@@ -51,6 +56,12 @@ class UserTools
     public function getDataMClub() {
         $list = 'UF_NUMBER_MCLUB,UF_CHECK_M_CLUB,UF_IS_MCLUB';
         return $this->getDataUser($list);
+    }
+
+    public function setPhone($idUser,$phone) {
+        $fields = ['PERSONAL_MOBILE' => $phone];
+        $user = new CUser;
+        return $user->Update($idUser, $fields);
     }
 
 }

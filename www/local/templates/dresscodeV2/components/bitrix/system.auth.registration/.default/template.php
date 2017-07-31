@@ -110,7 +110,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 			<div class="bx-authform-formgroup-container">
 				<div class="bx-authform-label-container">Номер телефона</div>
 				<div class="bx-authform-input-container">
-					<input type="text" name="USER_PERSONAL_MOBILE" maxlength="255" value="<?=$arResult["USER_PERSONAL_MOBILE"]?>"/>
+					<input type="text" name="UF_TMP_PHONE" maxlength="255" value="<?=$arResult["UF_TMP_PHONE"]?>"/>
 				</div>
 			</div>
 
