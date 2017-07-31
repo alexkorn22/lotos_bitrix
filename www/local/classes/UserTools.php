@@ -58,10 +58,4 @@ class UserTools
         return $this->getDataUser($list);
     }
 
-    public function setPhone($idUser,$phone) {
-        $fields = ['PERSONAL_MOBILE' => $phone];
-        $user = new CUser;
-        return $user->Update($idUser, $fields);
-    }
-
 }
