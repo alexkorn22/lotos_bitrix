@@ -104,7 +104,7 @@ $APPLICATION->SetTitle("DELUXE");?> <?$APPLICATION->IncludeComponent(
 		"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
-<div id="footerTabsCaption">
+<div id="topSalesCaption">
     <div class="wrapper">
         <div class="items">
             <p>ХИТЫ ПРОДАЖ</p>
