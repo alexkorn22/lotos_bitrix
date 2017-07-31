@@ -84,6 +84,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 			</div>
 
 		</div>
+
 		<div class="bx-authform-formgroup-container-line">
 			<div class="bx-authform-formgroup-container">
 				<div class="bx-authform-label-container"><?if($arResult["EMAIL_REQUIRED"]):?><span class="bx-authform-starrequired">*</span><?endif?><?=GetMessage("AUTH_EMAIL")?></div>
@@ -104,6 +105,24 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 				</div>
 			</div>
 		</div>
+		<?//Поля для Мама клуба?>
+		<div class="bx-authform-formgroup-container-line">
+			<div class="bx-authform-formgroup-container">
+				<div class="bx-authform-label-container">Номер телефона</div>
+				<div class="bx-authform-input-container">
+					<input type="text" name="USER_PERSONAL_MOBILE" maxlength="255" value="<?=$arResult["USER_PERSONAL_MOBILE"]?>"/>
+				</div>
+			</div>
+
+			<div class="bx-authform-formgroup-container">
+				<div class="bx-authform-label-container">Номер карты участника Мама клуб</div>
+				<div class="bx-authform-input-container">
+					<input type="text" name="UF_NUMBER_MCLUB" maxlength="255" value="<?=$arResult["UF_NUMBER_MCLUB"]?>" />
+				</div>
+			</div>
+		</div>
+
+
 <?if($arResult["USER_PROPERTIES"]["SHOW"] == "Y"):?>
 	<?foreach ($arResult["USER_PROPERTIES"]["DATA"] as $FIELD_NAME => $arUserField):?>
 
