@@ -1,6 +1,8 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-$this->setFrameMode(true);?>
-	<?
+$this->setFrameMode(true);
+$category = new Category(10, $arResult['VARIABLES']['SECTION_ID']);
+?>
+<?
 	App::$ds->useFooterTabs = false;
 		if (CModule::IncludeModule("iblock")){
 		   $arFilter = array(
@@ -72,8 +74,9 @@ $this->setFrameMode(true);?>
 			}
 		}
 	?>
-	<h1><?if(!empty($arResult["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"])):?><?=$arResult["IPROPERTY_VALUES"]["SECTION_PAGE_TITLE"]?><?else:?><?=$APPLICATION->ShowTitle(false)?><?endif;?></h1>
-	<?if(!empty($arResult["SECTION_BANNERS"])):?>
+	<h1><?=$category->getValueHOne();?></h1>
+
+<?if(!empty($arResult["SECTION_BANNERS"])):?>
 		<div id="catalog-section-banners">
 			<ul class="slideBox">
 				<?foreach ($arResult["SECTION_BANNERS"] as $isc => $arNextBanner):?>

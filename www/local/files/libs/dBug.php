@@ -437,7 +437,11 @@ class dBug {
 	}
 
 	function initJSandCSS() {
-		echo <<<SCRIPTS
+		echo self::getScriptStyle();
+	}
+
+	public static function getScriptStyle() {
+		return <<<SCRIPTS
 			<script language="JavaScript">
 			/* code modified from ColdFusion's cfdump code */
 				function dBug_toggleRow(source) {
@@ -537,6 +541,5 @@ class dBug {
 			</style>
 SCRIPTS;
 	}
-
 }
 ?>

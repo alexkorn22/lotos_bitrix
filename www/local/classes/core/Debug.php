@@ -2,7 +2,7 @@
 
 
 class Debug {
-
+    protected $debugLibs = false;
     protected $pathFile = '/bitrix/art_debug.html';
 
     public function __construct(){
@@ -28,7 +28,14 @@ class Debug {
         $bt["file"] = str_replace($dRoot,"",$bt["file"]);
         $res = "<div style=\"font-size: 9pt; color: #000; background: #fff; border: 1px dashed #000;\">";
         $res .= "<div style=\"padding: 3px 5px; background: #99CCFF; font-weight: bold;\">File: " . $bt["file"] . " [" . $bt["line"] . "]</div>";
-        $res .= " <pre style=\"padding: 10px;\">" . print_r($value,true) . "</pre>";
+        if (!$this->debugLibs) {
+            $res .= " <pre style=\"padding: 10px;\">" . print_r($value,true) . "</pre>";
+        } else {
+            require_once $_SERVER['DOCUMENT_ROOT'] . '/local/files/libs/dBug.php';
+            ob_start();
+            new dBug($value);
+            $res .= ob_get_clean();
+        }
         $res .= "</div>";
         return $res;
     }
@@ -58,4 +65,12 @@ class Debug {
         $this->inF($value,true,$die,$bt);
     }
 
+    /**
+     * @return Debug
+     */
+    public function dBug() {
+        $debug = new Debug();
+        $debug->debugLibs = true;
+        return $debug;
+    }
 }
