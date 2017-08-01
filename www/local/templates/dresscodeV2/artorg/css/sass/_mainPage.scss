@@ -190,8 +190,8 @@
     }
   }
   @media (max-width: 660px) {
-    #footerTabs {
-      display: block!important;
+    #footerTabs.itemsTopSales {
+      display: block;
     }
   }
   @media (max-width: 560px){

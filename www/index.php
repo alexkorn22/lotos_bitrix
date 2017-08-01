@@ -112,7 +112,7 @@ $APPLICATION->SetTitle("DELUXE");?> <?$APPLICATION->IncludeComponent(
     </div>
 </div>
 <div class="topSales">
-    <div id="footerTabs">
+    <div id="footerTabs" class="itemsTopSales">
         <div class="wrapper">
             <div class="items">
                 <?$APPLICATION->IncludeComponent(
