@@ -1,1 +1,1 @@
-<span class="heading">+380(61)214-99-54, +380(67)620-22-44</span>
+<span class="heading">+380(67)620-22-44</span>
