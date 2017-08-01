@@ -8,8 +8,13 @@ class UserTools
 {
     public $user;
     protected $data;
-    public function __construct($user){
-        $this->user = $user;
+    public function __construct($user = false){
+        if (!$user) {
+            global $USER;
+            $this->user = $USER;
+        } else {
+            $this->user = $user;
+        }
     }
 
     protected function getDataUser($field) {
