@@ -1,1 +1,1 @@
-<span class="heading">+7 (800) 505-40-38</span>
+<span class="heading">+380(61)214-99-54, +380(67)620-22-44</span>

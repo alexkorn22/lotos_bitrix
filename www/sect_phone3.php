@@ -1,2 +1,2 @@
-<span class="heading">+7 (800) 505-40-38</span>
-<div class="schedule">с 9:00 до18:00 ежедневно</div>
+<span class="heading">+380(61)214-99-54, +380(67)620-22-44</span>
+<div class="schedule">Пн.-Пт. с 08:00 до 17:00</div>

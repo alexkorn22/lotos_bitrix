@@ -75,7 +75,7 @@ $(function(){
 
 	var getProductNextPage = function(event){
 	
-		var $activeGroup = $self.find(".caption.selected a");
+		var $activeGroup = $self.find(".caption.selected");
 		var currentPage = parseInt($activeGroup.data("page"), 10);
 
 		$activeGroup.data({

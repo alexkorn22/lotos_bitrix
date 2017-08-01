@@ -1,8 +1,10 @@
-<div class="telephone">+7 (800) 433-35-43</div>
-<div class="email">Email: <a href="mailto:info@dresscode.ru">info@dresscode.ru</a></div>
+<div class="telephone footer_right">+380(61)214-99-54</div>
+<div class="telephone footer_right">+380(67)620-22-44</div>
+<div class="email footer_right">Эл. почта:</br> <a href="mailto:info@elta-market.com.ua">info@elta-market.com.ua</a></div>
+<div class="email footer_right">Отдел продаж:</br><a href="mailto:info@order@elta-market.com.ua">order@elta-market.com.ua</a></div>
 <ul class="list">
 	<li>График работы</li>
-	<li>Пн-Пт: с 9:00 до 21:00</li>
-	<li>Сб: с 9:00 до 18:00</li>
+	<li>Пн.-Пт. с 08:00 до 17:00</li>
+	<li>Сб: Выходной</li>
 	<li>Вс: Выходной</li>
 </ul>
