@@ -1,1 +1,1 @@
-<a href="mailto:info@digitalweb.ru" class="email">info@digitalweb.ru</a>
+<a href="mailto:info@elta-market.com.ua" class="email">info@elta-market.com.ua</a>
