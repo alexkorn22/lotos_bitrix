@@ -1,1 +1,1 @@
-<a href="tel:+7 (800) 777 55 22" class="telephone">+7 (800) 777 55 22</a>
+<a href="tel:+3 (8061) 214 99 54" class="telephone">+380(61)214-99-54</a>
