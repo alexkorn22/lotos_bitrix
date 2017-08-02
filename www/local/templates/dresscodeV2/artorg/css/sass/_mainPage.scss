@@ -24,7 +24,8 @@
   }
 
   .infoAbouthHeader{
-    margin-bottom: 36px;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   h1{
@@ -186,6 +187,11 @@
       .item {
         width: 48%;
       }
+    }
+  }
+  @media (max-width: 700px){
+    #flushFooterCart.flushFooterCartMedia .item:nth-child(1) {
+      display: block;
     }
   }
   @media (max-width: 660px) {
