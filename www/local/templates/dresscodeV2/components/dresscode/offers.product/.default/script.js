@@ -20,19 +20,13 @@ $(function(){
 					return false;
 				}
 
-				if(changeSheet != "Y"){
-					var $captionEL = $self.find(".caption")
-										.removeClass("selected");
-
-				}
-
 				var $ajaxContainer = $self.find(".ajaxContainer")
 												.addClass("loading");
 
 				$parentThis
 					.addClass("loading");
 
-				$this.data("sheet", "N");	// clear status 
+				$this.data("sheet", "N");	// clear status
 
 				if(parseInt(groupID, 10) > 0 || groupID == "all"){
 					
