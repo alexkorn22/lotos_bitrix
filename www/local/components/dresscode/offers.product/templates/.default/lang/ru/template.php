@@ -19,4 +19,5 @@
 	$MESS["FROM"] = "из";
 	$MESS["REQUEST_PRICE_LABEL"] = "Цена по запросу";
 	$MESS["REQUEST_PRICE_BUTTON_LABEL"] = "Запросить цену";
+    $MESS["ITEMS_NEWS"] = "Новинки";
 ?>

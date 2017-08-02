@@ -150,77 +150,87 @@
     margin-bottom: 11px;
   }
 }
-  @media (max-width: 1200px){
 
-    #infoAbout{
-      .item {
-        width: 18%;
-      }
-      h2{
-        line-height: 22px;
-        margin-bottom: 10px;
-      }
-    }
-    #infoPromo{
-      .item {
-        width: 24%;
-      }
-    }
+#footerLine .freeDelivery{
+  text-transform:uppercase;
+  color: white;
+  &.mark,.mark{
+    color: #27c148;
   }
 
-  @media (max-width: 1055px){
-    #infoPromo{
-      .item {
-        width: 23%;
-      }
-    }
-  }
-  @media (max-width: 980px){
-    #infoAbout{
-      .descriptionTitle{
-        display: none;
-      }
-    }
-  }
-  @media (max-width: 850px){
-    #infoPromo{
-      .item {
-        width: 48%;
-      }
-    }
-  }
-  @media (max-width: 700px){
-    #flushFooterCart.flushFooterCartMedia .item:nth-child(1) {
-      display: block;
-    }
-  }
-  @media (max-width: 660px) {
-    #footerTabs.itemsTopSales {
-      display: block;
-    }
-  }
-  @media (max-width: 560px){
-    #infoAbout{
-      .item {
-        width: 47%;
-      }
-    }
-    #infoPromo{
-      .item {
-        width: 47%;
-      }
-    }
-  }
+}
 
-  @media (max-width: 480px){
-    #infoAbout {
-      .item {
-        width: 100%;
-      }
+@media (max-width: 1200px){
+
+  #infoAbout{
+    .item {
+      width: 18%;
     }
-    #infoPromo{
-      .item {
-        width: 100%;
-      }
+    h2{
+      line-height: 22px;
+      margin-bottom: 10px;
     }
   }
+  #infoPromo{
+    .item {
+      width: 24%;
+    }
+  }
+}
+
+@media (max-width: 1055px){
+  #infoPromo{
+    .item {
+      width: 23%;
+    }
+  }
+}
+@media (max-width: 980px){
+  #infoAbout{
+    .descriptionTitle{
+      display: none;
+    }
+  }
+}
+@media (max-width: 850px){
+  #infoPromo{
+    .item {
+      width: 48%;
+    }
+  }
+}
+@media (max-width: 700px){
+  #flushFooterCart.flushFooterCartMedia .item:nth-child(1) {
+    display: block;
+  }
+}
+@media (max-width: 660px) {
+  #footerTabs.itemsTopSales {
+    display: block;
+  }
+}
+@media (max-width: 560px){
+  #infoAbout{
+    .item {
+      width: 47%;
+    }
+  }
+  #infoPromo{
+    .item {
+      width: 47%;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  #infoAbout {
+    .item {
+      width: 100%;
+    }
+  }
+  #infoPromo{
+    .item {
+      width: 100%;
+    }
+  }
+}

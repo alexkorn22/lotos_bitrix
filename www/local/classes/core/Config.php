@@ -5,6 +5,7 @@
  * Class Config
  * @property bool debug;
  * @property array typeMotherClub;
+ * @property int freeDeliverySum;
  */
 class Config {
     protected $data = [];
