@@ -1,7 +1,14 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);?>
 <?if (!empty($arResult["ITEMS"])):?>
-	<?$this->SetViewTarget("catalog_top_view_content_tab");?><div class="item"><a href="#"><?=GetMessage("TOP_PRODUCT_HEADER")?></a></div><?$this->EndViewTarget();?>
+    <div id="topSalesCaption">
+        <div class="wrapper">
+            <div class="items">
+                <p>ХИТЫ ПРОДАЖ</p>
+            </div>
+        </div>
+    </div>
+    <?$this->SetViewTarget("catalog_top_view_content_tab");?><div class="item"><a href="#"><?=GetMessage("TOP_PRODUCT_HEADER")?></a></div><?$this->EndViewTarget();?>
 	<div class="tab item">
 		<div id="topProduct">
 			<div class="wrap">
