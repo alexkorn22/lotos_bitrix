@@ -2,7 +2,7 @@
 
 
 class Debug {
-    protected $debugLibs = false;
+    protected $debugLibs = true;
     protected $pathFile = '/bitrix/art_debug.html';
 
     public function __construct(){
