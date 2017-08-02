@@ -191,8 +191,10 @@ class ArtSaleBasketLineComponent extends SaleBasketLineComponent
 		}
 
 		if($this->arParams["SHOW_TOTAL_PRICE"] == "Y"){
-            $this->arResult["ART_TOTAL_PRICE"] = App::$config->freeDeliverySum - $this->arResult["TOTAL_PRICE"];
-            $this->arResult["ART_TOTAL_PRICE_STR"] = CCurrencyLang::CurrencyFormat( $this->arResult["ART_TOTAL_PRICE"], CSaleLang::GetLangCurrency(SITE_ID), true);
+		    if($this->arResult["NUM_PRODUCTS"] > 0) {
+                $this->arResult["ART_TOTAL_PRICE"] = App::$config->freeDeliverySum - $this->arResult["TOTAL_PRICE"];
+                $this->arResult["ART_TOTAL_PRICE_STR"] = CCurrencyLang::CurrencyFormat($this->arResult["ART_TOTAL_PRICE"], CSaleLang::GetLangCurrency(SITE_ID), true);
+            };
             $this->arResult["TOTAL_PRICE"] = CCurrencyLang::CurrencyFormat($this->arResult["TOTAL_PRICE"], CSaleLang::GetLangCurrency(SITE_ID), true);
         }
 
