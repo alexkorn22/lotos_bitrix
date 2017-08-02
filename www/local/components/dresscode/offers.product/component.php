@@ -592,17 +592,17 @@
 								$arResult["FIRST_ITEMS_GROUP_ID"] = $PROP_ID;
 								$arResult["FIRST_ITEMS_ALL_COUNT"] = $res->SelectedRowsCount();
 
-								if($arResult["FIRST_ITEMS_ALL_COUNT"] > $arParams["ELEMENTS_COUNT"]){
-									$arParams["~ELEMENTS_COUNT"] = $arParams["ELEMENTS_COUNT"] -1;
+                                if($arResult["FIRST_ITEMS_COUNT"] >= $arParams["ELEMENTS_COUNT"]){
+									$arParams["~ELEMENTS_COUNT"] = $arResult["FIRST_ITEMS_COUNT"] -1;
 								}else{
-									$arParams["~ELEMENTS_COUNT"] = $arParams["ELEMENTS_COUNT"];
+									$arParams["~ELEMENTS_COUNT"] = $arResult["FIRST_ITEMS_COUNT"];
 								}
-							
+
 								$arParams["NEXT_ELEMENTS_COUNT"] = $arResult["FIRST_ITEMS_ALL_COUNT"] - $arParams["~ELEMENTS_COUNT"];
 
-								if($arParams["NEXT_ELEMENTS_COUNT"] > $arParams["~ELEMENTS_COUNT"]){
+								/*if($arParams["NEXT_ELEMENTS_COUNT"] > $arParams["~ELEMENTS_COUNT"]){
 									$arParams["NEXT_ELEMENTS_COUNT"] = $arParams["~ELEMENTS_COUNT"];
-								}
+								}*/
 		
 							}
 							
