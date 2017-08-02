@@ -4,6 +4,7 @@ $(window).bind('load', function(){
 		var $win = $("#elementError"); 
 		$.getJSON(ajaxDir + "/ajax.php?" + $form.serialize(), function(data){
 			$win.show().find("p").text(data["message"]).parent().find(".heading").text(data["heading"]);
+			return;
 			data["reload"] ? $win.data("reload", 1) : void 0;
 		});
 		event.preventDefault();

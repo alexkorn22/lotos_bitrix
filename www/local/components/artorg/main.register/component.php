@@ -234,8 +234,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_REQUEST["register_submit_bu
 }
 
 // if user is registered - redirect him to backurl or to success_page; currently added users too
+
 if($register_done)
 {
+
 	if($arParams["USE_BACKURL"] == "Y" && $_REQUEST["backurl"] <> '')
 		LocalRedirect($_REQUEST["backurl"]);
 	elseif($arParams["SUCCESS_PAGE"] <> '')
