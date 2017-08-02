@@ -127,7 +127,7 @@
 					</div>
 				</div>
 			    <div class="col">
-				    <div id="flushFooterCart">
+				    <div id="flushFooterCart" class="flushFooterCartMedia">
 					    <?$APPLICATION->IncludeComponent(
 	"bitrix:sale.basket.basket.line", 
 	"bottomCart", 
