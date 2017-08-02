@@ -174,6 +174,7 @@
 
 	<script type="text/javascript">
 		var offersProductParams = '<?=json_encode($arParams);?>';
+		var offersItemsNews = '<?=$arParams["ITEMS_NEWS"];?>';
 	</script>
 
 <?endif;?>	

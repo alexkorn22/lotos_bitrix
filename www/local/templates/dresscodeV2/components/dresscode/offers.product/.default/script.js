@@ -6,15 +6,19 @@ $(function(){
 
 	var getProductByGroup = function(event){
 		if(httpLock == false){
+
 			if(offersProductParams != ""){
-			
-				var $this = $(this);
+
+                if (offersItemsNews == "Y") {
+                    var $this = $self.find(".caption.selected");
+                }else{
+                    var $this = $(this);
+				};
 				var $parentThis = $this.parent();
 
 				var page = $this.data("page");			
 				var groupID = $this.data("group");
 				var changeSheet = $this.data("sheet");
-
 				
 				if($parentThis.hasClass("selected") && changeSheet != "Y"){
 					return false;
@@ -63,7 +67,7 @@ $(function(){
 				console.error("var type (json) not found (name offersProductParams)");
 			}
 		}
-		return event.preventDefault();
+		return false;//event.preventDefault();
 		
 	};
 
@@ -77,13 +81,21 @@ $(function(){
 			"sheet": "Y"
 		});
 
-		$activeGroup.trigger("click");
+		if (offersItemsNews == "Y") {
+            getProductByGroup();
+        }else{
+            $activeGroup.trigger("click");
+		};
 
 		return event.preventDefault();
 	
 	}
 
-	$(document).on("click", ".getProductByGroup", getProductByGroup);
-	$(document).on("click", ".product .showMore", getProductNextPage);
+    if (offersItemsNews == "Y") {
+        $(document).on("click", ".product .showMore", getProductNextPage);
+    }else{
+        $(document).on("click", ".getProductByGroup", getProductByGroup);
+        $(document).on("click", ".product .showMore", getProductNextPage);
+	};
 
 });

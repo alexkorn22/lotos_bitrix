@@ -1033,7 +1033,7 @@
 				</li>
 				<li class="dl">
 <?$APPLICATION->IncludeComponent(
-	"bitrix:sale.basket.basket.line",
+	"artorg:sale.basket.basket.line",
 	"bottomCart",
 	array(
 		"HIDE_ON_BASKET_PAGES" => "N",

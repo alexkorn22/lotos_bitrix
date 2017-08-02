@@ -97,7 +97,8 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
 			0 => "_9",
 		),
 		"SORT_PROPERTY_NAME" => "SORT",
-		"SORT_VALUE" => "ASC"
+		"SORT_VALUE" => "ASC",
+        "ITEMS_NEWS" => "Y"
 	),
 	false,
 	array(

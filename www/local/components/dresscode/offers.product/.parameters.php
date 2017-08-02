@@ -154,6 +154,12 @@ if(CModule::IncludeModule("iblock") && CModule::IncludeModule("sale") && CModule
 		         "DEFAULT" => "140"
 			),
 			"CACHE_TIME" => Array("DEFAULT" => "360000"),
+            "ITEMS_NEWS" => array(
+                "PARENT" => "PICTURE",
+                "NAME" => GetMessage("ITEMS_NEWS"),
+                "TYPE" => "STRING",
+                "DEFAULT" => "N"
+            ),
 		)
 	);
 
