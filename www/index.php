@@ -104,13 +104,7 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
 		"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
-<div id="topSalesCaption">
-    <div class="wrapper">
-        <div class="items">
-            <p>ХИТЫ ПРОДАЖ</p>
-        </div>
-    </div>
-</div>
+
 <div class="topSales">
     <div id="footerTabs" class="itemsTopSales">
         <div class="wrapper">
