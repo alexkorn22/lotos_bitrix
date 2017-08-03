@@ -31,7 +31,7 @@ $arDefaultValues = array(
 	"USE_BACKURL" => "Y",
 	"SUCCESS_PAGE" => "",
 );
-
+$_SESSION['register_from_socserv'] = 'Y';
 foreach ($arDefaultValues as $key => $value)
 {
 	if (!is_set($arParams, $key))
@@ -77,7 +77,7 @@ $arResult["USE_CAPTCHA"] = COption::GetOptionString("main", "captcha_registratio
 $arResult["VALUES"] = array();
 $arResult["ERRORS"] = array();
 $register_done = false;
-
+$this->setAuthServices();
 // register user
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_REQUEST["register_submit_button"]) && !$USER->IsAuthorized())
 {

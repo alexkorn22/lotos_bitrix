@@ -22,4 +22,7 @@ class ShowDialogMessage {
 
         unset($_SESSION['show_msg']);
     }
+    public function del() {
+        unset($_SESSION['show_msg']);
+    }
 }

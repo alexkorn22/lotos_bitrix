@@ -15,49 +15,8 @@ class MainRegister extends CBitrixComponent {
     }
 
     public function getDataForResult() {
-        $data = [
-            'FIO' => [
-                'title' => 'ФИО',
-                'value' => $this->getValueFIO(),
-            ],
-        ];
-        foreach ($this->result['VALUES'] as $key=>$value) {
-            if ($key == 'UF_NUMBER_MCLUB') {
-                $val = 'Вы не являетесь участником Мама клуба';
-                if (!empty($value)){
-                    $val = 'Выполняется премодерация Вашей карты Мама клуб';
-                }
-                $data[$key] = ['value' => $val];
-                continue;
-            }
-            $title = $this->getTitleField($key);
-            if (!$title) {
-                continue;
-            }
-            $data[$key] = [
-                'title' => $title,
-                'value' => $value,
-            ];
-        }
-        return $data;
-    }
-
-    protected function getTitleField($field) {
-        $fields = [
-            'EMAIL' => 'E-mail',
-            'PERSONAL_MOBILE' => 'Телефон',
-            'PERSONAL_CITY' => 'Город',
-            'PERSONAL_STREET' => 'Адрес',
-        ];
-
-        return $fields[$field];
-
-    }
-
-    protected function getValueFIO() {
-        $values = $this->result['VALUES'];
-        $res = [$values['LAST_NAME'],$values['NAME'],$values['SECOND_NAME']];
-        return implode(' ', $res);
+        $userTools = new UserTools();
+        return $userTools->getDataForResultRegister($this->result);
     }
 
     public function isSetAddValues() {
@@ -89,6 +48,44 @@ class MainRegister extends CBitrixComponent {
             $this->result['PERSONAL_MOBILE'] = '09884444444';
             $this->result['PERSONAL_CITY'] = 'Запорожье';
             $this->result['PERSONAL_STREET'] = 'Независимой Украины, 63';
+        }
+
+    }
+
+    public function setAuthServices() {
+        global $USER,$APPLICATION;
+        $this->result["AUTH_SERVICES"] = false;
+        $this->result["CURRENT_SERVICE"] = false;
+        $this->result["FOR_INTRANET"] = false;
+        if(IsModuleInstalled("intranet")||IsModuleInstalled("rest"))
+            $this->result["FOR_INTRANET"] = true;
+        if(!$USER->IsAuthorized() && CModule::IncludeModule("socialservices"))
+        {
+            $oAuthManager = new CSocServAuthManager();
+            $arServices = $oAuthManager->GetActiveAuthServices(array(
+                'BACKURL' => $this->result['~BACKURL'],
+                'FOR_INTRANET' => $this->result['FOR_INTRANET'],
+            ));
+
+            if(!empty($arServices))
+            {
+                $this->result["AUTH_SERVICES"] = $arServices;
+                if(isset($_REQUEST["auth_service_id"]) && $_REQUEST["auth_service_id"] <> '' && isset($this->result["AUTH_SERVICES"][$_REQUEST["auth_service_id"]]))
+                {
+                    App::$debug->inF($_REQUEST);
+                    $this->result["CURRENT_SERVICE"] = $_REQUEST["auth_service_id"];
+                    if(isset($_REQUEST["auth_service_error"]) && $_REQUEST["auth_service_error"] <> '')
+                    {
+                        $this->result['ERRORS'] = $oAuthManager->GetError($this->result["CURRENT_SERVICE"], $_REQUEST["auth_service_error"]);
+                    }
+                    elseif(!$oAuthManager->Authorize($_REQUEST["auth_service_id"]))
+                    {
+                        $ex = $APPLICATION->GetException();
+                        if ($ex)
+                            $this->result['ERRORS'] = $ex->GetString();
+                    }
+                }
+            }
         }
 
     }
