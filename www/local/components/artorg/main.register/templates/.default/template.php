@@ -76,12 +76,23 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 					/>
 					<label for="isInMClub">Я являюсь участником Мама клуб</label>
 				</div>
+				</li>
+			<li>
 				<div class="MClub <? if (!isset($arResult['CHECKED_IS_MCLUB'])){ echo 'hidden';}?>" >
 					<label>
 						<span class="bx-authform-starrequired">*</span>Номер карты участника Мама клуб
 					</label>
 					<input type="text" name="UF_NUMBER_MCLUB" maxlength="255" value="<?=$arResult["UF_NUMBER_MCLUB"]?>" />
 				</div>
+			</li>
+			<li>
+				<a href="#" id="aAddDataRegister" class="heading_a">
+					<div class="headingBlock">
+						<span class="heading">Дополнительные данные </span>
+					</div>
+				</a>
+			</li>
+			<li id="blockAddDataRegister">
 				<div>
 					<label>
 						ФИО
@@ -164,6 +175,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
 <script type="text/javascript">
 document.bform.EMAIL.focus();
+$(function(){
+	var blockAddInfo = new BlockAddInfo("<?=$arResult['showAddInfoBlock']?>");
+});
 </script>
 
 <?endif?>

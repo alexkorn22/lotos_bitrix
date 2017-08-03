@@ -59,4 +59,38 @@ class MainRegister extends CBitrixComponent {
         $res = [$values['LAST_NAME'],$values['NAME'],$values['SECOND_NAME']];
         return implode(' ', $res);
     }
+
+    public function isSetAddValues() {
+        $addFields = [
+            'FIO',
+            'PERSONAL_MOBILE',
+            'PERSONAL_CITY',
+            'PERSONAL_STREET',
+        ];
+        foreach ($addFields as $addField) {
+            if (isset($this->result[$addField]) && !empty($this->result[$addField])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public function setDebugRegisterData() {
+        if (!App::$config->setTempDataRegister) {
+            return;
+        }
+        if (empty($_POST)) {
+            $this->result['EMAIL'] = uniqid() . '@test.com';
+            $this->result['FIO'] = 'Корниенко Александр';
+            $this->result['PASSWORD'] = '111111';
+            $this->result['CONFIRM_PASSWORD'] = '111111';
+            $this->result['CHECKED_IS_MCLUB'] = 'Y';
+            $this->result['UF_NUMBER_MCLUB'] = '16541654651';
+            $this->result['PERSONAL_MOBILE'] = '09884444444';
+            $this->result['PERSONAL_CITY'] = 'Запорожье';
+            $this->result['PERSONAL_STREET'] = 'Независимой Украины, 63';
+        }
+
+    }
+
 }

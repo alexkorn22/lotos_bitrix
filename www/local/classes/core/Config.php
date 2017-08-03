@@ -5,6 +5,7 @@
  * Class Config
  * @property bool debug;
  * @property array typeMotherClub;
+ * @property bool setTempDataRegister;
  */
 class Config {
     protected $data = [];

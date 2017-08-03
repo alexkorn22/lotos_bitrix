@@ -36,12 +36,10 @@ $(function(){
 
 	$registerForm.on("submit", authFormSubmit);
 	$('#isInMClub').on("change", changeIsInMClub)
-
 });
 
 changeIsInMClub = function (event) {
 	var checked = false;
-	console.log(event);
 	if (event) {
 		checked = this.checked;
 		$('.MClub').toggle(500);
@@ -65,4 +63,32 @@ changeIsInMClub = function (event) {
 		elements[i].data('required',valueReq);
 	}
 
+};
+
+var BlockAddInfo = function (showBlock) {
+	this.block = $('#blockAddDataRegister');
+	this.aOpenClose = $('#aAddDataRegister');
+	this.checkIsInMClub = $('#isInMClub');
+	this.showBlock = showBlock;
+	var self = this;
+	this.constructor = function () {
+		if (!self.showBlock) {
+			this.block.hide();
+		}
+		this.setEvents();
+	};
+	this.setEvents = function () {
+		this.aOpenClose.on('click',this.clickOpenClose);
+		this.checkIsInMClub.on("change", this.clickCheckIsInMClub)
+	};
+	this.clickOpenClose = function(e){
+		e.preventDefault();
+		self.block.toggle(500);
+	};
+	this.clickCheckIsInMClub = function(e){
+		if (this.checked) {
+			self.block.show(500);
+		}
+	};
+	this.constructor();
 };
