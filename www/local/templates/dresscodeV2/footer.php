@@ -220,7 +220,8 @@
 		};
 	</script>
 <?
-App::$msgBox->showMessage();
+if (!empty(App::$ds->msgBox))
+	App::$ds->msgBox->showMessage();
 ?>
 </body>
 </html>

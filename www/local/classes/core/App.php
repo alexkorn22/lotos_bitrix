@@ -18,17 +18,12 @@ class App{
      * @var View
      */
     public static $view;
-    /**
-     * @var ShowDialogMessage
-     */
-    public static $msgBox;
 
     public static function Init() {
         App::$ds = new DataStore();
         App::$debug = new Debug();
         App::$config = new Config();
         App::$view = new View();
-        App::$msgBox = new ShowDialogMessage();
     }
 
 }
