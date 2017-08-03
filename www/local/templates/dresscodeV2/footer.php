@@ -129,7 +129,7 @@
 			    <div class="col">
 				    <div id="flushFooterCart" class="flushFooterCartMedia">
 					    <?$APPLICATION->IncludeComponent(
-	"artorg:sale.basket.basket.line",
+	"bitrix:sale.basket.basket.line",
 	"bottomCart", 
 	array(
 		"HIDE_ON_BASKET_PAGES" => "N",
