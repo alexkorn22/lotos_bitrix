@@ -5,8 +5,6 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 <?require_once($_SERVER["DOCUMENT_ROOT"]."/settings.php"); // site settings?>
 <?
 IncludeTemplateLangFile(__FILE__);
-App::$ds->msgBox = new ShowDialogMessage();
-App::$ds->msgBox->setMessage(['test'],'messages/register');
 ?>
 <!DOCTYPE html>
 <html lang="<?=LANGUAGE_ID?>">

@@ -7,7 +7,7 @@ class ShowDialogMessage {
 
         $_SESSION['show_msg'] = array(
             'template' => $template,
-            'data' => $params,
+            'data' => serialize($params),
         );
 
     }
@@ -17,7 +17,7 @@ class ShowDialogMessage {
             return;
         }
         App::$view->render($_SESSION['show_msg']['template'],
-            ['data' => $_SESSION['show_msg']['data']]
+            ['data' => unserialize($_SESSION['show_msg']['data'])]
         );
 
         unset($_SESSION['show_msg']);

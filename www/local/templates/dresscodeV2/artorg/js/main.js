@@ -15,7 +15,10 @@ modalForm = function() {
     var $win = $(".modalForm");
     var windowClose = function(event){
         $win.data("reload") ? document.location.reload() : $win.hide();
-        event.preventDefault();
+        var elem = $(this);
+        if (elem.attr('href') == '#') {
+            event.preventDefault();
+        }
     };
     $(document).on("click", ".modalForm, .modalForm .close", windowClose);
 

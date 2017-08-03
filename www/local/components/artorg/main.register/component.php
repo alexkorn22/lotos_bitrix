@@ -237,7 +237,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_REQUEST["register_submit_bu
 
 if($register_done)
 {
-
+    if (empty($arResult["ERRORS"])) {
+        App::$msgBox->setMessage($this->getDataForResult(),'messages/register');
+    }
 	if($arParams["USE_BACKURL"] == "Y" && $_REQUEST["backurl"] <> '')
 		LocalRedirect($_REQUEST["backurl"]);
 	elseif($arParams["SUCCESS_PAGE"] <> '')
