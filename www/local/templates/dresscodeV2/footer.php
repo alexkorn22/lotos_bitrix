@@ -219,5 +219,9 @@
 			REQUEST_PRICE_BUTTON_LABEL: "<?=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?>"
 		};
 	</script>
+<?
+
+	App::$msgBox->showMessage();
+?>
 </body>
 </html>

@@ -40,7 +40,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true){
 		<?endforeach?>
 
 				<div>
-					<div class="bx-authform-label-container"><?=GetMessage("AUTH_LOGIN")?>*</div>
+					<div class="bx-authform-label-container">E-mail*</div>
 					<div class="bx-authform-input-container">
 						<input type="text" name="USER_LOGIN" maxlength="255" value="<?=$arResult["LAST_LOGIN"]?>" />
 					</div>
