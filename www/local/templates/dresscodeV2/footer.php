@@ -113,19 +113,19 @@
 				</div>
 			</div>
 		</div>
-		<div id="footerLine"<?if(!empty($TEMPLATE_FOOTER_LINE_COLOR) && $TEMPLATE_FOOTER_LINE_COLOR != "default"):?> class="color_<?=$TEMPLATE_FOOTER_LINE_COLOR?>"<?endif;?>>
+		<div id="footerLine" class="miniCart <?if(!empty($TEMPLATE_FOOTER_LINE_COLOR) && $TEMPLATE_FOOTER_LINE_COLOR != "default"):?> color_<?=$TEMPLATE_FOOTER_LINE_COLOR?>"<?endif;?>>
 			<div class="limiter">
-				<div class="col">
+				<!--<div class="col">
 					<div class="item">
-						<a href="<?=SITE_DIR?>callback/" class="callback"><span class="icon"></span> <?=GetMessage("FOOTER_CALLBACK_LABEL")?></a>
+						<a href="<?/*=SITE_DIR*/?>callback/" class="callback"><span class="icon"></span> <?/*=GetMessage("FOOTER_CALLBACK_LABEL")*/?></a>
 					</div>
 					<div class="item">
-						<?$APPLICATION->IncludeFile(SITE_DIR."sect_footer_telephone.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_TELEPHONE"), "TEMPLATE" => "sect_footer_telephone.php"));?>
+						<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_telephone.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_TELEPHONE"), "TEMPLATE" => "sect_footer_telephone.php"));*/?>
 					</div>
 					<div class="item">
-						<?$APPLICATION->IncludeFile(SITE_DIR."sect_footer_email.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_EMAIL"), "TEMPLATE" => "sect_footer_email.php"));?>
+						<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_email.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_EMAIL"), "TEMPLATE" => "sect_footer_email.php"));*/?>
 					</div>
-				</div>
+				</div>-->
 			    <div class="col">
 				    <div id="flushFooterCart" class="flushFooterCartMedia">
 					    <?$APPLICATION->IncludeComponent(
