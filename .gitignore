@@ -62,3 +62,5 @@ www/bitrix/php_interface/constants.php
 www/bitrix/cache
 www/bitrix/managed_cache
 www/bitrix/stack_cache
+
+www/local/templates/dresscodeV2/artorg/css/dist/*
