@@ -2,7 +2,6 @@ $(function(){
 	var $registerForm = $(".bx-register-form");
 
 	var authFormSubmit = function(event){
-		console.log('wtrer');
 		var $formFields = $registerForm.find("input").removeClass("error");
 		var emptyFields = false;
 		var fieldMClub = $('input[name=UF_NUMBER_MCLUB]');
