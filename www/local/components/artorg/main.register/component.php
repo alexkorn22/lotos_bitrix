@@ -95,7 +95,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_REQUEST["register_submit_bu
 				$arResult["ERRORS"][] = GetMessage("main_register_decode_err", array("#ERRCODE#"=>$errno));
 		}
 	}
-
+    if (isset($_REQUEST['UF_NUMBER_MCLUB']) && !empty($_REQUEST['UF_NUMBER_MCLUB'])) {
+        $valid = new Validator(trim($_REQUEST['UF_NUMBER_MCLUB']));
+        $valid->validateEan13();
+        if (!$valid->isValid) {
+            $arResult["ERRORS"]['UF_NUMBER_MCLUB'] = 'Неправильный формат номера карты Мама клуб';
+        }
+    }
 	// check emptiness of required fields
     if (isset($_REQUEST['FIO'])) {
         $this->parseFIO($_REQUEST['FIO']);

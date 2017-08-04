@@ -32,6 +32,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 				<?
 				if(!empty($arResult["ERRORS"])):
 					$text = str_replace(array("<br>", "<br />"), "\n", $arResult["ERRORS"][0]);
+					if (isset($arResult["ERRORS"]['UF_NUMBER_MCLUB'])) {
+						$text .= str_replace(array("<br>", "<br />"), "\n", $arResult["ERRORS"]['UF_NUMBER_MCLUB']);
+					}
 					?>
 					<div class="alert <?=(empty($arResult["ERRORS"])? "alert-success":"alert-danger")?>"><?=nl2br(htmlspecialcharsbx($text))?></div>
 				<?endif?>
