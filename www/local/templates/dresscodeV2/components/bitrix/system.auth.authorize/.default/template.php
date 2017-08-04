@@ -8,7 +8,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true){
 
 <ul id="authMenu">
 	<li><a href="<?=$arResult["AUTH_URL"]?>" rel="nofollow" class="selected"><?=GetMessage("AUTH_TITLE")?></a></li>
-	<li><a href="<?=$arResult["AUTH_REGISTER_URL"]?>" rel="nofollow"><?=GetMessage("AUTH_REGISTER")?></a></li>
+	<li><a href="/register/" rel="nofollow"><?=GetMessage("AUTH_REGISTER")?></a></li>
 	<li><a href="<?=$arResult["AUTH_FORGOT_PASSWORD_URL"]?>" rel="nofollow"><?=GetMessage("AUTH_FORGOT_PASSWORD_2")?></a></li>
 </ul>
 
