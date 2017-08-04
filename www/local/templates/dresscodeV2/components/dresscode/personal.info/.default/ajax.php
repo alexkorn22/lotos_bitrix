@@ -55,7 +55,19 @@
 					echo jsonEn($result);
 					exit();
 				}
+				$valid = new Validator($numberMClub);
+				$valid->validateEan13();
+				if (!$valid->isValid) {
+					$result = array(
+						"message" => "Неправильный формат номера карты Мама клуб",
+						"heading" => "Ошибка",
+						"reload" => false
+					);
+					echo jsonEn($result);
+					exit();
+				}
 				$checkMClub = 1;
+
 			}
 			if ($isMClub || $checkMClub) {
 				if (empty($PERSONAL_MOBILE)) {

@@ -39,7 +39,7 @@
           false,
           array("ID","MODULE","PRODUCT_ID","QUANTITY","CAN_BUY","PRICE")
 	   );
-	   
+		$cart_num = 0;
 	   while ($arItems = $dbBasketItems->Fetch()){
 	      $cart_num += $arItems['QUANTITY'];
 	   }

@@ -9,7 +9,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
 
 <ul id="authMenu">
 	<li><a href="<?=SITE_DIR?>auth/" rel="nofollow"><?=GetMessage("AUTH_TITLE")?></a></li>
-	<li><a href="<?=SITE_DIR?>auth/?register=yes" rel="nofollow"><?=GetMessage("AUTH_REGISTER")?></a></li>
+	<li><a href="<?=SITE_DIR?>register/" rel="nofollow"><?=GetMessage("AUTH_REGISTER")?></a></li>
 	<li><a href="<?=SITE_DIR?>auth/?forgot_password=yes" rel="nofollow" class="selected"><?=GetMessage("AUTH_FORGOT_PASSWORD_2")?></a></li>
 </ul>
 
