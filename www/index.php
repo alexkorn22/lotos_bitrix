@@ -27,7 +27,7 @@ $APPLICATION->SetTitle("DELUXE");?> <?$APPLICATION->IncludeComponent(
             <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout1.png" alt="промоблок 1">
             <h2 class="tapTitle">Широкий ассортимент</h2>
             <div class="descriptionTitle">
-                <p >Более <strong>15000</strong>
+                <p >Более <strong>5000</strong>
                     хозяйственных товаров,
                     бытовой химии и косметики,
                     которые регулярно обновляются.</p>
@@ -37,38 +37,23 @@ $APPLICATION->SetTitle("DELUXE");?> <?$APPLICATION->IncludeComponent(
             <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout2.png" alt="промоблок 2">
             <h2 class="tapTitle">Удобная оплата</h2>
             <div class="descriptionTitle"><p>Расплачивайтесь за покупку
-                    <strong>любым способом</strong>: онлайн,
-                    наличными, безналичным
-                    расчётом, переводом на карту.</p></div>
+                    <strong>любым способом</strong>: наличными, безналичным расчётом, наложенным платежом.</p></div>
         </div>
         <div class="item">
             <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout3.png" alt="промоблок 3">
-            <h2 class="tapTitle">Доставка за 3 часа</h2>
-            <div class="descriptionTitle"><p>для жителей городов, где
-                    интернет-магазин ЛОТОС
-                    имеет офлайн
-                    представительства, и 1-2 дня
-                    по Украине транспортными
-                    компаниями.</p></div>
+            <h2 class="tapTitle">Доставка за 1 день</h2>
+            <div class="descriptionTitle"><p>для жителей Запорожья и 2-3 дня по всем городам Украины транспортными компаниями.</p></div>
         </div>
         <div class="item">
             <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout4.png" alt="промоблок 4">
-            <h2 class="tapTitle">Самовывоз</h2>
-            <div class="descriptionTitle"><p>Оформляйте заказ и
-                    самостоятельно забирайте его
-                    в одной из 50 точек
-                    в 19 населённых пунктах
-                    Украины.</p></div>
+            <h2 class="tapTitle">Программа лояльности</h2>
+            <div class="descriptionTitle"><p>В интернет-магазине ЛОТОС действуют дисконты постоянных клиентов и участников Мама Клуба.</p></div>
         </div>
         <div class="item">
             <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout5.png" alt="промоблок 5">
             <h2  class="tapTitle">Довольные покупатели</h2>
            <div class="descriptionTitle">
-               <p>За последний год число
-                   наших клиентов достигло
-                   отметки 40 000.
-                   Они доверяют нам, а мы
-                   благодарны им за это.</p>
+               <p>За последний год число наших постоянных клиентов достигло отметки 300 000. Они доверяют нам, а мы благодарны им за это.</p>
            </div>
         </div>
         <!--<img src="--><?//=(SITE_TEMPLATE_PATH);?><!--/artorg/images/AboutUs.png" alt="промоблок">-->
