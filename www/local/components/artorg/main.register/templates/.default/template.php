@@ -188,18 +188,23 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 			</div>
 		</div>
 		<div class="col-md-6">
-			<?
-			$APPLICATION->IncludeComponent("bitrix:socserv.auth.form",
-				"flat",
-				array(
-					"AUTH_SERVICES" => $arResult["AUTH_SERVICES"],
-					"AUTH_URL" => $arResult["AUTH_URL"],
-					"POST" => $arResult["POST"],
-				),
-				$component,
-				array("HIDE_ICONS"=>"Y")
-			);
-			?>
+			<div class="containerSocServ">
+				<h3 class="bx-title">Зарегистрироваться как пользователь</h3>
+				<div class="blockSocServ">
+					<?
+					$APPLICATION->IncludeComponent("bitrix:socserv.auth.form",
+						"flat",
+						array(
+							"AUTH_SERVICES" => $arResult["AUTH_SERVICES"],
+							"AUTH_URL" => $arResult["AUTH_URL"],
+							"POST" => $arResult["POST"],
+						),
+						$component,
+						array("HIDE_ICONS"=>"Y")
+					);
+					?>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
