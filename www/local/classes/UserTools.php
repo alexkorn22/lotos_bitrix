@@ -58,4 +58,52 @@ class UserTools
         return $this->getDataUser($list);
     }
 
+    public function getDataForResultRegister($result) {
+        $data = [
+            'FIO' => [
+                'title' => 'ФИО',
+                'value' => $this->getValueFIO($result),
+            ],
+        ];
+        foreach ($result['VALUES'] as $key=>$value) {
+            if ($key == 'UF_NUMBER_MCLUB') {
+                $val = 'Вы не являетесь участником Мама клуба';
+                if (!empty($value)){
+                    $val = 'Выполняется премодерация Вашей карты Мама клуб';
+                }
+                $data[$key] = ['value' => $val];
+                continue;
+            }
+            $title = $this->getTitleField($key);
+            if (!$title) {
+                continue;
+            }
+            $data[$key] = [
+                'title' => $title,
+                'value' => $value,
+            ];
+        }
+        return $data;
+    }
+
+    protected function getTitleField($field) {
+        $fields = [
+            'EMAIL' => 'E-mail',
+            'PERSONAL_MOBILE' => 'Телефон',
+            'PERSONAL_CITY' => 'Город',
+            'PERSONAL_STREET' => 'Адрес',
+        ];
+
+        return $fields[$field];
+
+    }
+
+    protected function getValueFIO($result) {
+        $values = $result['VALUES'];
+        $res = [$values['LAST_NAME'],$values['NAME'],$values['SECOND_NAME']];
+        return implode(' ', $res);
+    }
+
+
+
 }

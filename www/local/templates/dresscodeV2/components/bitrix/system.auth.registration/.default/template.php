@@ -46,18 +46,12 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 		<input type="hidden" name="AUTH_FORM" value="Y" />
 		<input type="hidden" name="TYPE" value="REGISTRATION" />
 
-		<div class="bx-authform-formgroup-container-line">
+		<div class="bx-authform-formgroup-container-line ">
 
 			<div class="bx-authform-formgroup-container">
 				<div class="bx-authform-label-container"><?=GetMessage("AUTH_NAME")?></div>
 				<div class="bx-authform-input-container">
 					<input type="text" name="USER_NAME" maxlength="255" value="<?=$arResult["USER_NAME"]?>" />
-				</div>
-			</div>
-			<div class="bx-authform-formgroup-container">
-				<div class="bx-authform-label-container"><span class="bx-authform-starrequired">*</span><?=GetMessage("AUTH_LOGIN_MIN")?></div>
-				<div class="bx-authform-input-container">
-					<input type="text" name="USER_LOGIN" maxlength="255" value="<?=$arResult["USER_LOGIN"]?>"  data-required="required" />
 				</div>
 			</div>
 
@@ -172,6 +166,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 </div>
 <?endif?>
 		<div class="bx-authform-formgroup-container send">
+			<input type="hidden" name="USER_LOGIN" value="<?=$arResult["USER_LOGIN"]?>"  data-required="not_required" />
 			<input type="submit" class="btn btn-primary submit" name="Register" value="<?=GetMessage("AUTH_REGISTER")?>" />
 		</div>
 
