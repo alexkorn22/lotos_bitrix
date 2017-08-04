@@ -123,6 +123,12 @@ $category = new Category(10, $arResult['VARIABLES']['SECTION_ID']);
 				),
 				$component
 			);?>
+			   <?
+			   $category = new Category($arParams["IBLOCK_ID"], $arCurSection["ID"]);
+			   $arCountSubSections = $category->getCountSubSections();
+			   ?>
+
+			   <?if ($arCountSubSections == 0):?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.smart.filter",
 	".default",
@@ -155,6 +161,7 @@ $category = new Category(10, $arResult['VARIABLES']['SECTION_ID']);
 	false
 );?>
 
+<?endif;?>
 	</div>
 	<div class="rightColumn">
 	<?global $APPLICATION;?>
