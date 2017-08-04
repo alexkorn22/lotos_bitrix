@@ -4,9 +4,11 @@
 /**
  * Class DataStore
  * @property bool useFooterTabs;
+ * @property array callBack;
+ * @property tmp;
  */
 class DataStore{
-    public $data = [];
+    protected $data = [];
 
     public function __get($name){
         if (!isset($this->data[$name])) {

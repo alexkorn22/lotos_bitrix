@@ -14,7 +14,24 @@
 				$_REQUEST[$key] = iconv("UTF-8", "WINDOWS-1251//IGNORE",  $nextValue);
 			}
 		}
+
 	}?>
+
+	<?
+
+	if (isset($_REQUEST['form_text_1']) || isset($_REQUEST['form_text_2'])){
+		$callBack = [
+			'name'=> $_REQUEST['form_text_2'],
+			'phone'=> $_REQUEST['form_text_1']
+		];
+		$alert = new Alert($callBack);
+		$pattern = '📞 '. "<b>Новый запрос обратного звонка</b>\n";
+		$pattern .= '▶'. "Имя      : %name% \n";
+		$pattern .= '▶'. "Телефона : %phone%";
+		$alert->parseText($pattern);
+		$alert->sendTelegram(App::$config->telegram['chatCallBack']);
+	}
+	?>
 
 	<?$APPLICATION->IncludeComponent("bitrix:form.result.new", "ajax", Array(
 		"CACHE_TIME" => "0",
@@ -36,6 +53,7 @@
 		),
 		false
 	);?>
+
 
 <?endif;?>
 

@@ -7,6 +7,7 @@
  * @property array typeMotherClub;
  * @property bool setTempDataRegister;
  * @property int freeDeliverySum;
+ * @property array telegram;
  */
 class Config {
     protected $data = [];

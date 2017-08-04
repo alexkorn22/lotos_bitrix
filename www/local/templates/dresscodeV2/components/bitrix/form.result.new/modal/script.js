@@ -33,8 +33,8 @@ $(function(){
 				}
 
 			}
-		});
 
+		});
 		var $personalInfo = $thisForm.find("#personalInfoField");
 		if(!$personalInfo.prop("checked")){
 			$personalInfo.addClass("error");
