@@ -294,4 +294,9 @@ var flushTimeout;
 		$(document).on("click", "#newReview .submit", reviewSubmit);
 		$(document).on("click", "#elementErrorClose, #elementError .close", windowClose);
 		$(document).on("click", ".countReviewsTools", scrollToReviews);
+
+		$(document).on("click", "#btn_similar_prod", function (e) {
+			$('#elementSmallNavigation .tab[data-id=similar] a').click();
+		});
+
 	});

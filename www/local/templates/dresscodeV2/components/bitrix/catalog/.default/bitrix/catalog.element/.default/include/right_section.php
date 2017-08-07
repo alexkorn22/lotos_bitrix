@@ -28,11 +28,33 @@
 		<?endif;?>
 		<div class="row">
 			<?if(!empty($arResult["MIN_PRICE"])):?>
-				<a href="#" class="addCart changeID changeCart<?if($arResult["CAN_BUY"] === false || $arResult["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arResult["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="<?=GetMessage("ADDCART_LABEL")?>" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
+				<a href="#"
+				   class="addCart changeID changeCart<?if($arResult["CAN_BUY"] === false || $arResult["CAN_BUY"] === "N"):?> disabled<?endif;?>"
+				   data-id="<?=$arResult["ID"]?>"
+				>
+					<?if($arResult["CAN_BUY"] === false || $arResult["CAN_BUY"] === "N"):?>
+						Нет в наличии
+					<?else:?>
+						<img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="<?=GetMessage("ADDCART_LABEL")?>" class="icon"><?=GetMessage("ADDCART_LABEL")?>
+					<?endif;?>
+
+				</a>
 			<?else:?>
 				<a href="#" class="addCart changeID changeCart disabled requestPrice" data-id="<?=$arResult["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="<?=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?>" class="icon"><?=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?></a>
 			<?endif;?>
 		</div>
+		<?if($arResult["CAN_BUY"] === false || $arResult["CAN_BUY"] === "N"):?>
+			<div class="row similar_prod">
+
+					<a href="#"
+					   class="addCart "
+					   id="btn_similar_prod"
+					>
+						Похожие товары
+					</a>
+
+			</div>
+		<?endif;?>
 	</div>
 	<div class="secondTool">
 		<?if(isset($arResult["PROPERTIES"]["RATING"]["VALUE"])):?>

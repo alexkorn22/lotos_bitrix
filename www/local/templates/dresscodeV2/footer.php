@@ -18,6 +18,7 @@
                 false
             );?>
         <?endif;?>
+
 		<div id="footer"<?if(!empty($TEMPLATE_FOOTER_VARIANT) && $TEMPLATE_FOOTER_VARIANT != "default"):?> class="variant_<?=$TEMPLATE_FOOTER_VARIANT?>"<?endif;?>>
 			<div class="fc">
 				<div class="limiter">

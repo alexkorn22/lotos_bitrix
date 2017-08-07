@@ -14,11 +14,11 @@
                         continue;
                     }
                     ?>
-                    <div class="row">
-                        <div class="col-md-3 text-center">
+                    <div class="row center-xs">
+                        <div class="col-md-3 col-xs-9 text-center">
                             <span class="title"><?=$value['title']?></span>
                         </div>
-                        <div class="col-md-9 text-left">
+                        <div class="col-md-9 col-xs-9 text-left">
                             <span class="value"><?=$value['value']?></span>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                 }?>
 
             <div class="row">
-                <div class="col-md-12 text-center">
+                <div class="col-md-12 col-xs-12 text-center">
                     <p>
                         <?=$data['UF_NUMBER_MCLUB']['value'];?>
                     </p>
@@ -34,10 +34,10 @@
             </div>
 
             <div class="row">
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 col-xs-12 text-center">
                     <a href="#" class="close">Продолжить</a>
                 </div>
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 col-xs-12 text-center">
                     <a href="/personal/" class="close">Изменить данные</a>
                 </div>
             </div>

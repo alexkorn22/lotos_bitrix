@@ -14,9 +14,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 	<p class="registerText"><?=GetMessage("REGISTER_TEXT")?></p>
 </div>
 
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-md-6">
+		<div class="col-md-6 col-xs-12">
 			<div class="bx-auth container_register">
 
 
@@ -190,7 +190,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 				<?endif?>
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-6 col-xs-12">
 			<div class="containerSocServ">
 				<h3 class="bx-title">Зарегистрироваться как пользователь</h3>
 				<div class="blockSocServ">

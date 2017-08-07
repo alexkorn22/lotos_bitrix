@@ -800,7 +800,10 @@ $(window).on("ready", function(event){
 		var quantity = $this.data("quantity");
 
 		var _arID = [];
-
+		if ($this.hasClass("similar_prod")) {
+			event.preventDefault();
+			return;
+		}
 		if(!$this.hasClass("disabled")){
 
 			if($this.attr("href") === "#"){
