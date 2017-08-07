@@ -18,24 +18,30 @@
   margin: 0 18px 0 0px;
   padding: 0;
   .heading_a {
-    color: #27c148;
     text-decoration: none;
     &:hover{
-      color: #19cc3f;
+      .heading {
+        color: #19cc3f;
+      }
     }
     &:active {
       position: relative;
       top: 1px;
+      color: #000;
     }
   }
   .headingBlock {
     padding-top: 10px;
     padding-bottom: 20px;
+    font-size: 16px;
+    .additional {
+      color: #000;
+    }
   }
   .heading {
     background: none;
-    font-size: 16px;
     margin: 0;
+    color: #27c148;
   }
   li {
     max-width: 600px;

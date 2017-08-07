@@ -95,9 +95,14 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 								<li>
 									<a href="#" id="aAddDataRegister" class="heading_a">
 										<div class="headingBlock">
-											<span class="heading">Дополнительные данные </span>
+											<span class="heading">
+												Дополнительные данные
+											</span>
+											<span class="additional"> (для автозаполнения данных при заказе) </span>
 										</div>
 									</a>
+
+
 								</li>
 								<li id="blockAddDataRegister">
 									<div>
