@@ -26,12 +26,6 @@ $frame = $this->createFrame()->begin();
                                      src=<?=$arItem["PICTURE_SRC"]?>
                                      alt=<?=$arItem["NAME"]?>
                                      title=<?=$arItem["NAME"]?>>
-                                <form action="/cart/removeEntry" method="POST" class="noreset">
-                                    <input type="hidden" name="entryNumber" value="0">
-                                    <input type="hidden" name="productCode" value="<?=$arItem["PRODUCT_ID"]?>">
-                                    <input type="hidden" name="initialQuantity" value="<?=$arItem["QUANTITY"]?>">
-                                    <input type="hidden" name="quantity" value="<?=$arItem["QUANTITY"]?>">
-                                </form>
                                 <a href=<?=$arItem["DETAIL_PAGE_URL"]?>
                                    class="footer-del-fade-div">
                                     <span href="javascript:void(0);" class="footerMiniCartRemoveLink" data-id="<?=$arItem["ID"]?>"></span>
