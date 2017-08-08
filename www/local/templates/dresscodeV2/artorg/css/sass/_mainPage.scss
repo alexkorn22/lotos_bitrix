@@ -196,6 +196,14 @@
       position: relative;
       text-align: -webkit-center;
     }
+    .jcarousel-container.jcarousel-container-horizontal{
+      position: relative;
+      display: block;
+    }
+    .jcarousel-item.jcarousel-item-horizontal{
+      float: left;
+      list-style: none;
+    }
   }
   .footerCart{
     padding-right: 60px;

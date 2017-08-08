@@ -16,12 +16,12 @@ $frame = $this->createFrame()->begin();
     <div class="products-carousel-container">
 
         <div class="miniCartFooterCarouselWrapper">
-            <div id="jcarousel-wrapper" style="left: 15px;">
-                <div class="jcarousel-container jcarousel-container-horizontal" style="position: relative; display: block;">
+            <div id="jcarousel-wrapper">
+                <div class="jcarousel-container jcarousel-container-horizontal">
                     <div class="jcarousel">
                         <ul id="miniCartFooterCarousel">
                         <? $n = 1; foreach ($arResult["CATEGORIES"]["READY"] as &$arItem):?>
-                            <li id="carouselProduct_<?=$arItem["ID"]?>" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-<?=$n?> jcarousel-item-<?$n?>-horizontal" jcarouselindex="<?$n?>" style="float: left; list-style: none;">
+                            <li id="carouselProduct_<?=$arItem["ID"]?>" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-<?=$n?> jcarousel-item-<?$n?>-horizontal" jcarouselindex="<?$n?>">
                                 <img id="img-preview" class="product-image"
                                      src=<?=$arItem["PICTURE_SRC"]?>
                                      alt=<?=$arItem["NAME"]?>
