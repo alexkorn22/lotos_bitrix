@@ -1,11 +1,6 @@
 <?php
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
-/**
- * Created by PhpStorm.
- * User: korns
- * Date: 09.08.2017
- * Time: 11:47
- */
 class FastBackCart{
     const ERROR_USER = 0;
     const ERROR_FILLING = 1;

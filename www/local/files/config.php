@@ -1,4 +1,5 @@
 <?php
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 //при добавлении настроек нужно добавить описание в класс Config
 //глобальные настройки сайта
 $config = [

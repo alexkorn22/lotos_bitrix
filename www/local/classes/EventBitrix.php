@@ -1,11 +1,7 @@
 <?php
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
-/**
- * Created by PhpStorm.
- * User: korns
- * Date: 31.07.2017
- * Time: 9:37
- */
+
 class EventBitrix {
 
     public function onAfterUserAdd(&$arFields) {
