@@ -169,17 +169,33 @@
 		false
 	);?>
 
-	<?$APPLICATION->IncludeComponent(
-		"bitrix:main.include",
-		".default",
-		array(
-			"AREA_FILE_SHOW" => "sect",
-			"AREA_FILE_SUFFIX" => "fastbuy",
-			"AREA_FILE_RECURSIVE" => "Y",
-			"EDIT_TEMPLATE" => ""
-		),
-		false
-	);?>
+	<?
+	if (App::$ds->pageCart) {
+		$APPLICATION->IncludeComponent(
+			"bitrix:main.include",
+			".default",
+			array(
+				"AREA_FILE_SHOW" => "sect",
+				"AREA_FILE_SUFFIX" => "fastbuycart",
+				"AREA_FILE_RECURSIVE" => "Y",
+				"EDIT_TEMPLATE" => ""
+			),
+			false
+		);
+	}else {
+		$APPLICATION->IncludeComponent(
+			"bitrix:main.include",
+			".default",
+			array(
+				"AREA_FILE_SHOW" => "sect",
+				"AREA_FILE_SUFFIX" => "fastbuy",
+				"AREA_FILE_RECURSIVE" => "Y",
+				"EDIT_TEMPLATE" => ""
+			),
+			false
+		);
+	}
+	?>
 
 	<?$APPLICATION->IncludeComponent(
 		"bitrix:main.include",

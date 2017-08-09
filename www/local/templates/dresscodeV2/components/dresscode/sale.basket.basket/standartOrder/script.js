@@ -580,6 +580,14 @@ var checkCoupon = function(event){
 
 };
 
+var closeFastBackСart = function(event){
+	event.preventDefault();
+	var $appFastBuy = $("#appFastBuy").hide();
+	var $foundation = $("#foundation").removeClass("blurred");
+	location.reload();
+};
+
+$(document).on("click", "#appFastBuy.fastBuyCart .closeWindow", closeFastBackСart);
 $(document).on("keyup", ".location", getLocations);
 $(document).on("focus", ".location", clearLocations);
 $(document).on("click", ".locTip" , setLocation);

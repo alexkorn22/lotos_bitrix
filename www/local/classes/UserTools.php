@@ -48,9 +48,17 @@ class UserTools
 
     }
 
+    protected function getOneData($nameData) {
+        $arRes = $this->getDataUser($nameData);
+        return $arRes[$nameData];
+    }
+
     public function getPhone() {
-        $arRes = $this->getDataUser('PERSONAL_MOBILE');
-        return $arRes['PERSONAL_MOBILE'];
+        return $this->getOneData('PERSONAL_MOBILE');
+    }
+
+    public function getName() {
+        return $this->getOneData('NAME');
     }
 
     public function getDataMClub() {

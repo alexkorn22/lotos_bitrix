@@ -100,3 +100,16 @@
     }
   }
 }
+
+#appFastBuy.fastBuyCart {
+  #appFastBuyContainer {
+    width: 400px;
+    margin-left: -215px;
+    .column {
+      width: 100%;
+    }
+    #fastBuyFormSubmit {
+      margin:0 auto;
+    }
+  }
+}

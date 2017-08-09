@@ -1268,41 +1268,46 @@ $(window).on("ready", function(event){
 			$("#fastBuyForm").find('input[type="text"], textarea').val("");
 
 			var productID = $this.data("id");
-			
+			var isCart = $this.data("cart");
 			$this.addClass("loading");
 
 			var gObj = {
 				id: productID,
-				act: "getFastBuy"
+				act: "getFastBuy",
+				cart: isCart
 			};
-
+			console.log(gObj);
 			$.getJSON(ajaxPath, gObj).done(function(jData){
-				
+
 				$this.removeClass("loading");
-				$appFastBuy.find("#fastBuyPicture .url, #fastBuyName .url").attr("href", jData[0]["DETAIL_PAGE_URL"]);
-				$appFastBuy.find("#fastBuyPicture .picture").attr("src", $appFastBuy.data("load"));
-				$appFastBuy.find("#fastBuyPrice").html(jData[0]["PRICE"]["PRICE_FORMATED"]);
-				$appFastBuy.find("#fastBuyName .middle").html(jData[0]["NAME"]);	
-				$appFastBuy.find("#fastBuyFormId").val(jData[0]["ID"]);
-				$appFastBuy.find(".markerContainer").remove();
+				if (!jData.cart) {
+					$appFastBuy.find("#fastBuyPicture .url, #fastBuyName .url").attr("href", jData[0]["DETAIL_PAGE_URL"]);
+					$appFastBuy.find("#fastBuyPicture .picture").attr("src", $appFastBuy.data("load"));
+					$appFastBuy.find("#fastBuyPrice").html(jData[0]["PRICE"]["PRICE_FORMATED"]);
+					$appFastBuy.find("#fastBuyName .middle").html(jData[0]["NAME"]);
+					$appFastBuy.find("#fastBuyFormId").val(jData[0]["ID"]);
+					$appFastBuy.find(".markerContainer").remove();
 
-				if(jData[0]["MARKER"] != undefined){
-					
-					$appFastBuy.find("#fastBuyPicture").prepend(
-						$("<div>").addClass("markerContainer")
-							.append(
-								jData[0]["MARKER"]
-							)
+					if(jData[0]["MARKER"] != undefined){
 
-					);
+						$appFastBuy.find("#fastBuyPicture").prepend(
+							$("<div>").addClass("markerContainer")
+								.append(
+									jData[0]["MARKER"]
+								)
+
+						);
+					}
+				} else {
+					$appFastBuy.find("#fastBuyFormName").val(jData.nameUser);
+					$appFastBuy.find("#fastBuyFormTelephone").val(jData.phoneUser);
 				}
-
-				$appFastBuy.show();	
-
-				loadingPictureControl(jData[0]["PICTURE"]["src"], function(){
-					$appFastBuy.find("#fastBuyPicture .picture").attr("src", jData[0]["PICTURE"]["src"]);
-				});
-
+				$appFastBuy.show();
+				if (!jData.cart) {
+					loadingPictureControl(jData[0]["PICTURE"]["src"], function () {
+						$appFastBuy.find("#fastBuyPicture .picture").attr("src", jData[0]["PICTURE"]["src"]);
+					});
+				}
 			}).fail(function(jqxhr, textStatus, error){
 				
 				$.get(ajaxPath, gObj).done(function(Data){

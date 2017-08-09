@@ -1229,12 +1229,12 @@
 			echo jsonEn($result);
 
 		}elseif($_GET["act"] == "getFastBuy"){
-		
+
 			if(!empty($_GET["id"])){
 				
 				$OPTION_CURRENCY  = CCurrency::GetBaseCurrency();
 				$arResult = array();
-				
+
 				$res = CIBlockElement::GetList(array(), array("ID" => intval($_GET["id"])), false, false, array("ID", "IBLOCK_ID", "DETAIL_PAGE_URL", "DETAIL_PICTURE", "NAME", "CATALOG_QUANTITY")); 
 				while($arRes = $res->GetNextElement()){ 
 					$arResult["PRODUCT"] = $arRes->GetFields();
@@ -1346,6 +1346,18 @@
 					echo jsonMultiEn($arResult);
 				}
 
+			} else {
+				if (!empty($_GET['cart'])) {
+					global $USER;
+					$tools = new UserTools();
+					$res = [
+						'cart' => true,
+						'nameUser' => $tools->getName(),
+						'phoneUser' => $tools->getPhone(),
+					];
+					App::$debug->inF($res);
+					echo jsonEn($res);
+				}
 			}
 
 			}elseif($_GET["act"] === "fastBack"){
@@ -1593,6 +1605,11 @@
 				}
 
 			echo jsonEn($result);
+
+		} elseif($_GET["act"] === "fastBackCart"){
+			$fastOrderCart = new FastBackCart();
+			$fastOrderCart->setData($_GET);
+			echo jsonEn($fastOrderCart->createOrder());
 
 		}
 	}

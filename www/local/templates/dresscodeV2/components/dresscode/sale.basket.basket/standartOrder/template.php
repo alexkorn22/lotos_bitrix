@@ -87,9 +87,11 @@
 				<input placeholder="<?=GetMessage("COUPON_LABEL")?>" name="user" class="couponField"><input type="submit" value="<?=GetMessage("COUPON_ACTIVATE")?>" class="couponActivate">
 			</form>
 		</div>
-
+		<?
+		App::$ds->pageCart = true;
+		?>
 		<a href="<?=SITE_DIR?>personal/cart/order/" id="newOrder" class="selected"><img src="<?=SITE_TEMPLATE_PATH?>/images/order.png"><?=GetMessage("BASKET_TABS_ORDER_MAKE")?></a>
-
+		<a href="#" class="fastBack" data-id="0" data-cart="Y">Купить в один клик</a>
 		<div id="order" class="orderContainer">
 			<span class="title"><?=GetMessage("ORDER_HEADING")?></span> 
 			<table class="personSelect">
