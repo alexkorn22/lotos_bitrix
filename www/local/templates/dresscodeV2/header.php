@@ -17,8 +17,6 @@ IncludeTemplateLangFile(__FILE__);
 		<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/fonts/roboto/roboto.css");?>
 		<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/themes/".$TEMPLATE_THEME_NAME."/style.css");?>
         <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/artorg/css/dist/main.css");?>
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/artorg/css/dist/slick.css");?>
-        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/artorg/css/dist/slick-theme.css");?>
 
 		<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/jquery-1.11.0.min.js");?>
 		<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/jquery.easing.1.3.js");?>
