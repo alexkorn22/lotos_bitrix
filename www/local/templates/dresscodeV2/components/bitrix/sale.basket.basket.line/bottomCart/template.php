@@ -19,14 +19,14 @@ $frame = $this->createFrame()->begin();
                 <div id="miniCartFooterCarousel">
                     <? $n = 1; foreach ($arResult["CATEGORIES"]["READY"] as &$arItem):?>
 
-                    <div id="carouselProduct_<?=$arItem["ID"]?>" class="carousel-item carousel-item-horizontal carousel-item-<?=$n?> jcarousel-item-<?$n?>-horizontal" carouselindex="<?$n?>">
+                    <div id="carouselProduct_<?=$arItem["ID"]?>" class="carousel-item">
                         <img id="img-preview" class="product-image"
                              src=<?=$arItem["PICTURE_SRC"]?>
                              alt=<?=$arItem["NAME"]?>
                              title=<?=$arItem["NAME"]?>>
                         <a href=<?=$arItem["DETAIL_PAGE_URL"]?>
                            class="footer-del-fade-div">
-                            <span href="javascript:void(0);" class="footerMiniCartRemoveLink" data-id="<?=$arItem["ID"]?>"></span>
+                            <span class="footerMiniCartRemoveLink" data-id="<?=$arItem["ID"]?>"></span>
                         </a>
                     </div>
                     <? $n++; endforeach;?>
@@ -37,7 +37,7 @@ $frame = $this->createFrame()->begin();
 <?endif?>
 
 <div class="item footerCart">
-	<a <?if(!empty($arResult["NUM_PRODUCTS"])):?>href="<?=SITE_DIR?>personal/cart/"<?endif;?> class="cart<?if(!empty($arResult["NUM_PRODUCTS"])):?> active<?endif;?>"><span class="icon"></span><?=GetMessage("CART_LABEL")?><span class="mark"><?=$arResult["NUM_PRODUCTS"]?></span></a>
+    <a <?if(!empty($arResult["NUM_PRODUCTS"])):?>href="<?=SITE_DIR?>personal/cart/"<?endif;?> class="cart<?if(!empty($arResult["NUM_PRODUCTS"])):?> active<?endif;?>"><span class="icon"></span><span class="cartLabel"><?=GetMessage("CART_LABEL")?></span><span class="mark numProducts"><?=$arResult["NUM_PRODUCTS"]?></span></a>
 </div>
 
 <script type="text/javascript">
@@ -49,7 +49,7 @@ $frame = $this->createFrame()->begin();
             slidesToScroll: 1,
             responsive: [
                 {
-                    breakpoint: 1024,
+                    breakpoint: 1120,
                     settings: {
                         slidesToShow: 6,
                         slidesToScroll: 1
@@ -63,45 +63,16 @@ $frame = $this->createFrame()->begin();
                     }
                 },
                 {
-                    breakpoint: 800,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1
-                    }
-                },
-                {
                     breakpoint: 710,
                     settings: {
-                        slidesToShow: 3,
+                        slidesToShow: 4,
                         slidesToScroll: 1
                     }
                 },
                 {
                     breakpoint: 620,
                     settings: {
-                        slidesToShow: 5,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 560,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 1
-                    }
-                }
-                ,
-                {
-                    breakpoint: 380,
-                    settings: {
-                        slidesToShow: 2,
                         slidesToScroll: 1
                     }
                 }
