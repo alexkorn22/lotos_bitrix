@@ -1,6 +1,7 @@
-#modalSuccessRegister,#register {
+#modalSuccessRegister,#register, .onFlexGrid {
   @import "libs/flexgrid";
 }
+@import "libs/grid";
 @import "libs/FontAwesome/_font-awesome";
 @import "libs/align_text";
 
@@ -9,6 +10,7 @@
 @import "mainPage";
 @import "personal";
 @import "product";
+@import "cart";
 
 .text-right {
   text-align: right;

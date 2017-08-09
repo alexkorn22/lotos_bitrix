@@ -1,0 +1,42 @@
+#personalCart {
+  .buttons {
+    @include row-flex;
+    @include justify-content-sm(center);
+    .item {
+      @include col;
+      @include size(3);
+      @include size-sm(8);
+    }
+  }
+  #newOrder {
+    width: 100%;
+  }
+}
+.btnFastOrder{
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 50px;
+  margin-top: 24px;
+  font-size: 16px;
+  display: block;
+  color: #ffffff;
+  width: 100%;
+  height: 50px;
+  background-color: #27c148;
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+  &:hover{
+    background-color: #19cc3f;
+  }
+  img{
+    vertical-align: middle;
+    padding-right: 12px;
+    margin-top: -4px;
+  }
+}

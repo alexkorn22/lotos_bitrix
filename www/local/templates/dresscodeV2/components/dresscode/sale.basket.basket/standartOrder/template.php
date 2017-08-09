@@ -90,8 +90,16 @@
 		<?
 		App::$ds->pageCart = true;
 		?>
-		<a href="<?=SITE_DIR?>personal/cart/order/" id="newOrder" class="selected"><img src="<?=SITE_TEMPLATE_PATH?>/images/order.png"><?=GetMessage("BASKET_TABS_ORDER_MAKE")?></a>
-		<a href="#" class="fastBack" data-id="0" data-cart="Y">Купить в один клик</a>
+		<div class="clear"></div>
+		<div class="buttons">
+			<div class="item">
+				<a href="<?=SITE_DIR?>personal/cart/order/" id="newOrder" class="selected"><img src="<?=SITE_TEMPLATE_PATH?>/images/order.png"><?=GetMessage("BASKET_TABS_ORDER_MAKE")?></a>
+			</div>
+			<div class="item">
+				<a href="#" class="fastBack btnFastOrder" data-id="0" data-cart="Y"><img src="<?=SITE_TEMPLATE_PATH?>/images/order.png">Купить в один клик</a>
+			</div>
+		</div>
+
 		<div id="order" class="orderContainer">
 			<span class="title"><?=GetMessage("ORDER_HEADING")?></span> 
 			<table class="personSelect">
