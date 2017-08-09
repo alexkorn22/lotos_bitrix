@@ -23,3 +23,4 @@ modalForm = function() {
     $(document).on("click", ".modalForm, .modalForm .close", windowClose);
 
 };
+
