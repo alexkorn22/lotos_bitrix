@@ -1,14 +1,11 @@
-#modalSuccessRegister,#register {
-  @import "libs/flexgrid";
-}
+@import "libs/_flexgrid";
 @import "libs/FontAwesome/_font-awesome";
-@import "libs/align_text";
-
+@import "libs/_slick";
 @import "variables";
 @import "modal";
 @import "mainPage";
 @import "personal";
-@import "product";
+
 
 .text-right {
   text-align: right;
