@@ -14,37 +14,100 @@ $frame = $this->createFrame()->begin();
     </div>
 
     <div class="products-carousel-container">
-
         <div class="miniCartFooterCarouselWrapper">
-            <div id="jcarousel-wrapper">
-                <div class="jcarousel-container jcarousel-container-horizontal">
-                    <div class="jcarousel">
-                        <ul id="miniCartFooterCarousel">
-                        <? $n = 1; foreach ($arResult["CATEGORIES"]["READY"] as &$arItem):?>
-                            <li id="carouselProduct_<?=$arItem["ID"]?>" class="jcarousel-item jcarousel-item-horizontal jcarousel-item-<?=$n?> jcarousel-item-<?$n?>-horizontal" jcarouselindex="<?$n?>">
-                                <img id="img-preview" class="product-image"
-                                     src=<?=$arItem["PICTURE_SRC"]?>
-                                     alt=<?=$arItem["NAME"]?>
-                                     title=<?=$arItem["NAME"]?>>
-                                <a href=<?=$arItem["DETAIL_PAGE_URL"]?>
-                                   class="footer-del-fade-div">
-                                    <span href="javascript:void(0);" class="footerMiniCartRemoveLink" data-id="<?=$arItem["ID"]?>"></span>
-                                </a>
-                            </li>
-                        <? $n++; endforeach?>
-                        </ul>
+            <div class="carousel">
+                <div id="miniCartFooterCarousel">
+                    <? $n = 1; foreach ($arResult["CATEGORIES"]["READY"] as &$arItem):?>
+
+                    <div id="carouselProduct_<?=$arItem["ID"]?>" class="carousel-item carousel-item-horizontal carousel-item-<?=$n?> jcarousel-item-<?$n?>-horizontal" carouselindex="<?$n?>">
+                        <img id="img-preview" class="product-image"
+                             src=<?=$arItem["PICTURE_SRC"]?>
+                             alt=<?=$arItem["NAME"]?>
+                             title=<?=$arItem["NAME"]?>>
+                        <a href=<?=$arItem["DETAIL_PAGE_URL"]?>
+                           class="footer-del-fade-div">
+                            <span href="javascript:void(0);" class="footerMiniCartRemoveLink" data-id="<?=$arItem["ID"]?>"></span>
+                        </a>
                     </div>
-                    <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                    <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                    <? $n++; endforeach;?>
                 </div>
             </div>
         </div>
     </div>
-
 <?endif?>
 
 <div class="item footerCart">
 	<a <?if(!empty($arResult["NUM_PRODUCTS"])):?>href="<?=SITE_DIR?>personal/cart/"<?endif;?> class="cart<?if(!empty($arResult["NUM_PRODUCTS"])):?> active<?endif;?>"><span class="icon"></span><?=GetMessage("CART_LABEL")?><span class="mark"><?=$arResult["NUM_PRODUCTS"]?></span></a>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#miniCartFooterCarousel').slick({
+            infinite: false,
+            speed: 300,
+            slidesToShow: 7,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 920,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 710,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 620,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 560,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                }
+                ,
+                {
+                    breakpoint: 380,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>
 
 <?$frame->end();?>

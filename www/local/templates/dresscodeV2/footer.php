@@ -126,7 +126,7 @@
 						<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_email.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_EMAIL"), "TEMPLATE" => "sect_footer_email.php"));*/?>
 					</div>
 				</div>-->
-			    <div class="col">
+			    <div class="colFooterCart">
 				    <div id="flushFooterCart" class="flushFooterCartMedia">
 					    <?$APPLICATION->IncludeComponent(
 	"bitrix:sale.basket.basket.line",
