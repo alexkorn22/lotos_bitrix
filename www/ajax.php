@@ -1349,11 +1349,18 @@
 			} else {
 				if (!empty($_GET['cart'])) {
 					global $USER;
-					$tools = new UserTools();
+					$name = '';
+					$phone = '';
+					if ($USER->isAuthorized()) {
+						$tools = new UserTools();
+						$name = $tools->getName();
+//						$phone = $tools->getPhone();
+					}
+
 					$res = [
 						'cart' => true,
-						'nameUser' => $tools->getName(),
-						'phoneUser' => $tools->getPhone(),
+						'nameUser' => $name,
+						'phoneUser' => $phone,
 					];
 					echo jsonEn($res);
 				}

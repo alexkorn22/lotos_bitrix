@@ -6,8 +6,10 @@ class FastBackCart{
     const ERROR_FILLING = 1;
     const ERROR_PAYSYSTEM = 2;
     const ERROR_DELIVERY = 3;
+    const ERROR_USER_BASKET = 4;
 
     protected $idUser= 0;
+    protected $idBasketUser= 0;
     protected $personItem= [];
     protected $idSite = 0;
     protected $paySystem = [];
@@ -27,6 +29,9 @@ class FastBackCart{
     public function createOrder() {
         if(empty($this->phoneUser)){
             return $this->msgError(self::ERROR_FILLING);
+        }
+        if (empty($this->getBasketUserId())) {
+            return $this->msgError(self::ERROR_USER_BASKET);
         }
         if (empty($this->getUserID())) {
             return $this->msgError(self::ERROR_USER);
@@ -64,7 +69,10 @@ class FastBackCart{
         $msg = 'Непредвиденная ошибка';
         switch ($error) {
             case self::ERROR_USER:
-                $msg = "Ошибка, пользователь не создан!";
+                $msg = "Ошибка, пользователь не найден!";
+                break;
+            case self::ERROR_USER_BASKET:
+                $msg = "Ошибка, корзина пустая!";
                 break;
             case self::ERROR_FILLING:
                 $msg = "Ошибка, заполните обязательные поля!";
@@ -182,9 +190,13 @@ class FastBackCart{
         $this->idOrder = IntVal($ORDER_ID);
     }
 
+    protected function getBasketUserId() {
+        $this->idBasketUser = CSaleBasket::GetBasketUserID(true);
+        return $this->idBasketUser;
+    }
+
     protected function getSumCart() {
-        $fuserId = \Bitrix\Sale\Fuser::getId(true);
-        $total = \Bitrix\Sale\BasketComponentHelper::getFUserBasketPrice($fuserId, $this->idSite);
+        $total = \Bitrix\Sale\BasketComponentHelper::getFUserBasketPrice($this->idBasketUser, $this->idSite);
         return CCurrencyLang::CurrencyFormat($total, CSaleLang::GetLangCurrency($this->idSite), true);
     }
 
@@ -223,7 +235,7 @@ class FastBackCart{
     }
 
     protected function setOrderBasket() {
-        CSaleBasket::OrderBasket($this->idOrder, $this->idUser, $this->idSite);
+        CSaleBasket::OrderBasket($this->idOrder, $this->idBasketUser, $this->idSite);
     }
 
 }

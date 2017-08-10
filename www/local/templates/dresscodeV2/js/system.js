@@ -1276,7 +1276,6 @@ $(window).on("ready", function(event){
 				act: "getFastBuy",
 				cart: isCart
 			};
-			console.log(gObj);
 			$.getJSON(ajaxPath, gObj).done(function(jData){
 
 				$this.removeClass("loading");
