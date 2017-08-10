@@ -18,9 +18,7 @@ class Alert {
     public function sendTelegram($idChat) {
 
         $bot = new Telegram($idChat);
-        App::$debug->inF($bot);
-        App::$debug->inF($this->text);
-        App::$debug->inF( $bot->sendMessage($this->text));
+        $bot->sendMessage($this->text);
 
     }
 }

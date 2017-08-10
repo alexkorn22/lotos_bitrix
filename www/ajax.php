@@ -1355,7 +1355,6 @@
 						'nameUser' => $tools->getName(),
 						'phoneUser' => $tools->getPhone(),
 					];
-					App::$debug->inF($res);
 					echo jsonEn($res);
 				}
 			}
