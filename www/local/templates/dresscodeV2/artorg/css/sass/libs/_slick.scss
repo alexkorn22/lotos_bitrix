@@ -217,11 +217,11 @@
 
 .slick-prev
 {
-  left: 0px;
+  left: 6px;
 }
 [dir='rtl'] .slick-prev
 {
-  right: 0px;
+  right: 6px;
   left: auto;
 }
 .slick-prev:before
@@ -235,7 +235,7 @@
 
 .slick-next, .slick-next:hover, .slick-next:focus
 {
-  right: 0px;
+  right: 3px;
   background-position: 0 -50px;
 }
 [dir='rtl'] .slick-next

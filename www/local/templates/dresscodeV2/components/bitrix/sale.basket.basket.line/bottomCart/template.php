@@ -8,7 +8,6 @@ $frame = $this->createFrame()->begin();
 <?if ($arParams["SHOW_PRODUCTS"] == "Y" && $arResult['NUM_PRODUCTS'] > 0):?>
 
     <div class="delivery-container<?if($arResult["ART_TOTAL_PRICE"]<=0):?> freeDelivery<?endif;?>">
-        <img src="#" align="left" class="pd-r-10">
         <?if(!empty($arResult["NUM_PRODUCTS"]) && $arResult["FREE_DELIVERY_SUM"] > 0):?><span <?if($arResult["ART_TOTAL_PRICE"]<=0):?>class="mark"<?endif;?>><?if($arResult["ART_TOTAL_PRICE"]>0):?>До бесплатной доставки осталось <span class="mark"><?=$arResult["ART_TOTAL_PRICE_STR"];?></span><?else:?>Доставка бесплатно<?;endif;?></span><?endif;?>
         <!--<span style="font-size: 14px;">Доставка вашого замовлення можлива за 1 коп.</span>-->
     </div>
@@ -21,10 +20,10 @@ $frame = $this->createFrame()->begin();
 
                     <div id="carouselProduct_<?=$arItem["ID"]?>" class="carousel-item">
                         <img id="img-preview" class="product-image"
-                             src=<?=$arItem["PICTURE_SRC"]?>
-                             alt=<?=$arItem["NAME"]?>
-                             title=<?=$arItem["NAME"]?>>
-                        <a href=<?=$arItem["DETAIL_PAGE_URL"]?>
+                             src="<?=$arItem["PICTURE_SRC"]?>"
+                             alt="<?=ltrim($arItem["NAME"])?>"
+                             title="<?=ltrim($arItem["NAME"])?>">
+                        <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"
                            class="footer-del-fade-div">
                             <span class="footerMiniCartRemoveLink" data-id="<?=$arItem["ID"]?>"></span>
                         </a>
