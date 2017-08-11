@@ -15,21 +15,22 @@ $frame = $this->createFrame()->begin();
     <div class="products-carousel-container">
         <div class="miniCartFooterCarouselWrapper">
             <div class="carousel">
+                <button type="button" data-role="none" class="button-arrow slick-prev-arrow">Previous</button>
                 <div id="miniCartFooterCarousel">
                     <? $n = 1; foreach ($arResult["CATEGORIES"]["READY"] as &$arItem):?>
-
-                    <div id="carouselProduct_<?=$arItem["ID"]?>" class="carousel-item">
-                        <img id="img-preview" class="product-image"
-                             src="<?=$arItem["PICTURE_SRC"]?>"
-                             alt="<?=ltrim($arItem["NAME"])?>"
-                             title="<?=ltrim($arItem["NAME"])?>">
-                        <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"
-                           class="footer-del-fade-div">
-                            <span class="footerMiniCartRemoveLink" data-id="<?=$arItem["ID"]?>"></span>
-                        </a>
-                    </div>
+                        <div id="carouselProduct_<?=$arItem["ID"]?>" class="carousel-item">
+                            <img id="img-preview" class="product-image"
+                                 src="<?=$arItem["PICTURE_SRC"]?>"
+                                 alt="<?=ltrim($arItem["NAME"])?>"
+                                 title="<?=ltrim($arItem["NAME"])?>">
+                            <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"
+                               class="footer-del-fade-div">
+                                <span class="footerMiniCartRemoveLink" data-id="<?=$arItem["ID"]?>"></span>
+                            </a>
+                        </div>
                     <? $n++; endforeach;?>
                 </div>
+                <button type="button" data-role="none" class="button-arrow slick-next-arrow">Next</button>
             </div>
         </div>
     </div>
@@ -42,36 +43,41 @@ $frame = $this->createFrame()->begin();
 <script type="text/javascript">
     $(document).ready(function(){
         $('#miniCartFooterCarousel').slick({
+            appendArrows: $(".button-arrow"),
+            prevArrow: $(".slick-prev-arrow"),
+            nextArrow: $(".slick-next-arrow"),
+            accessibility:true,
+
             infinite: false,
             speed: 300,
-            slidesToShow: 7,
+            slidesToShow: 9,
             slidesToScroll: 1,
             responsive: [
                 {
-                    breakpoint: 1120,
+                    breakpoint: 1290,
                     settings: {
-                        slidesToShow: 6,
+                        slidesToShow: 8,
                         slidesToScroll: 1
                     }
                 },
                 {
                     breakpoint: 920,
                     settings: {
-                        slidesToShow: 5,
+                        slidesToShow: 6,
                         slidesToScroll: 1
                     }
                 },
                 {
                     breakpoint: 710,
                     settings: {
-                        slidesToShow: 4,
+                        slidesToShow: 5,
                         slidesToScroll: 1
                     }
                 },
                 {
                     breakpoint: 620,
                     settings: {
-                        slidesToShow: 3,
+                        slidesToShow: 4,
                         slidesToScroll: 1
                     }
                 }

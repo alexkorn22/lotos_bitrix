@@ -233,17 +233,15 @@
 
 #miniCartFooterCarousel .carousel-item {
   //border: 0;
-  width: 75px;
-  min-width: 75px;
+  //width: 70px;
+  max-width: 70px;
+  min-width: 70px;
   box-shadow: none;
   background-color: white;
   position: relative;
   height: 75px;
   margin: 6px 6px;
   border-radius: 20px;
-  //margin-top: 6px;
-  //border-left: 1px solid #1a1a1a;
-  //border-right: 1px solid #1a1a1a;
   img{
     position:absolute;
     margin:auto;
@@ -291,7 +289,8 @@
 }
 
 .miniCartFooterCarouselWrapper{
-  max-width: 620px;
+  max-width: 980px;
+  //min-width: 480px;
   padding: 0 20px 40px 20px;
   margin: auto;
 }
@@ -299,6 +298,68 @@
 .itemCart_photo{
     display: inline-block;
   }
+
+/* Arrows */
+.slick-prev-arrow,
+.slick-next-arrow
+{
+  font-size: 0;
+  line-height: 0;
+
+  position: absolute;
+  top: 55%;
+
+  display: block;
+
+  width: 25px;
+  height: 50px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+
+  cursor: pointer;
+
+  color: transparent;
+  border: none;
+  outline: none;
+  background: url(/local/templates/dresscodeV2/components/dresscode/slider/promoSlider/images/slideArrow.png) 0 0 no-repeat transparent;
+  background-size: 75px;
+  z-index: 22;
+  &:hover
+  {
+    top: 55%;
+
+    width: 25px;
+    height: 50px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    color: transparent;
+    outline: none;
+    background: url(/local/components/artorg/catalog.top/templates/.default/images/slideArrowSmall.png) 0 0 no-repeat transparent;
+    background-size: 75px;
+  }
+  &.slick-disabled{
+    background: url(/local/templates/dresscodeV2/components/dresscode/slider/promoSlider/images/slideArrow.png) 0 0 no-repeat transparent;
+    background-size: 75px;
+  }
+}
+
+.slick-prev-arrow
+{
+  left: 26px;
+}
+
+.slick-next-arrow
+{
+  right: 22px;
+  &, &:hover, &:focus, &:before, &.slick-disabled {
+    background-position: 0 -50px;
+  }
+}
 
 @media (max-width: 1200px) {
 
@@ -403,16 +464,14 @@
   }
   #footerLine{
     &.miniCart{
-      .products-carousel-container {
+      .products-carousel-container, .delivery-container{
         display: none;
-      }
-      .delivery-container {
-        width: 50%;
       }
     }
      .item {
        &.footerCart {
-         width: 50%;
+         width: 100%;
+         text-align: center;
          .cartLabel {
            display: inline-block;
          }
