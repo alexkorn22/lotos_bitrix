@@ -232,16 +232,15 @@
 }
 
 #miniCartFooterCarousel .carousel-item {
-  //border: 0;
-  //width: 70px;
   max-width: 70px;
-  min-width: 70px;
   box-shadow: none;
   background-color: white;
   position: relative;
   height: 75px;
-  margin: 6px 6px;
+  margin: 6px auto;
   border-radius: 20px;
+  margin: 6px 3px;
+
   img{
     position:absolute;
     margin:auto;
@@ -261,13 +260,11 @@
     -webkit-transform: rotate(-1deg);
     -moz-transform: rotate(-1deg);
     .footer-del-fade-div{
-      //background-color: #d9f1f1;
       text-align: right;
       position: absolute;
       z-index: 97;
       width: 100%;
       top: 0;
-      //opacity: .67;
       cursor: pointer;
       display: block;
       height: 75px;
@@ -290,7 +287,6 @@
 
 .miniCartFooterCarouselWrapper{
   max-width: 980px;
-  //min-width: 480px;
   padding: 0 20px 40px 20px;
   margin: auto;
 }
@@ -401,6 +397,18 @@
     }
   }
 }
+@media (max-width: 950px){
+  #footerLine{
+    &.miniCart{
+      .delivery-container{
+        .freeDeliveryLeftStr{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 850px){
   #infoPromo{
     .item {
@@ -408,22 +416,41 @@
     }
   }
 }
-@media (max-width: 730px){
+@media (max-width: 780px){
   #footerLine{
+    &.miniCart{
+      .delivery-container.freeDelivery{
+        line-height: 30px;
+      }
+    }
+  }
+}
+@media (max-width: 770px){
+  #footerLine{
+    &.miniCart{
+      .delivery-container{
+          display: none;
+        }
+      .products-carousel-container{
+        width: 75%;
+      }
+    }
     .item{
       &.footerCart {
-        width: 70px;
+        line-height: 30px;
+        //width: 80px;
         .cartLabel {
-          display: none;
+          //display: none;
         }
       }
       .cart{
         .mark.numProducts{
-          margin-left: unset;
+          //margin-left: unset;
         }
       }
     }
   }
+
 }
 
 @media (max-width: 700px){
@@ -438,6 +465,18 @@
 
 }
 
+@media (max-width: 600px) {
+  #footerLine{
+    .item{
+      .cart{
+        .mark.numProducts{
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 560px){
   #infoAbout{
     .item {
@@ -447,6 +486,16 @@
   #infoPromo{
     .item {
       width: 47%;
+    }
+  }
+  #footerLine {
+    .item {
+      &.footerCart {
+        line-height: unset;
+        .cartLabel {
+          display: none;
+        }
+      }
     }
   }
 }
