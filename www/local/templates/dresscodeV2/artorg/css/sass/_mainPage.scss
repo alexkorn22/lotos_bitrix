@@ -187,12 +187,14 @@
       //padding-left: 230px;
       //margin-right: -180px;
       float: left;
-      width: 60%;
       height: 80px;
       overflow-y: visible;
       box-sizing: border-box;
-      position: relative;
+      //position: relative;
       text-align: -webkit-center;
+      max-width: 750px;
+      //padding: 0 20px 40px 20px;
+      margin: auto;
     }
   }
   .item.footerCart{
@@ -231,25 +233,26 @@
   }
 }
 
-#miniCartFooterCarousel .carousel-item {
-  max-width: 70px;
+.products-carousel-container .carousel-item {
+  //max-width: 70px;
   box-shadow: none;
   background-color: white;
   position: relative;
-  height: 75px;
-  margin: 6px auto;
-  border-radius: 20px;
+  //height: 100%;
   margin: 6px 3px;
-
+  border-radius: 13px;
+  //margin: 6px 3px;
+  width: 65px;
+  height: 75px;
+  transform: translate3d(3px, 0, 0);
   img{
-    position:absolute;
-    margin:auto;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    max-width: 50px;
-    max-height: 55px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width:60px;
   }
   &:hover{
     animation: jiggle 0.2s infinite;
@@ -259,6 +262,7 @@
     -moz-animation-iteration-count: infinite;
     -webkit-transform: rotate(-1deg);
     -moz-transform: rotate(-1deg);
+
     .footer-del-fade-div{
       text-align: right;
       position: absolute;
@@ -283,12 +287,6 @@
       background-color: #27c148;
     }
   }
-}
-
-.miniCartFooterCarouselWrapper{
-  max-width: 980px;
-  padding: 0 20px 40px 20px;
-  margin: auto;
 }
 
 .itemCart_photo{
@@ -346,12 +344,12 @@
 
 .slick-prev-arrow
 {
-  left: 26px;
+  left: 3px;
 }
 
 .slick-next-arrow
 {
-  right: 19px;
+  right: 3px;
   &, &:hover, &:focus, &:before, &.slick-disabled {
     background-position: 0 -50px;
   }

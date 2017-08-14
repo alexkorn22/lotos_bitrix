@@ -13,26 +13,18 @@ $frame = $this->createFrame()->begin();
     </div>
 
     <div class="products-carousel-container">
-        <div class="miniCartFooterCarouselWrapper">
-            <div class="carousel">
-                <button type="button" data-role="none" class="button-arrow slick-prev-arrow">Previous</button>
-                <div id="miniCartFooterCarousel">
-                    <? $n = 1; foreach ($arResult["CATEGORIES"]["READY"] as &$arItem):?>
-                        <div id="carouselProduct_<?=$arItem["ID"]?>" class="carousel-item" data-slick-index="<?=$n?>">
-                            <img id="img-preview" class="product-image"
-                                 src="<?=$arItem["PICTURE_SRC"]?>"
-                                 alt="<?=ltrim($arItem["NAME"])?>"
-                                 title="<?=ltrim($arItem["NAME"])?>">
-                            <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"
-                               class="footer-del-fade-div">
-                                <span class="footerMiniCartRemoveLink" data-id="<?=$arItem["ID"]?>"></span>
-                            </a>
-                        </div>
-                    <? $n++; endforeach;?>
-                </div>
-                <button type="button" data-role="none" class="button-arrow slick-next-arrow">Next</button>
+        <? $n = 1; foreach ($arResult["CATEGORIES"]["READY"] as &$arItem):?>
+            <div id="carouselProduct_<?=$arItem["ID"]?>" class="carousel-item" data-slick-index="<?=$n?>">
+                <img id="img-preview" class="product-image"
+                     src="<?=$arItem["PICTURE_SRC"]?>"
+                     alt="<?=ltrim($arItem["NAME"])?>"
+                     title="<?=ltrim($arItem["NAME"])?>">
+                <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"
+                   class="footer-del-fade-div">
+                    <span class="footerMiniCartRemoveLink" data-id="<?=$arItem["ID"]?>"></span>
+                </a>
             </div>
-        </div>
+        <? $n++; endforeach;?>
     </div>
 <?endif?>
 
@@ -42,14 +34,27 @@ $frame = $this->createFrame()->begin();
 
 <script type="text/javascript">
     $(document).ready(function(){
-        $("#miniCartFooterCarousel").slick({
-            appendArrows: $(".button-arrow"),
-            prevArrow: $(".slick-prev-arrow"),
-            nextArrow: $(".slick-next-arrow"),
+        $(".products-carousel-container").slick({
+            prevArrow: '<button type="button" data-role="none" class="button-arrow slick-prev-arrow">Previous</button>',//$(".slick-prev-arrow"),
+            nextArrow: '<button type="button" data-role="none" class="button-arrow slick-next-arrow">Next</button>',//$(".slick-next-arrow"),
             infinite: false,
-            slidesToShow: 5,
+            slidesToShow: 9,
             slidesToScroll: 1,
-            speed: 300
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 1268,
+                    settings: {
+                        slidesToShow: 10
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
         });
     });
 </script>
