@@ -182,25 +182,18 @@
       }
     }
     .products-carousel-container{
-      //min-width: 80%;
-      //margin-left: -230px;
-      //padding-left: 230px;
-      //margin-right: -180px;
       float: left;
       height: 80px;
       overflow-y: visible;
       box-sizing: border-box;
-      //position: relative;
       text-align: -webkit-center;
-      max-width: 750px;
-      //padding: 0 20px 40px 20px;
-      margin: auto;
+      width: 50%;
+      margin: 0 auto;
     }
   }
   .item.footerCart{
-    //padding-right: 60px;
     margin-right: unset;
-    width: 20%;
+    width: 30%;
     margin-top: 13px;
     text-align: center;
   }
@@ -234,24 +227,19 @@
 }
 
 .products-carousel-container .carousel-item {
-  //max-width: 70px;
   box-shadow: none;
   background-color: white;
-  position: relative;
-  //height: 100%;
   margin: 6px 3px;
   border-radius: 13px;
-  //margin: 6px 3px;
   width: 65px;
   height: 75px;
+  transition: height 0.3s ease-in-out;
   img{
     margin: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     max-width:60px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
   &:hover{
     animation: jiggle 0.2s infinite;
@@ -374,9 +362,6 @@
     .colFooterCart {
       width: 100%;
     }
-    &.miniCart .products-carousel-container{
-      margin-right: unset;
-    }
   }
 }
 
@@ -429,21 +414,13 @@
           display: none;
         }
       .products-carousel-container{
-        width: 75%;
+        width: 79%;
       }
     }
     .item{
       &.footerCart {
         line-height: 30px;
-        //width: 80px;
-        .cartLabel {
-          //display: none;
-        }
-      }
-      .cart{
-        .mark.numProducts{
-          //margin-left: unset;
-        }
+        width: 20%;
       }
     }
   }

@@ -38,23 +38,7 @@ $frame = $this->createFrame()->begin();
             prevArrow: '<button type="button" data-role="none" class="button-arrow slick-prev-arrow">Previous</button>',//$(".slick-prev-arrow"),
             nextArrow: '<button type="button" data-role="none" class="button-arrow slick-next-arrow">Next</button>',//$(".slick-next-arrow"),
             infinite: false,
-            slidesToShow: 9,
-            slidesToScroll: 1,
-            variableWidth: true,
-            responsive: [
-                {
-                    breakpoint: 1268,
-                    settings: {
-                        slidesToShow: 10
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }
-            ]
+            variableWidth: true
         });
     });
 </script>
