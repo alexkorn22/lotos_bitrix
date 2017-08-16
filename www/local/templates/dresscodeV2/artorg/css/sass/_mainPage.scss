@@ -187,13 +187,13 @@
       overflow-y: visible;
       box-sizing: border-box;
       text-align: -webkit-center;
-      width: 50%;
+      width: 60%;
       margin: 0 auto;
     }
   }
   .item.footerCart{
     margin-right: unset;
-    width: 30%;
+    width: 20%;
     margin-top: 13px;
     text-align: center;
   }
@@ -414,13 +414,13 @@
           display: none;
         }
       .products-carousel-container{
-        width: 79%;
+        width: 75%;
+        margin-left:10px;
       }
     }
     .item{
       &.footerCart {
         line-height: 30px;
-        width: 20%;
       }
     }
   }
@@ -487,6 +487,8 @@
   }
   #footerLine{
     &.miniCart{
+      height: 45px;
+      line-height: unset;
       .products-carousel-container, .delivery-container{
         display: none;
       }

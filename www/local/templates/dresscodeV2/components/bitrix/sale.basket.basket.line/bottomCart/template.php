@@ -34,11 +34,30 @@ $frame = $this->createFrame()->begin();
 
 <script type="text/javascript">
     $(document).ready(function(){
+        var productsCarouselContainer = document.getElementsByClassName("products-carousel-container");
+        var containerWidth = productsCarouselContainer[0].clientWidth || productsCarouselContainer[0].offsetWidth;
+        var count, _centerMode, _slidesToShow;
+
+        count = 0;
+        _centerMode = false;
+        _slidesToShow = 1;
+
+        if(containerWidth > parseInt(<?=$arResult["NUM_PRODUCTS"]?>*71)){
+            _slidesToShow = parseInt(<?=$arResult["NUM_PRODUCTS"]?>);
+            if(containerWidth > parseInt(<?=$arResult["NUM_PRODUCTS"]?>*71+50)){
+                count = parseInt(<?=$arResult["NUM_PRODUCTS"]?>/2);
+                _centerMode = true;
+            };
+        };
+
         $(".products-carousel-container").slick({
             prevArrow: '<button type="button" data-role="none" class="button-arrow slick-prev-arrow">Previous</button>',//$(".slick-prev-arrow"),
             nextArrow: '<button type="button" data-role="none" class="button-arrow slick-next-arrow">Next</button>',//$(".slick-next-arrow"),
             infinite: false,
-            variableWidth: true
+            variableWidth: true,
+            slidesToShow: _slidesToShow,
+            centerMode: _centerMode,
+            initialSlide: count
         });
     });
 </script>
