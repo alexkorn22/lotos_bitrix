@@ -35,6 +35,7 @@ $frame = $this->createFrame()->begin();
 <script type="text/javascript">
     $(document).ready(function(){
         var productsCarouselContainer = document.getElementsByClassName("products-carousel-container");
+        if(productsCarouselContainer.length == 0)return;
         var containerWidth = productsCarouselContainer[0].clientWidth || productsCarouselContainer[0].offsetWidth;
         var count, _centerMode, _slidesToShow;
 
