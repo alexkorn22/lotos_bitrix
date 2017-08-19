@@ -28,8 +28,8 @@ $APPLICATION->SetTitle("Задайте вопрос");
  <img alt="cont1.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont1.png" title="cont1.png">
 			</td>
 			<td>
-				 +7 (800) 505-40-38<br>
-				 +7 (812) 244-71-27<br>
+                +38 (061) 214-99-54<br>
+                +38 (067) 620-22-44<br>
 			</td>
 		</tr>
 		</tbody>
@@ -43,8 +43,8 @@ $APPLICATION->SetTitle("Задайте вопрос");
  <img alt="cont2.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont2.png" title="cont2.png">
 			</td>
 			<td>
- <a href="mailto:info@dw24.su">info@dw24.su</a><br>
- <a href="mailto:support@dw24.su">support@dw24.su</a><br>
+ <a href="mailto:info@elta-market.com.ua">info@elta-market.com.ua</a><br>
+ <a href="mailto:order@elta-market.com.ua">order@elta-market.com.ua</a><br>
 			</td>
 		</tr>
 		</tbody>
@@ -58,8 +58,8 @@ $APPLICATION->SetTitle("Задайте вопрос");
  <img alt="cont3.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont3.png" title="cont3.png">
 			</td>
 			<td>
-				 г. Санкт-Петербург<br>
-				 улица Пушкина, д.53     
+                г. Запорожье<br>
+                ул. Музыкальная 2 (Космический м-н)    
 			</td>
 		</tr>
 		</tbody>
@@ -73,7 +73,7 @@ $APPLICATION->SetTitle("Задайте вопрос");
  <img alt="cont4.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont4.png" title="cont4.png">
 			</td>
 			<td>
-				 Пн-Пт : с 10:00 до 20:00<br>
+				 Пн-Пт : с 08:00 до 17:00<br>
 				 Сб, Вс : выходной<br>
 			</td>
 		</tr>
@@ -87,19 +87,17 @@ $APPLICATION->SetTitle("Задайте вопрос");
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"CONTROLS" => array(
-			0 => "SMALL_ZOOM_CONTROL",
-			1 => "TYPECONTROL",
-			2 => "SCALELINE",
+			0 => "TYPECONTROL",
+			1 => "SCALELINE",
 		),
-		"INIT_MAP_TYPE" => "ROADMAP",
-		"MAP_DATA" => "a:4:{s:10:\"yandex_lat\";d:55.757043820610185;s:10:\"yandex_lon\";d:37.60695961914063;s:12:\"yandex_scale\";i:12;s:10:\"PLACEMARKS\";a:3:{i:0;a:3:{s:4:\"TEXT\";s:7:\"Точка 1\";s:3:\"LON\";d:37.620620727539;s:3:\"LAT\";d:55.731749899652;}i:1;a:3:{s:4:\"TEXT\";s:7:\"Точка 2\";s:3:\"LON\";d:37.58337020874;s:3:\"LAT\";d:55.752718847644;}i:2;a:3:{s:4:\"TEXT\";s:7:\"Магазин\";s:3:\"LON\";d:37.633838653564;s:3:\"LAT\";d:55.770200458426;}}}",
+		"INIT_MAP_TYPE" => "MAP",
+		"MAP_DATA" => "a:4:{s:10:\"yandex_lat\";d:47.794124000011436;s:10:\"yandex_lon\";d:35.22232199999999;s:12:\"yandex_scale\";i:16;s:10:\"PLACEMARKS\";a:1:{i:0;a:3:{s:3:\"LON\";d:35.22236491534423;s:3:\"LAT\";d:47.79413122952874;s:4:\"TEXT\";s:273:\"Центральный офис: ###RN###г. Запорожье, ул. Музыкальная 2 (Космический м-н) ###RN###Тел.: +380 (61) 214-99-54 ###RN###Эл. почта: ###RN###info@lotos.zp.ua ###RN###Отдел продаж: ###RN###order@lotos.zp.ua\";}}}",
 		"MAP_HEIGHT" => "500",
 		"MAP_ID" => "",
 		"MAP_WIDTH" => "100%",
 		"OPTIONS" => array(
 			0 => "ENABLE_DBLCLICK_ZOOM",
 			1 => "ENABLE_DRAGGING",
-			2 => "ENABLE_KEYBOARD",
 		)
 	),
 	false
