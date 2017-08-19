@@ -1,24 +1,23 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 $this->setFrameMode(true);
 ?><h1><?=$APPLICATION->showTitle(false);?></h1>
-<?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"personal", 
-	array(
-		"COMPONENT_TEMPLATE" => "personal",
+<?$APPLICATION->IncludeComponent("bitrix:menu", "personal", array(
+	"COMPONENT_TEMPLATE" => "personal",
 		"ROOT_MENU_TYPE" => "about",
 		"MENU_CACHE_TYPE" => "A",
 		"MENU_CACHE_TIME" => "3600000",
 		"MENU_CACHE_USE_GROUPS" => "Y",
-		"MENU_CACHE_GET_VARS" => array(
-		),
+		"MENU_CACHE_GET_VARS" => "",
 		"MAX_LEVEL" => "1",
 		"CHILD_MENU_TYPE" => "",
 		"USE_EXT" => "N",
 		"DELAY" => "N",
 		"ALLOW_MULTI_SELECT" => "N"
 	),
-	false
+	false,
+	array(
+	"ACTIVE_COMPONENT" => "N"
+	)
 );?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
