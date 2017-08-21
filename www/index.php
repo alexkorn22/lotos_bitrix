@@ -191,18 +191,18 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
 
         <div class="item">
             <a href="/mama-club/">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_MomСlub.png" alt="Мама-клуб">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_MomClub.png" alt="Мама-клуб">
             </a>
         </div>
 
         <div class="item">
             <a href="/sertificate/">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_GiftСertificates.png" alt="Подарочные сертификаты">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_GiftCertificates.png" alt="Подарочные сертификаты">
             </a>
         </div>
 
         <div class="item">
-            <a href="/komarovsky/">
+            <a href="/catalog/detskie_tovary/gigiena/nabory_dlya_novorozhdennykh/">
             <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_KomarovskySets.png" alt="Наборы от Комаровского">
             </a>
         </div>
