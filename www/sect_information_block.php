@@ -10,8 +10,8 @@
 							<img src="<?=SITE_TEMPLATE_PATH?>/images/cont1.png">
 						</div>
 						<div class="tc">
-							+7 (800) 505-40-38<br>
-							+7 (812) 244-71-27<br>
+                            +380(61)214-99-54<br>
+                            +380(67)620-22-44<br>
 						</div>
 					</div>
 				</div>
@@ -21,8 +21,8 @@
 							<img src="<?=SITE_TEMPLATE_PATH?>/images/cont2.png">
 						</div>
 						<div class="tc">
-							<a href="mailto:info@dw24.su">info@dw24.su</a><br>
-							<a href="mailto:support@dw24.su">support@dw24.su</a><br>
+							<a href="mailto:info@elta-market.com.ua">info@elta-market.com.ua</a><br>
+							<a href="mailto:info@order@elta-market.com.ua">info@order@elta-market.com.ua</a><br>
 						</div>
 					</div>
 				</div>
@@ -32,8 +32,8 @@
 							<img src="<?=SITE_TEMPLATE_PATH?>/images/cont3.png">
 						</div>
 						<div class="tc">
-							г. Санкт-Петербург<br>
-							улица Пушкина, д.53    
+                            г. Запорожье<br>
+                            ул. Музыкальная 2 (Космический м-н)   
 						</div>
 					</div>
 				</div>
@@ -43,7 +43,7 @@
 							<img src="<?=SITE_TEMPLATE_PATH?>/images/cont4.png">
 						</div>
 						<div class="tc">
-							Пн-Пт : с 10:00 до 20:00<br>
+							Пн-Пт : с 08:00 до 17:00<br>
 							Сб, Вс : выходной<br>
 						</div>
 					</div>
