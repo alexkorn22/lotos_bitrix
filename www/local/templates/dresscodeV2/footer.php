@@ -114,7 +114,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="footerLine" class="miniCart <?if(!empty($TEMPLATE_FOOTER_LINE_COLOR) && $TEMPLATE_FOOTER_LINE_COLOR != "default"):?> color_<?=$TEMPLATE_FOOTER_LINE_COLOR?>"<?endif;?>>
+		<div id="footerLine" class="hidden miniCart <?if(!empty($TEMPLATE_FOOTER_LINE_COLOR) && $TEMPLATE_FOOTER_LINE_COLOR != "default"):?> color_<?=$TEMPLATE_FOOTER_LINE_COLOR?>"<?endif;?>>
 			<div class="limiter">
 				<!--<div class="col">
 					<div class="item">

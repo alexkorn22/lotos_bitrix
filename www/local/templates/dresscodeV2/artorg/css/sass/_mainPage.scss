@@ -159,6 +159,9 @@
 }
 
 #footerLine{
+  &.hidden{
+    display: none;
+  }
   &.miniCart{
     height: 86px;
     .col{
