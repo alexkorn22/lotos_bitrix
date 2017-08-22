@@ -14,14 +14,14 @@ $frame = $this->createFrame()->begin();
 
     <div class="products-carousel-container">
         <? $n = 1; foreach ($arResult["CATEGORIES"]["READY"] as &$arItem):?>
-            <div id="carouselProduct_<?=$arItem["ID"]?>" class="carousel-item" data-slick-index="<?=$n?>">
+            <div id="carouselProduct_<?=$arItem["PRODUCT_ID"]?>" class="carousel-item" data-slick-index="<?=$n?>">
                 <img id="img-preview" class="product-image"
                      src="<?=$arItem["PICTURE_SRC"]?>"
                      alt="<?=ltrim($arItem["NAME"])?>"
                      title="<?=ltrim($arItem["NAME"])?>">
                 <a href="<?=$arItem["DETAIL_PAGE_URL"]?>"
                    class="footer-del-fade-div">
-                    <span class="footerMiniCartRemoveLink" data-id="<?=$arItem["ID"]?>"></span>
+                    <span class="footerMiniCartRemoveLink" data-id="<?=$arItem["ID"]?>" data-prod-id="<?=$arItem["PRODUCT_ID"]?>"></span>
                 </a>
             </div>
         <? $n++; endforeach;?>

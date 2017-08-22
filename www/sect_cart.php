@@ -21,12 +21,12 @@
         <div class="lower">
             <table class="tools">
                 <tr>
-                    <td class="icon">
+<!--                    <td class="icon">-->
 <!--                        <a href="#" class="addCompare" data-no-label="Y"><span class="ico"></span></a>-->
-                    </td>
-                    <td class="icon">
+<!--                    </td>-->
+<!--                    <td class="icon">-->
 <!--                        <a href="#" class="addWishlist" data-no-label="Y"><span class="ico"></span></a>-->
-                    </td>
+<!--                    </td>-->
                     <td class="icon"><a class="availability"><span class="ico"></span></a></td>
                     <td class="icon"><a href="#" class="delete"><span class="ico"></span></a></td>
                     <td class="continue"><a href="#" class="closeWindow"><img src="<?=SITE_TEMPLATE_PATH?>/images/continue.png" alt=""><span class="text">Продолжить покупки</span></a></td>
