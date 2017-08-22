@@ -37,10 +37,13 @@ $frame = $this->createFrame()->begin();
 
         var $NUM_PRODUCTS = parseInt(<?=$arResult["NUM_PRODUCTS"]?>);
         var $footerLine = $("#footerLine");
+        var $footer = $("#footer");
         if($NUM_PRODUCTS == 0){
             $footerLine.addClass("hidden");
+            $footer.addClass("footerLineHidden");
         }else{
             $footerLine.removeClass("hidden");
+            $footer.removeClass("footerLineHidden");
         };
 
         var productsCarouselContainer = document.getElementsByClassName("products-carousel-container");

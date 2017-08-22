@@ -158,8 +158,14 @@
   }
 }
 
+#footer{
+  &.footerLineHidden{
+    margin-bottom: 0;
+  }
+}
+
 #footerLine{
-  &.hidden{
+  &.hidden {
     display: none;
   }
   &.miniCart{
