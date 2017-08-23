@@ -21,8 +21,8 @@
 							<img src="<?=SITE_TEMPLATE_PATH?>/images/cont2.png">
 						</div>
 						<div class="tc">
-							<a href="mailto:info@elta-market.com.ua">info@elta-market.com.ua</a><br>
-							<a href="mailto:info@order@elta-market.com.ua">info@order@elta-market.com.ua</a><br>
+							<a href="mailto:info@lotostrade.ua">info@lotostrade.ua</a><br>
+							<a href="mailto:order@lotostrade.ua">order@lotostrade.ua</a><br>
 						</div>
 					</div>
 				</div>
