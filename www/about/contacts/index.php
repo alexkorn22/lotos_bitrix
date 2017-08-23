@@ -43,8 +43,8 @@ $APPLICATION->SetTitle("Задайте вопрос");
  <img alt="cont2.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont2.png" title="cont2.png">
 			</td>
 			<td>
- <a href="mailto:info@lotos-trade.ua">info@lotos-trade.ua</a><br>
- <a href="mailto:order@lotos-trade.ua">order@lotos-trade.ua</a><br>
+ <a href="mailto:info@lotostrade.ua">info@lotostrade.ua</a><br>
+ <a href="mailto:order@lotostrade.ua">order@lotostrade.ua</a><br>
 			</td>
 		</tr>
 		</tbody>
@@ -91,7 +91,7 @@ $APPLICATION->SetTitle("Задайте вопрос");
 			1 => "SCALELINE",
 		),
 		"INIT_MAP_TYPE" => "MAP",
-		"MAP_DATA" => "a:4:{s:10:\"yandex_lat\";d:47.794124000011436;s:10:\"yandex_lon\";d:35.22232199999999;s:12:\"yandex_scale\";i:16;s:10:\"PLACEMARKS\";a:1:{i:0;a:3:{s:3:\"LON\";d:35.22236491534423;s:3:\"LAT\";d:47.79413122952874;s:4:\"TEXT\";s:273:\"Центральный офис: ###RN###г. Запорожье, ул. Музыкальная 2 (Космический м-н) ###RN###Тел.: +380 (61) 214-99-54 ###RN###Эл. почта: ###RN###info@lotos-trade.ua ###RN###Отдел продаж: ###RN###order@lotos-trade.ua\";}}}",
+		"MAP_DATA" => "a:4:{s:10:\"yandex_lat\";d:47.794124000011436;s:10:\"yandex_lon\";d:35.22232199999999;s:12:\"yandex_scale\";i:16;s:10:\"PLACEMARKS\";a:1:{i:0;a:3:{s:3:\"LON\";d:35.22236491534423;s:3:\"LAT\";d:47.79413122952874;s:4:\"TEXT\";s:273:\"Центральный офис: ###RN###г. Запорожье, ул. Музыкальная 2 (Космический м-н) ###RN###Тел.: +380 (61) 214-99-54 ###RN###Эл. почта: ###RN###info@lotostrade.ua ###RN###Отдел продаж: ###RN###order@lotostrade.ua\";}}}",
 		"MAP_HEIGHT" => "500",
 		"MAP_ID" => "",
 		"MAP_WIDTH" => "100%",
