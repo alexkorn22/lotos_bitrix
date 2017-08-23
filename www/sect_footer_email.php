@@ -1,1 +1,1 @@
-<a href="mailto:info@elta-market.com.ua" class="email">info@elta-market.com.ua</a>
+<a href="mailto:info@lotostrade.ua" class="email">info@lotostrade.ua</a>
