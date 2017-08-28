@@ -46,6 +46,17 @@
   }
 }
 
+.noBorder{
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+}
+
+#logo, #headerTools, #headerTools .tools li {
+  @extend .noBorder;
+}
+
 .fontFamilyRobotoboldText{
   font-family: 'robotobold';
 }
