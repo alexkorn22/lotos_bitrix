@@ -121,3 +121,9 @@
 .checkboxMClub {
   padding: 10px 0px;
 }
+
+@media (max-width: 1330px) {
+  #mainProfile .profileSettings li{
+    float: none;
+  }
+}
