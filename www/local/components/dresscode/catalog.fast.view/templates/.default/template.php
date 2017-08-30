@@ -2,9 +2,7 @@
 <?$this->setFrameMode(true);?>
 
 <?if(!empty($arResult)):?>
-	<?
-	var_dump($arResult);
-	?>
+
 	<div id="appFastView" class="item<?if(!empty($arResult["SKU_ACTIVE_OFFER"])):?> sku<?endif;?>" data-product-id="<?=!empty($arResult["~ID"]) ? $arResult["~ID"] : $arResult["ID"]?>"<?if(!empty($arResult["SKU_INFO"])):?> data-iblock-id="<?=$arResult["SKU_INFO"]["IBLOCK_ID"]?>" data-prop-id="<?=$arResult["SKU_INFO"]["SKU_PROPERTY_ID"]?>"<?endif;?> data-product-width="<?=$arParams["PICTURE_WIDTH"]?>" data-product-height="<?=$arParams["PICTURE_HEIGHT"]?>" data-hide-measure="<?=$arParams["HIDE_MEASURES"]?>" data-cast-func="fastViewSku" data-change-prop="fast-view" data-more-pictures="Y" data-price-code="<?=implode("||", $arParams["PRODUCT_PRICE_CODE"])?>">
 		<div class="appFastViewContainer">
 			<div class="appFastViewHeading"><?=GetMessage("FAST_VIEW_HEADING")?> <a href="#" class="appFastViewExit"></a></div>
