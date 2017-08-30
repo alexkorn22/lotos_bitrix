@@ -107,13 +107,13 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 								<li id="blockAddDataRegister">
 									<div>
 										<label>
-											ФИО
+                                            <span class="bx-authform-starrequired">*</span>ФИО
 										</label>
 										<input type="text" name="FIO" maxlength="255" value="<?=$arResult["FIO"]?>" />
 									</div>
 
 									<label>
-										Номер телефона
+                                        <span class="bx-authform-starrequired">*</span>Номер телефона
 									</label>
 									<input type="text" name="PERSONAL_MOBILE" maxlength="255" value="<?=$arResult["PERSONAL_MOBILE"]?>"/>
 

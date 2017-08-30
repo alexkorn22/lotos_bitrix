@@ -65,6 +65,7 @@ changeIsInMClub = function (event) {
 };
 
 var BlockAddInfo = function (showBlock) {
+    var $dataRegisterForm = $("#blockAddDataRegister");
 	this.block = $('#blockAddDataRegister');
 	this.aOpenClose = $('#aAddDataRegister');
 	this.checkIsInMClub = $('#isInMClub');
@@ -87,6 +88,19 @@ var BlockAddInfo = function (showBlock) {
 	this.clickCheckIsInMClub = function(e){
 		if (this.checked) {
 			self.block.show(500);
+            $formFields = $dataRegisterForm.find(".bx-authform-starrequired");
+            $formFields.each(function(i, nextElement){
+                var $nextElement = $(nextElement)[0];
+                console.log($nextElement);
+                $nextElement.style.display = "inline-block";
+            });
+		}else{
+            $formFields = $dataRegisterForm.find(".bx-authform-starrequired");
+            $formFields.each(function(i, nextElement){
+                var $nextElement = $(nextElement)[0];
+                console.log($nextElement);
+                $nextElement.style.display = "none";
+            });
 		}
 	};
 	this.constructor();
