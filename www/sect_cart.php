@@ -27,8 +27,8 @@
 <!--                    <td class="icon">-->
 <!--                        <a href="#" class="addWishlist" data-no-label="Y"><span class="ico"></span></a>-->
 <!--                    </td>-->
-                    <td class="icon"><a class="availability"><span class="ico"></span></a></td>
-                    <td class="icon"><a href="#" class="delete"><span class="ico"></span></a></td>
+                    <td class="icon itext"><a class="availability"><span class="ico"></span><span class="text"><?=GetMessage("AVAILABLE")?></span></a></td>
+                    <td class="icon itext"><a href="#" class="delete"><span class="ico"></span><span class="text">Удалить</span></a></td>
                     <td class="continue"><a href="#" class="closeWindow"><img src="<?=SITE_TEMPLATE_PATH?>/images/continue.png" alt=""><span class="text">Продолжить покупки</span></a></td>
                     <td class="goToBasket"><a href="<?=SITE_DIR?>personal/cart/"><img src="<?=SITE_TEMPLATE_PATH?>/images/goToBasket.png" alt=""><span class="text">Перейти в корзину</span></a></td>
                 </tr>
