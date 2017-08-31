@@ -91,14 +91,12 @@ var BlockAddInfo = function (showBlock) {
             $formFields = $dataRegisterForm.find(".bx-authform-starrequired");
             $formFields.each(function(i, nextElement){
                 var $nextElement = $(nextElement)[0];
-                console.log($nextElement);
                 $nextElement.style.display = "inline-block";
             });
 		}else{
             $formFields = $dataRegisterForm.find(".bx-authform-starrequired");
             $formFields.each(function(i, nextElement){
                 var $nextElement = $(nextElement)[0];
-                console.log($nextElement);
                 $nextElement.style.display = "none";
             });
 		}

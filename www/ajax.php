@@ -1544,7 +1544,7 @@
 												   "VALUE" => BX_UTF != 1 ? iconv("UTF-8","windows-1251//IGNORE", htmlspecialcharsbx($_GET["name"])) : htmlspecialcharsbx($_GET["name"])
 												));
 											}else if(strtoupper($props["CODE"]) == "TELEPHONE" || strtoupper($props["CODE"]) == "PHONE" || $props["IS_PHONE"] == "Y"){
-												CSaleOrderPropsValue::Add(array(
+											    CSaleOrderPropsValue::Add(array(
 												   "ORDER_ID" => $ORDER_ID,
 												   "ORDER_PROPS_ID" => $props["ID"],
 												   "NAME" => $props["NAME"],
@@ -1589,6 +1589,24 @@
 									"message" => "В ближайшее время Вам перезвонит наш менеджер для уточнения деталей заказа.",
 									"success" => true
 								);
+
+                                if(CModule::IncludeModule("justdevelop.morder"))
+                                {
+                                    $chat = "-247989205";
+
+                                    $message = "Поступил заказ № ".$ORDER_ID."\n";
+                                    $message .= "(необходимо уточнить детали заказа)."."\n";
+                                    $message .= "\n";
+                                    $message .= "Состав заказа: "."\n";
+                                    $message .= $arMessage["PRODUCT"]."\n";
+                                    $message .= "\n";
+                                    $message .= "Покупатель: ".$arMessage["NAME"]."\n";
+                                    $message .= "Телефон: ".$arMessage["PHONE"]."\n";
+                                    $message .= "Сообщение: ".$arMessage["COMMENT"]."\n";
+
+                                    $sms = new JUSTDEVELOP_Send;
+                                    $sms->Send_SMS($chat, $message);
+                                }
 							}
 						}else{
 

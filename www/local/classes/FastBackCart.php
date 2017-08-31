@@ -27,6 +27,9 @@ class FastBackCart{
     }
 
     public function createOrder() {
+
+
+
         if(empty($this->phoneUser)){
             return $this->msgError(self::ERROR_FILLING);
         }
@@ -45,7 +48,47 @@ class FastBackCart{
         $this->addOrder();
         $this->fillPropsOrder();
         $this->setOrderBasket();
+        $this->sendMsgToTelegram();
+
         return $this->msgSuccess();
+    }
+
+    public function sendMsgToTelegram(){
+        if(CModule::IncludeModule("justdevelop.morder"))
+        {
+            $chat = "-247989205";
+
+            $message = "Поступил заказ № ".$this->idOrder."\n";
+            $message .= "(необходимо уточнить детали заказа)."."\n";
+            $message .= "\n";
+            $message .= "Состав заказа: "."\n";
+
+            $arBasketOrder = array("PRICE" => "ASC");
+            $arBasketUser = array("FUSER_ID" => $this->idBasketUser, "LID" => $this->personItem["LID"], "ORDER_ID" => $this->idOrder);
+            $arBasketSelect = array("ID", "CALLBACK_FUNC", "MODULE", "PRODUCT_ID", "QUANTITY", "DELAY",
+                "CAN_BUY", "PRICE", "WEIGHT", "NAME", "CURRENCY", "CATALOG_XML_ID", "VAT_RATE",
+                "NOTES", "DISCOUNT_PRICE", "PRODUCT_PROVIDER_CLASS", "DIMENSIONS", "TYPE", "SET_PARENT_ID", "DETAIL_PAGE_URL", "*"
+            );
+            $dbBasketItems = CSaleBasket::GetList(
+                $arBasketOrder,
+                $arBasketUser,
+                false,
+                false,
+                $arBasketSelect
+            );
+
+            while ($arItems = $dbBasketItems->Fetch()){
+                $message .= $arItems["NAME"]." : ".$arItems["QUANTITY"]." : ".$arItems["PRICE"]."\n";
+            }
+
+            $message .= "\n";
+            $message .= "Покупатель: ".$this->nameUser."\n";
+            $message .= "Телефон: ".$this->phoneUser."\n";
+            $message .= "Сообщение: ".$this->messageUser."\n";
+
+            $sms = new JUSTDEVELOP_Send;
+            $sms->Send_SMS($chat, $message);
+        }
     }
 
     public function setData($data) {
