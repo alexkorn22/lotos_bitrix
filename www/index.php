@@ -47,7 +47,7 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
         <div class="item">
             <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout4.png" alt="промоблок 4">
             <h2 class="tapTitle">Программа лояльности</h2>
-            <div class="descriptionTitle"><p>В интернет-магазине ЛОТОС действуют <span class="fontFamilyRobotoboldText sizeText16">дисконты</span> постоянных клиентов и участников Мама Клуба.</p></div>
+            <div class="descriptionTitle"><p>В интернет-магазине ЛОТОС действуют <span class="fontFamilyRobotoboldText sizeText16">дисконты</span> постоянных клиентов и участников Мама-Клуба.</p></div>
         </div>
         <div class="item">
             <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout5.png" alt="промоблок 5">

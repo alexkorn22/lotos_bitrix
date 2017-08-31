@@ -87,7 +87,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 								<li>
 									<div class="MClub <? if (!isset($arResult['CHECKED_IS_MCLUB'])){ echo 'hidden';}?>" >
 										<label>
-											<span class="bx-authform-starrequired">*</span>Номер карты участника Мама клуб
+											<span class="bx-authform-starrequired">*</span>Номер карты участника Мама-клуб
 										</label>
 										<input type="text" name="UF_NUMBER_MCLUB" maxlength="255" value="<?=$arResult["UF_NUMBER_MCLUB"]?>" />
 									</div>
