@@ -56,7 +56,7 @@ class FastBackCart{
     public function sendMsgToTelegram(){
         if(CModule::IncludeModule("justdevelop.morder"))
         {
-            $chat = "-247989205";
+            $chat = "-247750923";
 
             $message = "Поступил заказ № ".$this->idOrder."\n";
             $message .= "(необходимо уточнить детали заказа)."."\n";
