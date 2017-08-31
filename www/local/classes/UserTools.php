@@ -75,9 +75,9 @@ class UserTools
         ];
         foreach ($result['VALUES'] as $key=>$value) {
             if ($key == 'UF_NUMBER_MCLUB') {
-                $val = 'Вы не являетесь участником Мама клуба';
+                $val = 'Вы не являетесь участником Мама-клуба';
                 if (!empty($value)){
-                    $val = 'Выполняется премодерация Вашей карты Мама клуб';
+                    $val = 'Выполняется премодерация Вашей карты Мама-клуб';
                 }
                 $data[$key] = ['value' => $val];
                 continue;

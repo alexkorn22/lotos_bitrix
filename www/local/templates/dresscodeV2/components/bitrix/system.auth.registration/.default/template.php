@@ -109,7 +109,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 			</div>
 
 			<div class="bx-authform-formgroup-container">
-				<div class="bx-authform-label-container">Номер карты участника Мама клуб</div>
+				<div class="bx-authform-label-container">Номер карты участника Мама-клуб</div>
 				<div class="bx-authform-input-container">
 					<input type="text" name="UF_NUMBER_MCLUB" maxlength="255" value="<?=$arResult["UF_NUMBER_MCLUB"]?>" />
 				</div>
