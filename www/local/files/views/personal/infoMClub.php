@@ -10,9 +10,9 @@ $number = '';
 <? if ($dataUser['UF_IS_MCLUB']):?>
     <p>Вы состоите в Мама клубе</p>
 <?elseif ($dataUser['UF_CHECK_M_CLUB'] == 1):?>
-    <p>Ваш номер Мама клуб проверяется</p>
+    <p>Ваш номер карты участника проверяется</p>
 <?else:?>
-    <label>Введите номер Мама клуба</label>
+    <label>Введите номер карты участника</label>
     <?$inputType = 'text';?>
 <?endif;?>
 <input type="<?=$inputType?>" name="UF_NUMBER_MCLUB" value="<?=$number?>" class="inputTel">
