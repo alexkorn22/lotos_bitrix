@@ -40,3 +40,14 @@
     margin-top: -4px;
   }
 }
+
+#appBasket .lower .tools .continue{
+  background-color: #27c148;
+  &:hover{
+    background-color: #19cc3f;
+  }
+}
+
+#appBasket .lower .tools .goToBasket.inDark{
+  background-color: unset;
+}
