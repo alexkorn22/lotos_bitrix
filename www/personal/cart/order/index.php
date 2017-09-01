@@ -4,7 +4,7 @@ if ($USER->IsAuthorized()):?>
 	<div class="personal-order-info">*Нажимая на кнопку оформить заказ, я даю согласие на <a href="/personal-info/" class="pilink">обработку персональных данных.</a><br /></div>
 <?endif?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:sale.order.ajax", 
+	"artorg:sale.order.ajax",
 	".default", 
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
@@ -32,7 +32,7 @@ if ($USER->IsAuthorized()):?>
 		"SET_TITLE" => "Y",
 		"DISABLE_BASKET_REDIRECT" => "N",
 		"PRODUCT_COLUMNS" => array(
-		)
+		),
 	),
 	false
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
