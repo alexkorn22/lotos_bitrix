@@ -920,14 +920,35 @@ $(window).on("ready", function(event){
 			$changeAvailable.removeClass("onOrder");
 			$changeAvailable.removeClass("inStock");
 
+            $changeAvailable.find(".text").remove();
 
 			if(jData["CATALOG_QUANTITY"] > 0){
 				$changeAvailable.addClass("inStock");
+
+                $changeAvailable.append(
+                    $("<span/>").addClass("text").html(
+                        "В наличии"
+                    )
+                );
+
 			}else{
 				if(jData["CAN_BUY"] != true){
 					$changeAvailable.addClass("outOfStock");
+
+					$changeAvailable.append(
+                        $("<span/>").addClass("text").html(
+                            "Недоступно"
+                        )
+                    );
+
 				}else{
-					$changeAvailable.addClass("onOrder");		
+					$changeAvailable.addClass("onOrder");
+
+                    $changeAvailable.append(
+                        $("<span/>").addClass("text").html(
+                            "Под заказ"
+                        )
+                    );
 				}
 			}
 
