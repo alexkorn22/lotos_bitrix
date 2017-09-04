@@ -25,7 +25,7 @@ $this->setFrameMode(true);?>
 						<li>
 							<div class="item product" data-price-code="<?=implode("||", $arParams["PRICE_CODE"])?>">
 						
-								<div class="tabloid">
+								<div class="tooltip">
 									<?if(!empty($arElement["PROPERTIES"]["OFFERS"]["VALUE"])):?>
 										<div class="markerContainer">
 											<?foreach ($arElement["PROPERTIES"]["OFFERS"]["VALUE"] as $ifv => $marker):?>
@@ -50,14 +50,22 @@ $this->setFrameMode(true);?>
 												<s class="discount"><?=$arElement["MIN_PRICE"]["PRINT_VALUE"]?></s>
 											<?endif;?>
 										</a>
+<!--                                        <a href="#" class="addCart--><?//if($arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?><!-- disabled--><?//endif;?><!--" data-id="--><?//=$arElement["ID"]?><!--"><img src="--><?//=SITE_TEMPLATE_PATH?><!--/images/incart.png" alt="" class="icon">--><?//=GetMessage("ADDCART_LABEL")?><!--</a>-->
 									<?else:?>
 										<a class="price"><?=GetMessage("REQUEST_PRICE_LABEL")?></a>
+<!--                                        <a href="#" class="addCart disabled requestPrice" data-id="--><?//=$arElement["ID"]?><!--"><img src="--><?//=SITE_TEMPLATE_PATH?><!--/images/request.png" alt="" class="icon">--><?//=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?><!--</a>-->
 									<?endif;?>
 								</div>
 							</div>
+
+                            <?if(!empty($arElement["MIN_PRICE"])):?>
+                                <a href="#" class="addCart<?if($arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
+                            <?else:?>
+                                <a href="#" class="addCart disabled requestPrice" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="" class="icon"><?=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?></a>
+                            <?endif;?>
 						</li>
 					<?endforeach;?>
-				</ul>
+				    </ul>
 				<a href="#" class="topBtnLeft"></a>
 				<a href="#" class="topBtnRight"></a>
 			</div>
