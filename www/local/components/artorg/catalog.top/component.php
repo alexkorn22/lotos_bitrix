@@ -733,7 +733,8 @@ if($this->startResultCache(false, array($arrFilter, ($arParams["CACHE_GROUPS"]==
             if (!empty($arItem['PRICES']))
                 $arItem['MIN_PRICE'] = CIBlockPriceTools::getMinPriceFromList($arItem['PRICES']);
         }
-        $arItem["CAN_BUY"] = CIBlockPriceTools::CanBuy($arParams["IBLOCK_ID"], $arResult["PRICES"], $arItem);
+
+        $arItem["CAN_BUY"] = $arItem["CATALOG_AVAILABLE"];
 
         $arItem['~BUY_URL'] = str_replace('#ID#', $arItem["ID"], $arResult['~BUY_URL_TEMPLATE']);
         $arItem['BUY_URL'] = str_replace('#ID#', $arItem["ID"], $arResult['BUY_URL_TEMPLATE']);

@@ -12,7 +12,7 @@ $this->setFrameMode(true);?>
 	<div class="tab item">
 		<div id="topProduct">
 			<div class="wrap">
-				<ul class="slideBox productList">
+				<ul class="slideBox productList mainServiceContainer">
 					<?foreach ($arResult["ITEMS"] as $index => $arElement):?>
 						<?
 							$this->AddEditAction($arElement["ID"], $arElement["EDIT_LINK"], CIBlock::GetArrayByID($arElement["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -44,25 +44,22 @@ $this->setFrameMode(true);?>
 										<span class="getFastView" data-id="<?=$arElement["ID"]?>"><?=GetMessage("FAST_VIEW_PRODUCT_LABEL")?></span>
 									</a>
 									<a href="<?=$arElement["DETAIL_PAGE_URL"]?>" class="name"><span class="middle"><?=$arElement["NAME"]?></span></a>
-									<?if(!empty($arElement["MIN_PRICE"])):?>
+<!--                                    --><?//=print_r($arElement)?>
+									<?if(!empty($arElement["MIN_PRICE"]["PRINT_DISCOUNT_VALUE"])):?>
 										<a class="price"><?=$arElement["MIN_PRICE"]["PRINT_DISCOUNT_VALUE"]?>
 											<?if(!empty($arElement["MIN_PRICE"]["PRINT_DISCOUNT_DIFF"]) && $arElement["MIN_PRICE"]["PRINT_DISCOUNT_DIFF"] > 0):?>
 												<s class="discount"><?=$arElement["MIN_PRICE"]["PRINT_VALUE"]?></s>
 											<?endif;?>
 										</a>
-<!--                                        <a href="#" class="addCart--><?//if($arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?><!-- disabled--><?//endif;?><!--" data-id="--><?//=$arElement["ID"]?><!--"><img src="--><?//=SITE_TEMPLATE_PATH?><!--/images/incart.png" alt="" class="icon">--><?//=GetMessage("ADDCART_LABEL")?><!--</a>-->
+                                        <a href="#" class="addCart<?if($arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
+                                        <a href="#" class="fastBack label<?if($arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>
 									<?else:?>
 										<a class="price"><?=GetMessage("REQUEST_PRICE_LABEL")?></a>
-<!--                                        <a href="#" class="addCart disabled requestPrice" data-id="--><?//=$arElement["ID"]?><!--"><img src="--><?//=SITE_TEMPLATE_PATH?><!--/images/request.png" alt="" class="icon">--><?//=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?><!--</a>-->
+                                        <a href="#" class="addCart disabled requestPrice" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="" class="icon"><?=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?></a>
+                                        <a href="#" class="fastBack label<?if(empty($arElement["MIN_PRICE"]["PRINT_DISCOUNT_VALUE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>
 									<?endif;?>
 								</div>
 							</div>
-
-                            <?if(!empty($arElement["MIN_PRICE"])):?>
-                                <a href="#" class="addCart<?if($arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
-                            <?else:?>
-                                <a href="#" class="addCart disabled requestPrice" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="" class="icon"><?=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?></a>
-                            <?endif;?>
 						</li>
 					<?endforeach;?>
 				    </ul>
@@ -74,14 +71,13 @@ $this->setFrameMode(true);?>
 			$("#topProduct").dwCarousel({
 				leftButton: ".topBtnLeft",
 				rightButton: ".topBtnRight",
-				countElement: 5,
+				countElement: 4,
 				resizeElement: true,
 				resizeAutoParams: {
-					1920: 5,
-					1500: 4,
-					1200: 3,
-					850: 2,
-					480: 1
+                    1920: 4,
+                    1200: 3,
+                    850: 2,
+                    480: 1
 				}
 			});
 		</script>
