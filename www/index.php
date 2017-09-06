@@ -182,34 +182,33 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
 
 <div id="infoPromo">
     <div class="limiter">
+        <div class="itemContainer">
+            <div class="item">
+                <a href="/promotions/">
+                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_Promotions.png" alt="Акции">
+                </a>
+            </div>
 
-        <div class="item">
-            <a href="/promotions/">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_Promotions.png" alt="Акции">
-            </a>
+            <div class="item">
+                <a href="/mama-club/">
+                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_MomClub.png" alt="Мама-клуб">
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="/sertificate/">
+                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_GiftCertificates.png" alt="Подарочные сертификаты">
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="/catalog/detskie_tovary/gigiena/nabory_dlya_novorozhdennykh/">
+                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_KomarovskySets.png" alt="Наборы от Комаровского">
+                </a>
+            </div>
         </div>
-
-        <div class="item">
-            <a href="/mama-club/">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_MomClub.png" alt="Мама-клуб">
-            </a>
-        </div>
-
-        <div class="item">
-            <a href="/sertificate/">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_GiftCertificates.png" alt="Подарочные сертификаты">
-            </a>
-        </div>
-
-        <div class="item">
-            <a href="/catalog/detskie_tovary/gigiena/nabory_dlya_novorozhdennykh/">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_KomarovskySets.png" alt="Наборы от Комаровского">
-            </a>
-        </div>
-
     </div>
 
 </div>
-
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
