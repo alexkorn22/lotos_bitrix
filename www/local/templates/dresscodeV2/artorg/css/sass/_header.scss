@@ -1,0 +1,27 @@
+/*BEGIN top menu*/
+#topHeader.color_theme {
+    background-color: $white;
+    #topMenu, #topService {
+        & li a {
+            color: $black;
+            font-size: 13px;
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+    #topMenu {
+        float: none;
+        margin: auto;
+        width: 400px;
+        .selected {
+            color: $green;
+        }
+    }
+    #topService {
+        .top-auth-register a {
+            color: $green;
+        }
+    }
+}
+/*END top menu*/

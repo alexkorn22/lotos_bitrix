@@ -16,6 +16,7 @@ IncludeTemplateLangFile(__FILE__);
 
 		<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/fonts/roboto/roboto.css");?>
 		<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/themes/".$TEMPLATE_THEME_NAME."/style.css");?>
+        <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/headers/header1/css/style.css");?>
         <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/artorg/css/dist/main.css");?>
 
 		<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/jquery-1.11.0.min.js");?>
@@ -28,8 +29,8 @@ IncludeTemplateLangFile(__FILE__);
 		<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/dwSlider.js");?>
 		<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/colorSwitcher.js");?>
 		<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/dwZoomer.js");?>
-        <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/artorg/js/main.js");?>
         <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/artorg/js/slick.js");?>
+        <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/artorg/js/main.js");?>
 		<?$APPLICATION->ShowHead();?>
 		<?CJSCore::Init(array("fx"));?>
 		<title><?$APPLICATION->ShowTitle();?></title>

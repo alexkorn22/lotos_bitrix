@@ -1,4 +1,3 @@
-<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/headers/header1/css/style.css");?>
 <div id="topHeader"<?if($TEMPLATE_HEADER_COLOR != ""):?> class="color_<?=$TEMPLATE_HEADER_COLOR?>"<?endif;?>>
 	<div class="limiter">
 		<?$APPLICATION->IncludeComponent("bitrix:menu", "topMenu", Array(
