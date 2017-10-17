@@ -6,11 +6,14 @@
 			<tr>
 				<td class="searchField">
 					<input type="text" name="q" value="<?=!empty($arResult["q"]) ? $arResult["q"] : ""?>" autocomplete="off" placeholder="<?=GetMessage("SEARCH_TEXT")?>" id="searchQuery">
-					<a href="#" id="topSeachCloseForm"><?=GetMessage("SEARCH_CLOSE_BUTTON")?></a>
+<!--					<a href="#" id="topSeachCloseForm">--><?//=GetMessage("SEARCH_CLOSE_BUTTON")?><!--</a>-->
 				</td>
 				<td class="submit">
 					<input type="hidden" name="r" value="Y">
-					<input type="submit" name="send" value="Y" id="goSearch">
+<!--					<input type="submit" name="send" value="Y" id="goSearch">-->
+                    <button type="submit" name="send" value="Y" id="goSearch">
+                        <i class="fa fa-search"></i>
+                    </button>
 				</td>
 			</tr>
 		</table>

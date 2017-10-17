@@ -25,3 +25,39 @@
     }
 }
 /*END top menu*/
+
+/*BEGIN search*/
+#topSearch {
+    .searchField {
+        width: 390px;
+        input[type="text"] {
+            height: 30px;
+            width: 380px;
+            margin-top: 0;
+            background: none;
+        }
+    }
+    .submit {
+        width: 0!important;
+        input[type="submit"] {
+            float: none;
+            background: none;
+        }
+        button {
+            position: relative;
+            background: transparent;
+            border: none;
+            right: 56px;
+            padding: 0;
+            margin: 0;
+            top: 4px;
+            i {
+                font-size: 28px;
+                color: $gray;
+            }
+        }
+    }
+
+}
+
+/*END search*/

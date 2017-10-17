@@ -1,5 +1,5 @@
 <?
-	$MESS["SEARCH_TEXT"] = "Введите текст для поиска";
+	$MESS["SEARCH_TEXT"] = "Поиск по сайту";
 	$MESS["SEARCH_HEADING"] = "Результаты поиска";
 	$MESS["SEARCH_ALL_RESULT"] = "Смотреть все результаты";
 	$MESS["SEARCH_ERROR_FOR_EMPTY_RESULT"] = "По вашему поисковому запросу ничего не найдено";
