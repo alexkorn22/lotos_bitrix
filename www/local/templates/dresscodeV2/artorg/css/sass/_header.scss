@@ -5,6 +5,8 @@
         & li a {
             color: $black;
             font-size: 13px;
+            font-family: $HelveticaLight;
+            letter-spacing: 0.75px;
             &:hover {
                 color: $green;
             }
