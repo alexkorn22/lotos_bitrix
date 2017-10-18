@@ -10,6 +10,7 @@ $(function(){
 
 	//functions
 	var searchKeyPressed = function(event){
+		return; //выпадающий список в быстром поиске временно отключен
 		if(event.keyCode !== 27){
 			clearTimeout(searchTimeoutID);
 			if($searchQuery.val().length > 1){
