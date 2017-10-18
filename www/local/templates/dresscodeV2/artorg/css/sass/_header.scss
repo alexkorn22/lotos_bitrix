@@ -26,6 +26,19 @@
 }
 /*END top menu*/
 
+/*BEGIN logo*/
+@media all and (max-width: 1300px) {
+    #subHeader {
+        .limiter {
+            #logo{
+                width: 200px;
+            }
+        }
+
+    }
+}
+/*END logo*/
+
 /*BEGIN search*/
 #topSearch1 {
     table {
@@ -77,5 +90,18 @@
     }
 
 }
-
 /*END search*/
+
+/*BEGIN callback*/
+#headerTools .telephone .icon{
+    background: url(../../images/phone.png) 0 0 no-repeat transparent;
+}
+
+#headerTools .telephone .icon:hover{
+    background: url(../../images/phone.png) -48px 0 no-repeat transparent;
+}
+
+#headerTools .tools .telephone .wrap .icon {
+    width: 37px;
+}
+/*END callback*/

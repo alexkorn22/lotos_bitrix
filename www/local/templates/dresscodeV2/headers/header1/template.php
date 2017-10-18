@@ -184,7 +184,7 @@
 				</li>
 				<li class="telephone">
 					<div class="wrap">
-						<a href="<?=SITE_DIR?>callback/" class="icon openWebFormModal callBack" data-id="1"></a>
+						<a href="#" class="icon openWebFormModal callBack" data-id="1"></a>
 						<div class="nf">
 							<?$APPLICATION->IncludeComponent(
 								"bitrix:main.include",
