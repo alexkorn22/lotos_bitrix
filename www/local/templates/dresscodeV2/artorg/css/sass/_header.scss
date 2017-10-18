@@ -93,15 +93,33 @@
 /*END search*/
 
 /*BEGIN callback*/
-#headerTools .telephone .icon{
+#headerTools {
+  .telephone .icon{
     background: url(../../images/phone.png) 0 0 no-repeat transparent;
-}
-
-#headerTools .telephone .icon:hover{
-    background: url(../../images/phone.png) -48px 0 no-repeat transparent;
-}
-
-#headerTools .tools .telephone .wrap .icon {
+    &:hover {
+      background: url(../../images/phone.png) -48px 0 no-repeat transparent;
+    }
+  }
+  .tools .telephone .wrap .icon {
     width: 37px;
+  }
+  /*BEGIN catr*/
+  .cart .wrap .icon{
+    width: 35px;
+    background: url(../../images/cart-new.png) 0 0 no-repeat transparent;
+    &.active {
+      background: url(../../images/cart-new.png) -40px 0 no-repeat transparent;
+      &:hover {
+        background: url(../../images/cart-new.png) -40px 0 no-repeat transparent;
+      }
+    }
+  }
+    .cart ins.active {
+        color: $gray;
+    }
+  /*END cart*/
 }
 /*END callback*/
+
+
+
