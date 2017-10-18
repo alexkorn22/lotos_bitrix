@@ -1,4 +1,4 @@
-<span class="heading">+380(67)620-22-44</span>
+<span class="heading">0-800-300-244</span>
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:form.result.new", 
