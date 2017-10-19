@@ -180,5 +180,75 @@ body.index {
 }
 /*END category menu*/
 
+/*BEGIN slider*/
+
+.sliders {
+  max-height: 320px;
+  @include row-flex;
+  margin: 0;
+  .item {
+    @include col;
+    margin: 0;
+  }
+
+  .dynamic-slider {
+    @include sizeWithoutMargin (8);
+    padding-right: 4px;
+    #slider {
+      max-height: 320px;
+      //width: 68%;
+      .sliderContent {
+        top: 35%;
+        .bigText,
+        .bigTextColor {
+          font-family: $HelveticaMedium;
+        }
+        .bigTextLightColor {
+          font-family: $HelveticaRegular;
+        }
+        .smallText,
+        .bigTextLight {
+          font-family: $HelveticaLight;
+        }
+        .cButton {
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  .static-slider {
+    @include sizeWithoutMargin (4);
+    max-height: 320px;
+    padding-left: 4px;
+    .sliderContent {
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      .title {
+        font-family: $HelveticaRegular;
+        font-size: 36px;
+        color: $green;
+      }
+      .descr {
+        font-family: $HelveticaLight;
+        font-size: 16px;
+        color: $white;
+        text-align: center;
+      }
+    }
+  }
+
+}
+
+
+
+/*END slider*/
+
 
 

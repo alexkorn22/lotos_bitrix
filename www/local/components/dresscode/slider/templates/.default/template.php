@@ -12,8 +12,8 @@
 				<li id="<?=$this->GetEditAreaId($arElement['ID']);?>">
 					<?if($arElement["PROPERTIES"]["LINK"]["VALUE"]):?>
 						<a href="<?=str_replace("#SITE_DIR#", SITE_DIR, $arElement["PROPERTIES"]["LINK"]["VALUE"])?>">
-					<?endif;?>		
-					<span data-large="<?=$arElement['DETAIL_PICTURE']["src"]?>" data-normal="<?=$arElement['PREVIEW_PICTURE']["src"]?>"></span>			
+					<?endif;?>
+					<span data-large="<?=$arElement['DETAIL_PICTURE']["src"]?>" data-normal="<?=$arElement['PREVIEW_PICTURE']["src"]?>"></span>
 					<?if($arElement["PROPERTIES"]["LINK"]["VALUE"]):?>
 						</a>
 					<?endif;?>

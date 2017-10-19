@@ -35,15 +35,15 @@
 	background-position: -28px 0;
 }
 #slider ol li.selected{
-	background-position: -42px 0;	
+	background-position: -42px 0;
 }
 #slider ol li.selected:hover{
-	background-position: -56px 0;	
+	background-position: -56px 0;
 }
 #slider ol li.selected:active{
-	background-position: -70px 0;	
+	background-position: -70px 0;
 }
-#slider .sliderBtnLeft, 
+#slider .sliderBtnLeft,
 #slider .sliderBtnRight{
 	display: block;
 	height: 118px;
@@ -55,10 +55,10 @@
 
 }
 #slider .sliderBtnLeft:hover{
-	background-position: -59px 0;	
+	background-position: -59px 0;
 }
 #slider .sliderBtnLeft:active{
-	background-position: -118px 0;		
+	background-position: -118px 0;
 }
 #slider .sliderBtnRight{
 	background-position: 0 -118px;

@@ -112,6 +112,11 @@ $break_xs: 560px;
     $value: $atom * $n;
     width: #{calc(#{$value} - #{$offset})};
 }
+@mixin sizeWithoutMargin($n){
+    $value: $atom * $n;
+    width: #{calc(#{$value})};
+}
+
 @mixin col-1(){
     @include size(1);
 }
