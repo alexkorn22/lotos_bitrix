@@ -1,3 +1,6 @@
+body.index {
+  background-color: $white;
+}
 /*BEGIN top menu*/
 #topHeader.color_theme {
     background-color: $white;
@@ -124,7 +127,57 @@
 /*END callback*/
 
 /*BEGIN category menu*/
-
+.menuContainerColor {
+  #mainMenuContainer {
+    background-color: $gray;
+    margin-bottom: 8px;
+    .minCatalogButton{
+      font-family: $HelveticaLight;
+      text-transform: uppercase;
+    }
+    #mainMenu {
+      width: 100%;
+      overflow: visible;
+      &>li>a {
+        text-transform: uppercase;
+        &:hover {
+          color: $black;
+        }
+      }
+      & li {
+        border: none;
+        .drop {
+          -webkit-box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
+          -moz-box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
+          .nextColumn {
+            & li {
+              margin-top: 10px;
+              & a {
+                font-family: $HelveticaRegular;
+              }
+              &>ul>li>a {
+                font-family: $HelveticaThin;
+                letter-spacing: 1px;
+              }
+            }
+          }
+        }
+        &:hover {
+          background-color: $white;
+        }
+      }
+      .activeDrop>a {
+        color: $black;
+      }
+      .activeDrop:hover {
+        -webkit-box-shadow: -1px 0px 10px 1px rgba(94,91,91,0.3);
+        -moz-box-shadow: -1px 0px 10px 1px rgba(94,91,91,0.3);
+        box-shadow: -1px 0px 10px 1px rgba(94,91,91,0.3);
+      }
+    }
+  }
+}
 /*END category menu*/
 
 

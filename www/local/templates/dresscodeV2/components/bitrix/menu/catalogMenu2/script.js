@@ -70,7 +70,7 @@ $(window).on("ready", function(event){
 		var $_captureThis = $(this);
 		__menuTimeoutID = setTimeout(function(){
 			$_captureThis.removeClass(__active).find("." + __drop).hide();
-		}, 500);
+		}, 0);
 	}
 
 	$_eChild.hover(openChild, closeChild);
@@ -89,7 +89,7 @@ $(window).on("ready", function(event){
 		}
 
 		var $mainMenuItems = $mainMenu.children("li");
-		var visibleMenuWidth = $mainMenu.width() - 100;
+		var visibleMenuWidth = $mainMenu.width() - 50;
 		var totalSumMenuWidth = 0;
 
 		if(visibleMenuWidth > 700){
