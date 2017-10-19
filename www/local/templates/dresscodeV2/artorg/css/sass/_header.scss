@@ -33,7 +33,10 @@
     #subHeader {
         .limiter {
             #logo{
-                width: 200px;
+                width: 250px;
+                top: -20px;
+                position: relative;
+                z-index: 36;
             }
         }
 
@@ -63,10 +66,7 @@
             -webkit-transition: all 0.2s ease-in-out;
             -o-transition: all 0.2s ease-in-out;
             transition: all 0.2s ease-in-out;
-            border: 0.7px solid $gray;
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            border-radius: 4px;
+            border: 0.5px solid $light-gray;
             padding: 0 2%;
             font-size: 14px;
             color: #ccc7c7;
@@ -122,6 +122,10 @@
   /*END cart*/
 }
 /*END callback*/
+
+/*BEGIN category menu*/
+
+/*END category menu*/
 
 
 
