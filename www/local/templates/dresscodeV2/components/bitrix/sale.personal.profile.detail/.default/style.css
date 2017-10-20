@@ -14,7 +14,7 @@
 }
 
 .sale-personal-profile-detail-form-title-row h4{
-	font: normal normal 16px "roboto_ltregular" , arial , sans-serif;
+	font: normal normal 16px 'HelveticaLight' , arial , sans-serif;
 	font-weight: 600;
 	margin-top: 12px;
 }
@@ -59,7 +59,7 @@
 }
 
 .sale-profile-detail-form textarea {
-	font: normal normal 13px "roboto_ltregular" , arial , sans-serif;
+	font: normal normal 13px 'HelveticaLight' , arial , sans-serif;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;

@@ -181,19 +181,19 @@
 .sale-order-link,
 .sale-order-history-link {
 	display: inline-block;
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #4a90e2;
 	padding: 0 34px 0 0;
 }
 
 .sale-order-title {
 	margin-top:40px;
-	font: 20px "roboto_ltregular", Arial, Helvetica, sans-serif;
+	font: 20px 'HelveticaLight', Arial, Helvetica, sans-serif;
 	color: #262626;
 }
 
 .sale-order-description {
-	font: 13px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 13px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #888;
 }
 
@@ -204,7 +204,7 @@
 .sale-order-list-title,
 .sale-order-list-accomplished-title {
 	margin-top: 10px;
-	font: bold 15px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 15px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #2f3435;
 }
 
@@ -229,7 +229,7 @@
 	display: inline-block;
 	margin: 0 5px 0 0;
 	vertical-align: middle;
-	font: bold 10px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 10px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #9b9b9b;
 }
 
@@ -252,7 +252,7 @@
 
 .sale-order-list-payment-title,
 .sale-order-list-shipment-title {
-	font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #000;
 }
 
@@ -267,7 +267,7 @@
 .sale-order-list-cancel-link,
 .sale-order-list-about-link,
 .sale-order-list-change-payment {
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #4a90e2;
 	text-decoration: underline;
 	cursor: pointer;
@@ -321,7 +321,7 @@ div.sale-order-list-repeat-container {
 }
 
 .sale-order-list-about-link {
-	font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 }
 
 .sale-order-list-status-alert,
@@ -334,7 +334,7 @@ div.sale-order-list-repeat-container {
 	-o-border-radius: 2px;
 	border-radius: 2px;
 	background: #ffe5e8;
-	font: bold 12px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 12px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #d0021b;
 }
 
@@ -346,13 +346,13 @@ div.sale-order-list-repeat-container {
 
 .sale-order-list-payment-price {
 	padding: 4px 0 0 0;
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 }
 
 .sale-order-list-change-payment {
 	display: block;
 	margin: 6px 0 0 0;
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 }
 
 /*.sale-order-list-button-container {*/
@@ -375,7 +375,7 @@ div.sale-order-list-repeat-container {
 	height: 38px;
 	background: #70bb18;
 	color: #fff;
-	font: bold 14px/38px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px/38px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	text-align: center;
 }
 
@@ -389,7 +389,7 @@ div.sale-order-list-repeat-container {
 }
 
 .sale-order-list-shipment {
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	list-style: none;
 }
 
@@ -437,7 +437,7 @@ div.sale-order-list-repeat-container {
 .sale-order-list-accomplished-date-number {
 	display: inline-block;
 	margin: 10px 0 0 0;
-	font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 }
 
 .sale-order-list-accomplished-date {
@@ -478,7 +478,7 @@ div.sale-order-list-repeat-container {
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 	background: #f3f4f5;
-	font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #535c69;
 	vertical-align: middle;
 }

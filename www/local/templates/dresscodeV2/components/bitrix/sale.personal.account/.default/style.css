@@ -6,7 +6,7 @@
 .sale-personal-account-wallet-title{
 	background-color: #f1f1f1;
 	color: #000000;
-	font-family: "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaLight', Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	text-transform: uppercase;
 	font-size:12px;
@@ -51,12 +51,12 @@
 }
 
 .sale-personal-account-wallet-currency-item {
-	font: bold 14px/17px "roboto_ltregular", Arial, Helvetica, sans-serif;
+	font: bold 14px/17px 'HelveticaLight', Arial, Helvetica, sans-serif;
 	color: #000000;
 }
 
 .sale-personal-account-wallet-currency-item + .sale-personal-account-wallet-currency-item {
-	font: bold 11px "roboto_ltregular", Arial, Helvetica, sans-serif;
+	font: bold 11px 'HelveticaLight', Arial, Helvetica, sans-serif;
 }
 
 .sale-personal-account-wallet-sum {

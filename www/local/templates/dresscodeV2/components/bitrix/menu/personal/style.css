@@ -33,7 +33,7 @@
 
 #personalMenu li .selected{
 	border-bottom: 1px dashed #000000;
-	font-family: 'robotobold';
+	font-family: 'HelveticaBold';
 	padding-bottom: 4px;
 }
 

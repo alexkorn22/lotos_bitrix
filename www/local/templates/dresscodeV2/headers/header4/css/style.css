@@ -88,7 +88,7 @@
 
 #headerLine .headerLineTools .heading:nth-child(2),
 #headerLine .headerLineTools .heading:nth-child(3){
-	font-family: "robotomedium";
+	font-family: 'HelveticaMedium';
 	font-size: 16px;
 }
 
@@ -166,7 +166,7 @@
 
 #headerLine .headerLineTools .heading:nth-child(2),
 #headerLine .headerLineTools .heading:nth-child(3){
-	font-family: "roboto_ltregular" , arial , sans-serif;
+	font-family: 'HelveticaLight' , arial , sans-serif;
 }
 
 #subHeader4{

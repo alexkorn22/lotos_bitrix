@@ -263,7 +263,7 @@ body.index {
 }
 /*END arrow top*/
 
-/*BEGIN new products*/
+/*BEGIN new products and hits*/
 #homeCatalog, .homeCatalog {
   background-color: $white;
   .title-new-hit p {
@@ -287,6 +287,7 @@ body.index {
             background-color: transparent !important;
             color: $green;
             border: 1px solid $green;
+            line-height: normal;
           }
         }
         .name {
@@ -335,6 +336,23 @@ body.index {
   }
 }
 /*END new products*/
+
+/*BEGIN fast view*/
+#appFastView {
+  .appFastViewContainer{
+    .marker {
+      font-family: $HelveticaRegular;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background-color: transparent !important;
+      color: $green;
+      border: 1px solid $green;
+      line-height: normal;
+    }
+  }
+}
+/*END fast view*/
 
 
 

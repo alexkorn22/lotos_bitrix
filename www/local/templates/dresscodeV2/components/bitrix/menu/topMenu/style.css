@@ -18,7 +18,7 @@
 }
 
 #topMenu li a{
-	font: normal normal 12px "roboto_ltregular" , arial , sans-serif;
+	font: normal normal 12px 'HelveticaLight' , arial , sans-serif;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;

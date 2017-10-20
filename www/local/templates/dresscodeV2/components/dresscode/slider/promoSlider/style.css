@@ -122,7 +122,7 @@
 #slider .sliderContent .bigTextColor,
 #slider .sliderContent .bigTextLight,
 #slider .sliderContent .bigTextLightColor{
-	font-family: "robotoMedium";
+	font-family: 'HelveticaMedium';
 	line-height: 56px;
 	margin-top: 24px;
 	font-size: 48px;
@@ -151,7 +151,7 @@
 #slider .sliderContent .bigTextLight,
 #slider .sliderContent .mediumTextLight,
 #slider .sliderContent .smallTextLight{
-	font-family: "roboto_thregular";
+	font-family: "HelveticaThin";
 }
 
 #slider .sliderContent .whiteColor{

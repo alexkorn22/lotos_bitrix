@@ -5,7 +5,7 @@
 
 #catalogReviews .heading{
 	border-top: 1px solid #e7e8ea;
-	font-family: 'robotobold';
+	font-family: 'HelveticaBold';
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	padding: 36px 24px;
@@ -18,7 +18,7 @@
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 	border-bottom: 1px dashed #888888;
-	font-family: "robotoregular";
+	font-family: 'HelveticaRegular';
 	text-decoration: none;
 	display: inline-block;
 	vertical-align: middle;
@@ -35,7 +35,7 @@
 }
 
 #catalogReviews .heading .label{
-	font-family: "robotoregular";
+	font-family: 'HelveticaRegular';
 	text-transform: none;
 	display: inline-block;
 	letter-spacing: 0;
@@ -253,7 +253,7 @@
 #catalogElement #newReview .heading{
 	border-bottom: 1px solid #e7e8ea;
 	border-top: 1px solid #e7e8ea;
-	font-family: 'robotobold';
+	font-family: 'HelveticaBold';
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin-bottom: 24px;
@@ -373,7 +373,7 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	border: 1px solid #E4E4E4;
-	font-family: "roboto_ltregular";
+	font-family: 'HelveticaLight';
 	padding-left: 12px;
 	padding-top: 12px;
 	background: #fff;
@@ -394,7 +394,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;	
-	font-family: "roboto_ltregular";
+	font-family: 'HelveticaLight';
 	border: 1px solid #E4E4E4;
 	display: inline-block;
 	margin-bottom: 12px;

@@ -12,7 +12,7 @@
 #popSection .heading{
 	margin-bottom: 0px !important;
 	text-transform: uppercase;
-	font-family: 'robotobold';
+	font-family: 'HelveticaBold';
 	text-align: center;
     padding-left: 18px;
 	line-height: 95px;
@@ -62,7 +62,7 @@
 }
 
 #popSection .marker {
-	font: normal normal 12px "roboto_ltregular" , arial , sans-serif;
+	font: normal normal 12px 'HelveticaLight' , arial , sans-serif;
 	background-color: #424242;
 	margin-bottom: 8px;
 	color: #fff;

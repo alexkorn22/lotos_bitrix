@@ -207,7 +207,7 @@ ul.sale-acountpay-pp-list li {
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 	background: #70bb18;
-	font: 14px "roboto_ltregular" , arial , sans-serif;
+	font: 14px 'HelveticaLight' , arial , sans-serif;
 	text-decoration: none;
 	display: inline-block;
 	line-height: 42px;
@@ -235,7 +235,7 @@ ul.sale-acountpay-pp-list li {
 }
 
 .bx-sap a{
-	font: 14px "robotobold" , arial , sans-serif;
+	font: 14px 'HelveticaBold' , arial , sans-serif;
 	margin-top: 12px;
 	display: block;
 	color: #000000;

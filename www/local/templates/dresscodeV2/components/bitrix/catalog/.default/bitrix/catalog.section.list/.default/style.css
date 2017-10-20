@@ -62,7 +62,7 @@
 }
 
 #catalogSection .sectionItems .item .itemContainer .bigPicture .marker {
-	font: normal normal 12px "roboto_ltregular" , arial , sans-serif;
+	font: normal normal 12px 'HelveticaLight' , arial , sans-serif;
 	margin-bottom: 8px;
 	padding: 3px 4px;
 	line-height: 16px;
@@ -79,7 +79,7 @@
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 	text-transform: uppercase;
-	font-family: 'robotobold';
+	font-family: 'HelveticaBold';
 	text-decoration: none;
 	margin-bottom: 24px;
 	font-size: 20px;

@@ -433,7 +433,7 @@
 
 .sale-order-detail-title-element {
 	margin: 0;
-	font: 36px "roboto_ltregular", Arial, Helvetica, sans-serif;
+	font: 36px 'HelveticaLight', Arial, Helvetica, sans-serif;
 	color: #262626;
 }
 
@@ -528,7 +528,7 @@
 .sale-order-detail-about-order-inner-container-status-detail,
 .sale-order-detail-about-order-inner-container-price-detail {
 	padding: 5px 0 0 0;
-	font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #303030;
 }
 
@@ -545,7 +545,7 @@ div.sale-order-detail-about-order-inner-container-repeat {
 	-moz-border-radius: 2px;
 	-o-border-radius: 2px;
 	border-radius: 2px;
-	font: bold 12px/38px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 12px/38px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #fff;
 	text-align: center;
 }
@@ -553,7 +553,7 @@ div.sale-order-detail-about-order-inner-container-repeat {
 .sale-order-detail-about-order-inner-container-repeat-cancel {
 	display: block;
 	padding: 7px 0 0 0;
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #9b9b9b;
 	text-align: center;
 	text-decoration: underline;
@@ -575,14 +575,14 @@ div.sale-order-detail-about-order-inner-container-repeat {
 
 .sale-order-detail-about-order-inner-container-list-item-element {
 	padding: 4px 0 0 0;
-	font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #303030;
 }
 
 .sale-order-detail-about-order-inner-container-list-item-link {
 	display: block;
 	padding: 3px 0 0 0;
-	font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #4a90e2;
 }
 
@@ -669,7 +669,7 @@ div.sale-order-detail-payment-options-methods-image-container {
 .sale-order-detail-payment-options-info-total-price {
 	height: 21px;
 	line-height: 21px;
-	font: bold 15px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 15px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #000;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -677,7 +677,7 @@ div.sale-order-detail-payment-options-methods-image-container {
 }
 
 .sale-order-detail-payment-options-info-total-price {
-	font: 15px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 15px 'HelveticaLight', Helvetica, Arial, sans-serif;
 }
 .sale-order-detail-payment-options-method {
 	position: relative;
@@ -707,12 +707,12 @@ div.sale-order-detail-payment-options-methods-image-container {
 
 .sale-order-detail-payment-options-methods-info-title,
 .sale-order-detail-payment-options-methods-shipment-list-item-title {
-	font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #000;
 }
 
 .sale-order-detail-payment-options-shipment-button-element {
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #4a90e2;
 }
 
@@ -726,7 +726,7 @@ div.sale-order-detail-payment-options-methods-image-container {
 	-o-border-radius: 2px;
 	border-radius: 2px;
 	background: #ffe5e8;
-	font: bold 12px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 12px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #d0021b;
 }
 
@@ -738,13 +738,13 @@ div.sale-order-detail-payment-options-methods-image-container {
 
 .sale-order-detail-payment-options-methods-info-total-price {
 	padding: 4px 0 0 0;
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 }
 
 .sale-order-detail-payment-options-methods-info-change-link {
 	display: block;
 	padding: 6px 0 0 0;
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 }
 
 div.sale-order-detail-payment-options-methods-button-container {
@@ -761,7 +761,7 @@ div.sale-order-detail-payment-options-methods-button-container {
 	/*max-width: 115px;*/
 	background: #70bb18;
 	color: #fff;
-	font: bold 14px/38px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px/38px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	text-align: center;
 }
 
@@ -836,7 +836,7 @@ div.sale-order-detail-payment-options-methods-template {
 /* shipment */
 .sale-order-detail-payment-options-methods-shipment-list {
 	padding-left: 5px !important;
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	list-style: none;
 }
 
@@ -901,7 +901,7 @@ div.sale-order-detail-payment-options-methods-template {
 .sale-order-detail-payment-options-shipment-composition-map-title {
 	padding: 44px 0 8px 0;
 	margin: 0;
-	font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #2f3435;
 }
 
@@ -915,12 +915,12 @@ div.sale-order-detail-payment-options-methods-template {
 }
 
 .sale-order-detail-payment-options-shipment-map-address-title {
-	font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #2f3435;
 }
 
 .sale-order-detail-payment-options-shipment-map-address-element {
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 }
 
 .sale-order-detail-payment-options-shipment-composition-item-product-image {
@@ -996,7 +996,7 @@ div.sale-order-detail-payment-options-methods-template {
 }
 
 .sale-order-detail-total-payment-list-left-item {
-	font: 15px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 15px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #2f3435;
 	text-align: right;
 	list-style: none;
@@ -1008,7 +1008,7 @@ div.sale-order-detail-payment-options-methods-template {
 .sale-order-detail-total-payment-list-right-item {
 	height: 20px;
 	line-height: 20px;
-	font: bold 15px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 15px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #2f3435;
 	text-align: right;
 }
@@ -1020,7 +1020,7 @@ div.sale-order-detail-payment-options-methods-template {
 .sale-order-detail-about-order-inner-container-price-title,
 .sale-order-detail-payment-options-shipment-composition-item-title,
 .sale-order-detail-payment-options-order-content-item-title {
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #888;
 }
 
@@ -1029,7 +1029,7 @@ div.sale-order-detail-payment-options-methods-template {
 }
 
 .sale-order-detail-about-order-inner-container-details-title {
-	font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #888;
 }
 
@@ -1052,7 +1052,7 @@ div.sale-order-detail-payment-options-methods-template {
 .sale-order-detail-payment-options-order-content-title-element,
 .sale-order-detail-general-item {
 	margin: 11px 0 13px 0;
-	font: bold 15px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: bold 15px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #2f3435;
 }
 
@@ -1266,7 +1266,7 @@ div.sale-order-detail-payment-options-methods-template {
 
 .sale-order-detail-order-item-color,
 .sale-order-detail-order-item-size {
-	font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+	font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	color: #7c7c7c;
 }
 
@@ -1619,7 +1619,7 @@ input[name="BuyButton"]:active{
 		border-radius: 2px;
 		background: #70bb18;
 		color: #fff;
-		font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+		font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 		text-align: center;
 		/*transform: translate(-6%, 35%);*/
 		cursor: pointer;
@@ -1762,12 +1762,12 @@ input[name="BuyButton"]:active{
 @media (max-width: 320px) {
 	.sale-order-detail-total-payment-list-left-item,
 	.sale-order-detail-payment-options-info-total-price {
-		font: 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+		font: 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	}
 
 	.sale-order-detail-payment-options-info-order-number,
 	.sale-order-detail-total-payment-list-right-item {
-		font: bold 14px "roboto_ltregular", Helvetica, Arial, sans-serif;
+		font: bold 14px 'HelveticaLight', Helvetica, Arial, sans-serif;
 	}
 
 	.sale-order-detail-payment-options-info-image {

@@ -362,7 +362,7 @@
 
 
 #scrollTable .price {
-    font-family: 'robotobold';
+    font-family: 'HelveticaBold';
     color: #000000;
     font-size: 18px;
     display: block;
@@ -376,7 +376,7 @@
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	font-family: 'roboto_condensedlight';
+	font-family: 'HelveticaLight';
 	margin-bottom: 12px;
 	color: #ffffff;
 	line-height: 60px;

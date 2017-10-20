@@ -87,7 +87,7 @@
 }
 
 #catalogTableList .price{
-	font-family: 'robotobold';
+	font-family: 'HelveticaBold';
 	text-decoration: none;
 	position: relative;
 	font-size: 21px;
@@ -100,7 +100,7 @@
 }
 
 #catalogTableList .price .discount{
-	font-family: 'roboto_ltregular';
+	font-family: 'HelveticaLight';
 	position: absolute;
 	padding-left: 4px;
 	font-size: 14px;
@@ -114,7 +114,7 @@
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	font-family: 'roboto_ltregular';
+	font-family: 'HelveticaLight';
 	display: inline-block;
 	text-decoration: none;
 	text-align: center;
@@ -149,7 +149,7 @@
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	font-family: 'roboto_condensedlight';
+	font-family: 'HelveticaLight';
 	text-decoration: none;
 	line-height: 21px;
 	text-align: left;

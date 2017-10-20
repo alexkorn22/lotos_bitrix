@@ -15,7 +15,7 @@
 #appProductPriceVariant .priceVariantHeading{
 	border-bottom: 1px solid #ececec;
 	text-transform: uppercase;
-	font-family: "robotobold";
+	font-family: 'HelveticaBold';
 	text-align: center;
 	line-height: 28px;
 	font-size: 18px;
@@ -64,7 +64,7 @@
 }
 
 #appProductPriceVariant .minAvailablePrice{
-	font-family: "robotomedium";
+	font-family: 'HelveticaMedium';
 }
 
 #appProductPriceVariant .linkMore{
