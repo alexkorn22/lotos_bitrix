@@ -9,7 +9,7 @@ $countNews = 4;
 <?if(!empty($arResult["GROUPS"])):?>
 
 	<?if(empty($arParams["AJAX"])):?>
-		<div id="homeCatalog">
+		<div class="homeCatalog">
 		<?endif;?>
 			<?foreach ($arResult["GROUPS"] as $itg => $arItemsGroup):?>
 				<?if(!empty($arItemsGroup["ITEMS"])):?>
@@ -18,7 +18,7 @@ $countNews = 4;
 					<?endif;?>
 						<div class="limiter">
                             <div class="title-new-hit">
-                                <p>Новинки</p>
+                                <p><?=$arParams["TITLE_BLOCK"]?></p>
                             </div>
 							<div class="items productList">
                                <?
@@ -26,6 +26,7 @@ $countNews = 4;
                                ?>
 							<?foreach ($arItemsGroup["ITEMS"] as $index => $arElement):?>
 								<?
+                                $dimension = $arElement['PROPERTIES']['OBYEM']['VALUE'];
                                 $counter++;
                                 if ($counter > $countNews) {
                                     break;
@@ -43,18 +44,13 @@ $countNews = 4;
 												<?endforeach;?>
 											</div>
 										<?endif;?>
-										<?if(isset($arElement["PROPERTIES"]["RATING"]["VALUE"])):?>
-										    <!--<div class="rating">
-										      <i class="m" style="width:<?/*=($arElement["PROPERTIES"]["RATING"]["VALUE"] * 100 / 5)*/?>%"></i>
-										      <i class="h"></i>
-										    </div>-->
-									    <?endif;?>
 										<a href="<?=$arElement["DETAIL_PAGE_URL"]?>" class="picture">
 											<img src="<?=(!empty($arElement["IMG"]["src"]) ? $arElement["IMG"]["src"] : SITE_TEMPLATE_PATH.'/images/empty.png')?>" alt="<?=$arElement["NAME"]?>">
 											<span class="getFastView" data-id="<?=$arElement["ID"]?>"><?=GetMessage("FAST_VIEW_PRODUCT_LABEL")?></span>
 										</a>
 										<a href="<?=$arElement["DETAIL_PAGE_URL"]?>" class="name"><span class="middle"><?=$arElement["NAME"]?></span></a>
 										<?if(!empty($arElement["PRICE"])):?>
+
 											<?if($arElement["COUNT_PRICES"] > 1):?>
 												<a class="price getPricesWindow" data-id="<?=$arElement["ID"]?>">
 													<span class="priceIcon"></span><?=CCurrencyLang::CurrencyFormat($arElement["PRICE"]["DISCOUNT_PRICE"], $arResult["CURRENCY"], true)?>
@@ -66,6 +62,7 @@ $countNews = 4;
 													<?endif;?>
 												</a>
 											<?else:?>
+                                                <div class="wrapper-price">
 												<a class="price"><?=CCurrencyLang::CurrencyFormat($arElement["PRICE"]["DISCOUNT_PRICE"], $arResult["CURRENCY"], true)?>
 													<?if($arParams["HIDE_MEASURES"] != "Y" && !empty($arResult["MEASURES"][$arElement["CATALOG_MEASURE"]]["SYMBOL_RUS"])):?>
 														<span class="measure"> / <?=$arResult["MEASURES"][$arElement["CATALOG_MEASURE"]]["SYMBOL_RUS"]?></span>
@@ -74,6 +71,10 @@ $countNews = 4;
 														<s class="discount"><?=CCurrencyLang::CurrencyFormat($arElement["PRICE"]["RESULT_PRICE"]["BASE_PRICE"], $arResult["CURRENCY"], true)?></s>
 													<?endif;?>
 												</a>
+                                                <div class="dimension">
+                                                    <p><?=$dimension?></p>
+                                                </div>
+                                                </div>
 											<?endif;?>
 											<a href="#" class="addCart<?if($arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><i class="fa fa-shopping-bag" aria-hidden="true"></i><?=GetMessage("ADDCART_LABEL")?></a>
 										<?else:?>

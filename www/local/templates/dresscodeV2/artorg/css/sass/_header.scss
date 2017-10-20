@@ -264,7 +264,7 @@ body.index {
 /*END arrow top*/
 
 /*BEGIN new products*/
-#homeCatalog {
+#homeCatalog, .homeCatalog {
   background-color: $white;
   .title-new-hit p {
     font-size: 24px;
@@ -291,6 +291,14 @@ body.index {
         }
         .name {
           font-family: $HelveticaLight;
+        }
+        .wrapper-price {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          .dimension p {
+            margin: 0;
+          }
         }
         .price {
           font-family: $HelveticaMedium;
@@ -319,6 +327,9 @@ body.index {
       }
       .optional i{
         padding-right: 10px;
+      }
+      .label {
+        font-family: $HelveticaLight;
       }
     }
   }

@@ -153,6 +153,12 @@ if(CModule::IncludeModule("iblock") && CModule::IncludeModule("sale") && CModule
 		         "TYPE" => "STRING",
 		         "DEFAULT" => "140"
 			),
+            "TITLE_BLOCK" => array(
+                "PARENT" => "BASE",
+                "NAME" => "Название блока",
+                "TYPE" => "STRING",
+                "DEFAULT" => "Новинки"
+            ),
 			"CACHE_TIME" => Array("DEFAULT" => "360000"),
             "ITEMS_NEWS" => array(
                 "PARENT" => "PICTURE",

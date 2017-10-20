@@ -102,7 +102,7 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
 		"COMPONENT_TEMPLATE" => ".default",
 		"ELEMENTS_COUNT" => "6",
 		"HIDE_MEASURES" => "N",
-		"HIDE_NOT_AVAILABLE" => "N",
+		"HIDE_NOT_AVAILABLE" => "Y",
 		"IBLOCK_ID" => "10",
 		"IBLOCK_TYPE" => "catalog",
 		"PICTURE_HEIGHT" => "200",
@@ -115,7 +115,8 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
 		),
 		"SORT_PROPERTY_NAME" => "SORT",
 		"SORT_VALUE" => "ASC",
-		"ITEMS_NEWS" => "Y"
+		"ITEMS_NEWS" => "Y",
+		"TITLE_BLOCK" => "Новинки"
 	),
 	false,
 	array(
@@ -125,14 +126,14 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
 
 <?$APPLICATION->IncludeComponent(
 	"dresscode:offers.product", 
-	"hitSales", 
+	".default", 
 	array(
 		"CACHE_TIME" => "3600000",
 		"CACHE_TYPE" => "Y",
-		"COMPONENT_TEMPLATE" => "hitSales",
+		"COMPONENT_TEMPLATE" => ".default",
 		"ELEMENTS_COUNT" => "6",
 		"HIDE_MEASURES" => "N",
-		"HIDE_NOT_AVAILABLE" => "N",
+		"HIDE_NOT_AVAILABLE" => "Y",
 		"IBLOCK_ID" => "10",
 		"IBLOCK_TYPE" => "catalog",
 		"PICTURE_HEIGHT" => "200",
@@ -145,7 +146,8 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
 		),
 		"SORT_PROPERTY_NAME" => "SORT",
 		"SORT_VALUE" => "ASC",
-		"ITEMS_NEWS" => "Y"
+		"ITEMS_NEWS" => "Y",
+		"TITLE_BLOCK" => "Хиты продаж"
 	),
 	false,
 	array(
