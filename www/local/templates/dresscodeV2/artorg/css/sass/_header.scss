@@ -249,9 +249,18 @@ body.index {
 
 }
 /*END slider*/
-/*BEGIN why we*/
-
-/*END why we*/
+/*BEGIN arrow top*/
+#upButton.arrow-top {
+  background: url(../../images/up3.png) 0 0 no-repeat transparent;
+  height: 43px;
+  width: 42px;
+  bottom: 100px;
+  transition: .3s ease-in-out;
+  &:hover {
+    background-position: 0px -45px;
+  }
+}
+/*END arrow top*/
 
 
 

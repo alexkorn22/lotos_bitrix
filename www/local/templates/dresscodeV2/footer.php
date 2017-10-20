@@ -209,8 +209,8 @@
 		false
 	);?>
 
-	<div id="upButton">
-		<a href="#"></a>
+	<div id="upButton" class="arrow-top">
+        <a href="#"></a>
 	</div>
 
     <script type="text/javascript">
