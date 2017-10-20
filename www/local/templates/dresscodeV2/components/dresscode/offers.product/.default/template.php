@@ -1,61 +1,40 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<?$this->setFrameMode(true);?>
+<?
+$this->setFrameMode(true);
+$countNews = 4;
+?>
 <script type="text/javascript">
 	var ajaxDir = "<?=$this->GetFolder();?>";
 </script>
 <?if(!empty($arResult["GROUPS"])):?>
-	
+
 	<?if(empty($arParams["AJAX"])):?>
 		<div id="homeCatalog">
-			<?if(!empty($arResult["PROPERTY_ENUM"])):?>
-				<div class="captionList">
-					<div class="limiter">
-						<div id="captionCarousel">
-							<ul class="slideBox">
-								<?foreach ($arResult["PROPERTY_ENUM"] as $ipe => $arPropEnum):?>
-									<?if(!empty($arResult["GROUPS"][$ipe]["ITEMS"])):?>
-										<li class="cItem">
-                                            <div class="caption<?if($arPropEnum["SELECTED"] == "Y"):?> selected<?endif;?> getProductByGroup" data-name="<?=$arPropEnum["PROP_NAME"]?>" data-group="<?=$arPropEnum["ID"]?>" data-page="1" data-sheet="N"><?=$arPropEnum["VALUE"]?></div>
-										</li>	
-									<?endif;?>
-								<?endforeach;?>
-							</ul>
-							<a href="#" class="captionBtnLeft"></a>
-							<a href="#" class="captionBtnRight"></a>
-						</div>
-						<script type="text/javascript">
-							$("#captionCarousel").dwCarousel({
-								leftButton: ".captionBtnLeft",
-								rightButton: ".captionBtnRight",
-								countElement: 5,
-								resizeElement: true,
-								resizeAutoParams: {
-									1920: 5,
-									1500: 4,
-									1200: 3,
-									850: 2,
-									// 480: 1
-								}
-							});
-						</script>
-					</div>
-				</div>
-			<?endif;?>
-		<?endif;?> 
+		<?endif;?>
 			<?foreach ($arResult["GROUPS"] as $itg => $arItemsGroup):?>
 				<?if(!empty($arItemsGroup["ITEMS"])):?>
 					<?if(empty($arParams["AJAX"])):?>
 						<div class="ajaxContainer">
 					<?endif;?>
 						<div class="limiter">
+                            <div class="title-new-hit">
+                                <p>Новинки</p>
+                            </div>
 							<div class="items productList">
+                               <?
+                               $counter = 0;
+                               ?>
 							<?foreach ($arItemsGroup["ITEMS"] as $index => $arElement):?>
 								<?
+                                $counter++;
+                                if ($counter > $countNews) {
+                                    break;
+                                }
 									$this->AddEditAction($arElement["ID"], $arElement["EDIT_LINK"], CIBlock::GetArrayByID($arElement["IBLOCK_ID"], "ELEMENT_EDIT"));
 									$this->AddDeleteAction($arElement["ID"], $arElement["DELETE_LINK"], CIBlock::GetArrayByID($arElement["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 								?>
 								<div class="item product sku" id="<?=$this->GetEditAreaId($arElement["ID"]);?>" data-product-id="<?=!empty($arElement["~ID"]) ? $arElement["~ID"] : $arElement["ID"]?>" data-iblock-id="<?=$arElement["SKU_INFO"]["IBLOCK_ID"]?>" data-prop-id="<?=$arElement["SKU_INFO"]["SKU_PROPERTY_ID"]?>" data-product-width="<?=$arParams["PICTURE_WIDTH"]?>" data-product-height="<?=$arParams["PICTURE_HEIGHT"]?>" data-hide-measure="<?=$arParams["HIDE_MEASURES"]?>" data-price-code="<?=implode("||", $arParams["PRODUCT_PRICE_CODE"])?>">
-							
+
 									<div class="tabloid">
 										<?if(!empty($arElement["PROPERTIES"]["OFFERS"]["VALUE"])):?>
 											<div class="markerContainer">
@@ -65,16 +44,16 @@
 											</div>
 										<?endif;?>
 										<?if(isset($arElement["PROPERTIES"]["RATING"]["VALUE"])):?>
-										    <div class="rating">
-										      <i class="m" style="width:<?=($arElement["PROPERTIES"]["RATING"]["VALUE"] * 100 / 5)?>%"></i>
+										    <!--<div class="rating">
+										      <i class="m" style="width:<?/*=($arElement["PROPERTIES"]["RATING"]["VALUE"] * 100 / 5)*/?>%"></i>
 										      <i class="h"></i>
-										    </div>
+										    </div>-->
 									    <?endif;?>
 										<a href="<?=$arElement["DETAIL_PAGE_URL"]?>" class="picture">
 											<img src="<?=(!empty($arElement["IMG"]["src"]) ? $arElement["IMG"]["src"] : SITE_TEMPLATE_PATH.'/images/empty.png')?>" alt="<?=$arElement["NAME"]?>">
 											<span class="getFastView" data-id="<?=$arElement["ID"]?>"><?=GetMessage("FAST_VIEW_PRODUCT_LABEL")?></span>
 										</a>
-										<a href="<?=$arElement["DETAIL_PAGE_URL"]?>" class="name"><span class="middle"><?=$arElement["NAME"]?></span></a> 
+										<a href="<?=$arElement["DETAIL_PAGE_URL"]?>" class="name"><span class="middle"><?=$arElement["NAME"]?></span></a>
 										<?if(!empty($arElement["PRICE"])):?>
 											<?if($arElement["COUNT_PRICES"] > 1):?>
 												<a class="price getPricesWindow" data-id="<?=$arElement["ID"]?>">
@@ -96,14 +75,14 @@
 													<?endif;?>
 												</a>
 											<?endif;?>
-											<a href="#" class="addCart<?if($arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
+											<a href="#" class="addCart<?if($arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><i class="fa fa-shopping-bag" aria-hidden="true"></i><?=GetMessage("ADDCART_LABEL")?></a>
 										<?else:?>
 											<a class="price"><?=GetMessage("REQUEST_PRICE_LABEL")?></a>
 											<a href="#" class="addCart disabled requestPrice" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="" class="icon"><?=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?></a>
 										<?endif;?>
 										<div class="optional">
 											<div class="row">
-												<a href="#" class="fastBack label<?if(empty($arElement["PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>
+												<a href="#" class="fastBack label<?if(empty($arElement["PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><i class="fa fa-shopping-bag" aria-hidden="true"></i><?=GetMessage("FASTBACK_LABEL")?></a>
 											</div>
 											<div class="row">
 												<?if($arElement["CATALOG_QUANTITY"] > 0):?>
@@ -119,7 +98,7 @@
 														<a class="outOfStock label changeAvailable"><img src="<?=SITE_TEMPLATE_PATH?>/images/outOfStock.png" alt="" class="icon"><?=GetMessage("NOAVAILABLE")?></a>
 													<?endif;?>
 												<?endif;?>
-											</div>						
+											</div>
 										</div>
 										<?if(!empty($arElement["SKU_PRODUCT"])):?>
 											<?if(!empty($arElement["SKU_PROPERTIES"]) && $level = 1):?>

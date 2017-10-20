@@ -249,6 +249,7 @@ body.index {
 
 }
 /*END slider*/
+
 /*BEGIN arrow top*/
 #upButton.arrow-top {
   background: url(../../images/up3.png) 0 0 no-repeat transparent;
@@ -261,6 +262,68 @@ body.index {
   }
 }
 /*END arrow top*/
+
+/*BEGIN new products*/
+#homeCatalog {
+  background-color: $white;
+  .title-new-hit p {
+    font-size: 24px;
+    font-family: $HelveticaLight;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
+  }
+  .items.productList {
+    .product {
+      border: none !important;
+      .tabloid {
+        .markerContainer {
+          visibility: hidden;
+          .marker {
+            font-family: $HelveticaRegular;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background-color: transparent !important;
+            color: $green;
+            border: 1px solid $green;
+          }
+        }
+        .name {
+          font-family: $HelveticaLight;
+        }
+        .price {
+          font-family: $HelveticaMedium;
+          font-size: 20px;
+        }
+      }
+      &:hover {
+        .markerContainer {
+          visibility: visible;
+        }
+      }
+      .getFastView {
+        font-family: $HelveticaLight;
+      }
+      .addCart {
+        font-family: $HelveticaRegular;
+        font-size: 20px;
+        border-radius: 0;
+        letter-spacing: 0.5px;
+        & i {
+          font-size: 17px;
+          bottom: 3px;
+          position: relative;
+          padding-right: 10px;
+        }
+      }
+      .optional i{
+        padding-right: 10px;
+      }
+    }
+  }
+}
+/*END new products*/
 
 
 
