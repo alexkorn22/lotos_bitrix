@@ -222,6 +222,9 @@ body.index {
     @include sizeWithoutMargin (4);
     max-height: 320px;
     padding-left: 4px;
+    & a {
+      text-decoration: none;
+    }
     .sliderContent {
       background-repeat: no-repeat;
       background-size: cover;
@@ -245,10 +248,10 @@ body.index {
   }
 
 }
-
-
-
 /*END slider*/
+/*BEGIN why we*/
+
+/*END why we*/
 
 
 

@@ -1,6 +1,7 @@
 #infoAbout{
 
   padding-bottom: 36px;
+  padding-top: 30px;
 
   .item {
     height: 100%;
@@ -30,7 +31,7 @@
   h1{
     text-align: center;
     margin-bottom: 0px;
-    font-family: 'robotobold';
+    font-family: $HelveticaRegular;
     line-height: 50px;
     color: #000000;
   }
@@ -38,7 +39,7 @@
   h2{
     text-align: center;
     margin-bottom: 0px;
-    font-family: 'robotobold';
+    font-family: $HelveticaMedium;
     line-height: 50px;
     margin-bottom: -12px;
     margin-top: auto;
@@ -58,7 +59,7 @@
 }
 
 .fontFamilyRobotoboldText{
-  font-family: 'robotobold';
+  font-family: $HelveticaMedium;
 }
 
 .sizeText16{
@@ -67,11 +68,20 @@
 
 #infoPromo {
   display: block;
-  background-color: #f9f9f9;
+  padding-bottom: 20px;
   .item {
-    height: 100%;
+    max-height: 400px;
     display: inline-block;
     box-sizing: content-box;
+    -webkit-box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.4);
+    transition: .5s ease-in-out;
+    &:hover {
+      -webkit-box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.6);
+      -moz-box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.6);
+      box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.6);
+    }
     //width: 24%;
     img{
       width: 100%;
@@ -94,6 +104,9 @@
 
 .descriptionTitle{
   position: relative;
+  & p {
+    font-family: $HelveticaLight;
+  }
 }
 
 

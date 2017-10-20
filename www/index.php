@@ -24,7 +24,7 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
             <h1>Интернет-магазин ЛОТОС: бытовая химия и косметика</h1>
         </div>
         <div class="item">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout1.png" alt="промоблок 1">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/new.png" alt="промоблок 1">
             <h2 class="tapTitle">Широкий ассортимент</h2>
             <div class="descriptionTitle">
                 <p >Более <span class="fontFamilyRobotoboldText sizeText16">5000</span>
@@ -34,23 +34,23 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
             </div>
         </div>
         <div class="item">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout2.png" alt="промоблок 2">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/payment.png" alt="промоблок 2">
             <h2 class="tapTitle">Удобная оплата</h2>
             <div class="descriptionTitle"><p>Расплачивайтесь за покупку
                     <span class="fontFamilyRobotoboldText">любым способом</span>: наличными, безналичным расчётом, наложенным платежом.</p></div>
         </div>
         <div class="item">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout3.png" alt="промоблок 3">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/delivery.png" alt="промоблок 3">
             <h2 class="tapTitle">Доставка за 1 день</h2>
             <div class="descriptionTitle"><p>для жителей Запорожья и 2-3 дня по всем городам Украины транспортными компаниями.</p></div>
         </div>
         <div class="item">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout4.png" alt="промоблок 4">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/discont.png" alt="промоблок 4">
             <h2 class="tapTitle">Программа лояльности</h2>
             <div class="descriptionTitle"><p>В интернет-магазине ЛОТОС действуют <span class="fontFamilyRobotoboldText sizeText16">дисконты</span> постоянных клиентов и участников Мама-Клуба.</p></div>
         </div>
         <div class="item">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout5.png" alt="промоблок 5">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/smile.png" alt="промоблок 5">
             <h2  class="tapTitle">Довольные покупатели</h2>
            <div class="descriptionTitle">
                <p>За последний год число наших постоянных клиентов достигло отметки <span class="fontFamilyRobotoboldText sizeText16">300 000</span>. Они доверяют нам, а мы благодарны им за это.</p>
@@ -59,6 +59,38 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
         <!--<img src="--><?//=(SITE_TEMPLATE_PATH);?><!--/artorg/images/AboutUs.png" alt="промоблок">-->
     </div>
 </div>
+
+
+    <div id="infoPromo">
+        <div class="limiter">
+            <div class="itemContainer">
+                <div class="item">
+                    <a href="/promotions/">
+                        <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo1.png" alt="Акции">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="/mama-club/">
+                        <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo2.png" alt="Мама-клуб">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="/sertificate/">
+                        <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo3.png" alt="Подарочные сертификаты">
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="/catalog/detskie_tovary/gigiena/nabory_dlya_novorozhdennykh/">
+                        <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo4.png" alt="Наборы от Комаровского">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 <?$APPLICATION->IncludeComponent(
@@ -177,38 +209,6 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua
             </div>
         </div>
     </div>
-</div>
-
-
-<div id="infoPromo">
-    <div class="limiter">
-        <div class="itemContainer">
-            <div class="item">
-                <a href="/promotions/">
-                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_Promotions.png" alt="Акции">
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="/mama-club/">
-                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_MomClub.png" alt="Мама-клуб">
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="/sertificate/">
-                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_GiftCertificates.png" alt="Подарочные сертификаты">
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="/catalog/detskie_tovary/gigiena/nabory_dlya_novorozhdennykh/">
-                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_KomarovskySets.png" alt="Наборы от Комаровского">
-                </a>
-            </div>
-        </div>
-    </div>
-
 </div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
