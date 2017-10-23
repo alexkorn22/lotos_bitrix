@@ -1,50 +1,50 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Новинки", 
-		"new/", 
+		"Главная", 
+		"/index.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Хиты продаж", 
-		"popular/", 
+		"О магазине", 
+		"about/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Подарочные сертификаты", 
-		"discount/", 
+		"Доставка", 
+		"about/delivery/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Акции", 
+		"Оплата", 
+		"about/delivery/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"about/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Карта проезда", 
 		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Наборы доктора Комаровского", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Часто задаваемые вопросы", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Карьера", 
-		"", 
+		"Обратная связь", 
+		"callback/", 
 		Array(), 
 		Array(), 
 		"" 

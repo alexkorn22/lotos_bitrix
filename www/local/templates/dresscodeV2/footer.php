@@ -54,7 +54,7 @@
 										"bitrix:menu", 
 										"footerOffers", 
 										array(
-											"ROOT_MENU_TYPE" => "left2",
+											"ROOT_MENU_TYPE" => "footerMain",
 											"MENU_CACHE_TYPE" => "N",
 											"MENU_CACHE_TIME" => "3600",
 											"MENU_CACHE_USE_GROUPS" => "Y",
@@ -71,45 +71,106 @@
 										false
 									);?>						
 								</div>
-								<div class="column">
-									<span class="heading"><?$APPLICATION->IncludeFile(SITE_DIR."sect_footer_menu_heading3.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_MENU_HEADING3"), "TEMPLATE" => "sect_footer_menu_heading3.php"));?></span>
-									<?$APPLICATION->IncludeComponent("bitrix:menu", "footerHelp", Array(
-										"ROOT_MENU_TYPE" => "top",
-											"MENU_CACHE_TYPE" => "N",
-											"MENU_CACHE_TIME" => "3600",
-											"MENU_CACHE_USE_GROUPS" => "Y",
-											"MENU_CACHE_GET_VARS" => "",
-											"MAX_LEVEL" => "1",
-											"CHILD_MENU_TYPE" => "top",
-											"USE_EXT" => "N",
-											"DELAY" => "N",
-											"ALLOW_MULTI_SELECT" => "N",
-											"CACHE_SELECTED_ITEMS" => "N"
-										),
-										false
-									);?>
-								</div>
+
+                                <?
+                                global $USER;
+                                if ($USER->IsAuthorized()){
+                                    $typeMenu = 'footerAuthorized';
+                                }else{
+                                    $typeMenu = 'footerNotAuthorized';
+                                }
+                                ?>
+
+                                <div class="column">
+                                    <span class="heading"><?$APPLICATION->IncludeFile(SITE_DIR."sect_footer_menu_heading3.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_MENU_HEADING3"), "TEMPLATE" => "sect_footer_menu_heading3.php"));?></span>
+                                    <?$APPLICATION->IncludeComponent("bitrix:menu", "footerHelp", Array(
+                                        "ROOT_MENU_TYPE" => $typeMenu,
+                                        "MENU_CACHE_TYPE" => "N",
+                                        "MENU_CACHE_TIME" => "3600",
+                                        "MENU_CACHE_USE_GROUPS" => "Y",
+                                        "MENU_CACHE_GET_VARS" => "",
+                                        "MAX_LEVEL" => "1",
+                                        "CHILD_MENU_TYPE" => "top",
+                                        "USE_EXT" => "N",
+                                        "DELAY" => "N",
+                                        "ALLOW_MULTI_SELECT" => "N",
+                                        "CACHE_SELECTED_ITEMS" => "N"
+                                    ),
+                                        false
+                                    );?>
+                                </div>
+                                <div class="column">
+                                    <span class="heading"><?$APPLICATION->IncludeFile(SITE_DIR."sect_footer_menu_heading4.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_MENU_HEADING"), "TEMPLATE" => "sect_footer_menu_heading.php"));?></span>
+                                    <?$APPLICATION->IncludeComponent(
+                                        "bitrix:menu",
+                                        "footerCatalog",
+                                        array(
+                                            "ROOT_MENU_TYPE" => "left2",
+                                            "MENU_CACHE_TYPE" => "A",
+                                            "MENU_CACHE_TIME" => "36000000",
+                                            "MENU_CACHE_USE_GROUPS" => "Y",
+                                            "MENU_CACHE_GET_VARS" => array(
+                                            ),
+                                            "MAX_LEVEL" => "1",
+                                            "CHILD_MENU_TYPE" => "top",
+                                            "USE_EXT" => "Y",
+                                            "DELAY" => "N",
+                                            "ALLOW_MULTI_SELECT" => "N",
+                                            "COMPONENT_TEMPLATE" => "footerCatalog",
+                                            "CACHE_SELECTED_ITEMS" => "N"
+                                        ),
+                                        false
+                                    );?>
+                                </div>
 							</div>
+                            <hr class="separator">
+                            <div class="subscription">
+                                <div class="wrap">
+                                    <div class="subscr-left">
+                                        <div class="subscr-form">
+                                            <form action="" method="post" class="webflow-style-input">
+                                                <label for="field"><span>Подписаться на рассылку</span>
+                                                    <input class="" type="email" name="field" placeholder="Email" />
+                                                </label>
+                                                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="subscr-right">
+                                        <div class="social">
+                                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="copyrighted">
+                               <span class="first-line">© Copyright 2017  Интернет-магазин косметики и бытовой химии ЛОТОС. <a href="#">Все права защищены</a></span>
+                                <span>Email: <a href="mailto:info@lotostrade.ua">info@lotostrade.ua</a> Тел.: +380(61)214-99-54, +380(61)620-22-44</span>
+                                <span><a href="#">Сайт разработан и поддерживается компанией WeDo</a></span>
+                            </div>
 						</div>
+                        <!--
 						<div id="rightFooter">
 							<table class="rightTable">
 								<tr class="footerRow">
 									<td class="leftColumn">
-										<?$APPLICATION->IncludeFile(SITE_DIR."sect_footer_left.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_LEFT"), "TEMPLATE" => "sect_footer_left.php"));?>
-										<?$APPLICATION->IncludeFile(SITE_DIR."sect_footer_left2.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_LEFT2"), "TEMPLATE" => "sect_footer_left2.php"));?>
-										<?$APPLICATION->IncludeFile(SITE_DIR."sect_footer_left3.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_LEFT3"), "TEMPLATE" => "sect_footer_left3.php"));?>
-										<?$APPLICATION->IncludeFile(SITE_DIR."sect_footer_counters.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_COUNTERS"), "TEMPLATE" => "sect_footer_counters.php"));?>
+										<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_left.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_LEFT"), "TEMPLATE" => "sect_footer_left.php"));*/?>
+										<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_left2.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_LEFT2"), "TEMPLATE" => "sect_footer_left2.php"));*/?>
+										<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_left3.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_LEFT3"), "TEMPLATE" => "sect_footer_left3.php"));*/?>
+										<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_counters.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_COUNTERS"), "TEMPLATE" => "sect_footer_counters.php"));*/?>
 
 									</td>
 									<td class="rightColumn">
 										<div class="wrap">
-											<?$APPLICATION->IncludeFile(SITE_DIR."sect_footer_left4.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_LEFT4"), "TEMPLATE" => "sect_footer_left4.php"));?>
-											<?$APPLICATION->IncludeFile(SITE_DIR."sect_footer_counters_right.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_COUNTERS"), "TEMPLATE" => "sect_footer_counters_right.php"));?>
+											<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_left4.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_LEFT4"), "TEMPLATE" => "sect_footer_left4.php"));*/?>
+											<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_counters_right.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_COUNTERS"), "TEMPLATE" => "sect_footer_counters_right.php"));*/?>
 										</div>
 									</td>
 								</tr>
 							</table>
 						</div>
+                        -->
 					</div>
 				</div>
 			</div>

@@ -1,49 +1,49 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Новинки", 
-		"new/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Хиты продаж", 
-		"popular/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Подарочные сертификаты", 
-		"discount/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Акции", 
+		"Вход", 
 		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Наборы доктора Комаровского", 
+		"Регистрация", 
 		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Часто задаваемые вопросы", 
+		"Мой кабинет", 
 		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Карьера", 
+		"Мои заказы", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Корзина", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Мама-Клуб", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Регистрация дисконта", 
 		"", 
 		Array(), 
 		Array(), 
