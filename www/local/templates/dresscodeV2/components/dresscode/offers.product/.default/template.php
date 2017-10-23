@@ -83,7 +83,7 @@ $countNews = 4;
 										<?endif;?>
 										<div class="optional">
 											<div class="row">
-												<a href="#" class="fastBack label<?if(empty($arElement["PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><i class="fa fa-shopping-bag" aria-hidden="true"></i><?=GetMessage("FASTBACK_LABEL")?></a>
+												<a href="#" class="fastBack label<?if(empty($arElement["PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><i class="fa fa-shopping-bag new-bag" aria-hidden="true"></i><?=GetMessage("FASTBACK_LABEL")?></a>
 											</div>
 											<div class="row">
 												<?if($arElement["CATALOG_QUANTITY"] > 0):?>

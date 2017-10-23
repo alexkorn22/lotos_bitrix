@@ -116,7 +116,7 @@
 								<?endif;?>
 							</a>
 						<?endif;?>
-						<a href="#" class="addCart<?if($arResult["CATALOG_AVAILABLE"] != "Y"):?> disabled<?endif;?>" data-id="<?=$arResult["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("FAST_VIEW_ADDCART_LABEL")?></a>
+						<a href="#" class="addCart<?if($arResult["CATALOG_AVAILABLE"] != "Y"):?> disabled<?endif;?>" data-id="<?=$arResult["ID"]?>"><i class="fa fa-shopping-bag new-bag" aria-hidden="true"></i><?=GetMessage("FAST_VIEW_ADDCART_LABEL")?></a>
 						<?else:?>
 							<a class="price"><?=GetMessage("FAST_VIEW_REQUEST_PRICE_LABEL")?></a>
 							<a href="#" class="addCart disabled requestPrice" data-id="<?=$arResult["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="" class="icon"><?=GetMessage("FAST_VIEW_REQUEST_PRICE_BUTTON_LABEL")?></a>
@@ -133,7 +133,7 @@
 							</div>
 						<?endif;?>	
 						<div class="row">
-							<a href="#" class="fastBack label changeID<?if(empty($arResult["PRICE"]) || $arResult["CATALOG_AVAILABLE"] != "Y"):?> disabled<?endif;?>" data-id="<?=$arResult["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="<?=GetMessage("FAST_VIEW_FASTBACK_LABEL")?>" class="icon"><?=GetMessage("FAST_VIEW_FASTBACK_LABEL")?></a>
+							<a href="#" class="fastBack label changeID<?if(empty($arResult["PRICE"]) || $arResult["CATALOG_AVAILABLE"] != "Y"):?> disabled<?endif;?>" data-id="<?=$arResult["ID"]?>"><i class="fa fa-shopping-bag new-bag" aria-hidden="true"></i><?=GetMessage("FAST_VIEW_FASTBACK_LABEL")?></a>
 						</div>
 					</div>
 				</div>

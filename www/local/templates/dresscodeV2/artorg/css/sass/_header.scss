@@ -326,9 +326,6 @@ body.index {
           padding-right: 10px;
         }
       }
-      .optional i{
-        padding-right: 10px;
-      }
       .label {
         font-family: $HelveticaLight;
       }
@@ -340,19 +337,37 @@ body.index {
 /*BEGIN fast view*/
 #appFastView {
   .appFastViewContainer{
-    .marker {
-      font-family: $HelveticaRegular;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      background-color: transparent !important;
-      color: $green;
-      border: 1px solid $green;
-      line-height: normal;
+
+    .appFastViewInformationColumn {
+      .addCart {
+        border-radius: 0;
+      }
     }
   }
 }
+
 /*END fast view*/
+
+/*BEGIN marker*/
+.marker {
+  font-family: $HelveticaRegular;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: transparent !important;
+  color: $green !important;
+  border: 1px solid $green;
+  line-height: normal;
+}
+/*END marker*/
+/*BEGIN shopping-bag*/
+.new-bag {
+  font-size: 16px;
+  bottom: 1px;
+  position: relative;
+  padding-right: 9px;
+}
+/*END shopping-bag*/
 
 
 
