@@ -4864,6 +4864,7 @@ a.inStock:hover span{
 	.slider_middle #slider .limiter,
 	.slider_middle #slider .videoPoster{
 		height: 400px;
+		/*height: 320px;*/
 	}
 
 	.slider_small #slider ul li span,
@@ -4871,6 +4872,7 @@ a.inStock:hover span{
 	.slider_small #slider .limiter,
 	.slider_small #slider .videoPoster{
 		height: 400px;
+		/*height: 320px;*/
 	}
 
 }
@@ -5218,7 +5220,8 @@ body.panels_white #brandList .item:nth-child(5n+1){
 	#slider .slideVideoContainer,
 	#slider .limiter,
 	#slider .videoPoster{
-		height: 690px;
+		/*height: 690px;*/
+		height: 320px;
 	}
 }
 
@@ -5228,7 +5231,8 @@ body.panels_white #brandList .item:nth-child(5n+1){
 	#slider .slideVideoContainer,
 	#slider .limiter,
 	#slider .videoPoster{
-		height: 650px;
+		/*height: 650px;*/
+		height: 320px;
 	}
 
 	#slider .sliderContent,
@@ -5350,7 +5354,8 @@ body.panels_white #brandList .item:nth-child(5n+1){
 	#slider .slideVideoContainer,
 	#slider .limiter,
 	#slider .videoPoster{
-		height: 518px;
+		/*height: 518px;*/
+		height: 320px;
 	}
 
 /*	#catalogColumn .leftColumn{
@@ -5429,7 +5434,8 @@ body.panels_white #brandList .item:nth-child(5n+1){
 	#slider .slideVideoContainer,
 	#slider .limiter,
 	#slider .videoPoster{
-		height: 420px;
+		/*height: 420px;*/
+		height: 320px;
 	}
 
 	#footer .rightTable .leftColumn{
@@ -5641,7 +5647,8 @@ body.panels_white #brandList .item:nth-child(5n+1){
 	#slider .slideVideoContainer,
 	#slider .limiter,
 	#slider .videoPoster{
-		height: 400px;
+		/*height: 400px;*/
+		height: 320px;
 	}
 
 
@@ -5768,7 +5775,8 @@ body.panels_white #brandList .item:nth-child(5n+1){
 	#slider .slideVideoContainer,
 	#slider .limiter,
 	#slider .videoPoster{
-		height: 380px;
+		/*height: 380px;*/
+		height: 320px;
 	}
 }
 
@@ -5902,7 +5910,8 @@ body.panels_white #brandList .item:nth-child(5n+1){
 	#slider .slideVideoContainer,
 	#slider .limiter,
 	#slider .videoPoster{
-		height: 350px;
+		/*height: 350px;*/
+		height: 320px;
 	}
 
 	.product .getFastView,

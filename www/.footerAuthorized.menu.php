@@ -1,6 +1,20 @@
 <?
 $aMenuLinks = Array(
 	Array(
+		"Вход", 
+		"/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Регистрация", 
+		"/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
 		"Мой кабинет", 
 		"", 
 		Array(), 
@@ -9,7 +23,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Мои заказы", 
-		"", 
+		"/personal/order/", 
 		Array(), 
 		Array(), 
 		"" 

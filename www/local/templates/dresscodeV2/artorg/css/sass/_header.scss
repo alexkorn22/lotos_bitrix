@@ -18,7 +18,7 @@ body.index {
     #topMenu {
         float: none;
         margin: auto;
-        width: 400px;
+        width: 430px;
         .selected {
             color: $green;
         }
@@ -197,8 +197,11 @@ body.index {
     #slider {
       max-height: 320px;
       //width: 68%;
+      .limiter {
+        height: 320px;
+      }
       .sliderContent {
-        top: 35%;
+        //top: 35%;
         .bigText,
         .bigTextColor {
           font-family: $HelveticaMedium;
@@ -214,6 +217,9 @@ body.index {
           -webkit-border-radius: 0;
           -moz-border-radius: 0;
           border-radius: 0;
+        }
+        .center {
+          min-width: 430px;
         }
       }
     }
