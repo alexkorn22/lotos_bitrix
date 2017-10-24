@@ -144,8 +144,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="hide-cart">
-                                <a id="open-close" href="#">open</a>
+                            <div class="hide-cart green" onclick="openClose()">
+
                             </div>
                             <div class="copyrighted">
                                <span class="first-line">© Copyright 2017  Интернет-магазин косметики и бытовой химии ЛОТОС. <a href="#">Все права защищены</a></span>
@@ -265,6 +265,24 @@
 	<div id="upButton" class="arrow-top">
         <a href="#"></a>
 	</div>
+
+    <script>
+        function openClose(){
+            var $footerLine = $("#footerLine");
+            var $footer = $("#footer");
+            var $button = $('.hide-cart');
+
+            if($footerLine.hasClass('hidden')){
+                $button.addClass('green').removeClass('cart');
+                $footerLine.removeClass("hidden");
+                $footer.removeClass("footerLineHidden");
+            }else{
+                $button.addClass('cart').removeClass('green');
+                $footerLine.addClass("hidden");
+                $footer.addClass("footerLineHidden");
+            };
+        };
+    </script>
 
     <script type="text/javascript">
       var ajaxPath = "<?=SITE_DIR?>ajax.php";

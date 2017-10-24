@@ -38,21 +38,17 @@ $frame = $this->createFrame()->begin();
 <script type="text/javascript">
     $(document).ready(function(){
 
-        $('#open-close').show();
-
-
-        $('#open-close').click(function(event) {
-            event.preventDefault(); // Для того чтобы при нажатии на ссылку не кидало вверх
-            $('#footerLine').slideToggle();
-        });
-
         var $NUM_PRODUCTS = parseInt(<?=$arResult["NUM_PRODUCTS"]?>);
         var $footerLine = $("#footerLine");
         var $footer = $("#footer");
+        var $button = $('.hide-cart');
+
         if($NUM_PRODUCTS == 0){
+            $button.addClass("hidden");
             $footerLine.addClass("hidden");
             $footer.addClass("footerLineHidden");
         }else{
+            $button.removeClass("hidden");
             $footerLine.removeClass("hidden");
             $footer.removeClass("footerLineHidden");
         };
