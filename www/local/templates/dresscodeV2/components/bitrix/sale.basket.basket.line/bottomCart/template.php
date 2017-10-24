@@ -8,7 +8,7 @@ $frame = $this->createFrame()->begin();
 <?if ($arParams["SHOW_PRODUCTS"] == "Y" && $arResult['NUM_PRODUCTS'] > 0):?>
 
     <div class="delivery-container<?if($arResult["ART_TOTAL_PRICE"]<=0):?> freeDelivery<?endif;?>">
-        <?if(!empty($arResult["NUM_PRODUCTS"]) && $arResult["FREE_DELIVERY_SUM"] > 0):?><span <?if($arResult["ART_TOTAL_PRICE"]<=0):?>class="mark"<?endif;?>><?if($arResult["ART_TOTAL_PRICE"]>0):?>До бесплатной доставки <span class="freeDeliveryLeftStr">осталось </span><?else:?>Доставка бесплатно<?;endif;?></span><span class="mark"><?if($arResult["ART_TOTAL_PRICE"]>0):?><?=$arResult["ART_TOTAL_PRICE_STR"];?><?endif;?></span><?endif;?>
+        <?if(!empty($arResult["NUM_PRODUCTS"]) && $arResult["FREE_DELIVERY_SUM"] > 0):?><span <?if($arResult["ART_TOTAL_PRICE"]<=0):?>class="mark"<?endif;?>><?if($arResult["ART_TOTAL_PRICE"]>0):?>До бесплатной доставки осталось <?else:?>Доставка бесплатно<?;endif;?></span><span class="mark"><?if($arResult["ART_TOTAL_PRICE"]>0):?><?=$arResult["ART_TOTAL_PRICE_STR"];?><?endif;?></span><?endif;?>
         <!--<span style="font-size: 14px;">Доставка вашого замовлення можлива за 1 коп.</span>-->
     </div>
 
@@ -30,10 +30,21 @@ $frame = $this->createFrame()->begin();
 
 <div class="item footerCart">
     <a <?if(!empty($arResult["NUM_PRODUCTS"])):?>href="<?=SITE_DIR?>personal/cart/"<?endif;?> class="cart<?if(!empty($arResult["NUM_PRODUCTS"])):?> active<?endif;?>"><span class="icon"></span><span class="cartLabel"><?=GetMessage("CART_LABEL")?></span><span class="mark numProducts"><?=$arResult["NUM_PRODUCTS"]?></span></a>
+    <!--<div id="hide-cart">
+        <a id="open-close" href="#"></a>
+    </div>-->
 </div>
 
 <script type="text/javascript">
     $(document).ready(function(){
+
+        $('#open-close').show();
+
+
+        $('#open-close').click(function(event) {
+            event.preventDefault(); // Для того чтобы при нажатии на ссылку не кидало вверх
+            $('#footerLine').slideToggle();
+        });
 
         var $NUM_PRODUCTS = parseInt(<?=$arResult["NUM_PRODUCTS"]?>);
         var $footerLine = $("#footerLine");

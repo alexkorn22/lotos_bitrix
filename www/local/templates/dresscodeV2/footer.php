@@ -144,6 +144,9 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="hide-cart">
+                                <a id="open-close" href="#">open</a>
+                            </div>
                             <div class="copyrighted">
                                <span class="first-line">© Copyright 2017  Интернет-магазин косметики и бытовой химии ЛОТОС. <a href="#">Все права защищены</a></span>
                                 <span>Email: <a href="mailto:info@lotostrade.ua">info@lotostrade.ua</a> Тел.: +380(61)214-99-54, +380(61)620-22-44</span>
@@ -177,17 +180,6 @@
 		</div>
 		<div id="footerLine" class="hidden miniCart <?if(!empty($TEMPLATE_FOOTER_LINE_COLOR) && $TEMPLATE_FOOTER_LINE_COLOR != "default"):?> color_<?=$TEMPLATE_FOOTER_LINE_COLOR?>"<?endif;?>>
 			<div class="limiter">
-				<!--<div class="col">
-					<div class="item">
-						<a href="<?/*=SITE_DIR*/?>callback/" class="callback"><span class="icon"></span> <?/*=GetMessage("FOOTER_CALLBACK_LABEL")*/?></a>
-					</div>
-					<div class="item">
-						<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_telephone.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_TELEPHONE"), "TEMPLATE" => "sect_footer_telephone.php"));*/?>
-					</div>
-					<div class="item">
-						<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_email.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_EMAIL"), "TEMPLATE" => "sect_footer_email.php"));*/?>
-					</div>
-				</div>-->
 			    <div class="colFooterCart">
 				    <div id="flushFooterCart" class="flushFooterCartMedia">
 					    <?$APPLICATION->IncludeComponent(
