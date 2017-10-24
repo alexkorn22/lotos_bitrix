@@ -252,7 +252,6 @@ body.index {
       }
     }
   }
-
 }
 /*END slider*/
 
@@ -327,7 +326,6 @@ body.index {
       .addCart {
         font-family: $HelveticaRegular;
         font-size: 20px;
-        border-radius: 0;
         letter-spacing: 0.5px;
         & i {
           font-size: 17px;
@@ -338,6 +336,9 @@ body.index {
       }
       .label {
         font-family: $HelveticaLight;
+        &:last-child {
+          width: 100%;
+        }
       }
     }
   }
@@ -345,20 +346,12 @@ body.index {
 /*END new products*/
 
 /*BEGIN fast view*/
-#appFastView {
-  .appFastViewContainer{
 
-    .appFastViewInformationColumn {
-      .addCart {
-        border-radius: 0;
-      }
-    }
-  }
+/*END btn addCart*/
+.addCart {
+  border-radius: 0 !important;
 }
-
-/*END fast view*/
-
-/*BEGIN marker*/
+/*BEGIN btn addCart*/
 .marker {
   font-family: $HelveticaRegular;
   font-size: 10px;
@@ -512,6 +505,23 @@ body.index {
   color: #fff;
 }
 /*END text selection*/
+
+/*BEGIN catalog*/
+#catalog {
+  .items.productList {
+    .product {
+      border: none !important;
+      .row {
+         .label {
+           &:last-child {
+             width: 100%;
+           }
+         }
+      }
+    }
+  }
+}
+/*END catalog*/
 
 
 
