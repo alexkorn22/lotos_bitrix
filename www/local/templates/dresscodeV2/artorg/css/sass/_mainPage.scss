@@ -238,7 +238,7 @@
   .item.footerCart{
     display: flex;
     margin-right: auto;
-    width: 20%;
+    width: 18%;
     margin-top: 13px;
     text-align: center;
     float: right;
@@ -272,11 +272,11 @@
     transition: .3s ease-in-out;
   }
   &.cart {
-    background: url(../../images/cart-new.png) -17px 0 no-repeat transparent;
+    background: url(../../images/bottomCart.png) 0 -55px no-repeat transparent;
   }
 
   &:hover {
-    background-position: 0 0;
+    background-position: 0 1px;
     cursor: pointer;
   }
 }

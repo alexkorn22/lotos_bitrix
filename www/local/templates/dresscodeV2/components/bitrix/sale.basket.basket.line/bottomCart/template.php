@@ -30,9 +30,6 @@ $frame = $this->createFrame()->begin();
 
 <div class="item footerCart">
     <a <?if(!empty($arResult["NUM_PRODUCTS"])):?>href="<?=SITE_DIR?>personal/cart/"<?endif;?> class="cart<?if(!empty($arResult["NUM_PRODUCTS"])):?> active<?endif;?>"><span class="icon"></span><span class="cartLabel"><?=GetMessage("CART_LABEL")?></span><span class="mark numProducts"><?=$arResult["NUM_PRODUCTS"]?></span></a>
-    <!--<div id="hide-cart">
-        <a id="open-close" href="#"></a>
-    </div>-->
 </div>
 
 <script type="text/javascript">

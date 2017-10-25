@@ -144,36 +144,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="hide-cart green" onclick="openClose()">
-
-                            </div>
+                            <div class="hide-cart green" onclick="openClose()"></div>
                             <div class="copyrighted">
                                <span class="first-line">© Copyright 2017  Интернет-магазин косметики и бытовой химии ЛОТОС. <a href="#">Все права защищены</a></span>
                                 <span>Email: <a href="mailto:info@lotostrade.ua">info@lotostrade.ua</a> Тел.: +380(61)214-99-54, +380(61)620-22-44</span>
                                 <span><a href="#">Сайт разработан и поддерживается компанией WeDo</a></span>
                             </div>
 						</div>
-                        <!--
-						<div id="rightFooter">
-							<table class="rightTable">
-								<tr class="footerRow">
-									<td class="leftColumn">
-										<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_left.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_LEFT"), "TEMPLATE" => "sect_footer_left.php"));*/?>
-										<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_left2.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_LEFT2"), "TEMPLATE" => "sect_footer_left2.php"));*/?>
-										<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_left3.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_LEFT3"), "TEMPLATE" => "sect_footer_left3.php"));*/?>
-										<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_counters.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_COUNTERS"), "TEMPLATE" => "sect_footer_counters.php"));*/?>
-
-									</td>
-									<td class="rightColumn">
-										<div class="wrap">
-											<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_left4.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_LEFT4"), "TEMPLATE" => "sect_footer_left4.php"));*/?>
-											<?/*$APPLICATION->IncludeFile(SITE_DIR."sect_footer_counters_right.php", Array(), Array("MODE" => "text", "NAME" => GetMessage("SECT_FOOTER_COUNTERS"), "TEMPLATE" => "sect_footer_counters_right.php"));*/?>
-										</div>
-									</td>
-								</tr>
-							</table>
-						</div>
-                        -->
 					</div>
 				</div>
 			</div>
