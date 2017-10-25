@@ -9,6 +9,17 @@ $(document).ready(function(){
         }
     });
     modalForm();
+
+    var nav = $('#mainMenuContainer');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 125) {
+            nav.addClass("f-nav");
+        } else {
+            nav.removeClass("f-nav");
+        }
+    });
+
 });
 
 modalForm = function() {
