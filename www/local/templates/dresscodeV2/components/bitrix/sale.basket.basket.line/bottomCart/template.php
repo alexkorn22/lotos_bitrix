@@ -1,5 +1,6 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $frame = $this->createFrame()->begin();
+
 ?>
 
 <?$compareCount = count($_SESSION["COMPARE_LIST"]["ITEMS"])?>
@@ -12,6 +13,7 @@ $frame = $this->createFrame()->begin();
         <!--<span style="font-size: 14px;">Доставка вашого замовлення можлива за 1 коп.</span>-->
     </div>
 
+    <div class="slider-mini-cart">
     <div class="products-carousel-container">
         <? $n = 1; foreach ($arResult["CATEGORIES"]["READY"] as &$arItem):?>
             <div id="carouselProduct_<?=$arItem["PRODUCT_ID"]?>" class="carousel-item" data-slick-index="<?=$n?>">
@@ -26,56 +28,17 @@ $frame = $this->createFrame()->begin();
             </div>
         <? $n++; endforeach;?>
     </div>
+    </div>
 <?endif?>
 
 <div class="item footerCart">
     <a <?if(!empty($arResult["NUM_PRODUCTS"])):?>href="<?=SITE_DIR?>personal/cart/"<?endif;?> class="cart<?if(!empty($arResult["NUM_PRODUCTS"])):?> active<?endif;?>"><span class="icon"></span><span class="cartLabel"><?=GetMessage("CART_LABEL")?></span><span class="mark numProducts"><?=$arResult["NUM_PRODUCTS"]?></span></a>
 </div>
 
-<script type="text/javascript">
+<script>
+    var $NUM_PRODUCTS = parseInt(<?=$arResult["NUM_PRODUCTS"]?>);
     $(document).ready(function(){
-
-        var $NUM_PRODUCTS = parseInt(<?=$arResult["NUM_PRODUCTS"]?>);
-        var $footerLine = $("#footerLine");
-        var $footer = $("#footer");
-        var $button = $('.hide-cart');
-
-        if($NUM_PRODUCTS == 0){
-            $button.addClass("hidden");
-            $footerLine.addClass("hidden");
-            $footer.addClass("footerLineHidden");
-        }else{
-            $button.removeClass("hidden");
-            $footerLine.removeClass("hidden");
-            $footer.removeClass("footerLineHidden");
-        };
-
-        var productsCarouselContainer = document.getElementsByClassName("products-carousel-container");
-        if(productsCarouselContainer.length == 0)return;
-        var containerWidth = productsCarouselContainer[0].clientWidth || productsCarouselContainer[0].offsetWidth;
-        var count, _centerMode, _slidesToShow;
-
-        count = 0;
-        _centerMode = false;
-        _slidesToShow = 1;
-
-        if(containerWidth > parseInt(<?=$arResult["NUM_PRODUCTS"]?>*71)){
-            _slidesToShow = parseInt(<?=$arResult["NUM_PRODUCTS"]?>);
-            if(containerWidth > parseInt(<?=$arResult["NUM_PRODUCTS"]?>*71+50)){
-                count = parseInt(<?=$arResult["NUM_PRODUCTS"]?>/2);
-                _centerMode = true;
-            };
-        };
-
-        $(".products-carousel-container").slick({
-            prevArrow: '<button type="button" data-role="none" class="button-arrow slick-prev-arrow">Previous</button>',//$(".slick-prev-arrow"),
-            nextArrow: '<button type="button" data-role="none" class="button-arrow slick-next-arrow">Next</button>',//$(".slick-next-arrow"),
-            infinite: false,
-            variableWidth: true,
-            slidesToShow: _slidesToShow,
-            centerMode: _centerMode,
-            initialSlide: count
-        });
+        initBottomCart($NUM_PRODUCTS);
     });
 </script>
 

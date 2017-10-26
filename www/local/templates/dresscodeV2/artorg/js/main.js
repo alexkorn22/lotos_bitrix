@@ -21,9 +21,28 @@ $(document).ready(function(){
         }
     });
 
+    $('#hide-cart').on('click',openCloseBottomCart);
+
+
 // end fixed menu
 
 });
+
+var openCloseBottomCart = function (){
+    var $footerLine = $("#footerLine");
+    var $footer = $("#footer");
+    var $button = $('#hide-cart');
+
+    if($footerLine.hasClass('hidden')){
+        $button.addClass('green').removeClass('cart');
+        $footerLine.slideDown().removeClass("hidden");
+        $footer.removeClass("footerLineHidden");
+    }else{
+        $button.addClass('cart').removeClass('green');
+        $footerLine.addClass("hidden").slideUp();
+        $footer.addClass("footerLineHidden");
+    };
+};
 
 modalForm = function() {
     var $win = $(".modalForm");

@@ -257,12 +257,12 @@
 
       }
     }
-    .products-carousel-container{
+    .slider-mini-cart{
       float: left;
       height: 80px;
       box-sizing: border-box;
       text-align: -webkit-center;
-      width: 55%;
+      width: 52%;
       margin: 0 auto;
     }
   }
@@ -404,7 +404,7 @@
     }
   }
 
-  .products-carousel-container .carousel-item {
+  .slider-mini-cart .carousel-item {
     box-shadow: none;
     background-color: white;
     margin: 3px 3px;
@@ -590,7 +590,7 @@
         .delivery-container{
           display: none;
         }
-        .products-carousel-container{
+        .slider-mini-cart{
           width: 75%;
           margin-left:10px;
         }
@@ -684,7 +684,7 @@
       &.miniCart{
         height: 45px;
         line-height: unset;
-        .products-carousel-container, .delivery-container{
+        .slider-mini-cart, .delivery-container{
           display: none;
         }
       }

@@ -18,9 +18,14 @@
                 false
             );?>
         <?endif;?>
-
-		<div id="footer"<?if(!empty($TEMPLATE_FOOTER_VARIANT) && $TEMPLATE_FOOTER_VARIANT != "default"):?> class="variant_<?=$TEMPLATE_FOOTER_VARIANT?>"<?endif;?>>
-			<div class="fc">
+<?
+$cartPage = $APPLICATION->GetCurPage() == '/personal/cart/';
+?>
+		<div id="footer"
+            class="<?if(!empty($TEMPLATE_FOOTER_VARIANT) && $TEMPLATE_FOOTER_VARIANT != "default"):?>variant_<?=$TEMPLATE_FOOTER_VARIANT?><?endif;?>
+<?if($cartPage):?>
+            footerLineHidden <?endif?>">
+			<div class="fc ">
 				<div class="limiter">
 					<div id="rowFooter">
 						<div id="leftFooter">
@@ -144,7 +149,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="hide-cart green" onclick="openClose()"></div>
+                            <? if(!$cartPage):?>
+                            <div id="hide-cart" class="hide-cart green"></div>
+                            <?endif;?>
                             <div class="copyrighted">
                                <span class="first-line">© Copyright 2017  Интернет-магазин косметики и бытовой химии ЛОТОС. <a href="#">Все права защищены</a></span>
                                 <span>Email: <a href="mailto:info@lotostrade.ua">info@lotostrade.ua</a> Тел.: +380(61)214-99-54, +380(61)620-22-44</span>
@@ -160,10 +167,10 @@
 			    <div class="colFooterCart">
 				    <div id="flushFooterCart" class="flushFooterCartMedia">
 					    <?$APPLICATION->IncludeComponent(
-	"bitrix:sale.basket.basket.line",
+	"bitrix:sale.basket.basket.line", 
 	"bottomCart", 
 	array(
-		"HIDE_ON_BASKET_PAGES" => "N",
+		"HIDE_ON_BASKET_PAGES" => "Y",
 		"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
 		"PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
 		"PATH_TO_PERSONAL" => SITE_DIR."personal/",
@@ -176,7 +183,14 @@
 		"SHOW_PERSONAL_LINK" => "N",
 		"SHOW_PRODUCTS" => "Y",
 		"SHOW_TOTAL_PRICE" => "Y",
-		"COMPONENT_TEMPLATE" => "bottomCart"
+		"COMPONENT_TEMPLATE" => "bottomCart",
+		"PATH_TO_AUTHORIZE" => "",
+		"SHOW_DELAY" => "N",
+		"SHOW_NOTAVAIL" => "N",
+		"SHOW_SUBSCRIBE" => "N",
+		"SHOW_IMAGE" => "Y",
+		"SHOW_PRICE" => "Y",
+		"SHOW_SUMMARY" => "Y"
 	),
 	false
 );?>
@@ -242,24 +256,6 @@
 	<div id="upButton" class="arrow-top">
         <a href="#"></a>
 	</div>
-
-    <script>
-        function openClose(){
-            var $footerLine = $("#footerLine");
-            var $footer = $("#footer");
-            var $button = $('.hide-cart');
-
-            if($footerLine.hasClass('hidden')){
-                $button.addClass('green').removeClass('cart');
-                $footerLine.removeClass("hidden");
-                $footer.removeClass("footerLineHidden");
-            }else{
-                $button.addClass('cart').removeClass('green');
-                $footerLine.addClass("hidden");
-                $footer.addClass("footerLineHidden");
-            };
-        };
-    </script>
 
     <script type="text/javascript">
       var ajaxPath = "<?=SITE_DIR?>ajax.php";
