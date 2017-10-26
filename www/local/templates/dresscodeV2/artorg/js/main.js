@@ -10,15 +10,18 @@ $(document).ready(function(){
     });
     modalForm();
 
+// fixed menu
     var nav = $('#mainMenuContainer');
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 125) {
-            nav.addClass("f-nav");
+        if ($(this).scrollTop() > 135) {
+            nav.addClass("fix-menu");
         } else {
-            nav.removeClass("f-nav");
+            nav.removeClass("fix-menu");
         }
     });
+
+// end fixed menu
 
 });
 

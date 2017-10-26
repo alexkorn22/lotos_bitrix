@@ -175,13 +175,37 @@
   .minCatalogButton{
     background-color: #1a1a1a;
   }
+  .mini-logo {
+    float: left;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 0;
+    transition: all .5s;
+    img {
+      display: none;
+    }
+  }
 }
-#mainMenuContainer.f-nav{  /* To fix main menu container */
-  z-index: 9999;
+
+#mainMenuContainer.fix-menu{  /* To fix main menu container */
+  z-index: 100;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
+  opacity: 0.8;
+  transition: all 1s;
+  &:hover {
+    opacity: 1;
+  }
+  .mini-logo {
+    width: 45px;
+    img {
+      display: block;
+  }
+  }
+
 }
 
 .topSales #footerTabs{

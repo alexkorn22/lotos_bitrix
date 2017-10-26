@@ -7,6 +7,9 @@
 				<a href="<?=SITE_DIR?>catalog/" class="minCatalogButton" id="catalogSlideButton">
 					<img src="<?=SITE_TEMPLATE_PATH?>/images/catalogButton.png" alt=""> <?=GetMessage("CATALOG_BUTTON_LABEL")?>
 				</a>
+                <div class="mini-logo">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/images/miniLogo.png" alt="Logo" />
+                </div>
 				<ul id="mainMenu">
 					<?foreach($arResult["ITEMS"] as $nextElement):?>
 						<li class="eChild">
