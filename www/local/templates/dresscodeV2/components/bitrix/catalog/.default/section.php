@@ -172,7 +172,7 @@ $category = new Category(10, $arResult['VARIABLES']['SECTION_ID']);
 			"ORDER"=> "DESC",
 			"CODE" => "SHOWS",
 			"NAME" => GetMessage("CATALOG_SORT_FIELD_SHOWS")
-		),	
+		),
 		"NAME" => array( // параметр в url
 			"ORDER"=> "ASC", //в возрастающем порядке
 			"CODE" => "NAME", // Код поля для сортировки
@@ -211,22 +211,22 @@ $category = new Category(10, $arResult['VARIABLES']['SECTION_ID']);
 		setcookie("CATALOG_SORT_FIELD", $_REQUEST["SORT_FIELD"], time() + 60 * 60 * 24 * 30 * 12 * 2, "/");
 
 		$arParams["ELEMENT_SORT_FIELD"] = $arSortFields[$_REQUEST["SORT_FIELD"]]["CODE"];
-		$arParams["ELEMENT_SORT_ORDER"] = $arSortFields[$_REQUEST["SORT_FIELD"]]["ORDER"];	
+		$arParams["ELEMENT_SORT_ORDER"] = $arSortFields[$_REQUEST["SORT_FIELD"]]["ORDER"];
 
 		$arSortFields[$_REQUEST["SORT_FIELD"]]["SELECTED"] = "Y";
 
 	}elseif(!empty($_COOKIE["CATALOG_SORT_FIELD"]) && !empty($arSortFields[$_COOKIE["CATALOG_SORT_FIELD"]])){ // COOKIE
-		
+
 		$arParams["ELEMENT_SORT_FIELD"] = $arSortFields[$_COOKIE["CATALOG_SORT_FIELD"]]["CODE"];
 		$arParams["ELEMENT_SORT_ORDER"] = $arSortFields[$_COOKIE["CATALOG_SORT_FIELD"]]["ORDER"];
-		
+
 		$arSortFields[$_COOKIE["CATALOG_SORT_FIELD"]]["SELECTED"] = "Y";
 	}
 	?>
 
 	<?$arSortProductNumber = array(
-		30 => array("NAME" => 30), 
-		60 => array("NAME" => 60), 
+		30 => array("NAME" => 30),
+		60 => array("NAME" => 60),
 		90 => array("NAME" => 90)
 	);?>
 
@@ -248,7 +248,7 @@ $category = new Category(10, $arResult['VARIABLES']['SECTION_ID']);
 		),
 		"TABLE" => array(
 			"CLASS" => "table"
-		)	
+		)
 	);?>
 
 	<?if(!empty($_REQUEST["VIEW"]) && $arTemplates[$_REQUEST["VIEW"]]){

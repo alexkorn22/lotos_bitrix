@@ -25,8 +25,8 @@
 
 		<?if(count($arResult["ITEMS"]) > 1):?>
 			<?$APPLICATION->IncludeComponent(
-				"dresscode:search.smart.filter", 
-				"", 
+				"dresscode:search.smart.filter",
+				"",
 				array(
 					"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 					"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -51,7 +51,7 @@
 		<?endif;?>
 	</div>
 	<div class="rightColumn">
-	
+
 
 
 				<?$BASE_PRICE = CCatalogGroup::GetBaseGroup();?>
@@ -60,7 +60,7 @@
 						"ORDER"=> "DESC",
 						"CODE" => "SHOWS",
 						"NAME" => GetMessage("CATALOG_SORT_FIELD_SHOWS")
-					),	
+					),
 					"NAME" => array(
 						"ORDER"=> "ASC",
 						"CODE" => "NAME",
@@ -99,22 +99,22 @@
 					setcookie("CATALOG_SORT_FIELD", $_REQUEST["SORT_FIELD"], time() + 60 * 60 * 24 * 30 * 12 * 2, "/");
 
 					$arParams["ELEMENT_SORT_FIELD"] = $arSortFields[$_REQUEST["SORT_FIELD"]]["CODE"];
-					$arParams["ELEMENT_SORT_ORDER"] = $arSortFields[$_REQUEST["SORT_FIELD"]]["ORDER"];	
+					$arParams["ELEMENT_SORT_ORDER"] = $arSortFields[$_REQUEST["SORT_FIELD"]]["ORDER"];
 
 					$arSortFields[$_REQUEST["SORT_FIELD"]]["SELECTED"] = "Y";
 
 				}elseif(!empty($_COOKIE["CATALOG_SORT_FIELD"]) && !empty($arSortFields[$_COOKIE["CATALOG_SORT_FIELD"]])){ // COOKIE
-					
+
 					$arParams["ELEMENT_SORT_FIELD"] = $arSortFields[$_COOKIE["CATALOG_SORT_FIELD"]]["CODE"];
 					$arParams["ELEMENT_SORT_ORDER"] = $arSortFields[$_COOKIE["ORDER"]];
-					
+
 					$arSortFields[$_COOKIE["CATALOG_SORT_FIELD"]]["SELECTED"] = "Y";
 				}
 				?>
 
 				<?$arSortProductNumber = array(
-					30 => array("NAME" => 30), 
-					60 => array("NAME" => 60), 
+					30 => array("NAME" => 30),
+					60 => array("NAME" => 60),
 					90 => array("NAME" => 90)
 				);?>
 
@@ -136,7 +136,7 @@
 					),
 					"TABLE" => array(
 						"CLASS" => "table"
-					)	
+					)
 				);?>
 
 				<?if(!empty($_REQUEST["VIEW"]) && $arTemplates[$_REQUEST["VIEW"]]){
@@ -213,7 +213,7 @@
 				<?$arrFilter["FACET_OPTIONS"] = array();?>
 				<?reset($arTemplates);?>
 				<?$APPLICATION->IncludeComponent(
-					"bitrix:catalog.section", 
+					"bitrix:catalog.section",
 					!empty($arParams["CATALOG_TEMPLATE"]) ? strtolower($arParams["CATALOG_TEMPLATE"]) : strtolower(key($arTemplates)),
 					array(
 						"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],

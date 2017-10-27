@@ -151,6 +151,7 @@ body.index {
           -moz-box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
           .nextColumn {
+            line-height: 18px;
             & li {
               margin-top: 10px;
               & a {
@@ -507,20 +508,43 @@ body.index {
 /*END text selection*/
 
 /*BEGIN catalog*/
-#catalog {
-  .items.productList {
-    .product {
-      border: none !important;
-      .row {
-         .label {
-           &:last-child {
-             width: 100%;
-           }
-         }
+#catalogColumn {
+  .leftColumn {
+    #nextSection, #smartFilter {
+      border-radius: 0;
+      .rangeSlider input{
+        border-radius: 0;
+      }
+      #smartFilterControls a {
+        border-radius: 0;
+      }
+    }
+  }
+  .rightColumn {
+    #catalog {
+      #catalogLine {
+        border-radius: 0;
+        select {
+          border-radius: 0;
+        }
+      }
+      .items.productList {
+        .product {
+          border: none !important;
+          .row {
+            .label {
+              &:last-child {
+                width: 100%;
+              }
+            }
+          }
+        }
       }
     }
   }
 }
+
+
 /*END catalog*/
 
 
