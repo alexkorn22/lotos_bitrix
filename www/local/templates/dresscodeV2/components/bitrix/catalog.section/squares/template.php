@@ -12,6 +12,13 @@ $ds = new DataStore();
 
 	<div class="items productList">
 		<?foreach ($arResult["ITEMS"] as $index => $arElement):?>
+            <?
+            $dimension = $arElement['PROPERTIES']['OBYEM']['VALUE'];
+            if (empty($dimension)) {
+                $dimension = '-';
+            }
+            ?>
+
 			<?
 				$this->AddEditAction($arElement["ID"], $arElement["EDIT_LINK"], CIBlock::GetArrayByID($arElement["IBLOCK_ID"], "ELEMENT_EDIT"));
 				$this->AddDeleteAction($arElement["ID"], $arElement["DELETE_LINK"], CIBlock::GetArrayByID($arElement["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
@@ -44,10 +51,12 @@ $ds = new DataStore();
 					<a href="<?=$arElement["DETAIL_PAGE_URL"]?>" class="name"><span class="middle"><?=$arElement["NAME"]?></span></a>
 					<?
 					//$arElement["MIN_PRICE"]["PRINT_DISCOUNT_DIFF"] = "10 грн";
+//                    App::$debug->d($arElement["COUNT_PRICES"]);
 					$tmpArElement = $arElement["MIN_PRICE"];
 					?>
 					<?if(!empty($arElement["MIN_PRICE"])):?>
 						<?if($arElement["COUNT_PRICES"] > 1):?>
+                    <div class="wrapper-price">
 							<a href="#" class="price getPricesWindow" data-id="<?=$arElement["ID"]?>">
 								<span class="priceIcon"></span><?=$arElement["MIN_PRICE"]["PRINT_DISCOUNT_VALUE"]?>
 								<?if($arParams["HIDE_MEASURES"] != "Y" && !empty($arResult["MEASURES"][$arElement["CATALOG_MEASURE"]]["SYMBOL_RUS"])):?>
@@ -57,7 +66,12 @@ $ds = new DataStore();
 									<s class="discount"><?=$arElement["MIN_PRICE"]["PRINT_VALUE"]?></s>
 								<?endif;?>
 							</a>
+                        <div class="dimension">
+                            <p><?=$dimension?></p>
+                        </div>
+                    </div>
 						<?else:?>
+                            <div class="wrapper-price">
 							<a class="price"><?=$arElement["MIN_PRICE"]["PRINT_DISCOUNT_VALUE"]?>
 								<?if($arParams["HIDE_MEASURES"] != "Y" && !empty($arResult["MEASURES"][$arElement["CATALOG_MEASURE"]]["SYMBOL_RUS"])):?>
 									<span class="measure"> / <?=$arResult["MEASURES"][$arElement["CATALOG_MEASURE"]]["SYMBOL_RUS"]?></span>
@@ -66,6 +80,10 @@ $ds = new DataStore();
 									<s class="discount"><?=$arElement["MIN_PRICE"]["PRINT_VALUE"]?></s>
 								<?endif;?>
 							</a>
+                                <div class="dimension">
+                                    <p><?=$dimension?></p>
+                                </div>
+                            </div>
 						<?endif;?>
 						<a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><i class="fa fa-shopping-bag new-bag" aria-hidden="true"></i><?=GetMessage("ADDCART_LABEL")?></a>
 					<?else:?>
