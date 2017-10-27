@@ -223,6 +223,7 @@
 }
 
 #footer{
+  margin-bottom: 0!important;
   &.footerLineHidden{
     margin-bottom: 0;
   }
@@ -310,6 +311,12 @@
     background-position: 0 1px;
     cursor: pointer;
   }
+}
+
+.substrate {
+  height: 55px;
+  display: block;
+  background-color: $gray;
 }
 /*END bottom cart*/
 

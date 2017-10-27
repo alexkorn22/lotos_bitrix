@@ -24,17 +24,17 @@ $(document).on("click", ".footerMiniCartRemoveLink", function(e){
 
     function initBottomCart ($NUM_PRODUCTS) {
         var $footerLine = $("#footerLine");
-        var $footer = $("#footer");
+        var $substrate = $(".substrate");
         var $button = $('#hide-cart');
 
         if($NUM_PRODUCTS == 0){
             $button.addClass("hidden");
             $footerLine.addClass("hidden").slideUp();
-            $footer.addClass("footerLineHidden");
+            $substrate.addClass("hidden");
         }else{
             $button.removeClass("hidden");
             $footerLine.slideDown().removeClass("hidden");
-            $footer.removeClass("footerLineHidden");
+            $substrate.removeClass("hidden");
         };
 
         $(".products-carousel-container").slick({

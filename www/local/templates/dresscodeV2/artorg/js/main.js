@@ -30,17 +30,17 @@ $(document).ready(function(){
 
 var openCloseBottomCart = function (){
     var $footerLine = $("#footerLine");
-    var $footer = $("#footer");
+    var $substrate = $(".substrate");
     var $button = $('#hide-cart');
 
     if($footerLine.hasClass('hidden')){
         $button.addClass('green').removeClass('cart');
         $footerLine.slideDown().removeClass("hidden");
-        $footer.removeClass("footerLineHidden");
+        $substrate.removeClass("hidden");
     }else{
         $button.addClass('cart').removeClass('green');
         $footerLine.addClass("hidden").slideUp();
-        $footer.addClass("footerLineHidden");
+        $substrate.addClass("hidden");
     };
 };
 

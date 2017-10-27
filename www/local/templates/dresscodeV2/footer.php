@@ -22,9 +22,7 @@
 $cartPage = $APPLICATION->GetCurPage() == '/personal/cart/';
 ?>
 		<div id="footer"
-            class="<?if(!empty($TEMPLATE_FOOTER_VARIANT) && $TEMPLATE_FOOTER_VARIANT != "default"):?>variant_<?=$TEMPLATE_FOOTER_VARIANT?><?endif;?>
-<?if($cartPage):?>
-            footerLineHidden <?endif?>">
+            class="<?if(!empty($TEMPLATE_FOOTER_VARIANT) && $TEMPLATE_FOOTER_VARIANT != "default"):?>variant_<?=$TEMPLATE_FOOTER_VARIANT?><?endif;?>">
 			<div class="fc ">
 				<div class="limiter">
 					<div id="rowFooter">
@@ -162,6 +160,7 @@ $cartPage = $APPLICATION->GetCurPage() == '/personal/cart/';
 				</div>
 			</div>
 		</div>
+<div class="substrate <?if($cartPage):?>hidden<?endif?>"></div>
 		<div id="footerLine" class="hidden miniCart <?if(!empty($TEMPLATE_FOOTER_LINE_COLOR) && $TEMPLATE_FOOTER_LINE_COLOR != "default"):?> color_<?=$TEMPLATE_FOOTER_LINE_COLOR?>"<?endif;?>>
 			<div class="limiter">
 			    <div class="colFooterCart">
