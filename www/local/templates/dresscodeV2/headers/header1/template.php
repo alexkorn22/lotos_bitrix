@@ -60,32 +60,34 @@
 				</li>
          	 	<li class="cart">
          	 		<div id="flushTopCart"><?$APPLICATION->IncludeComponent(
-				"bitrix:sale.basket.basket.line", 
-				"topCart", 
-				array(
-					"HIDE_ON_BASKET_PAGES" => "N",
-					"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
-					"PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
-					"PATH_TO_PERSONAL" => SITE_DIR."personal/",
-					"PATH_TO_PROFILE" => SITE_DIR."personal/",
-					"PATH_TO_REGISTER" => SITE_DIR."login/",
-					"POSITION_FIXED" => "N",
-					"SHOW_AUTHOR" => "N",
-					"SHOW_EMPTY_VALUES" => "Y",
-					"SHOW_NUM_PRODUCTS" => "Y",
-					"SHOW_PERSONAL_LINK" => "N",
-					"SHOW_PRODUCTS" => "Y",
-					"SHOW_TOTAL_PRICE" => "Y",
-					"COMPONENT_TEMPLATE" => "topCart",
-					"SHOW_DELAY" => "N",
-					"SHOW_NOTAVAIL" => "N",
-					"SHOW_SUBSCRIBE" => "N",
-					"SHOW_IMAGE" => "Y",
-					"SHOW_PRICE" => "Y",
-					"SHOW_SUMMARY" => "Y"
-				),
-				false
-			);?></div></li>
+	"bitrix:sale.basket.basket.line", 
+	"topCart", 
+	array(
+		"HIDE_ON_BASKET_PAGES" => "N",
+		"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
+		"PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
+		"PATH_TO_PERSONAL" => SITE_DIR."personal/",
+		"PATH_TO_PROFILE" => SITE_DIR."personal/",
+		"PATH_TO_REGISTER" => SITE_DIR."login/",
+		"POSITION_FIXED" => "N",
+		"SHOW_AUTHOR" => "N",
+		"SHOW_EMPTY_VALUES" => "Y",
+		"SHOW_NUM_PRODUCTS" => "Y",
+		"SHOW_PERSONAL_LINK" => "N",
+		"SHOW_PRODUCTS" => "Y",
+		"SHOW_TOTAL_PRICE" => "Y",
+		"COMPONENT_TEMPLATE" => "topCart",
+		"SHOW_DELAY" => "N",
+		"SHOW_NOTAVAIL" => "N",
+		"SHOW_SUBSCRIBE" => "N",
+		"SHOW_IMAGE" => "Y",
+		"SHOW_PRICE" => "Y",
+		"SHOW_SUMMARY" => "Y",
+		"POSITION_HORIZONTAL" => "right",
+		"POSITION_VERTICAL" => "top"
+	),
+	false
+);?></div></li>
 			</ul>
 		</div>
 		<?$APPLICATION->IncludeComponent(

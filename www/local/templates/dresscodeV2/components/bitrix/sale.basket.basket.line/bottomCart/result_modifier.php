@@ -1,6 +1,7 @@
 <?
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED!==true) die();
 
+
     $fuserId = \Bitrix\Sale\Fuser::getId(true);
     $totalPrice = \Bitrix\Sale\BasketComponentHelper::getFUserBasketPrice($fuserId, SITE_ID);
 

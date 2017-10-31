@@ -6,8 +6,8 @@ $config = [
     'debug' => true, // признак что сайт не является рабочим
     'typeMotherClub' => ['id' => 2, 'code' => 'mClub'],
     'telegram' => [
-        'tokenBot' => '421533964:AAEPLpbkuqGERhgBDDSHKYTcpVp8OrNGYys',
-        'chatCallBack' => '-247750923',
+        'tokenBot' => '',
+        'chatCallBack' => '',
     ],
 ];
 
@@ -15,8 +15,8 @@ $config = [
 $configForTestSite = [
     'setTempDataRegister' => true, //заполняются автоматически данные для регистрации
     'telegram' => [
-        'tokenBot' => '421533964:AAEPLpbkuqGERhgBDDSHKYTcpVp8OrNGYys',
-        'chatCallBack' => '-247750923',
+        'tokenBot' => '277180941:AAEFGARnTdQGA-GILcyErqm5NImIFQcqRVs',
+        'chatCallBack' => '',
     ],
 ];
 
