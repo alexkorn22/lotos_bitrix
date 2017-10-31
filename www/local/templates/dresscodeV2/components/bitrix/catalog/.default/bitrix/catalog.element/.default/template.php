@@ -111,8 +111,8 @@
 						<?endif;?>
 						<div class="changePropertiesNoGroup">
 							<?$APPLICATION->IncludeComponent(
-								"dresscode:catalog.properties.list", 
-								"no-group", 
+								"dresscode:catalog.properties.list",
+								"no-group",
 								array(
 									"PRODUCT_ID" => $arResult["ID"],
 									"COUNT_PROPERTIES" => $countPropertyElements,
@@ -137,7 +137,7 @@
 											<a href="<?=$arNextComplect["DETAIL_PAGE_URL"]?>" class="complectListItemLink"><span class="middle"><?=$arNextComplect["NAME"]?></span></a>
 										</div>
 										<a class="complectListItemPrice">
-											<?=$arNextComplect["PRICE"]["PRICE_FORMATED"]?> 
+											<?=$arNextComplect["PRICE"]["PRICE_FORMATED"]?>
 											<?if($arParams["HIDE_MEASURES"] != "Y" && !empty($arResult["MEASURES"][$arNextComplect["CATALOG_MEASURE"]]["SYMBOL_RUS"])):?>
 												<span class="measure"> /<?if(!empty($arNextComplect["QUANTITY"]) && $arNextComplect["QUANTITY"] != 1):?> <?=$arNextComplect["QUANTITY"]?><?endif;?> <?=$arResult["MEASURES"][$arNextComplect["CATALOG_MEASURE"]]["SYMBOL_RUS"]?></span>
 											<?endif;?>
@@ -151,7 +151,7 @@
 						</div>
 						<div class="complectResult">
 							<?=GetMessage("CATALOG_ELEMENT_COMPLECT_PRICE_RESULT")?>
-							<div class="complectPriceResult"><?=$arResult["MIN_PRICE"]["PRINT_DISCOUNT_VALUE"];?></div> 
+							<div class="complectPriceResult"><?=$arResult["MIN_PRICE"]["PRINT_DISCOUNT_VALUE"];?></div>
 							<?if(!empty($arResult["MIN_PRICE"]["PRINT_DISCOUNT_DIFF"]) && $arResult["MIN_PRICE"]["PRINT_DISCOUNT_DIFF"] > 0):?>
 								<s class="discount"><?=$arResult["MIN_PRICE"]["PRINT_VALUE"];?></s>
 								<div class="complectResultEconomy">
@@ -162,8 +162,8 @@
 					</div>
 				<?endif;?>
 				<?$APPLICATION->IncludeComponent(
-		        	"bitrix:catalog.set.constructor", 
-		        	".default", 
+		        	"bitrix:catalog.set.constructor",
+		        	".default",
 		        	array(
 		        		"IBLOCK_TYPE_ID" => $arResult["IBLOCK_TYPE"],
 		        		"IBLOCK_ID" => $arResult["IBLOCK_ID"],
@@ -189,8 +189,8 @@
 				<?endif;?>
 				<div class="changePropertiesGroup">
 					<?$APPLICATION->IncludeComponent(
-						"dresscode:catalog.properties.list", 
-						"group", 
+						"dresscode:catalog.properties.list",
+						"group",
 						array(
 							"PRODUCT_ID" => $arResult["ID"],
 							"ELEMENT_LAST_SECTION_ID" => $arResult["LAST_SECTION"]["ID"]
@@ -202,8 +202,8 @@
 		        	<div id="related">
 						<div class="heading"><?=GetMessage("CATALOG_ELEMENT_ACCEESSORIES")?> (<?=$arResult["RELATED_COUNT"] <= 8 ? $arResult["RELATED_COUNT"] : 8?>)</div>
 						<?$APPLICATION->IncludeComponent(
-							"bitrix:catalog.section", 
-							"squares", 
+							"bitrix:catalog.section",
+							"squares",
 							array(
 								"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 								"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -291,8 +291,8 @@
 		        	<div id="similar">
 						<div class="heading"><?=GetMessage("CATALOG_ELEMENT_SIMILAR")?> (<?=$arResult["SIMILAR_COUNT"] <= 8 ? $arResult["SIMILAR_COUNT"] : 8?>)</div>
 						<?$APPLICATION->IncludeComponent(
-							"bitrix:catalog.section", 
-							"squares", 
+							"bitrix:catalog.section",
+							"squares",
 							array(
 								"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 								"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -377,8 +377,8 @@
 				<?endif;?>
 				<?if($arParams["HIDE_AVAILABLE_TAB"] != "Y"):?>
 					<?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.store.amount", 
-	".default", 
+	"bitrix:catalog.store.amount",
+	".default",
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"STORES" =>array(),
@@ -420,7 +420,7 @@
 			</div>
 		</div>
 	</div>
-</div>	
+</div>
 <div id="elementError">
   <div id="elementErrorContainer">
     <span class="heading"><?=GetMessage("ERROR")?></span>
