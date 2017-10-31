@@ -22,13 +22,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Личный счет", 
-		"/personal/bill/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Моя корзина", 
 		"/personal/cart/", 
 		Array(), 

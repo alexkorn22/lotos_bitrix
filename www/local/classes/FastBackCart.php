@@ -27,9 +27,6 @@ class FastBackCart{
     }
 
     public function createOrder() {
-
-
-
         if(empty($this->phoneUser)){
             return $this->msgError(self::ERROR_FILLING);
         }
