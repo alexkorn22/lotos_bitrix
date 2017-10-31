@@ -15,7 +15,7 @@ $ds = new DataStore();
             <?
             $dimension = $arElement['PROPERTIES']['OBYEM']['VALUE'];
             if (empty($dimension)) {
-                $dimension = '-';
+                $dimension = '';
             }
             ?>
 

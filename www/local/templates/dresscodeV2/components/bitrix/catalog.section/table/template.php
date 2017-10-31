@@ -74,7 +74,7 @@ $useAvailable = false;
 				</div>
 				<div class="column">
 					<?if(!empty($arElement["MIN_PRICE"])):?>
-						<a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>	
+						<a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><i class="fa fa-shopping-bag new-bag" aria-hidden="true"></i><?=GetMessage("ADDCART_LABEL")?></a>
 					<?else:?>
 						<a href="#" class="addCart disabled requestPrice" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="" class="icon"><?=GetMessage("TABLE_REQUEST_PRICE_BUTTON_LABEL")?></a>
 					<?endif;?>
@@ -82,42 +82,9 @@ $useAvailable = false;
 				<div class="column">
 					<div class="optional">
 						<div class="row">
-							<a href="#" class="fastBack label<?if(empty($arElement["MIN_PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>
-<!--							<a href="#" class="addCompare label" data-id="--><?//=$arElement["ID"]?><!--">-->
-<!--								<img src="--><?//=SITE_TEMPLATE_PATH?><!--/images/compare.png" alt="" class="icon">-->
-<!--								--><?//=GetMessage("COMPARE_LABEL")?>
-<!--							</a>-->
+							<a href="#" class="fastBack label<?if(empty($arElement["MIN_PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><i class="fa fa-shopping-bag new-bag" aria-hidden="true"></i><?=GetMessage("FASTBACK_LABEL")?></a>
 						</div>
 					</div>
-				</div>
-				<div class="column">
-					<div class="optional">
-						<div class="row">
-<!--							<a href="#" class="addWishlist label" data-id="--><?//=$arElement["~ID"]?><!--">-->
-<!--								<img src="--><?//=SITE_TEMPLATE_PATH?><!--/images/wishlist.png" alt="" class="icon">-->
-<!--								--><?//=GetMessage("WISHLIST_LABEL")?>
-<!--							</a>-->
-							<?if ($useAvailable):?>
-								<?if($arElement["CATALOG_QUANTITY"] > 0):?>
-									<?if(!empty($arElement["STORES"])):?>
-										<a href="#" data-id="<?=$arElement["ID"]?>" class="inStock label changeAvailable getStoresWindow"><img src="<?=SITE_TEMPLATE_PATH?>/images/inStock.png" alt="<?=GetMessage("AVAILABLE")?>" class="icon"><span><?=GetMessage("AVAILABLE")?></span></a>
-									<?else:?>
-										<span class="inStock label changeAvailable"><img src="<?=SITE_TEMPLATE_PATH?>/images/inStock.png" alt="<?=GetMessage("AVAILABLE")?>" class="icon"><span><?=GetMessage("AVAILABLE")?></span></span>
-									<?endif;?>
-								<?else:?>
-									<?if($arElement["CAN_BUY"] === true || $arElement["CAN_BUY"] === "Y"):?>
-										<a class="onOrder label changeAvailable"><img src="<?=SITE_TEMPLATE_PATH?>/images/onOrder.png" alt="<?=GetMessage("ON_ORDER")?>" class="icon"><?=GetMessage("ON_ORDER")?></a>
-									<?else:?>
-										<a class="outOfStock label changeAvailable"><img src="<?=SITE_TEMPLATE_PATH?>/images/outOfStock.png" alt="<?=GetMessage("NOAVAILABLE")?>" class="icon"><?=GetMessage("NOAVAILABLE")?></a>
-									<?endif;?>
-								<?endif;?>
-							<?endif;?>
-
-						</div>
-					</div>
-				</div>
-				<div class="column out">
-					<a href="#" class="removeFromWishlist" data-id="<?=$arElement["~ID"]?>"></a>
 				</div>
 			</div>
 		<?endforeach;?>

@@ -557,6 +557,14 @@ body.index {
           }
         }
       }
+      #catalogLineList {
+        .itemRow .column .article {
+          border-radius: 0;
+        }
+        .label:nth-child(1), .label:nth-child(3) {
+          width: 100%;
+        }
+      }
     }
   }
 }

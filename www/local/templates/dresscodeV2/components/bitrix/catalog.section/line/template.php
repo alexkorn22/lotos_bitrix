@@ -114,7 +114,7 @@ $this->setFrameMode(true);?>
 					</div>
 					<div class="resizeColumn">
 						<?if(!empty($arElement["MIN_PRICE"])):?>
-							<a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
+							<a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><i class="fa fa-shopping-bag new-bag" aria-hidden="true"></i><?=GetMessage("ADDCART_LABEL")?></a>
 						<?else:?>
 							<a href="#" class="addCart disabled requestPrice" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="" class="icon"><?=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?></a>
 						<?endif;?>
@@ -122,7 +122,7 @@ $this->setFrameMode(true);?>
 					<div class="resizeColumn last">
 						<div class="optional">
 							<div class="row">
-								<a href="#" class="fastBack label<?if(empty($arElement["MIN_PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>
+								<a href="#" class="fastBack label<?if(empty($arElement["MIN_PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><i class="fa fa-shopping-bag new-bag" aria-hidden="true"></i><?=GetMessage("FASTBACK_LABEL")?></a>
 							</div>
 							<div class="row">
 
