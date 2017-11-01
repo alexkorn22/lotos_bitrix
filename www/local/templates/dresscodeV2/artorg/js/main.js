@@ -14,11 +14,13 @@ $(document).ready(function(){
     var nav = $('#mainMenuContainer');
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 135) {
-            nav.addClass("fix-menu");
-        } else {
-            nav.removeClass("fix-menu");
-        }
+        if($('.limiter').width() >=1024) {
+            if ($(this).scrollTop() > 135) {
+                nav.addClass("fix-menu");
+            } else {
+                nav.removeClass("fix-menu");
+            }
+        };
     });
 
     $('#hide-cart').on('click',openCloseBottomCart);

@@ -17,7 +17,7 @@ body.index {
     }
     #topMenu {
         float: none;
-        margin: auto;
+        //margin: auto;
         width: 430px;
         .selected {
             color: $green;
@@ -37,9 +37,9 @@ body.index {
         .limiter {
             #logo{
                 width: 250px;
-                top: -20px;
+                top: -12px;
                 position: relative;
-                z-index: 36;
+
             }
         }
 
@@ -184,7 +184,7 @@ body.index {
 /*BEGIN slider*/
 
 .sliders {
-  max-height: 320px;
+  min-height: 320px;
   @include row-flex;
   margin: 0;
   .item {
@@ -194,6 +194,7 @@ body.index {
 
   .dynamic-slider {
     @include sizeWithoutMargin (8);
+    @include size-sm-WithoutMargin(12);
     padding-right: 4px;
     #slider {
       max-height: 320px;
@@ -227,7 +228,9 @@ body.index {
   }
   .static-slider {
     @include sizeWithoutMargin (4);
+    @include size-sm-WithoutMargin(12);
     max-height: 320px;
+    min-height: 320px;
     padding-left: 4px;
     & a {
       text-decoration: none;
@@ -568,9 +571,64 @@ body.index {
     }
   }
 }
-
-
 /*END catalog*/
+
+/*BEGIN mobile view*/
+@media all and (max-width: 480px)  {
+  //Header
+  #topHeader {
+    &.color_theme {
+      border-bottom: 1px solid rgba(197, 195, 195, 0.2);
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  #headerTools .tools .search{
+    display: none;
+  }
+  #subHeader {
+    .limiter  {
+      #logo {
+        width: 180px;
+        top: -3px;
+      }
+    }
+  }
+
+  .sliders {
+    .dynamic-slider, .static-slider {
+      padding: 0;
+    }
+    .static-slider {
+      margin-top: 8px;
+    }
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1250px) {
+  #subHeader {
+    .limiter  {
+      #logo {
+        width: 200px;
+        top: -3px;
+      }
+    }
+    #topSearch1 {
+      & .searchField {
+        width: 320px;
+        & input[type="text"] {
+          width: 320px;
+        }
+      }
+      & .submit input[type="submit"] {
+        right: 29px;
+      }
+    }
+  }
+}
+/*END mobile view*/
+
 
 
 

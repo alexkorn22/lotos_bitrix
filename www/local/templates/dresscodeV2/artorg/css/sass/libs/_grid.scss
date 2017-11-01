@@ -533,6 +533,11 @@ $break_xs: 560px;
         $value: $atom * $n;
         width: #{calc(#{$value} - #{$offset})};
     }
+}@mixin size-sm-WithoutMargin($n){
+    @media screen and (max-width: $break_sm){
+        $value: $atom * $n;
+        width: #{calc(#{$value})};
+    }
 }
 @mixin col-sm-1(){
     @include size-sm(1);
