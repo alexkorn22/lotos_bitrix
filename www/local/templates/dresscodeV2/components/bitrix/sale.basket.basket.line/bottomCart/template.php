@@ -32,7 +32,7 @@ $frame = $this->createFrame()->begin();
 <?endif?>
 
 <div class="item footerCart">
-    <a <?if(!empty($arResult["NUM_PRODUCTS"])):?>href="<?=SITE_DIR?>personal/cart/"<?endif;?> class="cart<?if(!empty($arResult["NUM_PRODUCTS"])):?> active<?endif;?>"><span class="icon"></span><span class="cartLabel"><?=GetMessage("CART_LABEL")?></span><span class="mark numProducts"><?=$arResult["NUM_PRODUCTS"]?></span></a>
+    <a <?if(!empty($arResult["NUM_PRODUCTS"])):?>href="<?=SITE_DIR?>personal/cart/"<?endif;?> class="wrap-btn-chekout<?if(!empty($arResult["NUM_PRODUCTS"])):?> active<?endif;?>"><span class="checkout">Оформить</span></a>
 </div>
 
 <script>

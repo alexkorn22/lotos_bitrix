@@ -274,14 +274,21 @@
     margin-top: 13px;
     text-align: center;
     float: right;
-    .cart.active {
-      .icon {
-        background: url(../../images/cart-new.png) -17px 0 no-repeat transparent;
-        -webkit-background-size:cover;
-        background-size: cover;
-        height: 19px;
-        margin-right: 0;
-        margin-top: -6px;
+    .wrap-btn-chekout {
+      background-color: $green;
+      line-height: 0;
+      height: 35px;
+      top: 6px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      &:hover {
+        background-color: #19cc3f;
+      }
+      .checkout {
+        color: $white;
+        padding: 0 35px;
+        letter-spacing: 0.8px;
       }
     }
   }
@@ -294,7 +301,7 @@
   //transition: .3s ease-in-out;
   position: fixed;
   right: 24px;
-  bottom: 10px;
+  bottom: 13px;
   z-index: 1000;
 
   &.green {
