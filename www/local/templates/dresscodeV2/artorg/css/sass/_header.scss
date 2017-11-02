@@ -411,6 +411,7 @@ body.index {
         @include size-sm(6);
         @include size-xs(12);
         padding: 0;
+        margin-bottom: 12px;
       }
     }
     .subscription {
@@ -420,7 +421,9 @@ body.index {
         .subscr-left {
           @include col;
           @include size(10);
-
+          @include size-sm(10);
+          @include size-xs(12);
+          margin-bottom: 10px;
           .webflow-style-input {
             label span{
               font-size: 16px;
@@ -457,6 +460,8 @@ body.index {
         .subscr-right {
           @include col;
           @include size(2);
+          @include size-sm(2);
+          @include size-xs(12);
           display: flex;
           justify-content: center;
           .social {
@@ -580,6 +585,10 @@ body.index {
     &.color_theme {
       border-bottom: 1px solid rgba(197, 195, 195, 0.2);
     }
+  }
+  //slider
+  .sliders .dynamic-slider #slider .limiter {
+    height: 220px;
   }
 }
 
