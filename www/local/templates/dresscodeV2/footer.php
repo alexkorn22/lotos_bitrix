@@ -132,10 +132,11 @@ $cartPage = $APPLICATION->GetCurPage() == '/personal/cart/';
                                     <div class="subscr-left">
                                         <div class="subscr-form">
                                             <form action="" method="post" class="webflow-style-input">
-                                                <label for="field"><span>Подписаться на рассылку</span>
+                                                <label for="field"><span>Подписаться на рассылку</span></label>
+                                                <div class="wrap-field">
                                                     <input class="" type="email" name="field" placeholder="Email" />
-                                                </label>
-                                                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                                    <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
