@@ -498,7 +498,7 @@
     color: transparent;
     border: none;
     outline: none;
-    background: url(/local/templates/dresscodeV2/components/dresscode/slider/promoSlider/images/slideArrow.png) 0 0 no-repeat transparent;
+    background: url(/local/templates/dresscodeV2/components/dresscode/slider/promoSlider/images/slideArrow2.png) 0 0 no-repeat transparent;
     background-size: 75px;
     z-index: 22;
     &:hover
@@ -514,25 +514,25 @@
 
       color: transparent;
       outline: none;
-      background: url(/local/components/artorg/catalog.top/templates/.default/images/slideArrowSmall.png) 0 0 no-repeat transparent;
       background-size: 75px;
     }
     &.slick-disabled{
-      background: url(/local/templates/dresscodeV2/components/dresscode/slider/promoSlider/images/slideArrow.png) 0 0 no-repeat transparent;
+      background: url(/local/templates/dresscodeV2/components/dresscode/slider/promoSlider/images/slideArrow2.png) 0 0 no-repeat transparent;
       background-size: 75px;
     }
   }
 
-  .slick-prev-arrow
-  {
+  .slick-prev-arrow {
     left: 3px;
+    &:hover {
+      background-position: -50px 0;
+    }
   }
-
-  .slick-next-arrow
-  {
-    right: 3px;
-    &, &:hover, &:focus, &:before, &.slick-disabled {
-      background-position: 0 -50px;
+  .slick-next-arrow {
+    right: 0;
+    background-position: 0 -50px;
+    &:hover, &:focus, &:before, &.slick-disabled{
+      background-position: -50px -50px;
     }
   }
 

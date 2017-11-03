@@ -17,7 +17,7 @@ body.index {
     }
     #topMenu {
         float: none;
-        //margin: auto;
+        margin: auto;
         width: 430px;
         .selected {
             color: $green;
@@ -634,6 +634,40 @@ body.index {
         right: 29px;
       }
     }
+  }
+}
+
+@media all and (max-width: 1280px) {
+  #topHeader.color_theme {
+    #topMenu {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 2560px) {
+  #subHeader {
+    #headerTools .tools {
+      .telephone {
+        padding: 0 80px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1500px) {
+  #subHeader {
+    #headerTools .tools {
+      .telephone {
+        padding: 0 60px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  #footerLine .item.footerCart {
+    margin-right: 40px;
   }
 }
 /*END mobile view*/
