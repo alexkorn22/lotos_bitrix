@@ -37,26 +37,28 @@
 				</div>
 				<div id="geoPosition"<?if(!empty($TEMPLATE_SUBHEADER_COLOR)):?> class="color_<?=$TEMPLATE_SUBHEADER_COLOR?>"<?endif;?>>
 					<ul>
-						<?$APPLICATION->IncludeComponent("dresscode:sale.geo.positiion", "", array(),
-							false,
-							array(
-							"ACTIVE_COMPONENT" => "Y"
-							)
-						);?>
+						<?$APPLICATION->IncludeComponent("dresscode:sale.geo.positiion", "", array(
+	
+	),
+	false,
+	array(
+	"ACTIVE_COMPONENT" => "N"
+	)
+);?>
 					</ul>
 				</div>
 				<div id="topSocial">
-					<?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						".default",
-						array(
-							"AREA_FILE_SHOW" => "sect",
-							"AREA_FILE_SUFFIX" => "social",
-							"AREA_FILE_RECURSIVE" => "Y",
-							"EDIT_TEMPLATE" => ""
-						),
-						false
-					);?>
+					<?$APPLICATION->IncludeComponent("bitrix:main.include", ".default", array(
+	"AREA_FILE_SHOW" => "sect",
+		"AREA_FILE_SUFFIX" => "social",
+		"AREA_FILE_RECURSIVE" => "Y",
+		"EDIT_TEMPLATE" => ""
+	),
+	false,
+	array(
+	"ACTIVE_COMPONENT" => "N"
+	)
+);?>
 				</div>
 			</div>
 		</div>
@@ -136,12 +138,26 @@
 					<div class="toolsContainer">
 						<div class="topCompare">
 							<div id="flushTopCompare">
-								<?$APPLICATION->IncludeComponent("dresscode:compare.line", "version4", Array(),	false);?>
+								<?$APPLICATION->IncludeComponent("dresscode:compare.line", "version4", array(
+	
+	),
+	false,
+	array(
+	"ACTIVE_COMPONENT" => "N"
+	)
+);?>
 							</div>
 						</div>
 						<div class="topWishlist">
 							<div id="flushTopwishlist">
-								<?$APPLICATION->IncludeComponent("dresscode:favorite.line", "version4", Array(), false);?>
+								<?$APPLICATION->IncludeComponent("dresscode:favorite.line", "version4", array(
+	
+	),
+	false,
+	array(
+	"ACTIVE_COMPONENT" => "N"
+	)
+);?>
 							</div>
 						</div>
 						<div class="cart">
@@ -182,23 +198,27 @@
 	</div>
 </div>
 <div class="menuContainerColor<?if(!empty($TEMPLATE_CATALOG_MENU_COLOR) && $TEMPLATE_CATALOG_MENU_COLOR != "default"):?> color_<?=$TEMPLATE_CATALOG_MENU_COLOR?><?endif;?>">
-<?$APPLICATION->IncludeComponent("bitrix:menu", "catalogMenu", array(
-	"ROOT_MENU_TYPE" => "left",
+<?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"catalogMenu2", 
+	array(
+		"ROOT_MENU_TYPE" => "left",
 		"MENU_CACHE_TYPE" => "N",
 		"MENU_CACHE_TIME" => "3600",
 		"MENU_CACHE_USE_GROUPS" => "Y",
-		"MENU_CACHE_GET_VARS" => "",
+		"MENU_CACHE_GET_VARS" => array(
+		),
 		"MAX_LEVEL" => "4",
 		"CHILD_MENU_TYPE" => "top",
 		"USE_EXT" => "Y",
 		"DELAY" => "N",
 		"ALLOW_MULTI_SELECT" => "N",
 		"CACHE_SELECTED_ITEMS" => "N",
-		"COMPONENT_TEMPLATE" => "catalogMenu"
+		"COMPONENT_TEMPLATE" => "catalogMenu2"
 	),
 	false,
 	array(
-	"ACTIVE_COMPONENT" => "Y"
+		"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
 </div>
