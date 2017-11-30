@@ -2,12 +2,12 @@
 
 	//настройки шаблона
 	//шапка сайта
-	$TEMPLATE_HEADER = "header1"; // выбор шапки 1-9 v2(9)
-	$TEMPLATE_HEADER_TYPE = "type1"; // круглые, квадратные края (type1, type2)
-	$TEMPLATE_HEADER_COLOR = "theme"; // цвет верхней или нижней панели шапки (default, black, theme)
+	$TEMPLATE_HEADER = "header7"; // выбор шапки 1-9 v2(9)
+	$TEMPLATE_HEADER_TYPE = "type2"; // круглые, квадратные края (type1, type2)
+	$TEMPLATE_HEADER_COLOR = "white"; // цвет верхней или нижней панели шапки (default, black, theme)
 	$TEMPLATE_SUBHEADER_COLOR = "white"; // цвет основной шапки  (default, black, theme)
-	$TEMPLATE_CATALOG_MENU_COLOR = "default";  // цвет меню каталога  (default, black, theme, gray)
-	$TEMPLATE_SLIDER_HEIGHT = "default"; // default / middle / small
+	$TEMPLATE_CATALOG_MENU_COLOR = "white";  // цвет меню каталога  (default, black, theme, gray)
+	$TEMPLATE_SLIDER_HEIGHT = "small"; // default / middle / small
 
 	//тема сайта
 	$TEMPLATE_THEME_NAME = "green"; // цветовая гамма сайта (/themes/)
@@ -33,7 +33,7 @@
 	$TEMPLATE_PANELS_COLOR = "white"; // заголовки и панели сайта (default, white)
 
 	//подвал - футер сайта
-	$TEMPLATE_FOOTER_LINE_COLOR = "default"; // прикрепляющийся блок внизу экрана (default, white, theme)
+	$TEMPLATE_FOOTER_LINE_COLOR = "white"; // прикрепляющийся блок внизу экрана (default, white, theme)
 	$TEMPLATE_FOOTER_VARIANT = "default";
 
 ?>

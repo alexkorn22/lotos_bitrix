@@ -21,8 +21,8 @@
 							<img src="<?=SITE_TEMPLATE_PATH?>/images/cont2.png">
 						</div>
 						<div class="tc">
-							<a href="mailto:info@lotostrade.ua">info@lotostrade.ua</a><br>
-							<a href="mailto:order@lotostrade.ua">order@lotostrade.ua</a><br>
+							<a href="mailto:info@lotos24.com.ua">info@lotos24.com.ua</a><br>
+							<a href="mailto:order@lotos24.com.ua">order@lotos24.com.ua</a><br>
 						</div>
 					</div>
 				</div>
