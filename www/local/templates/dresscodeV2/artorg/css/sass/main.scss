@@ -9,17 +9,10 @@
 //END LIBS
 @import "variables";
 @import "modal";
+@import "common";
 @import "mainPage";
 @import "personal";
 @import "product";
 @import "cart";
 
-.text-right {
-  text-align: right;
-}
-.text-left {
-  text-align: left;
-}
-.text-center {
-  text-align: center;
-}
+@import "media";

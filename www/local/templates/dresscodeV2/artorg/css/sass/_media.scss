@@ -1,0 +1,17 @@
+/*
+ПРИМЕРЫ ИСПОЛЬЗОВАНИЯ
+1 пример
+body.panels_white{
+  background-color: red;
+}
+@include md-block() {
+  body.panels_white{
+    background-color: green;
+  }
+}
+2 пример
+body.panels_white{
+  background-color: red;
+  @include md('background-color',green)
+}
+*/

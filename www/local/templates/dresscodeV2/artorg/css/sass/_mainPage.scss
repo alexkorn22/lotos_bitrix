@@ -203,6 +203,9 @@
       line-height: 30px;
       text-transform:uppercase;
       color: white;
+      span {
+        color: black;
+      }
       &.mark,.mark{
         color: #27c148;
         background-color: unset;
