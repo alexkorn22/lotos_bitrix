@@ -73,7 +73,7 @@ $APPLICATION->SetTitle("О магазине");
 
 			<p>Мы всегда рады общению с нашими клиентами. Если у вас есть какие-либо пожелания, предложения, замечания, касающиеся работы нашего Интернет-магазина - пишите нам, и мы с благодарностью примем ваше мнение во внимание:</p>
 
-			<p><b>ЭЛЕКТРОННАЯ ПОЧТА</b>: <a href="mailto:info@lotostrade.ua">info@lotostrade.ua</a></p>
+			<p><b>ЭЛЕКТРОННАЯ ПОЧТА</b>: <a href="mailto:info@lotos24.com.ua">info@lotos24.com.ua</a></p>
 		</div>
 	</div>
 	<div class="global-information-block">
