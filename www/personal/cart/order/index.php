@@ -4,7 +4,7 @@ if ($USER->IsAuthorized()):?>
 	<div class="personal-order-info">*Нажимая на кнопку оформить заказ, я даю согласие на <a href="/personal-info/" class="pilink">обработку персональных данных.</a><br /></div>
 <?endif?>
 <?$APPLICATION->IncludeComponent(
-	"artorg:sale.order.ajax",
+	"bitrix:sale.order.ajax",
 	".default", 
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
