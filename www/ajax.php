@@ -1518,6 +1518,7 @@
 										   "TAX_VALUE" => 0.0,
 										   "USER_DESCRIPTION" => BX_UTF != 1 ? iconv("UTF-8","windows-1251//IGNORE", htmlspecialcharsbx($_GET["message"])) : htmlspecialcharsbx($_GET["message"])
 										);
+										\Bitrix\Sale\Notify::setNotifyDisable(true);
 
 										$ORDER_ID = CSaleOrder::Add($arFields);
 										$ORDER_ID = IntVal($ORDER_ID);
@@ -1564,7 +1565,7 @@
 										);
 
 										CSaleBasket::OrderBasket($ORDER_ID, $USER_ID, $_GET["SITE_ID"]);
-
+										\Bitrix\Sale\Notify::setNotifyDisable(false);
 
 									}else{
 										$result = array(

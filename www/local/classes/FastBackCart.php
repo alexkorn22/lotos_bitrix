@@ -9,6 +9,7 @@ class FastBackCart{
     const ERROR_USER_BASKET = 4;
 
     protected $idUser= 0;
+    protected $alertEmail;
     protected $idBasketUser= 0;
     protected $personItem= [];
     protected $idSite = 0;
@@ -21,6 +22,7 @@ class FastBackCart{
 
     public function __construct($idSite = false){
         $this->idSite = $idSite;
+        $this->alertEmail = new Alert();
         if (!$this->idSite) {
             $this->idSite = SITE_ID;
         }
@@ -42,10 +44,15 @@ class FastBackCart{
         if (!$this->fillDelivery()) {
             return $this->msgError(self::ERROR_DELIVERY);
         }
+       \Bitrix\Sale\Notify::setNotifyDisable(true);
         $this->addOrder();
         $this->fillPropsOrder();
         $this->setOrderBasket();
+        $this->updateOrderPrice();
+        \Bitrix\Sale\Notify::setNotifyDisable(false);
         $this->sendMsgToTelegram();
+        $this->sendMessageEmail();
+
 
         return $this->msgSuccess();
     }
@@ -53,7 +60,7 @@ class FastBackCart{
     public function sendMsgToTelegram(){
         if(CModule::IncludeModule("justdevelop.morder"))
         {
-            $chat = "-247750923";
+            $chat = "";
 
             $message = "Поступил заказ № ".$this->idOrder."\n";
             $message .= "(необходимо уточнить детали заказа)."."\n";
@@ -158,9 +165,14 @@ class FastBackCart{
                         "PASSWORD"          => $newPass,
                         "CONFIRM_PASSWORD"  => $newPass,
                     );
-
+                    $arUser = $arUserFields;
                     $this->idUser = $newUser->Add($arUserFields);
                 }
+                $this->alertEmail->setData('ORDER_USER', $arUser['NAME'] . ' ' . $arUser['LAST_NAME']);
+                $this->alertEmail->setData('EMAIL',$arUser['NAME']);
+            } else {
+                $this->alertEmail->setData('ORDER_USER',$USER->GetFormattedName(false));
+                $this->alertEmail->setData('EMAIL',$USER->GetEmail());
             }
         }
         return $this->idUser;
@@ -209,13 +221,14 @@ class FastBackCart{
 
     protected function addOrder() {
         $OPTION_CURRENCY  = CCurrency::GetBaseCurrency();
+        $price = $this->getSumCart();
         $arFields = array(
             "LID" => htmlspecialcharsbx($this->idSite),
             "PERSON_TYPE_ID" => $this->personItem["ID"],
             "PAYED" => "N",
             "CANCELED" => "N",
             "STATUS_ID" => "N",
-            "PRICE" => $this->getSumCart(),
+            "PRICE" => $price,
             "CURRENCY" => $OPTION_CURRENCY,
             "USER_ID" => $this->idUser,
             "PAY_SYSTEM_ID" => $this->paySystem["ID"],
@@ -225,9 +238,15 @@ class FastBackCart{
             "TAX_VALUE" => 0.0,
             "USER_DESCRIPTION" => BX_UTF != 1 ? iconv("UTF-8","windows-1251//IGNORE", $this->messageUser) : $this->messageUser
         );
-
         $ORDER_ID = CSaleOrder::Add($arFields);
         $this->idOrder = IntVal($ORDER_ID);
+
+    }
+
+    protected function updateOrderPrice() {
+        $price = $this->getSumOrder();
+        CSaleOrder::Update($this->idOrder,['PRICE' => $price]);
+        $this->alertEmail->setData('PRICE',$price);
     }
 
     protected function getBasketUserId() {
@@ -238,6 +257,21 @@ class FastBackCart{
     protected function getSumCart() {
         $total = \Bitrix\Sale\BasketComponentHelper::getFUserBasketPrice($this->idBasketUser, $this->idSite);
         return CCurrencyLang::CurrencyFormat($total, CSaleLang::GetLangCurrency($this->idSite), true);
+    }
+
+    protected function getSumOrder() {
+        $total = 0;
+        $dbBasketItems = CSaleBasket::GetList(
+            array("ID" => "ASC"),
+            array("ORDER_ID" => $this->idOrder),
+            false,
+            false,
+            ['PRICE']
+        );
+        while ($arBasketItems = $dbBasketItems->Fetch()) {
+            $total += $arBasketItems['PRICE'];
+        }
+        return $total;
     }
 
     protected function fillPropsOrder() {
@@ -275,7 +309,11 @@ class FastBackCart{
     }
 
     protected function setOrderBasket() {
-        CSaleBasket::OrderBasket($this->idOrder, $this->idBasketUser, $this->idSite);
+       CSaleBasket::OrderBasket($this->idOrder, $this->idBasketUser, $this->idSite);
+    }
+
+    protected function sendMessageEmail() {
+        $this->alertEmail->sendEmailNewOrder($this->idOrder);
     }
 
 }
