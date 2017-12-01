@@ -3,7 +3,7 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
 $APPLICATION->SetPageProperty("description", "Бытовая химия, хозтовары, товары для детей и косметика в Украине. Бесплатная доставка. 50 точек самовывоза.  +380676202244");
-$APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos.zp.ua");?>
+$APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos24");?>
 <?$APPLICATION->IncludeComponent(
 	"dresscode:slider",
 	"promoSlider",

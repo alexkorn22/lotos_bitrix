@@ -518,8 +518,8 @@ $APPLICATION->SetTitle("Каталог товаров");
 		"FILE_404" => "",
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
-			"section" => "#SECTION_CODE_PATH#/",
-			"element" => "#SECTION_CODE_PATH#/#ELEMENT_CODE#.html",
+			"section" => "#SECTION_CODE#/",
+			"element" => "#SECTION_CODE#/#ELEMENT_CODE#.html",
 			"compare" => "compare/",
 			"smart_filter" => "#SECTION_CODE_PATH#/filter/#SMART_FILTER_PATH#/apply/",
 		)
