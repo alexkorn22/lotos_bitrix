@@ -737,7 +737,8 @@
 		}
 		elseif($_GET["act"] == "del"){
 			echo CSaleBasket::Delete(intval($_GET["id"]));
-		}elseif($_GET["act"] == "upd"){
+		}
+		elseif($_GET["act"] == "upd"){
 
 			$OPTION_QUANTITY_TRACE = COption::GetOptionString("catalog", "can_buy_zero");
 

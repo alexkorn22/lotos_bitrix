@@ -120,8 +120,10 @@
 						<?endif;?>
 					</td>
 				</tr>
+
 			</table>
-			<?foreach ($arResult["PERSON_TYPE"] as $personIndex => $arPersonType):?>
+			<? foreach ($arResult["PERSON_TYPE"] as $personIndex => $arPersonType):?>
+
 				<form id="orderForm_<?=$arPersonType["ID"]?>">
 					<table class="orderProps<?if($arPersonType["FIRST"] == "Y"):?> active<?endif;?>" data-id="person_<?=$arPersonType["ID"]?>">
 						<?foreach ($arResult["PROP_GROUP"][$personIndex] as $groupIndex => $arGroup):?>
