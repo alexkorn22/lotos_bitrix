@@ -171,7 +171,7 @@ $APPLICATION->SetTitle("Распродажа");?><h1>Распродажа</h1><?
 			135 => "WIDTH",
 			136 => "",
 		),
-		"CURRENCY_ID" => "RUB"
+		"CURRENCY_ID" => "UAH"
 	),
 	false,
 	array(
