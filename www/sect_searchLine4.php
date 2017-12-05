@@ -14,7 +14,7 @@
 			3 => "OPT1",
 		),
 		"CONVERT_CURRENCY" => "Y",
-		"CURRENCY_ID" => "RUB",
+		"CURRENCY_ID" => "UAH",
 		"PROPERTY_CODE" => array(
 			0 => "OFFERS",
 			1 => "ATT_BRAND",
