@@ -1054,19 +1054,19 @@
 	false
 );?>
 				</li>
-				<li class="dl">
-					<?$APPLICATION->IncludeComponent("dresscode:favorite.line", addslashes($_GET["wishListTemplate"]), Array(
-						),
-						false
-					);?>
-				</li>
-				<li class="dl">
-					<?$APPLICATION->IncludeComponent("dresscode:compare.line", addslashes($_GET["compareTemplate"]), Array(
-
-						),
-						false
-					);?>
-				</li>
+            <li class="dl">
+                <?$APPLICATION->IncludeComponent("dresscode:favorite.line", addslashes($_GET["wishListTemplate"]), Array(
+                ),
+                    false,array(
+                        "ACTIVE_COMPONENT" => "N"
+                    )
+                );?>
+            </li>
+            <li class="dl">
+                <?$APPLICATION->IncludeComponent("dresscode:compare.line", addslashes($_GET["compareTemplate"]), Array(),false,array(
+                    "ACTIVE_COMPONENT" => "N"
+                ));?>
+            </li>
 			</ul><?
 		}elseif($_GET["act"] == "rating"){
 			global $USER;
