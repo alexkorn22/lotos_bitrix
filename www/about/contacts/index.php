@@ -1,6 +1,7 @@
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Задайте вопрос");
 ?><h1>Контактная информация</h1>
+	<a name="map"></a>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:menu",
 	"personal",
@@ -18,7 +19,6 @@ $APPLICATION->SetTitle("Задайте вопрос");
 		"USE_EXT" => "N"
 	)
 );?>
-
 	<ul class="contactList">
 		<li>
 			<table>
@@ -81,6 +81,7 @@ $APPLICATION->SetTitle("Задайте вопрос");
 			</table>
 		</li>
 	</ul>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:map.google.view", 
 	".default", 

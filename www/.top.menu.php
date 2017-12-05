@@ -9,7 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Магазины", 
-		"about/", 
+		"about/contacts/#map",
 		Array(), 
 		Array(), 
 		"" 
