@@ -45,7 +45,7 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos24");?
             <div class="descriptionTitle"><p>для жителей Запорожья и 2-3 дня по всем городам Украины транспортными компаниями.</p></div>
         </div>
         <div class="item">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/cart_green.png" alt="промоблок 4">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/discount_green.png" alt="промоблок 4">
             <h2 class="tapTitle">Программа лояльности</h2>
             <div class="descriptionTitle"><p>В интернет-магазине ЛОТОС действуют <span class="fontFamilyRobotoboldText sizeText16">дисконты</span> постоянных клиентов и участников Мама-Клуба.</p></div>
         </div>
