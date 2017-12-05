@@ -24,7 +24,7 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos24");?
             <h1>Интернет-магазин ЛОТОС: бытовая химия и косметика</h1>
         </div>
         <div class="item">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout1_1.png" alt="промоблок 1">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/new_green_outline.png" alt="промоблок 1">
             <h2 class="tapTitle">Широкий ассортимент</h2>
             <div class="descriptionTitle">
                 <p >Более <span class="fontFamilyRobotoboldText sizeText16">5000</span>
@@ -34,23 +34,23 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos24");?
             </div>
         </div>
         <div class="item">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout1_2.png" alt="промоблок 2">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/payment_green_three.png" alt="промоблок 2">
             <h2 class="tapTitle">Удобная оплата</h2>
             <div class="descriptionTitle"><p>Расплачивайтесь за покупку
                     <span class="fontFamilyRobotoboldText">любым способом</span>: наличными, безналичным расчётом, наложенным платежом.</p></div>
         </div>
         <div class="item">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout1_3.png" alt="промоблок 3">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/delivery_green.png" alt="промоблок 3">
             <h2 class="tapTitle">Доставка за 1 день</h2>
             <div class="descriptionTitle"><p>для жителей Запорожья и 2-3 дня по всем городам Украины транспортными компаниями.</p></div>
         </div>
         <div class="item">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout1_4.png" alt="промоблок 4">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/cart_green.png" alt="промоблок 4">
             <h2 class="tapTitle">Программа лояльности</h2>
             <div class="descriptionTitle"><p>В интернет-магазине ЛОТОС действуют <span class="fontFamilyRobotoboldText sizeText16">дисконты</span> постоянных клиентов и участников Мама-Клуба.</p></div>
         </div>
         <div class="item">
-            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promoAbout1_5.png" alt="промоблок 5">
+            <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/smile_green_outline.png" alt="промоблок 5">
             <h2  class="tapTitle">Довольные покупатели</h2>
            <div class="descriptionTitle">
                <p>За последний год число наших постоянных клиентов достигло отметки <span class="fontFamilyRobotoboldText sizeText16">300 000</span>. Они доверяют нам, а мы благодарны им за это.</p>
