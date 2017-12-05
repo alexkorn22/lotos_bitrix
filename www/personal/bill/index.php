@@ -26,7 +26,7 @@ $APPLICATION->SetTitle("Личный счет");?><h1>Личный счет</h1>
 		"REFRESHED_COMPONENT_MODE" => "Y",
 		"PATH_TO_BASKET" => "/personal/cart",
 		"PATH_TO_PAYMENT" => "/personal/order/payment",
-		"SELL_CURRENCY" => "RUB",
+		"SELL_CURRENCY" => "UAH",
 		"PERSON_TYPE" => "1",
 		"ELIMINATED_PAY_SYSTEMS" => array(
 			0 => "1",
