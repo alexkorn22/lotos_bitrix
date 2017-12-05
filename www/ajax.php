@@ -737,7 +737,8 @@
 		}
 		elseif($_GET["act"] == "del"){
 			echo CSaleBasket::Delete(intval($_GET["id"]));
-		}elseif($_GET["act"] == "upd"){
+		}
+		elseif($_GET["act"] == "upd"){
 
 			$OPTION_QUANTITY_TRACE = COption::GetOptionString("catalog", "can_buy_zero");
 
@@ -1054,19 +1055,19 @@
 	false
 );?>
 				</li>
-				<li class="dl">
-					<?$APPLICATION->IncludeComponent("dresscode:favorite.line", addslashes($_GET["wishListTemplate"]), Array(
-						),
-						false
-					);?>
-				</li>
-				<li class="dl">
-					<?$APPLICATION->IncludeComponent("dresscode:compare.line", addslashes($_GET["compareTemplate"]), Array(
-
-						),
-						false
-					);?>
-				</li>
+            <li class="dl">
+                <?$APPLICATION->IncludeComponent("dresscode:favorite.line", addslashes($_GET["wishListTemplate"]), Array(
+                ),
+                    false,array(
+                        "ACTIVE_COMPONENT" => "N"
+                    )
+                );?>
+            </li>
+            <li class="dl">
+                <?$APPLICATION->IncludeComponent("dresscode:compare.line", addslashes($_GET["compareTemplate"]), Array(),false,array(
+                    "ACTIVE_COMPONENT" => "N"
+                ));?>
+            </li>
 			</ul><?
 		}elseif($_GET["act"] == "rating"){
 			global $USER;

@@ -403,6 +403,7 @@ var beforeCalcDelivery = function(){
 	var gPaySelectValue = $paySelect.val();
 	var gDeliSelectValue = $deliSelect.val();
 	var gLocationValue = $location.data("location");
+    gLocationValue = gLocationValue || 1;
 	var gPersonSelectValue = $personSelect.val();
 
 	if(parseInt(gPaySelectValue, 10) 
@@ -502,6 +503,7 @@ var getProductPricesInfo = function(){
 		act: "getProductPrices",
 		SITE_ID: SITE_ID,
 		PERSON_TYPE_ID: $personSelect.val(),
+        LOCATION_ID : 1,
 		PAY_SYSTEM_ID: $paySelect.val(),
 		DELIVERY_ID: $deliSelect.val()
 	};
@@ -515,15 +517,17 @@ var getProductPricesInfo = function(){
 			if(nextElement["MEASURE_SYMBOL_RUS"] != undefined && nextElement["MEASURE_SYMBOL_RUS"] !=""){
 				priceResult = priceResult + " <span class=\"measure\"> / " + nextElement["MEASURE_SYMBOL_RUS"] + "</span>";
 			}
+			var basePrice = Number(nextElement["~BASE_PRICE"]);
+			var price = Number(nextElement["~PRICE"]);
+			if(nextElement["~DISCOUNT_PRICE"] > 0 || basePrice != price){
 
-			if(nextElement["~DISCOUNT_PRICE"] > 0 || nextElement["~BASE_PRICE"] != nextElement["~PRICE"]){
 				priceResult = priceResult + " <s class=\"discount\">" + nextElement["BASE_PRICE"] + "</s>";
 			}
 
-			$nextElement.find(".price").html(priceResult);
-			$nextElement.find(".sum").data("price", nextElement["~PRICE"]).html(nextElement["SUM"]);
+			 $nextElement.find(".price").html(priceResult);
+			 $nextElement.find(".sum").data("price", nextElement["~PRICE"]).html(nextElement["SUM"]);
 			
-			flushParams();
+			 flushParams();
 
 		});
 	
