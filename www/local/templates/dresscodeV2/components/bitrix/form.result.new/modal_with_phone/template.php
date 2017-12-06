@@ -4,6 +4,7 @@
     <a href="#" class=" callBackIcon openWebFormModal<?if(!empty($arParams["MODAL_BUTTON_CLASS_NAME"])):?> <?endif;?>" data-id="<?=$arResult["arForm"]["ID"]?>"></a>
 </div>
 <div class="phonesTc">
+    <span class="heading">+380(67)620-22-44</span>
     <a href="#" class="openWebFormModal<?if(!empty($arParams["MODAL_BUTTON_CLASS_NAME"])):?> <?=$arParams["MODAL_BUTTON_CLASS_NAME"]?><?endif;?>" data-id="<?=$arResult["arForm"]["ID"]?>"><?if(empty($arParams["MODAL_BUTTON_NAME"])):?><?=$arResult["FORM_TITLE"]?><?else:?><?=$arParams["MODAL_BUTTON_NAME"]?><?endif;?></a>
 </div>
 

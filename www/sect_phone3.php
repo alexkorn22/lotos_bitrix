@@ -1,2 +1,2 @@
-<span class="heading">+380(67)620-22-44</span>
+<span class="heading">info@lotos24.com.ua</span>
 <div class="schedule">Пн.-Пт. с 08:00 до 17:00</div>

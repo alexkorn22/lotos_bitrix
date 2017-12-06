@@ -418,7 +418,7 @@
 }
 
 #subHeader7 .callBackIcon{
-	background: url(images/phoneIco2.png) 0 0 no-repeat transparent;
+	background: url(images/call.svg) 0 0 no-repeat transparent;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
@@ -433,13 +433,13 @@
 }
 
 #subHeader7 .scheduleIcon{
-	background: url(images/phoneIco.png) 0 0 no-repeat transparent;
+	background: url(images/Mail.svg) 0 0 no-repeat transparent;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 	display: block;
 	height: 28px;
-	width: 27px;
+	width: 34px;
 }
 
 #subHeader7.color_black .scheduleIcon,
@@ -449,13 +449,13 @@
 
 #subHeader7 .callBackIcon:hover,
 #subHeader7 .scheduleIcon:hover{
-	opacity: 0.7;
+	/*opacity: 0.7;*/
 }
 
 #subHeader7 .callBackIcon:active,
 #subHeader7 .scheduleIcon:active{
 	position: relative;
-	top: 1px;
+	/*top: 1px;*/
 }
 
 #subHeader7 .secondPhones .schedule{
