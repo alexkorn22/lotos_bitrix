@@ -43,6 +43,7 @@
 						<?if($arParams["HIDE_MEASURES"] != "Y" && !empty($arResult["MEASURES"][$arElement["INFO"]["CATALOG_MEASURE"]]["SYMBOL_RUS"])):?>
 							<span class="measure"> / <?=$arResult["MEASURES"][$arElement["INFO"]["CATALOG_MEASURE"]]["SYMBOL_RUS"]?></span>
 						<?endif;?>
+                        <br/>
 	  					<?=(((abs($arElement["INFO"]["OLD_PRICE"] - $arElement["PRICE"])) > 0.01) ? '<s class="discount">'.FormatCurrency($arElement["INFO"]["OLD_PRICE"], $OPTION_CURRENCY).'</s>' : '')?>
 	  				</a>			
 				<?endif;?>  
