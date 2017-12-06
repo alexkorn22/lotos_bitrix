@@ -92,30 +92,31 @@
 				</div>
 				<div class="subTableColumn">
 					<div class="phonesContainer">
+
 						<div class="firstPhones">
 							<div class="phonesTb">
-								<div class="phonesTc">
-									<a href="<?=SITE_DIR?>callback/" class="callBackIcon"></a>
-								</div>
-								<div class="phonesTc">
-									<?$APPLICATION->IncludeComponent(
-										"bitrix:main.include",
-										".default",
-										array(
-											"AREA_FILE_SHOW" => "sect",
-											"AREA_FILE_SUFFIX" => "phone",
-											"AREA_FILE_RECURSIVE" => "Y",
-											"EDIT_TEMPLATE" => ""
-										),
-										false
-									);?>
-								</div>
+                                <div class="phonesTc">
+                                    <?$APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        ".default",
+                                        array(
+                                            "AREA_FILE_SHOW" => "sect",
+                                            "AREA_FILE_SUFFIX" => "phone",
+                                            "AREA_FILE_RECURSIVE" => "Y",
+                                            "EDIT_TEMPLATE" => ""
+                                        ),
+                                        false
+                                    );?>
+                                </div>
+
 							</div>
 						</div>
+
+
 						<div class="secondPhones">
 							<div class="phonesTb">
 								<div class="phonesTc">
-									<a href="<?=SITE_DIR?>callback/" class="scheduleIcon"></a>
+									<span class="scheduleIcon"></span>
 								</div>
 								<div class="phonesTc">
 									<?$APPLICATION->IncludeComponent(

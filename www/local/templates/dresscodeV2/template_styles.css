@@ -4178,23 +4178,23 @@ a.inStock:hover span{
 }
 
 #upButton{
-	background: url(images/up.png) 0 0 no-repeat transparent;
+	background: url(images/arrow_up.svg) 0 0 no-repeat transparent;
 	position: fixed;
 	cursor: pointer;
 	display: none;
 	bottom: 132px; 
-	height: 73px;
-	width: 73px;
+	height: 40px;
+	width: 40px;
 	right: 24px;
 	z-index: 99;
 }
 
 #upButton:hover{
-	background-position: -73px 0;
+	/*background-position: -73px 0;*/
 }
 
 #upButton:active{
-	background-position: -146px 0;
+	/*background-position: -146px 0;*/
 }
 
 #upButton.enb{

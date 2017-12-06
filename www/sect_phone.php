@@ -1,8 +1,7 @@
-<span class="heading">+380(67)620-22-44</span>
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:form.result.new", 
-	"modal", 
+	"modal_with_phone",
 	array(
 		"CACHE_TIME" => "3600000",
 		"CACHE_TYPE" => "A",
