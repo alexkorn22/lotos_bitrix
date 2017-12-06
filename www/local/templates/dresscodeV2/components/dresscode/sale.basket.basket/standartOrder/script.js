@@ -186,7 +186,7 @@ var flushParams = function(){
 	$mainQty.each(function(){
 		totalQty += parseFloat($(this).val());
 	});
-
+	orderSum = parseFloat(orderSum.toFixed(2));
 	$allSum.html(formatPrice(orderSum) + allStr);
 	$itemsCount.text(totalQty);
 	$allordSum.html(
