@@ -88,6 +88,7 @@ $(document).on("click", ".basketQty .plus", function(e){
 	$sum.html(formatPrice(sumCalc) + sumStr);
 	
 	clearTimeout(flushTimeout);
+	console.log('test');
 	flushTimeout = setTimeout(function(){
 		updateCart($this.data("id"), Number($qtyBox.val()))
 	}, 500);
@@ -186,7 +187,7 @@ var flushParams = function(){
 	$mainQty.each(function(){
 		totalQty += parseFloat($(this).val());
 	});
-
+	orderSum = parseFloat(orderSum.toFixed(2));
 	$allSum.html(formatPrice(orderSum) + allStr);
 	$itemsCount.text(totalQty);
 	$allordSum.html(
