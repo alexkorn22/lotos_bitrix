@@ -223,7 +223,7 @@
 			0 => "BASE",
 		),
 		"PRODUCT_CONVERT_CURRENCY" => "Y",
-		"PRODUCT_CURRENCY_ID" => "RUB",
+		"PRODUCT_CURRENCY_ID" => "UAH",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",

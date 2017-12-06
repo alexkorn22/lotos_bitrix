@@ -8,6 +8,7 @@
 	$MESS["EMPTY_TEXT"]      = 'Воспользуйтесь поиском или <a href="'.SITE_DIR.'catalog/">каталогом</a>, выберите нужные товары и добавьте их в список сравнения.';
 	$MESS["MAIN_PAGE"]       = "Главная страница";
 	$MESS["RUB"] = "руб.";
+	$MESS["UAH"] = "грн.";
 	$MESS["FROM"] = "от ";
 	$MESS["ADDSKU"] = "В корзину";
 	$MESS["REQUEST_PRICE_LABEL"] = "Цена по запросу";

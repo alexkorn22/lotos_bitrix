@@ -188,7 +188,7 @@
 		"ADDITIONAL_PICT_PROP_10" => "MORE_PHOTO",
 		"OFFER_TREE_PROPS_10" => array(
 		),
-		"CURRENCY_ID" => "RUB"
+		"CURRENCY_ID" => "UAH"
 	),
 	false
 );?>

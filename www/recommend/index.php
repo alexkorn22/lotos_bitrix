@@ -171,7 +171,7 @@ $APPLICATION->SetTitle("Новинки");?><h1>Рекомендуемые тов
 			135 => "WIDTH",
 			136 => "",
 		),
-		"CURRENCY_ID" => "RUB"
+		"CURRENCY_ID" => "UAH"
 	),
 	false,
 	array(

@@ -18,7 +18,7 @@
   img{
     margin-top: 5px;
     margin-bottom: 5px;
-    height: 100%;
+   // height: 100%;
     max-width: 100%;
   }
 
@@ -209,6 +209,7 @@
       &.mark,.mark{
         color: #27c148;
         background-color: unset;
+        white-space: nowrap;
       }
       &.freeDelivery{
         line-height: unset;

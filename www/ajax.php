@@ -737,7 +737,8 @@
 		}
 		elseif($_GET["act"] == "del"){
 			echo CSaleBasket::Delete(intval($_GET["id"]));
-		}elseif($_GET["act"] == "upd"){
+		}
+		elseif($_GET["act"] == "upd"){
 
 			$OPTION_QUANTITY_TRACE = COption::GetOptionString("catalog", "can_buy_zero");
 
@@ -1054,19 +1055,19 @@
 	false
 );?>
 				</li>
-				<li class="dl">
-					<?$APPLICATION->IncludeComponent("dresscode:favorite.line", addslashes($_GET["wishListTemplate"]), Array(
-						),
-						false
-					);?>
-				</li>
-				<li class="dl">
-					<?$APPLICATION->IncludeComponent("dresscode:compare.line", addslashes($_GET["compareTemplate"]), Array(
-
-						),
-						false
-					);?>
-				</li>
+            <li class="dl">
+                <?$APPLICATION->IncludeComponent("dresscode:favorite.line", addslashes($_GET["wishListTemplate"]), Array(
+                ),
+                    false,array(
+                        "ACTIVE_COMPONENT" => "N"
+                    )
+                );?>
+            </li>
+            <li class="dl">
+                <?$APPLICATION->IncludeComponent("dresscode:compare.line", addslashes($_GET["compareTemplate"]), Array(),false,array(
+                    "ACTIVE_COMPONENT" => "N"
+                ));?>
+            </li>
 			</ul><?
 		}elseif($_GET["act"] == "rating"){
 			global $USER;
@@ -1518,6 +1519,7 @@
 										   "TAX_VALUE" => 0.0,
 										   "USER_DESCRIPTION" => BX_UTF != 1 ? iconv("UTF-8","windows-1251//IGNORE", htmlspecialcharsbx($_GET["message"])) : htmlspecialcharsbx($_GET["message"])
 										);
+										\Bitrix\Sale\Notify::setNotifyDisable(true);
 
 										$ORDER_ID = CSaleOrder::Add($arFields);
 										$ORDER_ID = IntVal($ORDER_ID);
@@ -1564,7 +1566,7 @@
 										);
 
 										CSaleBasket::OrderBasket($ORDER_ID, $USER_ID, $_GET["SITE_ID"]);
-
+										\Bitrix\Sale\Notify::setNotifyDisable(false);
 
 									}else{
 										$result = array(
