@@ -88,7 +88,6 @@ $(document).on("click", ".basketQty .plus", function(e){
 	$sum.html(formatPrice(sumCalc) + sumStr);
 	
 	clearTimeout(flushTimeout);
-	console.log('test');
 	flushTimeout = setTimeout(function(){
 		updateCart($this.data("id"), Number($qtyBox.val()))
 	}, 500);
