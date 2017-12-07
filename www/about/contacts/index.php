@@ -25,7 +25,7 @@ $APPLICATION->SetTitle("Задайте вопрос");
 				<tbody>
 				<tr>
 					<td>
-						<img alt="cont1.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont1.png" title="cont1.png">
+						<img alt="cont1.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont1_new.svg" title="cont1.png">
 					</td>
 					<td>
 						+38 (061) 214-99-54<br>
@@ -40,7 +40,7 @@ $APPLICATION->SetTitle("Задайте вопрос");
 				<tbody>
 				<tr>
 					<td>
-						<img alt="cont2.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont2.png" title="cont2.png">
+						<img alt="cont2.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont2_new.png" title="cont2.png">
 					</td>
 					<td>
 						<a href="mailto:info@lotos24.com.ua">info@lotos24.com.ua</a><br>
@@ -55,7 +55,7 @@ $APPLICATION->SetTitle("Задайте вопрос");
 				<tbody>
 				<tr>
 					<td>
-						<img alt="cont3.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont3.png" title="cont3.png">
+						<img alt="cont3.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont3_new.png" title="cont3.png">
 					</td>
 					<td>
 						г. Запорожье<br>
@@ -70,7 +70,7 @@ $APPLICATION->SetTitle("Задайте вопрос");
 				<tbody>
 				<tr>
 					<td>
-						<img alt="cont4.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont4.png" title="cont4.png">
+						<img alt="cont4.png" src="<?=SITE_TEMPLATE_PATH?>/images/cont4_new.png" title="cont4.png">
 					</td>
 					<td>
 						Пн-Пт : с 08:00 до 17:00<br>
