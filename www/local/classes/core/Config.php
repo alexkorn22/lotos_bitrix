@@ -9,20 +9,56 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
  * @property int freeDeliverySum;
  * @property array telegram;
  */
-class Config {
+class Config
+{
     protected $data = [];
+    protected $debug;
+    protected $default = [
+        'debug' => false
+    ];
 
-    public function __construct(){
-        $config = require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/config.php';
-        if (empty($config)) {
-            return;
+    public function __construct()
+    {
+        $debug = COption::GetOptionString("grain.customsettings", 'debug');
+        if ($debug == 'Y') {
+            $this->debug = true;
+        } else {
+            $this->debug = false;
         }
-        foreach ($config as $key => $value) {
-            $this->data[$key] = $value;
+
+
+        if ($this->debug != true) { // working site
+            $config = require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/config.php';
+            if (empty($config)) {
+                return;
+            }
+            foreach ($config as $key => $value) {
+                $this->data[$key] = $value;
+            }
         }
+
+
     }
 
-    public  function __get($name){
+    public function __get($name)
+    {
+        if (!isset($this->data[$name])) {
+            $this->data[$name] = COption::GetOptionString("grain.customsettings", $name);
+        }
+        if (empty($this->data[$name])) {
+            $this->data[$name] = $this->getDefault($name);
+        }
         return $this->data[$name];
     }
+
+
+    public function getDefault($name)
+    {
+        if(isset($this->default[$name])){
+            return $this->default[$name];
+        }
+        return NULL;
+    }
+
+
 }
