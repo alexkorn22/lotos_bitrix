@@ -23,7 +23,7 @@ class Telegram {
     }
 
     public function __construct($idChat = ''){
-        $this->token = App::$config->telegram['tokenBot'];
+        $this->token = App::$config->telegramTokenBot;
         $this->api .= $this->token;
         $this->idChat = $idChat;
     }
