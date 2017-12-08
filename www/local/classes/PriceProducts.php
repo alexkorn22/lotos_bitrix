@@ -9,7 +9,8 @@ class PriceProducts {
 
     public function __construct(&$products){
         $this->products = &$products;
-        $this->typeMotherClub = App::$config->typeMotherClub;
+        $this->typeMotherClub['id'] = App::$config->typeMotherClubId;
+        $this->typeMotherClub['code'] = App::$config->typeMotherClubCode;
     }
 
     public function fillMotherClub() {
