@@ -6,7 +6,7 @@ $APPLICATION->SetTitle("Title");
 		<div class="logotype_partner">
 		</div>
 		<div class="label_partner">
- <span style="font-size: 36pt;"><span style="color: #00a650;">программа «Мама-клуб»</span><span style="color: #00a650;"></span></span><br>
+ <span style="font-size: 36pt;"><span style="color: #00a650;">Программа «Мама-клуб»</span><span style="color: #00a650;"></span></span><br>
  <img width="371" src="/local/templates/dresscodeV2/artorg/images/mama_club_banner.png" height="226"><br>
 		</div>
 	</div>

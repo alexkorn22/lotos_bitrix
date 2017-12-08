@@ -12,18 +12,15 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 class Config
 {
     protected $data = [];
-    protected $debug;
-    protected $default = [
-        'debug' => false
-    ];
+    protected $debug = true ;
+
 
     public function __construct()
     {
         $debug = COption::GetOptionString("grain.customsettings", 'debug');
-        if ($debug == 'Y') {
-            $this->debug = true;
-        } else {
-            $this->debug = false;
+
+        if(!empty($debug)){
+           $this->debug = $debug == 'Y';
         }
 
 
