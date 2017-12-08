@@ -1,7 +1,6 @@
 <?if (!defined('INDEX_PAGE')) define('INDEX_PAGE', 'Y');?>
 <?define("MAIN_PAGE", true);?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-App::$debug->dDie(App::$config->debug);
 $APPLICATION->SetPageProperty("description", "Бытовая химия, хозтовары, товары для детей и косметика в Украине. Бесплатная доставка. 50 точек самовывоза.  +380676202244");
 $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos24");?>
 <?$APPLICATION->IncludeComponent(

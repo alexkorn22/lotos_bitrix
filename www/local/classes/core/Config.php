@@ -11,19 +11,20 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
  */
 class Config
 {
-    protected $data  = [];
-    protected $debug = true;
-    protected $default = [
-    ];
+    protected $data = [];
+    protected $debug = true ;
+
 
     public function __construct()
     {
         $debug = COption::GetOptionString("grain.customsettings", 'debug');
+
         if(!empty($debug)){
-            $this->debug = $debug == 'Y';
+           $this->debug = $debug == 'Y';
         }
 
-        if (!$this->debug) { // working site
+
+        if ($this->debug != true) { // working site
             $config = require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/config.php';
             if (empty($config)) {
                 return;
