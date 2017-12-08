@@ -7,38 +7,42 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
  * @property array typeMotherClub;
  * @property bool setTempDataRegister;
  * @property int freeDeliverySum;
- * @property array telegram;
+ * @property string scriptYaMetrik;
+ * @property string scriptGoogleAnalytiks;
+ * @property string scriptGoogleTagHead;
+ * @property string scriptGoogleTagBody;
  */
-class Config
-{
+class Config {
     protected $data = [];
-    protected $debug = true ;
+    public $debug = false;
+    protected $default = [
+    ];
 
-
-    public function __construct()
-    {
+    public function __construct() {
         $debug = COption::GetOptionString("grain.customsettings", 'debug');
-
-        if(!empty($debug)){
-           $this->debug = $debug == 'Y';
+        if($debug == 'Y'){
+           $this->debug = true;
         }
-
-
-        if ($this->debug != true) { // working site
-            $config = require_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/config.php';
-            if (empty($config)) {
-                return;
-            }
-            foreach ($config as $key => $value) {
-                $this->data[$key] = $value;
-            }
-        }
-
-
+        $this->readFileConfig();
     }
 
-    public function __get($name)
-    {
+    protected function readFileConfig() {
+
+        if (!$this->debug) {
+            return;
+        }
+        $config = include_once $_SERVER['DOCUMENT_ROOT'] . '/bitrix/config.php';
+        if (!empty($config)) {
+            foreach ($config as $key => $item) {
+                if ($key == 'debug') {
+                    continue;
+                }
+                $this->data[$key] = $item;
+            }
+        }
+    }
+
+    public function __get($name){
         if (!isset($this->data[$name])) {
             $this->data[$name] = COption::GetOptionString("grain.customsettings", $name);
         }
@@ -49,7 +53,7 @@ class Config
     }
 
 
-    public function getDefault($name)
+    protected function getDefault($name)
     {
         if(isset($this->default[$name])){
             return $this->default[$name];
