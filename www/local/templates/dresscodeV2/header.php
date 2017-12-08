@@ -9,6 +9,11 @@ IncludeTemplateLangFile(__FILE__);
 <!DOCTYPE html>
 <html lang="<?=LANGUAGE_ID?>">
 	<head>
+		<?
+		if (!App::$config->debug) {
+			echo App::$config->scriptGoogleTagHead;
+		}
+		?>
 		<meta charset="<?=SITE_CHARSET?>">
 		<META NAME="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/images/favicon.png" />
@@ -35,6 +40,14 @@ IncludeTemplateLangFile(__FILE__);
 		<title><?$APPLICATION->ShowTitle();?></title>
 	</head>
 <body class="loading <?if (INDEX_PAGE == "Y"):?>index<?endif;?><?if(!empty($TEMPLATE_PANELS_COLOR) && $TEMPLATE_PANELS_COLOR != "default"):?> panels_<?=$TEMPLATE_PANELS_COLOR?><?endif;?>">
+
+<?
+if (!App::$config->debug) {
+	echo App::$config->scriptGoogleTagBody;
+	echo App::$config->scriptYaMetrik;
+	echo App::$config->scriptGoogleAnalytiks;
+}
+?>
 	<div id="panel">
 		<?$APPLICATION->ShowPanel();?>
 	</div>

@@ -1,7 +1,6 @@
 <?if (!defined('INDEX_PAGE')) define('INDEX_PAGE', 'Y');?>
 <?define("MAIN_PAGE", true);?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-
 $APPLICATION->SetPageProperty("description", "Бытовая химия, хозтовары, товары для детей и косметика в Украине. Бесплатная доставка. 50 точек самовывоза.  +380676202244");
 $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos24");?>
 <?$APPLICATION->IncludeComponent(
@@ -180,32 +179,32 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos24");?
 </div>
 
 <?
-if(App::$config->usePromoBlock):?>
+if(App::$config->usePromoBlock == 'Y'):?>
 
 <div id="infoPromo">
     <div class="limiter">
         <div class="itemContainer">
             <div class="item">
-                <a href="/promotions/">
-                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_Promotions.png" alt="Акции">
+                <a href="/">
+                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/1.jpg" alt="Акции">
                 </a>
             </div>
 
             <div class="item">
                 <a href="/mama-club/">
-                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_MomClub.png" alt="Мама-клуб">
+                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/2.jpg" alt="Мама-клуб">
                 </a>
             </div>
 
             <div class="item">
-                <a href="/sertificate/">
-                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_GiftCertificates.png" alt="Подарочные сертификаты">
+                <a href="/certificates/">
+                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/3.jpg" alt="Подарочные сертификаты">
                 </a>
             </div>
 
             <div class="item">
-                <a href="/catalog/detskie_tovary/gigiena/nabory_dlya_novorozhdennykh/">
-                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/promo_KomarovskySets.png" alt="Наборы от Комаровского">
+                <a href="/catalog/nabory_dlya_novorozhdennykh/">
+                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/4.jpg" alt="Наборы от Комаровского">
                 </a>
             </div>
         </div>
