@@ -2,7 +2,7 @@
 	$this->setFrameMode(true);
 	$propertyCounter = 0;
 	$morePhotoCounter = 0;
-	$countPropertyElements = 7;
+	$countPropertyElements = COption::GetOptionString("grain.customsettings", 'countPropertyElements');
 	global $USER;
 ?>
 <?
