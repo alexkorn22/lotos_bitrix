@@ -67,7 +67,7 @@
 
 #infoPromo {
   display: block;
-  background-color: #f3f3f3;
+  background-color: $lightGrey;
   .item {
     height: 100%;
     display: inline-block;
@@ -139,9 +139,9 @@
   width: 100%!important;
 }
 #homeCatalog{
-  background-color: #f9f9f9;
+  background-color: $lightGrey;
   .caption.selected {
-    background-color: #f9f9f9;
+    background-color: $lightGrey;
     text-transform: uppercase;
     font-family: 'robotobold';
     font-size: 18px;
@@ -154,7 +154,7 @@
   }
   #captionCarousel{
     border: none!important;
-    background-color: #f9f9f9!important;
+    background-color: $lightGrey!important;
   }
 }
 
