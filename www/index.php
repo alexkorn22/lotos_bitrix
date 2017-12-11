@@ -180,12 +180,11 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos24");?
 
 <?
 if(App::$config->usePromoBlock == 'Y'):?>
-
 <div id="infoPromo">
     <div class="limiter">
         <div class="itemContainer">
             <div class="item">
-                <a href="/">
+                <a href="/promotions/">
                 <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/1.jpg" alt="Акции">
                 </a>
             </div>

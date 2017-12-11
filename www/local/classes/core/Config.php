@@ -16,6 +16,7 @@ class Config {
     protected $data = [];
     public $debug = false;
     protected $default = [
+        countPropertyElements=> 3
     ];
 
     public function __construct() {
