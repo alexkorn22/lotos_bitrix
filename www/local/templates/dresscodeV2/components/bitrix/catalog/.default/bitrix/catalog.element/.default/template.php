@@ -2,7 +2,7 @@
 	$this->setFrameMode(true);
 	$propertyCounter = 0;
 	$morePhotoCounter = 0;
-	$countPropertyElements = 7;
+	$countPropertyElements = App::$config->countPropertyElements ;
 	global $USER;
 ?>
 <?
