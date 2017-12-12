@@ -35,7 +35,7 @@ $APPLICATION->SetTitle("Title");
 		"DISPLAY_NAME" => "Y",
 		"DISPLAY_TOP_PAGER" => "Y",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "22",
+		"IBLOCK_ID" => "12",
 		"IBLOCK_TYPE" => "info",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",

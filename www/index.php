@@ -180,7 +180,6 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos24");?
 
 <?
 if(App::$config->usePromoBlock == 'Y'):?>
-
 <div id="infoPromo">
     <div class="limiter">
         <div class="itemContainer">

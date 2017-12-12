@@ -31,7 +31,13 @@
 								</video>
 							</div>
 						<?else:?>
-							<span data-large="<?=$arElement["DETAIL_PICTURE"]["src"]?>" data-normal="<?=$arElement["PREVIEW_PICTURE"]["src"]?>"></span>
+                            <?php if(!empty($arElement["PROPERTIES"]["LINK"]["VALUE"])):?>
+                                <a href="<?=$arElement["PROPERTIES"]["LINK"]["VALUE"]?>">
+                                    <span data-large="<?=$arElement["DETAIL_PICTURE"]["src"]?>" data-normal="<?=$arElement["PREVIEW_PICTURE"]["src"]?>"></span>
+                                </a>
+                            <?php else :?>
+                                <span data-large="<?=$arElement["DETAIL_PICTURE"]["src"]?>" data-normal="<?=$arElement["PREVIEW_PICTURE"]["src"]?>"></span>
+                            <?php endif;?></span>
 						<?endif;?>
 					</li>
 				<?endif;?>
