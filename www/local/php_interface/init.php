@@ -17,6 +17,11 @@ CModule::AddAutoloadClasses(
  * @param $path - путь к папке с классами
  * @return array - ключ - имя класса, значение - путь относительно корня сайта к файлу с классом
  */
+
+// test button event :
+$event = new EventBitrix();
+$event->onAdminTabControlBegin('btnOne','Test Site','btnTestSiteRequest()');
+
 function getArClasses($path,$arResult = array()){
 	$scandir = scandir($_SERVER["DOCUMENT_ROOT"].$path);
 	if (empty($scandir))

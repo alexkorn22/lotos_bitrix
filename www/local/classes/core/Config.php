@@ -62,5 +62,22 @@ class Config {
         return NULL;
     }
 
+    public function turnOnTest($GET){
+        global $USER;
+        if($USER->IsAdmin() && $GET['test'] =='true'){
+            COption::SetOptionString("grain.customsettings","debug","Y");
+
+            // clearing the file robots.txt:  User-Agent: *Disallow: /
+            $file = "../../robots.txt";
+            if($handle = fopen($file,'wt')){
+                fwrite($handle,"User-Agent: \n*Disallow: /");
+                fclose($handle);
+            }
+
+            // telegram chat:
+
+        }
+    }
+
 
 }
