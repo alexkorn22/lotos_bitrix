@@ -2,13 +2,7 @@
 <?php
 
 if(isAjaxRequest()){
-    // turn on test mode :
-        App::$config->turnOnTest($_GET);
+    App::$config->makeTestSite($_POST);
 }
-
-function isAjaxRequest(){
-    return isset($_SERVER['HTTP_X_REQUESTED_WITH'])&& $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest';
-}
-
 
 ?>

@@ -42,7 +42,7 @@ class EventBitrix {
         App::$msgBox->setMessage($dataUser,'messages/register');
     }
 
-    public function onAdminTabControlBegin ($btnId, $btnName ='test_button',$btnFunction){
+    public function createButtonTest ($btnId, $btnName, $btnFunction){
         global $APPLICATION;
         $APPLICATION->AddPanelButton(
             Array(
@@ -53,20 +53,20 @@ class EventBitrix {
                 "SORT" => 10, //сортировка внутри группы
                 "HREF" => "javascript:{$btnFunction}", //или javascript:MyJSFunction())
                 "ICON" => "bx-panel-button-icon bx-panel-install-solution-icon\"", //название CSS-класса с иконкой кнопки
-                "SRC" => "путь к иконке кнопки",
-                "ALT" => "Текст всплывающей подсказки", //старый вариант
+                "SRC" => "",
+                "ALT" => "Turn on Test site mode", //старый вариант
                 "HINT" => array( //тултип кнопки
-                    "TITLE" => "Заголовок тултипа",
-                    "TEXT" => "Текст тултипа" //HTML допускается
+                    "TITLE" => "Подключить Тест Сайт",
+                    "TEXT" => "" //HTML допускается
                 ),
                 "HINT_MENU" => array( //тултип кнопки контекстного меню
-                    "TITLE" => "Заголовок тултипа",
-                    "TEXT" => "Текст тултипа" //HTML допускается
+                    "TITLE" => "Подключить Тест Сайт",
+                    "TEXT" => "" //HTML допускается
                 ),
                 "MENU" => Array(
                     Array( //массив пунктов контекстного меню
-                        "TEXT" => "menu text",
-                        "TITLE" => "всплывающая подсказака над пунктом",
+                        "TEXT" => "menu for test button",
+                        "TITLE" => " ",
                         "SORT" => 1, //индекс сортировки пункта
                         "ICON" => "bx-panel-small-button-text", //иконка пункта
                         "ACTION" => "",

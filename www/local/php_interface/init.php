@@ -12,15 +12,18 @@ CModule::AddAutoloadClasses(
     $arClasses
 );
 
+
+// Event to create a button :
+$event = new EventBitrix();
+$event->createButtonTest('btnOne','Test Site','createButton({testMode:"true"})' );
+
+
+
 /**
  * Функция возвращает массив для добавления классов в Автолоад
  * @param $path - путь к папке с классами
  * @return array - ключ - имя класса, значение - путь относительно корня сайта к файлу с классом
  */
-
-// test button event :
-$event = new EventBitrix();
-$event->onAdminTabControlBegin('btnOne','Test Site','btnTestSiteRequest()');
 
 function getArClasses($path,$arResult = array()){
 	$scandir = scandir($_SERVER["DOCUMENT_ROOT"].$path);
@@ -37,4 +40,5 @@ function getArClasses($path,$arResult = array()){
 }
 App::Init();
 include_once $_SERVER['DOCUMENT_ROOT'] . '/local/files/events.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/local/files/functions.php';
 ?>
