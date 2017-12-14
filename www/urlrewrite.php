@@ -13,16 +13,16 @@ $arUrlRewrite = array(
 		"PATH" => "/personal/order/index.php",
 	),
 	array(
-		"CONDITION" => "#^/promotions/#",
-		"RULE" => "",
-		"ID" => "bitrix:news",
-		"PATH" => "/promotions/index.php",
-	),
-	array(
 		"CONDITION" => "#^/collection/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
 		"PATH" => "/collection/index.php",
+	),
+	array(
+		"CONDITION" => "#^/promotions/#",
+		"RULE" => "",
+		"ID" => "bitrix:news",
+		"PATH" => "/promotions/index.php",
 	),
 	array(
 		"CONDITION" => "#^/services/#",
