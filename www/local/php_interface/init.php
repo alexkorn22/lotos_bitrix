@@ -15,7 +15,7 @@ CModule::AddAutoloadClasses(
 
 // Event to create a button :
 $event = new EventBitrix();
-$event->createButtonTest('btnOne','Test Site','createButton({testMode:"true"})' );
+$event->createButtonTest();
 
 
 

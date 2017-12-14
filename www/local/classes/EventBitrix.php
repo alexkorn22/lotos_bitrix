@@ -42,16 +42,19 @@ class EventBitrix {
         App::$msgBox->setMessage($dataUser,'messages/register');
     }
 
-    public function createButtonTest ($btnId, $btnName, $btnFunction){
+    public function createButtonTest (){
         global $APPLICATION;
         $APPLICATION->AddPanelButton(
             Array(
-                "ID" => "{$btnId}", //определяет уникальность кнопки
-                "TEXT" => "{$btnName}",
+                "ID" => 'MakeBtnTest', //определяет уникальность кнопки
+                "TEXT" => 'Test Site',
                 "TYPE" => "BIG", //BIG - большая кнопка, иначе маленькая
                 "MAIN_SORT" => 10, //индекс сортировки для групп кнопок
                 "SORT" => 10, //сортировка внутри группы
-                "HREF" => "javascript:{$btnFunction}", //или javascript:MyJSFunction())
+                "HREF" => "javascript:createButton({action:'AdminButtons',method:'makeTestSite',params:{makeTestSite:'true'}})",
+                // - first parameter which class !
+                // - second is which method !
+                // - third is parameters to send to the method
                 "ICON" => "bx-panel-button-icon bx-panel-install-solution-icon\"", //название CSS-класса с иконкой кнопки
                 "SRC" => "",
                 "ALT" => "Turn on Test site mode", //старый вариант

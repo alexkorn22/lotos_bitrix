@@ -1594,7 +1594,7 @@
 
                                 if(CModule::IncludeModule("justdevelop.morder"))
                                 {
-                                    $chat = "-247750923";
+                                    $chat = App::$config->telegramChatCallBack;
 
                                     $message = "Поступил заказ № ".$ORDER_ID."\n";
                                     $message .= "(необходимо уточнить детали заказа)."."\n";

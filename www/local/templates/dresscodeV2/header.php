@@ -34,7 +34,7 @@ IncludeTemplateLangFile(__FILE__);
 		<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/colorSwitcher.js");?>
 		<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/dwZoomer.js");?>
         <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/artorg/js/main.js");?>
-        <?php if($USER->isAdmin()){$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/artorg/js/Admin.js");}?>
+        <?php if($USER->isAdmin()){$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/artorg/js/admin.js");}?>
         <?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/artorg/js/slick.js");?>
 		<?$APPLICATION->ShowHead();?>
 		<?CJSCore::Init(array("fx"));?>

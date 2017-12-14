@@ -2,7 +2,12 @@
 <?php
 
 if(isAjaxRequest()){
-    App::$config->makeTestSite($_POST);
+    $action = $_POST['action'];
+    $method = $_POST['method'];
+    $params = $_POST['params'];
+// check isset post
+    $button = new $action();
+    $button->{$method}($params);
 }
 
 ?>
