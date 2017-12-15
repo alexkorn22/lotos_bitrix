@@ -13,7 +13,7 @@ class AdminButton
         $APPLICATION->AddPanelButton(
             Array(
                 "ID" => 'MakeBtnTest', //определяет уникальность кнопки
-                "TEXT" => 'Test Site',
+                "TEXT" => 'преобразовать в тестовый сайт',
                 "TYPE" => "BIG", //BIG - большая кнопка, иначе маленькая
                 "MAIN_SORT" => 10, //индекс сортировки для групп кнопок
                 "SORT" => 10, //сортировка внутри группы
@@ -23,27 +23,13 @@ class AdminButton
                 // - third is parameters to send to the method
                 "ICON" => "bx-panel-button-icon bx-panel-install-solution-icon\"", //название CSS-класса с иконкой кнопки
                 "SRC" => "",
-                "ALT" => "Turn on Test site mode", //старый вариант
+                "ALT" => "преобразовать в тестовый сайт",
                 "HINT" => array( //тултип кнопки
-                    "TITLE" => "Подключить Тест Сайт",
+                    "TITLE" => "преобразовать в тестовый сайт",
                     "TEXT" => "" //HTML допускается
                 ),
-                "HINT_MENU" => array( //тултип кнопки контекстного меню
-                    "TITLE" => "Подключить Тест Сайт",
-                    "TEXT" => "" //HTML допускается
-                ),
-                "MENU" => Array(
-                    Array( //массив пунктов контекстного меню
-                        "TEXT" => "menu for test button",
-                        "TITLE" => " ",
-                        "SORT" => 1, //индекс сортировки пункта
-                        "ICON" => "bx-panel-small-button-text", //иконка пункта
-                        "ACTION" => "",
-                        "SEPARATOR" => true, //определяет пункт-разделитель
-                        "DEFAULT" => true, //пункт по умолчанию?
-                        "MENU" => Array() //массив подменю
-                    )
-                )
+                "HINT_MENU" => array(),
+                "MENU" => Array()
             ),
             $bReplace = false //заменить существующую кнопку?
         );
