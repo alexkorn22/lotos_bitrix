@@ -1594,7 +1594,7 @@
 
                                 if(CModule::IncludeModule("justdevelop.morder"))
                                 {
-                                    $chat = "-284858334";
+                                    $chat = "-225467276";
 
                                     $message = "Поступил заказ № ".$ORDER_ID."\n";
                                     $message .= "(необходимо уточнить детали заказа)."."\n";

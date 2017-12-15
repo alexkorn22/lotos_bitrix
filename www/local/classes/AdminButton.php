@@ -8,7 +8,7 @@
 
 class AdminButton
 {
-    public function createButtonTest (){
+    public function createButtonMakeTestSite (){
         global $APPLICATION;
         $APPLICATION->AddPanelButton(
             Array(

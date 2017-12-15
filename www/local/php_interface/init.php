@@ -15,7 +15,7 @@ CModule::AddAutoloadClasses(
 
 // create Admin button :
 $adminButton = new AdminButton();
-$adminButton->createButtonTest();
+$adminButton->createButtonMakeTestSite();
 
 
 
