@@ -16,7 +16,6 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos24");?
 		"PICTURE_WIDTH" => "1920"
 	)
 );?>
-
 <div id="infoAbout">
     <div class="limiter">
         <div class="infoAbouthHeader">
