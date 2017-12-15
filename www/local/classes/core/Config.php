@@ -58,10 +58,15 @@ class Config
     }
 
 
-    public function setDebug()
+    public function setDebug($debug)
     {
-        $this->debug = true;
-        COption::SetOptionString("grain.customsettings",'debug', "Y");
+        if($debug){
+            $this->debug = true;
+            COption::SetOptionString("grain.customsettings",'debug', "Y");
+            return;
+        }
+            $this->debug = false;
+            COption::SetOptionString("grain.customsettings",'debug', "N");
     }
 
 
