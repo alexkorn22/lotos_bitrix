@@ -13,9 +13,9 @@ CModule::AddAutoloadClasses(
 );
 
 
-// Event to create a button :
-$event = new EventBitrix();
-$event->createButtonTest();
+// create Admin button :
+$adminButton = new AdminButton();
+$adminButton->createButtonTest();
 
 
 
