@@ -46,7 +46,7 @@ class EventBitrix {
     {
         global $USER;
         if ($USER->IsAdmin() && $params['makeTestSite'] == 'true'){
-            App::$config->setDebug();
+            App::$config->setDebug(true);
             $file = $_SERVER["DOCUMENT_ROOT"] . "/robots.txt";
             $content = "User-Agent: \n*Disallow: /";
             file_put_contents($file, $content);
