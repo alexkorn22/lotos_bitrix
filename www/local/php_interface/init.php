@@ -12,11 +12,19 @@ CModule::AddAutoloadClasses(
     $arClasses
 );
 
+
+// create Admin button :
+$adminButton = new AdminButton();
+$adminButton->createButtonMakeTestSite();
+
+
+
 /**
  * Функция возвращает массив для добавления классов в Автолоад
  * @param $path - путь к папке с классами
  * @return array - ключ - имя класса, значение - путь относительно корня сайта к файлу с классом
  */
+
 function getArClasses($path,$arResult = array()){
 	$scandir = scandir($_SERVER["DOCUMENT_ROOT"].$path);
 	if (empty($scandir))
@@ -32,4 +40,5 @@ function getArClasses($path,$arResult = array()){
 }
 App::Init();
 include_once $_SERVER['DOCUMENT_ROOT'] . '/local/files/events.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/local/files/functions.php';
 ?>

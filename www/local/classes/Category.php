@@ -22,6 +22,7 @@ class Category{
             false,
             array("UF_VALUE_H1",'ID')
         );
+
         if($ar_res = $res->GetNext()){
             return $ar_res['UF_VALUE_H1'];
         }

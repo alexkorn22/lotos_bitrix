@@ -1,6 +1,5 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);
-$category = new Category(10, $arResult['VARIABLES']['SECTION_ID']);
 ?>
 <?
 	App::$ds->useFooterTabs = false;
@@ -74,6 +73,7 @@ $category = new Category(10, $arResult['VARIABLES']['SECTION_ID']);
 			}
 		}
 	?>
+<?php $category = new Category(10,$arCurSection['ID'] );?>
 	<h1><?=$category->getValueHOne();?></h1>
 
 <?if(!empty($arResult["SECTION_BANNERS"])):?>

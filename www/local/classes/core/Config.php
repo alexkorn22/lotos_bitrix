@@ -1,5 +1,5 @@
 <?php
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 /**
  * Class Config
@@ -12,22 +12,25 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
  * @property string scriptGoogleTagHead;
  * @property string scriptGoogleTagBody;
  */
-class Config {
+class Config
+{
     protected $data = [];
     public $debug = false;
     protected $default = [
         "countPropertyElements" => 3
     ];
 
-    public function __construct() {
+    public function __construct()
+    {
         $debug = COption::GetOptionString("grain.customsettings", 'debug');
-        if($debug == 'Y'){
-           $this->debug = true;
+        if ($debug == 'Y') {
+            $this->debug = true;
         }
         $this->readFileConfig();
     }
 
-    protected function readFileConfig() {
+    protected function readFileConfig()
+    {
 
         if (!$this->debug) {
             return;
@@ -43,7 +46,8 @@ class Config {
         }
     }
 
-    public function __get($name){
+    public function __get($name)
+    {
         if (!isset($this->data[$name])) {
             $this->data[$name] = COption::GetOptionString("grain.customsettings", $name);
         }
@@ -54,13 +58,27 @@ class Config {
     }
 
 
+    public function setDebug($debug)
+    {
+        $adminDebug = "N";
+        if($debug){
+            $adminDebug = "Y";
+        }
+
+        $this->debug = $debug;
+        COption::SetOptionString("grain.customsettings",'debug', $adminDebug);
+
+    }
+
+
     protected function getDefault($name)
     {
-        if(isset($this->default[$name])){
+        if (isset($this->default[$name])) {
             return $this->default[$name];
         }
         return NULL;
     }
+
 
 
 }

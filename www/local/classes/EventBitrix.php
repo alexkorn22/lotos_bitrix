@@ -1,7 +1,6 @@
+
 <?php
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-
-
 class EventBitrix {
 
     public function onAfterUserAdd(&$arFields) {
@@ -42,4 +41,20 @@ class EventBitrix {
         $dataUser = $userTools->getDataForResultRegister($dataUser);
         App::$msgBox->setMessage($dataUser,'messages/register');
     }
+
+    public function makeTestSite($params)
+    {
+        global $USER;
+        if ($USER->IsAdmin() && $params['makeTestSite'] == 'true'){
+            App::$config->setDebug(true);
+            $file = $_SERVER["DOCUMENT_ROOT"] . "/robots.txt";
+            $content = "User-Agent: \n*Disallow:/";
+            file_put_contents($file, $content);
+
+        }
+    }
+
 }
+
+?>
+
