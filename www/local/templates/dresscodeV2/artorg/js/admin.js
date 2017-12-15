@@ -5,7 +5,7 @@ function createButton(data){
         url        : url,
         type       : 'POST',
         data       : data,
-        success    : function(){alert('преобразование в тестовый сайт прошло успешно');}
+        success    : function(){alert('Преобразование в тестовый сайт прошло успешно');}
     });
 
 }

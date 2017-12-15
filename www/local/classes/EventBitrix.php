@@ -42,7 +42,7 @@ class EventBitrix {
         App::$msgBox->setMessage($dataUser,'messages/register');
     }
 
-    public function turnOnTestSite($params)
+    public function makeTestSite($params)
     {
         global $USER;
         if ($USER->IsAdmin() && $params['makeTestSite'] == 'true'){

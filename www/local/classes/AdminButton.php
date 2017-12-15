@@ -13,19 +13,19 @@ class AdminButton
         $APPLICATION->AddPanelButton(
             Array(
                 "ID" => 'MakeBtnTest', //определяет уникальность кнопки
-                "TEXT" => 'преобразовать в тестовый сайт',
+                "TEXT" => 'Преобразовать в в тестовый сайт',
                 "TYPE" => "BIG", //BIG - большая кнопка, иначе маленькая
                 "MAIN_SORT" => 10, //индекс сортировки для групп кнопок
                 "SORT" => 10, //сортировка внутри группы
-                "HREF" => "javascript:createButton({action:'EventBitrix',method:'turnOnTestSite',params:{makeTestSite:'true'}})",
+                "HREF" => "javascript:createButton({action:'EventBitrix',method:'makeTestSite',params:{makeTestSite:'true'}})",
                 // - first parameter which class !
                 // - second is which method !
                 // - third is parameters to send to the method
                 "ICON" => "bx-panel-button-icon bx-panel-install-solution-icon\"", //название CSS-класса с иконкой кнопки
                 "SRC" => "",
-                "ALT" => "преобразовать в тестовый сайт",
+                "ALT" => "Преобразовать в тестовый сайт",
                 "HINT" => array( //тултип кнопки
-                    "TITLE" => "преобразовать в тестовый сайт",
+                    "TITLE" => "Преобразовать в тестовый сайт",
                     "TEXT" => "" //HTML допускается
                 ),
                 "HINT_MENU" => array(),
