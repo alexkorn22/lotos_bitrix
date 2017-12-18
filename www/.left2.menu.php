@@ -9,7 +9,28 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Хиты продаж", 
-		"top/", 
+		"popular/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Подарочные сертификаты", 
+		"/certificates/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Акции", 
+		"/promotions/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Наборы доктора Комаровского", 
+		"/catalog/nabory_dlya_novorozhdennykh/", 
 		Array(), 
 		Array(), 
 		"" 
