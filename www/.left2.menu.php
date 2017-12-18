@@ -34,20 +34,6 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
-	),
-	Array(
-		"Часто задаваемые вопросы", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Карьера", 
-		"", 
-		Array(), 
-		Array(), 
-		"" 
 	)
 );
 ?>
