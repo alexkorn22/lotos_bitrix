@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Вход", 
+		"/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Регистрация", 
+		"/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Мой кабинет", 
+		"/personal/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Мои заказы", 
+		"/personal/order/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Корзина", 
+		"/personal/cart/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Мама-Клуб", 
+		"/mama-club/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Регистрация дисконта", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
