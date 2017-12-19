@@ -645,3 +645,18 @@
 
   }
 
+//-----------BEGIN banner--------------//
+@include sm-block() {
+  #main {
+    #slider {
+      .slideBox {
+        li>span {
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+
+
