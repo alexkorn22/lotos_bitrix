@@ -4797,7 +4797,8 @@ a.inStock:hover span{
 	.slider_small #slider .slideVideoContainer,
 	.slider_small #slider .limiter,
 	.slider_small #slider .videoPoster{
-		height: 420px;
+		/*height: 420px;*/
+		height: 690px;
 	}
 
 }
@@ -4815,7 +4816,8 @@ a.inStock:hover span{
 	.slider_small #slider .slideVideoContainer,
 	.slider_small #slider .limiter,
 	.slider_small #slider .videoPoster{
-		height: 380px;
+		/*height: 380px;*/
+		height: 575px;
 	}
 
 }
@@ -4833,7 +4835,8 @@ a.inStock:hover span{
 	.slider_small #slider .slideVideoContainer,
 	.slider_small #slider .limiter,
 	.slider_small #slider .videoPoster{
-		height: 350px;
+		/*height: 350px;*/
+		height: 490px;
 	}
 
 }
@@ -4851,7 +4854,8 @@ a.inStock:hover span{
 	.slider_small #slider .slideVideoContainer,
 	.slider_small #slider .limiter,
 	.slider_small #slider .videoPoster{
-		height: 420px;
+		/*height: 420px;*/
+		height: 460px;
 	}
 
 }
@@ -4977,7 +4981,8 @@ a.inStock:hover span{
 	.slider_small #slider .slideVideoContainer,
 	.slider_small #slider .limiter,
 	.slider_small #slider .videoPoster{
-		height: 220px;
+		/*height: 220px;*/
+		height: 175px;
 	}
 
 }
@@ -6650,7 +6655,7 @@ body.panels_white #brandList .item:nth-child(5n+1){
 		display: none;
 	}
 
-	#slider ul li span {
+	/*#slider ul li span {
 		-webkit-filter: url(#blur);
 		filter: url(#blur);
 		-webkit-filter: blur(2px);
@@ -6659,7 +6664,7 @@ body.panels_white #brandList .item:nth-child(5n+1){
 		-webkit-transition: 1s -webkit-filter linear;
 		transition: 1s filter linear;
 		opacity: 0.5;
-	}
+	}*/
 
 	#slider ul li span:hover {
 		transform: scale(1);
