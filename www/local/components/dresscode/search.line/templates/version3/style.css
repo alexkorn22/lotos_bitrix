@@ -161,7 +161,7 @@
 }
 
 #searchResult h1{
-    font-family: 'robotobold';
+    font-family: 'exo2bold';
     text-transform: uppercase;
     background-color: #ffffff;
     position: relative;
@@ -217,7 +217,7 @@
 	transition: all 0.2 ease-in-out;
 	border-top: 1px solid #e7e8ea;
     background-color: #f3f3f3;
-    font-family: 'robotobold';
+    font-family: 'exo2bold';
     text-transform: uppercase;
     text-decoration: none;
     position: relative;

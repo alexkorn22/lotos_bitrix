@@ -359,7 +359,7 @@
 
 #subHeader7 .firstPhones .heading,
 #subHeader7 .secondPhones .heading{
-	font-family: "robotoBold";
+	font-family: 'exo2bold';
 	font-size: 16px;
 	display: block;
 }
@@ -468,7 +468,7 @@
 
 #subHeader7.color_black .firstPhones .heading,
 #subHeader7.color_black .secondPhones .heading{
-	font-family: "roboto_ltregular";
+	font-family: 'exo2light';
 }
 
 #subHeader7 .topWishlist,

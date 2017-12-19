@@ -18,3 +18,7 @@
 @import "footer";
 
 @import "media";
+
+body {
+  font: normal normal 14px $MainFontLight , arial , sans-serif!important;
+}

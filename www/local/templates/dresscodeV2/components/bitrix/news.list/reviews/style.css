@@ -71,7 +71,7 @@
 }
 
 .shop-reviews-heading{
-	font-family: "robotoMedium";
+	font-family: 'exo2medium';
 	margin-bottom: 12px;
 	font-size: 18px;
 }
@@ -190,7 +190,7 @@
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	font-family: "robotoMedium";
+	font-family: 'exo2medium';
 	display: inline-block;
 	text-decoration: none;
 	position: relative;
@@ -222,7 +222,7 @@
 }
 
 .shop-review-form-heading{
-	font-family: "robotobold";
+	font-family: 'exo2bold';
 	text-transform: uppercase;
 	margin-bottom: 24px;
     letter-spacing: 1px;
@@ -267,7 +267,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	font-family: "roboto_ltregular";
+	font-family: 'exo2light';
 	border: 1px solid #e7e8ea;
 	border-radius: 2px;
 	font-size: 14px;

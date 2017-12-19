@@ -4,7 +4,7 @@
 
 #orderSuccess h2{
 	text-transform: uppercase;
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	font-size: 16px;
 }
 
@@ -124,7 +124,7 @@
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 	text-transform: uppercase;
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-decoration: none;
 	font-size: 16px;
 	display: block;
@@ -399,7 +399,7 @@
 }
 
 #personalCart .productTable .sum {
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	font-size: 16px;
 }
 
@@ -437,7 +437,7 @@
 }
 
 #personalCart .orderLine .price{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	font-size: 16px;
 }
 
@@ -526,7 +526,7 @@
 }
 
 #order .title{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-transform: uppercase;	
 	border: 1px solid #eeeeee;
 	text-overflow: ellipsis;
@@ -597,7 +597,7 @@
 
 .orderProps td:first-child span,
 .personSelect td:first-child span{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-transform: uppercase;		
 	text-align: center;
 	margin-top: 12px;
