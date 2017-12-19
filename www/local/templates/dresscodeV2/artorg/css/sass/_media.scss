@@ -15,3 +15,17 @@ body.panels_white{
   @include md('background-color',green)
 }
 */
+
+//-----------BEGIN banner--------------//
+@media screen and (max-width: 780px){
+  #main {
+    #slider {
+      .slideBox {
+        li>span {
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
