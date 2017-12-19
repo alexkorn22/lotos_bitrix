@@ -645,5 +645,20 @@
 
   }
 
+//-----------BEGIN banner--------------//
+
+#main {
+  #slider {
+    .slideBox {
+      li span {
+        @include sm-block {
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+
 
 
