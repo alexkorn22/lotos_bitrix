@@ -131,7 +131,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "roboto_ltregular";
+    font-family: 'exo2light';
     border-radius: 2px;
     padding: 0 42px;
     font-size: 14px;
@@ -155,7 +155,7 @@
 
 .geo-location-window-city-value{
     /*text-transform: uppercase;*/
-    font-family: "robotoBold";
+    font-family: 'exo2bold';
 }
 
 .geo-location-window-button-container{

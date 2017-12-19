@@ -147,7 +147,7 @@
                     </div>-->
                     <div class="copyrighted">
                         <span class="first-line">© Copyright 2017  Интернет-магазин косметики и бытовой химии ЛОТОС. <a href="#">Все права защищены</a></span>
-                        <span>Email: <a href="mailto:info@lotostrade.ua">info@lotostrade.ua</a> Тел.: +380(61)214-99-54, +380(61)620-22-44</span>
+                        <span>Email: <a href="mailto:info@lotos24.com.ua">info@lotos24.com.ua</a> Тел.: +380(61)214-99-54, +380(61)620-22-44</span>
                         <span><a href="http://wedo.com.ua" target="_blank">Сайт разработан и поддерживается компанией WeDo</a></span>
                     </div>
                 </div>

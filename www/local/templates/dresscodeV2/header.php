@@ -19,7 +19,7 @@ IncludeTemplateLangFile(__FILE__);
 		<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/images/favicon.png" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/fonts/roboto/roboto.css");?>
+		<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/fonts/Exo2/exo2.css");?>
 		<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/themes/".$TEMPLATE_THEME_NAME."/style.css");?>
         <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/artorg/css/dist/main.css");?>
 

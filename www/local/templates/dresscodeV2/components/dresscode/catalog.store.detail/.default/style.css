@@ -3,7 +3,7 @@
 }
 
 #storeDetail .allStoresText{
-	font-family: "robotoMedium";
+	font-family: 'exo2medium';
 	margin-right: 24px;
 	font-size: 16px;
 }
@@ -38,7 +38,7 @@
 }
 
 #storeDetail .storeInformationName{
-	font-family: "robotoMedium";
+	font-family: 'exo2medium';
 	font-size: 21px;
 }
 
@@ -95,7 +95,7 @@
 }
 
 #storeDetail .storeToolsItemLabel{
-	font-family: "robotoMedium";
+	font-family: 'exo2medium';
 	display: block;
 }
 

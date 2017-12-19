@@ -305,7 +305,7 @@
 }
 
 #subHeader5 .subTableColumn:nth-child(2) .heading{
-	font-family: "robotomedium";
+	font-family: 'exo2medium';
 	text-align: left;
 	font-size: 16px;
 	display: block;
@@ -313,7 +313,7 @@
 
 #subHeader5.color_theme .subTableColumn:nth-child(2) .heading,
 #subHeader5.color_black .subTableColumn:nth-child(2) .heading{
-	font-family: "roboto_ltregular";
+	font-family: 'exo2light';
 }
 
 #subHeader5 .subTableColumn:last-child{

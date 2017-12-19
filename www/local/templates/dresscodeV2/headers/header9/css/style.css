@@ -132,7 +132,7 @@
 
 #headerLine5 #topTelephone .schedule,
 #headerLine5 #topTelephone .heading{
-	font-family: "robotomedium";
+	font-family: 'exo2medium';
 	vertical-align: middle;
 	display: inline-block;
 	font-size: 13px;
@@ -263,7 +263,7 @@
 }
 
 #subHeader9 .subContainerColumn .heading{
-	font-family: "robotomedium";
+	font-family: 'exo2medium';
 	display: inline-block;
 	font-size: 16px;
 }
