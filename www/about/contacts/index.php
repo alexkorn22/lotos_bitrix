@@ -70,7 +70,7 @@ $APPLICATION->SetTitle("Задайте вопрос");
 				<tbody>
 				<tr>
 					<td>
-						<img alt="Time" src="<?=SITE_TEMPLATE_PATH?>/images/cont4_Onew.png" title="Время работы">
+						<img alt="Time" src="<?=SITE_TEMPLATE_PATH?>/images/clock.svg" title="Время работы">
 					</td>
 					<td>
 						Пн-Пт : с 08:00 до 17:00<br>
