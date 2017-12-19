@@ -67,7 +67,7 @@ a{
 }
 
 h1{
-	font-family: "roboto_ltregular";
+	font-family: 'exo2light';
 	line-height: 36px;
 	font-weight: 400;
 	text-align: left;
@@ -78,20 +78,20 @@ h1{
 }
 
 h2{
-	font-family: "roboto_ltregular";
+	font-family: 'exo2light';
 	font-weight: 400;
 	font-size: 18px;
 }
 
 h3{
-	font-family: "roboto_ltregular";
+	font-family: 'exo2light';
 	font-weight: 400;
 	font-size: 16px;
 }
 
 b,
 strong{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	font-weight: 400;
 }
 
@@ -117,7 +117,7 @@ strong{
 }
 
 .bold{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 }
 
 /* auth register city block */
@@ -413,7 +413,7 @@ strong{
 }
 
 #left .heading{
-	font-family: "roboto_ltregular";
+	font-family: 'exo2light';
 	text-decoration: none;
 	padding-left: 24px;
 	line-height: 65px;
@@ -1465,14 +1465,14 @@ strong{
 }
 
 #appBasket .price{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
     margin-bottom: 18px;
     font-size: 18px;
     display: block;
 }
 
 #appBasket .price .discount {
-    font-family: 'roboto_ltregular';
+    font-family: 'exo2light';
     padding-left: 8px;
     font-size: 14px;
 }
@@ -1516,7 +1516,7 @@ strong{
 }
 
 #appBasket .sum{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	line-height: 50px;
 	padding: 0 24px;
     font-size: 18px;
@@ -1524,7 +1524,7 @@ strong{
 }
 
 #appBasket .sum .discount{
-	font-family: 'roboto_ltregular';
+	font-family: 'exo2light';
 	padding-left: 8px;
 	font-size: 14px;
 }
@@ -1734,7 +1734,7 @@ line-height: 60px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	font-family: "roboto_ltregular";
+	font-family: 'exo2light';
 	padding-left: 12px;
 	width: 354px;
 	height: 50px;
@@ -1761,7 +1761,7 @@ line-height: 60px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	font-family: "roboto_ltregular";	
+	font-family: 'exo2light';
 	padding-left: 12px;
 	padding-top: 12px;
 	resize: none;
@@ -1886,7 +1886,7 @@ line-height: 60px;
 }
 
 #appFastBuyContainer .price{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-decoration: none;
 	margin-bottom: 12px;
 	font-size: 18px;
@@ -1894,7 +1894,7 @@ line-height: 60px;
 }
 
 #appFastBuyContainer .price .discount{
-	font-family: 'roboto_ltregular';
+	font-family: 'exo2light';
 	padding-left: 4px;
 	font-size: 14px;
 }
@@ -2461,7 +2461,7 @@ line-height: 60px;
 }
 
 #appFastView .price{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-decoration: none;
 	position: relative;
 	line-height: 28px;
@@ -2504,14 +2504,14 @@ line-height: 60px;
 }
 
 #appFastView .discount{
-	font-family: 'roboto_ltregular';
+	font-family: 'exo2light';
 	padding-left: 4px;
 	font-size: 14px;
 	color: #888888;
 }
 
 #appFastView .price .oldPriceLabel{
-	font-family: 'roboto_ltregular';
+	font-family: 'exo2light';
 	text-decoration: none;
 	margin-top: 6px;
 	font-size: 14px;
@@ -2521,7 +2521,7 @@ line-height: 60px;
 
 #appFastView .price .discount,
 #appFastView .price .discount{
-	font-family: 'roboto_ltregular';
+	font-family: 'exo2light';
 	padding-left: 4px;
 	font-size: 14px;
 	color: #888888;
@@ -2585,7 +2585,7 @@ line-height: 60px;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-    font-family: 'roboto_condensedlight';
+    font-family: 'exo2light';
     text-decoration: none;
     line-height: 21px;
     font-size: 15px;
@@ -2641,7 +2641,7 @@ line-height: 60px;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 	text-transform: uppercase;
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-decoration: none;
 	padding-bottom: 8px;
 	font-size: 16px;
@@ -2924,7 +2924,7 @@ line-height: 60px;
 }
 
 #authMenu li .selected{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	padding-bottom: 4px;
 }
 
@@ -2943,7 +2943,7 @@ line-height: 60px;
 }
 
 #empty h3{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 16px;
@@ -2975,7 +2975,7 @@ line-height: 60px;
 
 #empty .emptyTitle{
 	text-transform: uppercase;
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	margin-top: 24px;
 	font-size: 14px;
 }
@@ -3063,7 +3063,7 @@ line-height: 60px;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     text-transform: uppercase;
-    font-family: 'robotobold';
+    font-family: 'exo2bold';
     text-decoration: none;
     padding-bottom: 8px;
     font-size: 16px;
@@ -3105,12 +3105,12 @@ line-height: 60px;
 
 #nextSection .title{
 	font-size: 14px !important;
-    font-family: 'robotobold';
+    font-family: 'exo2bold';
 }
 
 #catalogColumn .leftColumn .heading{
     font-size: 14px !important;
-    font-family: 'robotobold';
+    font-family: 'exo2bold';
     text-decoration: none;
     line-height: 50px;
     font-weight: 400;
@@ -3185,7 +3185,7 @@ line-height: 60px;
 .mainService .heading{
     margin-bottom: 0px !important;
     text-transform: uppercase;
-    font-family: 'robotobold';
+    font-family: 'exo2bold';
     text-align: center;
     padding-left: 18px;
     line-height: 95px;
@@ -3470,7 +3470,7 @@ line-height: 60px;
 }
 
 .product .price{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	font-size: 18px;
 	display: block;
 	text-decoration: none;
@@ -3482,7 +3482,7 @@ line-height: 60px;
 }
 
 .product .price .discount{
-	font-family: 'roboto_ltregular';
+	font-family: 'exo2light';
 	padding-left: 4px;
 	font-size: 14px;
 }
@@ -3518,7 +3518,7 @@ line-height: 60px;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	font-family: 'roboto_condensedlight';
+	font-family: 'exo2light';
 	background-color: #2b2b2b;
 	text-decoration: none;
 	border-radius: 2px;
@@ -3585,7 +3585,7 @@ line-height: 60px;
 }
 
 .product .label{
-	font-family: 'roboto_condensedlight';
+	font-family: 'exo2light';
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
@@ -3793,7 +3793,7 @@ a.inStock:hover span{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
-	font-family: "roboto_ltregular" , arial , sans-serif;
+	font-family: 'exo2light' , arial , sans-serif;
 	margin-top: 8px;
 	padding: 0 12px;
 	height: 48px;
@@ -3827,7 +3827,7 @@ a.inStock:hover span{
 }
 
 .bx-auth .alert{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-transform: uppercase;
 	display: inline-block;
 	margin-bottom: 24px;
@@ -3837,7 +3837,7 @@ a.inStock:hover span{
 }
 
 .bx-auth .alert.small{
-	font-family: "roboto_ltregular";
+	font-family: 'exo2light';
 	line-height: 28px;
 	max-width: 600px;
 	font-size: 14px;
@@ -3872,7 +3872,7 @@ a.inStock:hover span{
 }
 
 .bx-auth input{
-	font-family: "roboto_ltregular" , arial , sans-serif;
+	font-family: 'exo2light' , arial , sans-serif;
 	font-size: 14px;
 }
 
@@ -4395,7 +4395,7 @@ a.inStock:hover span{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	font-family: "roboto_ltregular";
+	font-family: 'exo2light';
 	margin-bottom: 12px;
 	padding-left: 12px;
 	width: 354px;
@@ -4433,7 +4433,7 @@ a.inStock:hover span{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	font-family: "roboto_ltregular";
+	font-family: 'exo2light';
 	margin-bottom: 12px;
 	padding-left: 12px;
 	padding-top: 12px;
@@ -4556,7 +4556,7 @@ a.inStock:hover span{
 }
 
 .priceTableStyle80 th{
-	font-family: "robotomedium";
+	font-family: 'exo2medium';
 	background-color: #f7f7f7;
 	border: 1px solid #e4e4e4;
 	font-weight: normal;
@@ -4572,7 +4572,7 @@ a.inStock:hover span{
 }
 
 .mediumText{
-	font-family: "robotomedium";
+	font-family: 'exo2medium';
 }
 
 .pagePicture{
@@ -4616,7 +4616,7 @@ a.inStock:hover span{
 
 #stores .heading{
     border-top: 1px solid #efefef;
-    font-family: 'robotobold';
+    font-family: 'exo2bold';
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 36px 24px;
@@ -4709,7 +4709,7 @@ a.inStock:hover span{
 }
 
 #error404 h1{
-	font-family: "roboto_thregular";
+	font-family: 'exo2thin';
 	margin-bottom: 24px;
 	text-align: center;
 	line-height: 48px;
@@ -4736,7 +4736,7 @@ a.inStock:hover span{
 }
 
 #error404 .errorText{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-transform: uppercase;
 	line-height: 28px;
 }
@@ -6377,7 +6377,7 @@ body.panels_white #brandList .item:nth-child(5n+1){
 	}
 
 	#headerTools .telephone .nf .heading:first-child{
-		font-family: "robotomedium";
+		font-family: 'exo2medium';
 		font-size: 14px;
 		display: block;
 		color: #000000;
@@ -6922,7 +6922,7 @@ div.bx-debug-summary{
 }
 
 .information-heading{
-	font-family: "robotomedium";
+	font-family: 'exo2medium';
 	margin-bottom: 12px;
 	font-size: 21px;
 }
@@ -7150,7 +7150,7 @@ div.bx-debug-summary{
 
 #colorSwitcher .title{
 	text-transform: uppercase;
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-align: center;
 	margin-top: 12px;
 }
@@ -7522,7 +7522,7 @@ div.bx-debug-summary{
 }
 
 .templateSwitcher .switcherHeading{
-	font-family: "robotomedium";
+	font-family: 'exo2medium';
 	margin-bottom: 18px;
 	padding: 0 24px;
 	font-size: 16px;
@@ -7556,7 +7556,7 @@ div.bx-debug-summary{
 }
 
 .templateSwitcher .switcherHeading2{
-	font-family: "robotomedium";
+	font-family: 'exo2medium';
 	margin-bottom: 12px;
 	padding: 0 24px;
 }

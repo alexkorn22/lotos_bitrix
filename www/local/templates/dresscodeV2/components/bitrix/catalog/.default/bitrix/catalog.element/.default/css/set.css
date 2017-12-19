@@ -6,7 +6,7 @@
 
 #set .heading{
 	border-top: 1px solid #efefef;
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	padding: 36px 24px;
@@ -53,7 +53,7 @@
 }
 
 #set .setTools .price{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-decoration: none;
 	position: relative;
 	font-size: 18px;
@@ -62,7 +62,7 @@
 }
 
 #set .setTools .price #setDisnt{
-	font-family: 'roboto_ltregular';
+	font-family: 'exo2light';
 	display: inline-block;
 	padding-left: 12px;
 	font-size: 14px;
@@ -100,7 +100,7 @@
 }
 
 #set .setTools .addSet{
-	font-family: 'roboto_condensedlight';
+	font-family: 'exo2light';
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
@@ -151,7 +151,7 @@
 }
 
 #set .setElement:after{
-	font-family: 'roboto_thregular';
+	font-family: 'exo2thin';
 	transform: translateY(-50%);
 	position: absolute;
 	font-size: 48px;
@@ -220,7 +220,7 @@
 }
 
 #set .setElement .price{
-	font-family: 'robotobold';
+	font-family: 'exo2bold';
 	text-decoration: none;
 	margin-bottom: 12px;
 	position: relative;
@@ -230,7 +230,7 @@
 }
 
 #set .setElement .price .discount{
-	font-family: 'roboto_ltregular';
+	font-family: 'exo2light';
 	display: inline-block;
 	padding-left: 8px;
 	font-size: 14px;
@@ -408,7 +408,7 @@
 }
 
 #setWindowPrice .discount{
-    font-family: 'roboto_ltregular';
+    font-family: 'exo2light';
     display: inline-block;
     margin-left: 12px;
     padding-left: 8px;
@@ -417,7 +417,7 @@
 }
 
 #setWindowPrice .addCart{
-	font-family: 'roboto_condensedlight';
+	font-family: 'exo2light';
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
