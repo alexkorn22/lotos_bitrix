@@ -46,6 +46,24 @@
   }
 }
 
+//----------------------BEGIN Header, pictograms----------------------//
+#subHeader7 {
+  .subTableColumn {
+    .phonesContainer {
+      .firstPhones, .secondPhones {
+        .phonesTc {
+          .callBackIcon, .scheduleIcon{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+        }
+      }
+    }
+  }
+}
+//----------------------END Header, pictograms----------------------//
+
 .noBorder{
   border-left: none;
   border-right: none;
