@@ -1,3 +1,4 @@
+//-------------------BEGIN infoAbout------------------//
 #infoAbout{
 
   padding-bottom: 36px;
@@ -19,7 +20,7 @@
     margin-top: 5px;
     margin-bottom: 5px;
    // height: 100%;
-    max-width: 100%;
+    max-width: 70px;
   }
 
   .infoAbouthHeader{
@@ -45,24 +46,73 @@
     color: #000000;
   }
 }
+//------------hidden mobile--------------//
+@include xs-block() {
+  #infoAbout {
+    display: none;
+  }
+}
 
-//----------------------BEGIN Header, pictograms----------------------//
-#subHeader7 {
-  .subTableColumn {
-    .phonesContainer {
-      .firstPhones, .secondPhones {
-        .phonesTc {
-          .callBackIcon, .scheduleIcon{
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+//----------------------BEGIN Header----------------------//
+#foundation {
+  #subHeader7 {
+    border: none;
+    .subTableColumn {
+      &:first-child {
+        padding-right: 65px;
+      }
+      .phonesContainer {
+        .firstPhones, .secondPhones {
+          .phonesTc {
+            .callBackIcon, .scheduleIcon{
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
           }
         }
       }
     }
   }
 }
-//----------------------END Header, pictograms----------------------//
+
+//title header for mobile devices
+.header-line-title {
+  display: none;
+  @include xs('display',block);
+  background-color: $white;
+  padding-bottom: 20px;
+
+  .header-title-wrap {
+    .header-title {
+      p {
+        margin: 0;
+        text-align: center;
+        font-family: $MainFontBold;
+      }
+    }
+  }
+}
+
+
+//----------------------END Header----------------------//
+
+//-------------BEGIN top line----------------------------//
+#headerLine4 .subTable .subTableColumn {
+  #topSocial {
+    margin-left: 15px;
+
+    .topSoc {
+      display: block;
+    }
+  }
+  .headerLineMenu2 {
+    #subMenu {
+      vertical-align: top;
+    }
+  }
+}
+
 
 .noBorder{
   border-left: none;
