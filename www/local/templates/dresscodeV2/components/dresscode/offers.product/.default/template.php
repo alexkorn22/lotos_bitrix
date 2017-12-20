@@ -4,7 +4,7 @@
 	var ajaxDir = "<?=$this->GetFolder();?>";
 </script>
 <?if(!empty($arResult["GROUPS"])):?>
-	
+
 	<?if(empty($arParams["AJAX"])):?>
 		<div id="homeCatalog">
 			<?if(!empty($arResult["PROPERTY_ENUM"])):?>
@@ -16,7 +16,7 @@
 									<?if(!empty($arResult["GROUPS"][$ipe]["ITEMS"])):?>
 										<li class="cItem">
                                             <div class="caption<?if($arPropEnum["SELECTED"] == "Y"):?> selected<?endif;?> getProductByGroup" data-name="<?=$arPropEnum["PROP_NAME"]?>" data-group="<?=$arPropEnum["ID"]?>" data-page="1" data-sheet="N"><?=$arPropEnum["VALUE"]?></div>
-										</li>	
+										</li>
 									<?endif;?>
 								<?endforeach;?>
 							</ul>
@@ -41,7 +41,7 @@
 					</div>
 				</div>
 			<?endif;?>
-		<?endif;?> 
+		<?endif;?>
 			<?foreach ($arResult["GROUPS"] as $itg => $arItemsGroup):?>
 				<?if(!empty($arItemsGroup["ITEMS"])):?>
 					<?if(empty($arParams["AJAX"])):?>
@@ -55,7 +55,7 @@
 									$this->AddDeleteAction($arElement["ID"], $arElement["DELETE_LINK"], CIBlock::GetArrayByID($arElement["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 								?>
 								<div class="item product sku" id="<?=$this->GetEditAreaId($arElement["ID"]);?>" data-product-id="<?=!empty($arElement["~ID"]) ? $arElement["~ID"] : $arElement["ID"]?>" data-iblock-id="<?=$arElement["SKU_INFO"]["IBLOCK_ID"]?>" data-prop-id="<?=$arElement["SKU_INFO"]["SKU_PROPERTY_ID"]?>" data-product-width="<?=$arParams["PICTURE_WIDTH"]?>" data-product-height="<?=$arParams["PICTURE_HEIGHT"]?>" data-hide-measure="<?=$arParams["HIDE_MEASURES"]?>" data-price-code="<?=implode("||", $arParams["PRODUCT_PRICE_CODE"])?>">
-							
+
 									<div class="tabloid">
 										<?if(!empty($arElement["PROPERTIES"]["OFFERS"]["VALUE"])):?>
 											<div class="markerContainer">
@@ -74,7 +74,7 @@
 											<img src="<?=(!empty($arElement["IMG"]["src"]) ? $arElement["IMG"]["src"] : SITE_TEMPLATE_PATH.'/images/empty.png')?>" alt="<?=$arElement["NAME"]?>">
 											<span class="getFastView" data-id="<?=$arElement["ID"]?>"><?=GetMessage("FAST_VIEW_PRODUCT_LABEL")?></span>
 										</a>
-										<a href="<?=$arElement["DETAIL_PAGE_URL"]?>" class="name"><span class="middle"><?=$arElement["NAME"]?></span></a> 
+										<a href="<?=$arElement["DETAIL_PAGE_URL"]?>" class="name"><span class="middle"><?=$arElement["NAME"]?></span></a>
 										<?if(!empty($arElement["PRICE"])):?>
 											<?if($arElement["COUNT_PRICES"] > 1):?>
 												<a class="price getPricesWindow" data-id="<?=$arElement["ID"]?>">
@@ -119,7 +119,7 @@
 														<a class="outOfStock label changeAvailable"><img src="<?=SITE_TEMPLATE_PATH?>/images/outOfStock.png" alt="" class="icon"><?=GetMessage("NOAVAILABLE")?></a>
 													<?endif;?>
 												<?endif;?>
-											</div>						
+											</div>
 										</div>
 										<?if(!empty($arElement["SKU_PRODUCT"])):?>
 											<?if(!empty($arElement["SKU_PROPERTIES"]) && $level = 1):?>
