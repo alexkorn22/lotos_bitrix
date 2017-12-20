@@ -1,3 +1,4 @@
+//-------------------BEGIN infoAbout------------------//
 #infoAbout{
 
   padding-bottom: 36px;
@@ -19,7 +20,7 @@
     margin-top: 5px;
     margin-bottom: 5px;
    // height: 100%;
-    max-width: 100%;
+    max-width: 70px;
   }
 
   .infoAbouthHeader{
@@ -43,6 +44,12 @@
     margin-bottom: -12px;
     margin-top: auto;
     color: #000000;
+  }
+}
+//------------hidden mobile--------------//
+@include xs-block() {
+  #infoAbout {
+    display: none;
   }
 }
 
