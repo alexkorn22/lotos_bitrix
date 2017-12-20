@@ -5,7 +5,7 @@
 		<div id="mainMenuContainer">
 			<div class="limiter">
 				<a href="<?=SITE_DIR?>catalog/" class="minCatalogButton" id="catalogSlideButton">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/catalogButton.png" alt=""> <?=GetMessage("CATALOG_BUTTON_LABEL")?> 
+					<img src="<?=SITE_TEMPLATE_PATH?>/images/catalogButton.png" alt=""> <?=GetMessage("CATALOG_BUTTON_LABEL")?>
 				</a>
 				<?if(count($arResult["ITEMS"]) > 3):?>
 					<div id="menuCatalogSection">

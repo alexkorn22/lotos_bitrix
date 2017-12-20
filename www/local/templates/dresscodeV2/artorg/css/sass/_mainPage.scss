@@ -112,6 +112,7 @@
     }
   }
 }
+//-------------END top line----------------------------//
 
 
 .noBorder{
@@ -226,11 +227,30 @@
   }
 }
 
-#mainMenuContainer {
-  .minCatalogButton{
-    background-color: #1a1a1a;
+
+@media all and (max-width: 1024px) {
+  #mainMenuContainer {
+    #containerMainMenu {
+      display: none;
+      #mainMenu {
+        background-color: $lightGrey;
+        display: flex;
+        flex-direction: column;
+        & li {
+          border: none;
+          a {
+            color: $black;
+          }
+        }
+      }
+    }
+    .minCatalogButton{
+      background-color: $lightGrey;
+      color: $black;
+    }
   }
 }
+
 
 .topSales #footerTabs{
   background-color: #f3f3f3;
