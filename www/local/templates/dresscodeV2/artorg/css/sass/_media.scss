@@ -17,18 +17,22 @@ body.panels_white{
 */
 
 
-//---------HEADER---------------//
+
 @media all and (max-width: 1150px){
 
+  //---------HEADER---------------//
   #headerLine4 .limiter .subTable .subTableColumn #topSocial{
     display: block;
   }
-
+  //---------END HEADER---------------//
 }
 
 @media all and (max-width: 700px){
+
+  //---------HEADER---------------//
   #headerLine4 .subTable .subTableColumn:last-child{
     width: 230px;
   }
+  //---------END HEADER---------------//
 }
 

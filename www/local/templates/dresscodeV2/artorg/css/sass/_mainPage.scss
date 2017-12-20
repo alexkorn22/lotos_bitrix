@@ -53,7 +53,7 @@
   }
 }
 
-//----------------------BEGIN Header, pictograms----------------------//
+//----------------------BEGIN Header----------------------//
 #subHeader7 {
   .subTableColumn {
     .phonesContainer {
@@ -69,7 +69,26 @@
     }
   }
 }
-//----------------------END Header, pictograms----------------------//
+
+//title header for mobile devices
+.header-line-title {
+  display: none;
+  @include xs('display',block);
+  background-color: $white;
+  padding-top: 25px;
+
+  .header-title-wrap {
+    .header-title {
+      p {
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+//----------------------END Header----------------------//
 
 //-------------BEGIN top line----------------------------//
 #headerLine4 .subTable .subTableColumn #topSocial {

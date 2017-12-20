@@ -64,8 +64,18 @@
 		</div>
 	</div>
 </div>
+<div class="header-line-title">
+    <div class="limiter">
+        <div class="header-title-wrap">
+            <div class="header-title">
+                <p>Интернет-магазин ЛОТОС: бытовая химия и косметика</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="subHeader7"<?if($TEMPLATE_SUBHEADER_COLOR != "default"):?> class="color_<?=$TEMPLATE_SUBHEADER_COLOR?>"<?endif;?>>
-	<div class="limiter">
+    <div class="limiter">
 		<div class="subTable">
 			<div class="subTableRow">
 				<div class="subTableColumn">
