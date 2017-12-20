@@ -61,9 +61,6 @@
       &:first-child {
         padding-right: 65px;
       }
-      &:last-child {
-        //width: 265px;
-      }
       .phonesContainer {
         .firstPhones, .secondPhones {
           .phonesTc {
@@ -101,11 +98,18 @@
 //----------------------END Header----------------------//
 
 //-------------BEGIN top line----------------------------//
-#headerLine4 .subTable .subTableColumn #topSocial {
-  margin-left: 15px;
+#headerLine4 .subTable .subTableColumn {
+  #topSocial {
+    margin-left: 15px;
 
-  .topSoc {
-    display: block;
+    .topSoc {
+      display: block;
+    }
+  }
+  .headerLineMenu2 {
+    #subMenu {
+      vertical-align: top;
+    }
   }
 }
 
