@@ -36,3 +36,11 @@ body.panels_white{
   //---------END HEADER---------------//
 }
 
+@media all and (max-width: 420px) {
+
+ #foundation #subHeader7 .subTableColumn:last-child {
+    width: 0;
+  }
+
+}
+

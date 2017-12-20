@@ -57,18 +57,21 @@
 #foundation {
   #subHeader7 {
     border: none;
-  }
-}
-
-#subHeader7 {
-  .subTableColumn {
-    .phonesContainer {
-      .firstPhones, .secondPhones {
-        .phonesTc {
-          .callBackIcon, .scheduleIcon{
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+    .subTableColumn {
+      &:first-child {
+        padding-right: 65px;
+      }
+      &:last-child {
+        //width: 265px;
+      }
+      .phonesContainer {
+        .firstPhones, .secondPhones {
+          .phonesTc {
+            .callBackIcon, .scheduleIcon{
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
           }
         }
       }

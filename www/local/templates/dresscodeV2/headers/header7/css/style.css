@@ -329,7 +329,8 @@
 
 #subHeader7 .subTableColumn:last-child{
 	text-align: right;
-	width: 356px;
+	/*width: 356px;*/
+	width: 250px;
 }
 
 #subHeader7 .subTableColumn .toolsContainer{
