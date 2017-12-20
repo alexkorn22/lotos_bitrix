@@ -38,7 +38,7 @@
 				<div id="geoPosition"<?if(!empty($TEMPLATE_SUBHEADER_COLOR)):?> class="color_<?=$TEMPLATE_SUBHEADER_COLOR?>"<?endif;?>>
 					<ul>
 						<?$APPLICATION->IncludeComponent("dresscode:sale.geo.positiion", "", array(
-	
+
 	),
 	false,
 	array(
@@ -56,7 +56,7 @@
 	),
 	false,
 	array(
-	"ACTIVE_COMPONENT" => "N"
+	"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
 				</div>
@@ -140,7 +140,7 @@
 						<div class="topCompare">
 							<div id="flushTopCompare">
 								<?$APPLICATION->IncludeComponent("dresscode:compare.line", "version4", array(
-	
+
 	),
 	false,
 	array(
@@ -152,7 +152,7 @@
 						<div class="topWishlist">
 							<div id="flushTopwishlist">
 								<?$APPLICATION->IncludeComponent("dresscode:favorite.line", "version4", array(
-	
+
 	),
 	false,
 	array(
@@ -200,8 +200,8 @@
 </div>
 <div class="menuContainerColor<?if(!empty($TEMPLATE_CATALOG_MENU_COLOR) && $TEMPLATE_CATALOG_MENU_COLOR != "default"):?> color_<?=$TEMPLATE_CATALOG_MENU_COLOR?><?endif;?>">
 <?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"catalogMenu2", 
+	"bitrix:menu",
+	"catalogMenu2",
 	array(
 		"ROOT_MENU_TYPE" => "left",
 		"MENU_CACHE_TYPE" => "N",

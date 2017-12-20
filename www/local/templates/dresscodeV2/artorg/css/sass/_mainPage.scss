@@ -71,6 +71,16 @@
 }
 //----------------------END Header, pictograms----------------------//
 
+//-------------BEGIN top line----------------------------//
+#headerLine4 .subTable .subTableColumn #topSocial {
+  margin-left: 15px;
+
+  .topSoc {
+    display: block;
+  }
+}
+
+
 .noBorder{
   border-left: none;
   border-right: none;
