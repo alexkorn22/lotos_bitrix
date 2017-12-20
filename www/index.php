@@ -184,25 +184,25 @@ if(App::$config->usePromoBlock == 'Y'):?>
         <div class="itemContainer">
             <div class="item">
                 <a href="/promotions/">
-                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/1.jpg" alt="Акции">
+                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/shares.png" alt="Акции">
                 </a>
             </div>
 
             <div class="item">
                 <a href="/mama-club/">
-                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/2.jpg" alt="Мама-клуб">
+                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/mother-club.png" alt="Мама-клуб">
                 </a>
             </div>
 
             <div class="item">
                 <a href="/certificates/">
-                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/3.jpg" alt="Подарочные сертификаты">
+                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/sertificates.png" alt="Подарочные сертификаты">
                 </a>
             </div>
 
             <div class="item">
                 <a href="/catalog/nabory_dlya_novorozhdennykh/">
-                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/4.jpg" alt="Наборы от Комаровского">
+                <img src="<?=(SITE_TEMPLATE_PATH);?>/artorg/images/komarovsky.png" alt="Наборы от Комаровского">
                 </a>
             </div>
         </div>
