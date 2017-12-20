@@ -54,6 +54,12 @@
 }
 
 //----------------------BEGIN Header----------------------//
+#foundation {
+  #subHeader7 {
+    border: none;
+  }
+}
+
 #subHeader7 {
   .subTableColumn {
     .phonesContainer {
@@ -75,13 +81,14 @@
   display: none;
   @include xs('display',block);
   background-color: $white;
-  padding-top: 25px;
+  padding-bottom: 20px;
 
   .header-title-wrap {
     .header-title {
       p {
         margin: 0;
         text-align: center;
+        font-family: $MainFontBold;
       }
     }
   }
