@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Подарочные сертификаты");
-?><pre><span style="font-size: 36pt;color: #27c148;font-family: roboto_ltregular, arial, sans-serif;">Подарочные сертификаты</span></pre>Подарите своим друзьям и любимым возможность сделать выбор на свой вкус!
+?><pre><span style="font-size: 36pt;color: #27c148;font-family: exo2regular, arial, sans-serif; white-space: normal;">Подарочные сертификаты</span></pre>Подарите своим друзьям и любимым возможность сделать выбор на свой вкус!
 <p>
 	 На сумму, указанную в сертификате, владелец подарочного сертификата сети магазинов косметики и парфюмерии «Лотос» подберёт для себя или в подарок любимые ароматы, средства для макияжа и ухода за кожей, подарочные наборы.
 </p>
@@ -22,9 +22,7 @@ $APPLICATION->SetTitle("Подарочные сертификаты");
 <p>
 	 Номинал подарочного сертификата может составлять 50, 100, 200 гривень.
 </p>
-<p>
- <br>
-</p>
-<p>
- <img width="975" src="/local/templates/dresscodeV2/artorg/images/sertificate3.png" height="497"><br>
-</p><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<div class="certificate-img">
+    <img src="/local/templates/dresscodeV2/artorg/images/sertificate3.png"><br>
+</div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
