@@ -301,7 +301,7 @@
   }
 }
 
-#topProduct .productList {
+.slideStyles .productList {
     .item{
       height: 359px !important;
       float: left !important;
@@ -331,11 +331,11 @@
     }
 }
 
-#topProduct .wrap{
+.slideStyles .wrap{
   margin: 0 -12px;
 }
 
-#topProduct .productList > li {
+.slideStyles .productList > li {
   .addCart {
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;

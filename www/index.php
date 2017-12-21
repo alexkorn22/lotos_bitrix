@@ -59,123 +59,72 @@ $APPLICATION->SetTitle("Интернет-магазин ЛОТОС - lotos24");?
 </div>
 
 
-<?$APPLICATION->IncludeComponent(
-	"dresscode:offers.product", 
-	".default", 
-	array(
-		"CACHE_TIME" => "3600000",
-		"CACHE_TYPE" => "Y",
-		"COMPONENT_TEMPLATE" => ".default",
-		"ELEMENTS_COUNT" => "6",
-		"HIDE_MEASURES" => "N",
-		"HIDE_NOT_AVAILABLE" => "N",
-		"IBLOCK_ID" => "10",
-		"IBLOCK_TYPE" => "catalog",
-		"PICTURE_HEIGHT" => "200",
-		"PICTURE_WIDTH" => "220",
-		"PRODUCT_PRICE_CODE" => array(
-		),
-		"PROP_NAME" => "OFFERS",
-		"PROP_VALUE" => array(
-			0 => "_9",
-		),
-		"SORT_PROPERTY_NAME" => "SORT",
-		"SORT_VALUE" => "ASC",
-        "ITEMS_NEWS" => "Y"
-	),
-	false,
-	array(
-		"ACTIVE_COMPONENT" => "Y"
-	)
-);?>
 
-<div class="topSales">
-    <div id="footerTabs" class="itemsTopSales">
-        <div class="wrapper">
-            <div class="items">
-                <?$APPLICATION->IncludeComponent(
-                    "artorg:catalog.top",
-                    ".default",
-                    array(
-                        "COMPONENT_TEMPLATE" => ".default",
-                        "IBLOCK_TYPE" => "catalog",
-                        "IBLOCK_ID" => "10",
-                        "ELEMENT_SORT_FIELD" => "sort",
-                        "ELEMENT_SORT_ORDER" => "asc",
-                        "ELEMENT_SORT_FIELD2" => "id",
-                        "ELEMENT_SORT_ORDER2" => "desc",
-                        "FILTER_NAME" => "",
-                        "HIDE_NOT_AVAILABLE" => "Y",
-                        "ELEMENT_COUNT" => "12",
-                        "LINE_ELEMENT_COUNT" => "1",
-                        "PROPERTY_CODE" => array(
-                            0 => "",
-                            1 => "",
-                        ),
-                        "OFFERS_FIELD_CODE" => array(
-                            0 => "",
-                            1 => "",
-                        ),
-                        "OFFERS_PROPERTY_CODE" => array(
-                            0 => "",
-                            1 => "",
-                        ),
-                        "OFFERS_SORT_FIELD" => "sort",
-                        "OFFERS_SORT_ORDER" => "asc",
-                        "OFFERS_SORT_FIELD2" => "id",
-                        "OFFERS_SORT_ORDER2" => "desc",
-                        "OFFERS_LIMIT" => "5",
-                        "VIEW_MODE" => "SECTION",
-                        "TEMPLATE_THEME" => "blue",
-                        "PRODUCT_DISPLAY_MODE" => "N",
-                        "ADD_PICT_PROP" => "-",
-                        "LABEL_PROP" => "-",
-                        "SHOW_DISCOUNT_PERCENT" => "N",
-                        "SHOW_OLD_PRICE" => "N",
-                        "SHOW_CLOSE_POPUP" => "N",
-                        "MESS_BTN_BUY" => "Купить",
-                        "MESS_BTN_ADD_TO_BASKET" => "В корзину",
-                        "MESS_BTN_COMPARE" => "Сравнить",
-                        "MESS_BTN_DETAIL" => "Подробнее",
-                        "MESS_NOT_AVAILABLE" => "Нет в наличии",
-                        "SECTION_URL" => "",
-                        "DETAIL_URL" => "",
-                        "SECTION_ID_VARIABLE" => "SECTION_ID",
-                        "PRODUCT_QUANTITY_VARIABLE" => "",
-                        "SEF_MODE" => "N",
-                        "SEF_RULE" => "",
-                        "CACHE_TYPE" => "Y",
-                        "CACHE_TIME" => "36000000",
-                        "CACHE_GROUPS" => "Y",
-                        "CACHE_FILTER" => "N",
-                        "ACTION_VARIABLE" => "action",
-                        "PRODUCT_ID_VARIABLE" => "id",
-                        "PRICE_CODE" => array(
-                            0 => "BASE",
-                        ),
-                        "USE_PRICE_COUNT" => "N",
-                        "SHOW_PRICE_COUNT" => "1",
-                        "PRICE_VAT_INCLUDE" => "Y",
-                        "CONVERT_CURRENCY" => "N",
-                        "BASKET_URL" => "/personal/basket.php",
-                        "USE_PRODUCT_QUANTITY" => "N",
-                        "ADD_PROPERTIES_TO_BASKET" => "Y",
-                        "PRODUCT_PROPS_VARIABLE" => "prop",
-                        "PARTIAL_PRODUCT_PROPERTIES" => "N",
-                        "PRODUCT_PROPERTIES" => array(
-                        ),
-                        "OFFERS_CART_PROPERTIES" => array(
-                        ),
-                        "ADD_TO_BASKET_ACTION" => "ADD",
-                        "DISPLAY_COMPARE" => "N",
-                        "ROTATE_TIMER" => "30"
-                    ),
-                    false
-                );?>
-            </div>
-        </div>
-    </div>
-</div>
+
+<?$APPLICATION->IncludeComponent(
+    "dresscode:offers.product",
+    "slide",
+    array(
+        "CACHE_TIME" => "3600000",
+        "CACHE_TYPE" => "Y",
+        "COMPONENT_TEMPLATE" => "slide",
+        "ELEMENTS_COUNT" => "6",
+        "HIDE_MEASURES" => "N",
+        "HIDE_NOT_AVAILABLE" => "N",
+        "IBLOCK_ID" => "10",
+        "IBLOCK_TYPE" => "catalog",
+        "PICTURE_HEIGHT" => "200",
+        "PICTURE_WIDTH" => "220",
+        "PRICE_CODE" => array(
+            0 => 'BASE'
+        ),
+        "SHOW_PRICE_COUNT" => "1",
+        "PRICE_VAT_INCLUDE" => "Y",
+        "PROP_NAME" => "OFFERS",
+        "TITLE_BLOCK" => "Новинки",
+        "PROP_VALUE" => array(
+            0 => "_9",
+        ),
+        "SORT_PROPERTY_NAME" => "SORT",
+        "SORT_VALUE" => "ASC",
+        "ITEMS_NEWS" => "Y"
+    ),
+    false,
+    array(
+        "ACTIVE_COMPONENT" => "Y"
+    )
+);?>
+    <!--    <br/>-->
+<?$APPLICATION->IncludeComponent(
+    "dresscode:offers.product",
+    "slide",
+    array(
+        "CACHE_TIME" => "3600000",
+        "CACHE_TYPE" => "Y",
+        "COMPONENT_TEMPLATE" => "slide",
+        "ELEMENTS_COUNT" => "6",
+        "HIDE_MEASURES" => "N",
+        "HIDE_NOT_AVAILABLE" => "N",
+        "IBLOCK_ID" => "10",
+        "IBLOCK_TYPE" => "catalog",
+        "PICTURE_HEIGHT" => "200",
+        "PICTURE_WIDTH" => "220",
+        "PRODUCT_PRICE_CODE" => array(
+        ),
+        "PROP_NAME" => "TOP_SALES",
+        "TITLE_BLOCK" => "Хиты продаж",
+        "PROP_VALUE" => array(
+            0 => "_51",
+        ),
+        "SORT_PROPERTY_NAME" => "SORT",
+        "SORT_VALUE" => "ASC",
+        "ITEMS_NEWS" => "Y"
+    ),
+    false,
+    array(
+        "ACTIVE_COMPONENT" => "Y"
+    )
+);?>
 
 <?
 if(App::$config->usePromoBlock == 'Y'):?>
