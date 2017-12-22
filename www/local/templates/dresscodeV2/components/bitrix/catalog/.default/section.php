@@ -428,7 +428,18 @@ $this->setFrameMode(true);
 				"ADD_SECTIONS_CHAIN" => "N"
 			),
 			$component
-			);?>
+			);
+        $APPLICATION->IncludeComponent(
+            "sotbit:seo.meta",
+            ".default",
+            Array(
+                "FILTER_NAME" => $arParams["FILTER_NAME"],
+                "SECTION_ID" => $arCurSection['ID'],
+                "CACHE_TYPE" => $arParams["CACHE_TYPE"],
+                "CACHE_TIME" => $arParams["CACHE_TIME"],
+            )
+        );
+		?>
 		</div>
 	</div>
 </div>
