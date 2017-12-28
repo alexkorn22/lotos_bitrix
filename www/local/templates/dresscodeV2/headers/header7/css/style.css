@@ -329,7 +329,8 @@
 
 #subHeader7 .subTableColumn:last-child{
 	text-align: right;
-	width: 356px;
+	/*width: 356px;*/
+	width: 250px;
 }
 
 #subHeader7 .subTableColumn .toolsContainer{
@@ -359,7 +360,7 @@
 
 #subHeader7 .firstPhones .heading,
 #subHeader7 .secondPhones .heading{
-	font-family: "robotoBold";
+	font-family: 'exo2bold';
 	font-size: 16px;
 	display: block;
 }
@@ -418,7 +419,7 @@
 }
 
 #subHeader7 .callBackIcon{
-	background: url(images/call.svg) 0 0 no-repeat transparent;
+	background: url(../../../images/phone.svg) 0 0 no-repeat transparent;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
@@ -433,7 +434,7 @@
 }
 
 #subHeader7 .scheduleIcon{
-	background: url(images/Mail.svg) 0 0 no-repeat transparent;
+	background: url(../../../images/new-mail.svg) 0 0 no-repeat transparent;
 	-webkit-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
@@ -468,7 +469,7 @@
 
 #subHeader7.color_black .firstPhones .heading,
 #subHeader7.color_black .secondPhones .heading{
-	font-family: "roboto_ltregular";
+	font-family: 'exo2light';
 }
 
 #subHeader7 .topWishlist,

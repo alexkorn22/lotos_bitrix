@@ -122,7 +122,7 @@
 #slider .sliderContent .bigTextColor,
 #slider .sliderContent .bigTextLight,
 #slider .sliderContent .bigTextLightColor{
-	font-family: "robotoMedium";
+	font-family: 'exo2medium';
 	line-height: 56px;
 	margin-top: 24px;
 	font-size: 48px;
@@ -151,7 +151,7 @@
 #slider .sliderContent .bigTextLight,
 #slider .sliderContent .mediumTextLight,
 #slider .sliderContent .smallTextLight{
-	font-family: "roboto_thregular";
+	font-family: 'exo2thin';
 }
 
 #slider .sliderContent .whiteColor{
@@ -257,12 +257,12 @@
 	position: absolute;
 	top: 50%;
 	margin-top: -59px;
-	background: url(images/slideArrow.png) no-repeat transparent;
+	background: url(images/slideArrow2.png) no-repeat transparent;
 
 }
 
 #slider .sliderBtnLeft:hover{
-	background-position: -59px 0;	
+	background-position: 0 0;
 }
 
 #slider .sliderBtnLeft:active{
@@ -270,12 +270,16 @@
 }
 
 #slider .sliderBtnRight{
-	background-position: 0 -118px;
+	background-position: -59px -118px;
 	right: -0px;
 }
 
+#slider .sliderBtnLeft{
+	background-position: -59px 0;
+}
+
 #slider .sliderBtnRight:hover{
-	background-position: -59px -118px;
+	background-position: 0 -118px;
 }
 
 #slider .sliderBtnRight:active{

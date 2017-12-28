@@ -38,7 +38,7 @@
 				<div id="geoPosition"<?if(!empty($TEMPLATE_SUBHEADER_COLOR)):?> class="color_<?=$TEMPLATE_SUBHEADER_COLOR?>"<?endif;?>>
 					<ul>
 						<?$APPLICATION->IncludeComponent("dresscode:sale.geo.positiion", "", array(
-	
+
 	),
 	false,
 	array(
@@ -56,7 +56,7 @@
 	),
 	false,
 	array(
-	"ACTIVE_COMPONENT" => "N"
+	"ACTIVE_COMPONENT" => "Y"
 	)
 );?>
 				</div>
@@ -64,8 +64,9 @@
 		</div>
 	</div>
 </div>
+
 <div id="subHeader7"<?if($TEMPLATE_SUBHEADER_COLOR != "default"):?> class="color_<?=$TEMPLATE_SUBHEADER_COLOR?>"<?endif;?>>
-	<div class="limiter">
+    <div class="limiter">
 		<div class="subTable">
 			<div class="subTableRow">
 				<div class="subTableColumn">
@@ -140,7 +141,7 @@
 						<div class="topCompare">
 							<div id="flushTopCompare">
 								<?$APPLICATION->IncludeComponent("dresscode:compare.line", "version4", array(
-	
+
 	),
 	false,
 	array(
@@ -152,7 +153,7 @@
 						<div class="topWishlist">
 							<div id="flushTopwishlist">
 								<?$APPLICATION->IncludeComponent("dresscode:favorite.line", "version4", array(
-	
+
 	),
 	false,
 	array(
@@ -198,10 +199,19 @@
 		</div>
 	</div>
 </div>
+<div class="header-line-title">
+    <div class="limiter">
+        <div class="header-title-wrap">
+            <div class="header-title">
+                <p>Интернет-магазин ЛОТОС: бытовая химия и косметика</p>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="menuContainerColor<?if(!empty($TEMPLATE_CATALOG_MENU_COLOR) && $TEMPLATE_CATALOG_MENU_COLOR != "default"):?> color_<?=$TEMPLATE_CATALOG_MENU_COLOR?><?endif;?>">
 <?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"catalogMenu2", 
+	"bitrix:menu",
+	"catalogMenu2",
 	array(
 		"ROOT_MENU_TYPE" => "left",
 		"MENU_CACHE_TYPE" => "N",

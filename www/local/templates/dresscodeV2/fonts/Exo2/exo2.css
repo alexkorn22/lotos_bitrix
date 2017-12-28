@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'exo2bold';
+    src: url('Bold/Exo2Bold.eot');
+    src: url('Bold/Exo2Bold.eot?#iefix') format('embedded-opentype'),
+         url('Bold/Exo2Bold.woff') format('woff'),
+         url('Bold/Exo2Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'exo2medium';
+    src: url('Medium/Exo2Medium.eot');
+    src: url('Medium/Exo2Medium.eot?#iefix') format('embedded-opentype'),
+    url('Medium/Exo2Medium.woff') format('woff'),
+    url('Medium/Exo2Medium.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'exo2regular';
+    src: url('Regular/Exo2Regular.eot');
+    src: url('Regular/Exo2Regular.eot?#iefix') format('embedded-opentype'),
+    url('Regular/Exo2Regular.woff') format('woff'),
+    url('Regular/Exo2Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'exo2light';
+    src: url('Light/Exo2Light.eot');
+    src: url('Light/Exo2Light.eot?#iefix') format('embedded-opentype'),
+    url('Light/Exo2Light.woff') format('woff'),
+    url('Light/Exo2Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'exo2thin';
+    src: url('Thin/Exo2Thin.eot');
+    src: url('Thin/Exo2Thin.eot?#iefix') format('embedded-opentype'),
+    url('Thin/Exo2Thin.woff') format('woff'),
+    url('Thin/Exo2Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,3 +1,4 @@
+//-------------------BEGIN infoAbout------------------//
 #infoAbout{
 
   padding-bottom: 36px;
@@ -19,7 +20,7 @@
     margin-top: 5px;
     margin-bottom: 5px;
    // height: 100%;
-    max-width: 100%;
+    max-width: 70px;
   }
 
   .infoAbouthHeader{
@@ -30,7 +31,7 @@
   h1{
     text-align: center;
     margin-bottom: 0px;
-    font-family: 'robotobold';
+    font-family: 'exo2bold';
     line-height: 50px;
     color: #000000;
   }
@@ -38,13 +39,80 @@
   h2{
     text-align: center;
     margin-bottom: 0px;
-    font-family: 'robotobold';
+    font-family: 'exo2bold';
     line-height: 50px;
     margin-bottom: -12px;
     margin-top: auto;
     color: #000000;
   }
 }
+//------------hidden mobile--------------//
+@include xs-block() {
+  #infoAbout {
+    display: none;
+  }
+}
+
+//----------------------BEGIN Header----------------------//
+#foundation {
+  #subHeader7 {
+    border: none;
+    .subTableColumn {
+      &:first-child {
+        padding-right: 65px;
+      }
+      .phonesContainer {
+        .firstPhones, .secondPhones {
+          .phonesTc {
+            .callBackIcon, .scheduleIcon{
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//title header for mobile devices
+.header-line-title {
+  display: none;
+  @include xs('display',block);
+  background-color: $white;
+  padding-bottom: 20px;
+
+  .header-title-wrap {
+    .header-title {
+      p {
+        margin: 0;
+        text-align: center;
+        font-family: $MainFontBold;
+      }
+    }
+  }
+}
+
+
+//----------------------END Header----------------------//
+
+//-------------BEGIN top line----------------------------//
+#headerLine4 .subTable .subTableColumn {
+  #topSocial {
+    margin-left: 15px;
+
+    .topSoc {
+      display: block;
+    }
+  }
+  .headerLineMenu2 {
+    #subMenu {
+      vertical-align: top;
+    }
+  }
+}
+
 
 .noBorder{
   border-left: none;
@@ -58,7 +126,7 @@
 }
 
 .fontFamilyRobotoboldText{
-  font-family: 'robotobold';
+  font-family: 'exo2bold';
 }
 
 .sizeText16{
@@ -124,7 +192,7 @@
   p{
     transition: all 0.2s ease-in-out;
     text-transform: uppercase;
-    font-family: 'robotobold';
+    font-family: 'exo2bold';
     text-decoration: none;
     font-size: 18px;
     text-align: center;
@@ -143,7 +211,7 @@
   .caption.selected {
     background-color: $lightGrey;
     text-transform: uppercase;
-    font-family: 'robotobold';
+    font-family: 'exo2bold';
     font-size: 18px;
     text-align: center;
     line-height: 50px;
@@ -626,3 +694,21 @@
     }
 
   }
+
+//-----------BEGIN banner--------------//
+
+#main {
+  #slider {
+    .slideBox {
+      li span {
+        @include sm-block {
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+}
+
+
+

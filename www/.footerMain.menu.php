@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Главная", 
+		"/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О магазине", 
+		"about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Доставка", 
+		"about/delivery/#question1", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Оплата", 
+		"about/delivery/#question5", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"about/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Карта проезда", 
+		"/about/contacts/#map", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Обратная связь", 
+		"callback/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

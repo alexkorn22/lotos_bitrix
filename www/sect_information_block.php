@@ -7,7 +7,7 @@
 				<div class="information-list-item">
 					<div class="tb">
 						<div class="information-item-icon tc">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/cont1.png">
+							<img src="<?=SITE_TEMPLATE_PATH?>/images/phone.svg">
 						</div>
 						<div class="tc">
                             +380(61)214-99-54<br>
@@ -18,7 +18,7 @@
 				<div class="information-list-item">
 					<div class="tb">
 						<div class="information-item-icon tc">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/cont2.png">
+							<img src="<?=SITE_TEMPLATE_PATH?>/images/new-mail.svg">
 						</div>
 						<div class="tc">
 							<a href="mailto:info@lotos24.com.ua">info@lotos24.com.ua</a><br>
@@ -29,7 +29,7 @@
 				<div class="information-list-item">
 					<div class="tb">
 						<div class="information-item-icon tc">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/cont3.png">
+							<img src="<?=SITE_TEMPLATE_PATH?>/images/pin.svg">
 						</div>
 						<div class="tc">
                             г. Запорожье<br>
@@ -40,7 +40,7 @@
 				<div class="information-list-item">
 					<div class="tb">
 						<div class="information-item-icon tc">
-							<img src="<?=SITE_TEMPLATE_PATH?>/images/cont4.png">
+							<img src="<?=SITE_TEMPLATE_PATH?>/images/clock.svg">
 						</div>
 						<div class="tc">
 							Пн-Пт : с 08:00 до 17:00<br>
