@@ -227,34 +227,6 @@
   }
 }
 
-
-@media all and (max-width: 1024px) {
-  #mainMenuContainer {
-    #containerMainMenu {
-      display: none;
-      #mainMenu {
-        background-color: $lightGrey;
-        display: flex;
-        flex-direction: column;
-        & li {
-          border: none;
-          a {
-            color: $black;
-          }
-          &:hover {
-            background-color: #f3f3f3;
-          }
-        }
-      }
-    }
-    .minCatalogButton{
-      background-color: $lightGrey;
-      color: $black;
-    }
-  }
-}
-
-
 .topSales #footerTabs{
   background-color: #f3f3f3;
   padding-bottom: 36px;

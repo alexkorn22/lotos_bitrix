@@ -27,6 +27,35 @@ body.panels_white{
   //---------END HEADER---------------//
 }
 
+@media all and (max-width: 1024px) {
+
+  //------CATEGORY MENU-----------//
+  #mainMenuContainer {
+    #containerMainMenu {
+      display: none;
+      #mainMenu {
+        background-color: $lightGrey;
+        display: flex;
+        flex-direction: column;
+        & li {
+          border: none;
+          a {
+            color: $black;
+          }
+          &:hover {
+            background-color: #f3f3f3;
+          }
+        }
+      }
+    }
+    .minCatalogButton{
+      background-color: $lightGrey;
+      color: $black;
+    }
+  }
+  //------END CATEGORY MENU-----------//
+}
+
 @media all and (max-width: 700px){
 
   //---------HEADER---------------//
