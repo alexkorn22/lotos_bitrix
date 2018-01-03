@@ -1,4 +1,5 @@
 <div id="appFastBuy" data-load="<?=SITE_TEMPLATE_PATH?>/images/picLoad.gif">
+    <div class="modal-dialog">
 	<div id="appFastBuyContainer">
 		<div class="heading">Купить в один клик <a href="#" class="close closeWindow"></a></div>
 		<div class="container" id="fastBuyOpenContainer">
@@ -27,4 +28,5 @@
 			<a href="" id="fastBuyResultClose" class="closeWindow">Закрыть окно</a>
         </div>		
 	</div>
+    </div>
 </div>

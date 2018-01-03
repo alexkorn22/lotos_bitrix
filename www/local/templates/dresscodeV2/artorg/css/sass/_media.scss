@@ -63,6 +63,46 @@ body.panels_white{
     width: 230px;
   }
   //---------END HEADER---------------//
+
+  //---------FAST BUY--------------//
+  #appFastBuy {
+    .modal-dialog {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      #appFastBuyContainer {
+        .container {
+          .column:first-child {
+            display: none;
+          }
+          .column {
+            width: 100%;
+            padding: 0 7px;
+
+            #fastBuyForm {
+              text-align: center;
+
+              .formLine:last-child {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+        }
+        input, textarea, #fastBuyFormSubmit {
+          width: 305px;
+        }
+        input[type="checkbox"] {
+          width: 14px;
+        }
+      }
+    }
+  }
+  //---------END FAST BUY--------------//
+
 }
 
 
