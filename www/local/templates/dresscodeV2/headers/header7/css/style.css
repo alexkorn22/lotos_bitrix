@@ -611,7 +611,7 @@
 }
 
 .menuContainerColor #mainMenuContainer{
-	border-top: 0px !important;
+	/*border-top: 0px !important;*/
 }
 
 @media all and (max-width: 1590px){
