@@ -1,0 +1,78 @@
+.slideStyles{
+	position: relative;
+}
+
+.slideStyles .wrap{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.slideStyles .productList{
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	clear: both;
+	margin: 0px;
+	left: 0px;
+}
+
+.slideStyles .productList > li{
+	float: left;
+}
+
+.slideStyles .productList .item{
+	border-left: 0px !important;
+	height: 360px !important;
+	width: 100% !important;
+	float: none;
+}
+
+.slideStyles .productList > li:first-child .item{
+	border-left: 1px solid #e7e8ea !important;
+}
+
+.slideStyles .productList .item .tabloid{
+	height: 358px !important;
+}
+
+.slideStyles .slideBtnLeft,
+.slideStyles .slideBtnRight{
+	background: url(images/slideArrowSmall.png) 0 0 no-repeat transparent;
+	transform: translateY(-50%);
+	position: absolute;
+	height: 70px;
+	width: 35px;
+	z-index: 22;
+	top: 50%;
+}
+
+.slideStyles .slideBtnLeft{
+	left: 0px;
+}
+
+.slideStyles .slideBtnRight{
+	right: 0px;
+}
+
+.slideStyles .slideBtnLeft:hover{
+	background-position: -35px 0;
+}
+
+.slideStyles .slideBtnLeft:active{
+	background-position: -70px 0;
+}
+
+.slideStyles .slideBtnRight{
+	background-position: 0 -70px;
+}
+
+.slideStyles .slideBtnRight:hover{
+	background-position: -35px -70px;
+}
+
+.slideStyles .slideBtnRight:active{
+	background-position: -70px -70px;
+}
+

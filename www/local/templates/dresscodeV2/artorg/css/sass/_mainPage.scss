@@ -137,6 +137,7 @@
 #infoPromo {
   display: block;
   background-color: $lightGrey;
+  padding: 30px 0 20px 0;
   .item {
     height: 100%;
     display: inline-block;
@@ -167,7 +168,7 @@
 
 
 #topSalesCaption{
-  text-align: center;
+  //text-align: center;
   background-color: #f3f3f3;
   .topSalesHeader {
     line-height: 50px;
@@ -178,12 +179,12 @@
     min-width: 320px;
     margin: auto;
     .items {
-      text-align: center;
+      //text-align: center;
       overflow: hidden;
       .item {
         vertical-align: middle;
         display: inline-block;
-        text-align: center;
+        //text-align: center;
         &:last-child {
           margin-right: 0px;
         }
@@ -296,7 +297,12 @@
   }
 }
 
-#topProduct .productList {
+.slideStyles {
+  margin-bottom: 50px;
+  .wrap {
+    margin: 0 -12px;
+  }
+  .productList {
     .item{
       height: 359px !important;
       float: left !important;
@@ -324,39 +330,35 @@
     .price{
       margin-bottom: 9px;
     }
-}
-
-#topProduct .wrap{
-  margin: 0 -12px;
-}
-
-#topProduct .productList > li {
-  .addCart {
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 0px;
-    padding: 4px 12px;
-    margin-top: 0px;
-    color: #ffffff;
-    background: #27c148;
-    height: 21px;
-    line-height: 21px;
-    border-radius: 0;
-    .icon {
-      padding-right: 12px;
-      margin-top: -4px;
+    & > li {
+      .addCart {
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 0px;
+        padding: 4px 12px;
+        margin-top: 0px;
+        color: #ffffff;
+        background: #27c148;
+        height: 21px;
+        line-height: 21px;
+        border-radius: 0;
+        .icon {
+          padding-right: 12px;
+          margin-top: -4px;
+        }
+      }
+      .label{
+        width: 47%;
+        line-height:30px;
+        float: right;
+      }
+      a{
+        outline: none;
+      }
     }
-  }
-  .label{
-    width: 47%;
-    line-height:30px;
-    float: right;
-  }
-  a{
-    outline: none;
   }
 }
 
