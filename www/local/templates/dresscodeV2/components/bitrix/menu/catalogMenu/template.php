@@ -5,7 +5,7 @@
 		<div id="mainMenuContainer">
 			<div class="limiter">
 				<a href="<?=SITE_DIR?>catalog/" class="minCatalogButton" id="catalogSlideButton">
-					<img src="<?=SITE_TEMPLATE_PATH?>/images/catalogButton.png" alt=""> <?=GetMessage("CATALOG_BUTTON_LABEL")?> 
+					<img src="<?=SITE_TEMPLATE_PATH?>/images/catalogButton.png" alt=""> <?=GetMessage("CATALOG_BUTTON_LABEL")?>
 				</a>
 				<?if(count($arResult["ITEMS"]) > 3):?>
 					<div id="menuCatalogSection">
@@ -46,7 +46,7 @@
 							<?if(!empty($nextElement["ELEMENTS"])):?>
 							<div class="drop"<?if(!empty($nextElement["BIG_PICTURE"])):?> style="background: url(<?=$nextElement["BIG_PICTURE"]["src"]?>) 50% 50% no-repeat #ffffff;"<?endif;?>>
 								<div class="limiter">
-									<?foreach($nextElement["ELEMENTS"] as $next2Column):?> 
+									<?foreach($nextElement["ELEMENTS"] as $next2Column):?>
 										<?if(!empty($next2Column)):?>
 											<ul class="nextColumn">
 												<?foreach ($next2Column as $x2 => $next2Element):?>
@@ -69,7 +69,7 @@
 																	</li>
 																<?endforeach;?>
 															</ul>
-														<?endif;?>												
+														<?endif;?>
 													</li>
 												<?endforeach;?>
 											</ul>
