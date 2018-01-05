@@ -23,7 +23,7 @@ class AdminButton
             $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/jquery-1.11.0.min.js");
             $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/artorg/js/admin.js");
             $this->setButtons();
-            $form->tabs[] = array("DIV" => "Доробтки", "TAB" => "Дополнительные доробтки", "TITLE"=>"Дополнительные доробтки",
+            $form->tabs[] = array("DIV" => "обработки", "TAB" => "Дополнительные обработки", "TITLE"=>"Дополнительные обработки",
                 "CONTENT"=> $this->createHtmlButtons()
             );
         }
