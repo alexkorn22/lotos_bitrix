@@ -1,39 +1,41 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: amarz
- * Date: 14.12.2017
- * Time: 15:43
- */
 
 class AdminButton
 {
-    public function createButtonMakeTestSite (){
-        global $APPLICATION;
-        $APPLICATION->AddPanelButton(
-            Array(
-                "ID" => 'MakeBtnTest', //определяет уникальность кнопки
-                "TEXT" => 'Преобразовать в в тестовый сайт',
-                "TYPE" => "BIG", //BIG - большая кнопка, иначе маленькая
-                "MAIN_SORT" => 10, //индекс сортировки для групп кнопок
-                "SORT" => 10, //сортировка внутри группы
-                "HREF" => "javascript:createButton({action:'EventBitrix',method:'makeTestSite',params:{makeTestSite:'true'}})",
-                // - first parameter which class !
-                // - second is which method !
-                // - third is parameters to send to the method
-                "ICON" => "bx-panel-button-icon bx-panel-install-solution-icon\"", //название CSS-класса с иконкой кнопки
-                "SRC" => "",
-                "ALT" => "Преобразовать в тестовый сайт",
-                "HINT" => array( //тултип кнопки
-                    "TITLE" => "Преобразовать в тестовый сайт",
-                    "TEXT" => "" //HTML допускается
-                ),
-                "HINT_MENU" => array(),
-                "MENU" => Array()
-            ),
-            $bReplace = false //заменить существующую кнопку?
-        );
+    protected $buttons;
 
+    public function createHtmlButtons(){
+        $html = '';
+        foreach ($this->buttons as $button){
+            $html .= $button;
+        }
+        return $html;
+    }
+
+    public function setButtons (){
+        $this->buttons[] ='<button class="btn btn-primary" id="turnToTestSite" onclick="createButton({action:\'EventBitrix\',method:\'makeTestSite\',params:{makeTestSite:\'true\'}})">Преобразовать в тестовый сайт</button>';
+    }
+
+    public function addTabButtons($form){
+        if($this->isPage('gcustomsettings.php')){
+            global $APPLICATION;
+            define('SITE_TEMPLATE_PATH','/local/templates/dresscodeV2');
+            $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/jquery-1.11.0.min.js");
+            $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/artorg/js/admin.js");
+            $this->setButtons();
+            $form->tabs[] = array("DIV" => "обработки", "TAB" => "Дополнительные обработки", "TITLE"=>"Дополнительные обработки",
+                "CONTENT"=> $this->createHtmlButtons()
+            );
+        }
+    }
+
+    public function isPage($pageName){
+        if($GLOBALS["APPLICATION"]->GetCurPage() == "/bitrix/admin/".$pageName){
+            return true;
+        }
+        return false;
     }
 
 }
+?>
+
