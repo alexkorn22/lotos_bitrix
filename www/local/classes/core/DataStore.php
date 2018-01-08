@@ -5,7 +5,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
  * Class DataStore
  * @property bool useFooterTabs;
  * @property array callBack;
- * @property tmp;
+ * @property array tmp;
  */
 class DataStore{
     protected $data = [];

@@ -29,6 +29,16 @@ class Category{
         return $APPLICATION->ShowTitle(false);
     }
 
+    public function setSectionValueHOne($objTemplate) {
+        global $APPLICATION;
+        $value = $this->getValueHOne();
+        if (empty($APPLICATION->GetViewContent("sotbit_seometa_h1"))) {
+            $objTemplate->SetViewTarget("sotbit_seometa_h1");
+            echo $value;
+            $objTemplate->EndViewTarget();
+        }
+    }
+
     public function getCountSubSections() {
 
         $count = 0;

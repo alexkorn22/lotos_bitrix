@@ -73,8 +73,11 @@ $this->setFrameMode(true);
 			}
 		}
 	?>
-<?php $category = new Category(10,$arCurSection['ID'] );?>
-	<h1><?=$category->getValueHOne();?></h1>
+<?php $category = new Category(10,$arCurSection['ID'] );
+
+//$APPLICATION->GetViewContent("sotbit_seometa_h1")
+?>
+<h1><?=$APPLICATION->ShowViewContent("sotbit_seometa_h1")?></h1>
 
 <?if(!empty($arResult["SECTION_BANNERS"])):?>
 		<div id="catalog-section-banners">
@@ -428,7 +431,21 @@ $this->setFrameMode(true);
 				"ADD_SECTIONS_CHAIN" => "N"
 			),
 			$component
-			);?>
+			);
+        $APPLICATION->IncludeComponent(
+            "sotbit:seo.meta",
+            ".default",
+            Array(
+                "FILTER_NAME" => $arParams["FILTER_NAME"],
+                "SECTION_ID" => $arCurSection['ID'],
+                "CACHE_TYPE" => $arParams["CACHE_TYPE"],
+                "CACHE_TIME" => $arParams["CACHE_TIME"],
+            )
+        );
+		?>
 		</div>
 	</div>
 </div>
+<?
+$category->setSectionValueHOne($this->__component->__template);
+?>
