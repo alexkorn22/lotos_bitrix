@@ -81,4 +81,20 @@ class Config
 
 
 
+    public function getTelegramChatCallBack(){
+      return $this->getChatId('telegramChatCallBack');
+    }
+
+    public function getTelegramChatOrder(){
+        return $this->getChatId('telegramChatOrder');
+    }
+
+    protected function getChatId($chatName){
+        if($this->debug){
+            return App::$config->telegramChatTestSite;
+        }
+        return App::$config->{$chatName};
+    }
+
+
 }
