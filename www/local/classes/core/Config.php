@@ -81,4 +81,17 @@ class Config
 
 
 
+    public function getTelegramChatCallBack(){
+        if($this->debug){
+            return App::$config->telegramChatTestSite ;
+        }
+        return  App::$config->telegramChatCallBack;
+    }
+
+    public function getTelegramChatOrder(){
+        if($this->debug){
+            return App::$config->telegramChatTestSite ;
+        }
+        return App::$config->telegramChatOrder;
+    }
 }
