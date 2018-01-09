@@ -1591,24 +1591,28 @@
 									"message" => "В ближайшее время Вам перезвонит наш менеджер для уточнения деталей заказа.",
 									"success" => true
 								);
+                                // message (купить в одтн клик для товара)
+                                    $orderData = [
+                                        'orderId' => $ORDER_ID,
+                                        'product'   => $arMessage['PRODUCT'],
+                                        'name'    => $arMessage['NAME'],
+                                        'phone'   => $arMessage['PHONE'],
+                                        'comment' => $arMessage['COMMENT'],
+                                    ];
+                                    $alert = new Alert($orderData);
+                                    $pattern =  "Поступил заказ №  %orderId% \n";
+                                    $pattern .= "(необходимо уточнить детали заказа)."."\n";
+                                    $pattern .= "\n";
+                                    $pattern .= "Состав заказа: "."\n";
+                                    $pattern .="%product%";
+                                    $pattern .= "\n\n";
+                                    $pattern .= "Покупатель: %name%\n";
+                                    $pattern .= "Телефон: %phone%\n";
+                                    $pattern .= "Сообщение: %comment%\n";
 
-                                if(CModule::IncludeModule("justdevelop.morder"))
-                                {
-                                    $chat = App::$config->getTelegramChatOrder();
+                                    $alert->parseText($pattern);
+                                    $alert->sendTelegram(App::$config->getTelegramChatOrder());
 
-                                    $message = "Поступил заказ № ".$ORDER_ID."\n";
-                                    $message .= "(необходимо уточнить детали заказа)."."\n";
-                                    $message .= "\n";
-                                    $message .= "Состав заказа: "."\n";
-                                    $message .= $arMessage["PRODUCT"]."\n";
-                                    $message .= "\n";
-                                    $message .= "Покупатель: ".$arMessage["NAME"]."\n";
-                                    $message .= "Телефон: ".$arMessage["PHONE"]."\n";
-                                    $message .= "Сообщение: ".$arMessage["COMMENT"]."\n";
-
-                                    $sms = new JUSTDEVELOP_Send;
-                                    $sms->Send_SMS($chat, $message);
-                                }
 							}
 						}else{
 

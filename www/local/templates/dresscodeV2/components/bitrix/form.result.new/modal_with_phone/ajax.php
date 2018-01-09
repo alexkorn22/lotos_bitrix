@@ -21,14 +21,17 @@
 
 	if (isset($_REQUEST['form_text_1']) || isset($_REQUEST['form_text_2'])){
 
-		if(CModule::IncludeModule("justdevelop.morder")) {
-            $chat = App::$config->getTelegramChatCallBack();
-            $message .= '📞 '. "Новый запрос обратного звонка\n";
-            $message .= '▶'. "Имя      : " . $_REQUEST['form_text_2'] . "\n";
-            $message .= '▶'. "Телефона : " . $_REQUEST['form_text_1'];
-            $sms = new JUSTDEVELOP_Send;
-            $sms->Send_SMS($chat, $message);
-        }
+        $callBack = [
+            'name'=> $_REQUEST['form_text_2'],
+            'phone'=> $_REQUEST['form_text_1']
+        ];
+        $alert = new Alert($callBack);
+        $pattern = '📞 '. "<b>Новый запрос обратного звонка</b>\n";
+        $pattern .= '▶'. "Имя      : %name% \n";
+        $pattern .= '▶'. "Телефона : %phone%";
+
+        $alert->parseText($pattern);
+        $alert->sendTelegram(App::$config->getTelegramChatCallBack());
 	}
 	?>
 
