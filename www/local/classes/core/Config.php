@@ -81,19 +81,20 @@ class Config
 
 
 
-    public function getTelegramChat($chatName){
-        if($this->debug){
-            return App::$config->telegramChatTestSite ;
-        }
-        return $this->getChatId($chatName);
+    public function getTelegramChatCallBack(){
+      return $this->getChatId('telegramChatCallBack');
+    }
+
+    public function getTelegramChatOrder(){
+        return $this->getChatId('telegramChatOrder');
     }
 
     protected function getChatId($chatName){
-        if($chatName == 'callBack'){
-            return App::$config->telegramChatCallBack;
-        }elseif($chatName == 'order'){
-            return App::$config->telegramChatOrder;
+        if($this->debug){
+            return App::$config->telegramChatTestSite;
         }
+        return App::$config->{$chatName};
     }
+
 
 }
