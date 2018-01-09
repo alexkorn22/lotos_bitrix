@@ -22,7 +22,7 @@
 	if (isset($_REQUEST['form_text_1']) || isset($_REQUEST['form_text_2'])){
 
 		if(CModule::IncludeModule("justdevelop.morder")) {
-            $chat = App::$config->getTelegramChatCallBack();
+            $chat = App::$config->getTelegramChat('callBack');
             $message .= '📞 '. "Новый запрос обратного звонка\n";
             $message .= '▶'. "Имя      : " . $_REQUEST['form_text_2'] . "\n";
             $message .= '▶'. "Телефона : " . $_REQUEST['form_text_1'];

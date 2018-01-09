@@ -1594,7 +1594,7 @@
 
                                 if(CModule::IncludeModule("justdevelop.morder"))
                                 {
-                                    $chat = App::$config->getTelegramChatOrder();
+                                    $chat = App::$config->getTelegramChat('order');
 
                                     $message = "Поступил заказ № ".$ORDER_ID."\n";
                                     $message .= "(необходимо уточнить детали заказа)."."\n";
