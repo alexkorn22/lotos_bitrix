@@ -111,7 +111,14 @@ class UserTools
         $res = [$values['LAST_NAME'],$values['NAME'],$values['SECOND_NAME']];
         return implode(' ', $res);
     }
-
+    public function isMemberMamaClub(){
+        $userGroupsId               = CUser::GetUserGroup($this->getUserId());
+        $mClubGroupOfUsersId        = App::$config->mClubGroupOfUsersId;
+        if(in_array($mClubGroupOfUsersId,$userGroupsId)){
+            return true;
+        }
+        return false;
+    }
 
 
 }

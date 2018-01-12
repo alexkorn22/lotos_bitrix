@@ -1,10 +1,9 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 
-
+$user             = new UserTools();
+$isMemberMamaClub = $user->isMemberMamaClub();
 $groupId          = $arResult['groupId'];
-$userId           = $arResult['UserID'];
-$isMemberMamaClub = $arResult['MemberMamaClub'];
 $propName         = $arParams['PROP_NAME'];
 
 ?>
@@ -75,7 +74,7 @@ $propName         = $arParams['PROP_NAME'];
                                                             <s class="discount"><?= $arElement["PRICE"]["RESULT_PRICE"]["DISCOUNT"] ?></s>
                                                         <? endif; ?>
                                                     </a>
-                                                        <?php if ($userId != NULL) { ?>             <!-- registered user -->
+                                                        <?php if ($user->user->IsAuthorized()) { ?>             <!-- registered user -->
                                                             <?php if ($isMemberMamaClub) { ?>
                                                                 <a href="#"
                                                                    class="addCart<? if ($arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false): ?> disabled<? endif; ?>"
