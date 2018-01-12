@@ -20,6 +20,13 @@ class UserTools
     public function getUserId(){
         return $this->user->GetID();
     }
+
+    public function isAuth(){
+        if($this->getUserId()){
+            return true;
+        }
+        return false;
+    }
     protected function getDataUser($field) {
 
         $arFields = explode(',',$field);

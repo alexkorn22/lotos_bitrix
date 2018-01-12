@@ -74,7 +74,7 @@ $propName         = $arParams['PROP_NAME'];
                                                             <s class="discount"><?= $arElement["PRICE"]["RESULT_PRICE"]["DISCOUNT"] ?></s>
                                                         <? endif; ?>
                                                     </a>
-                                                        <?php if ($user->user->IsAuthorized()) { ?>             <!-- registered user -->
+                                                        <?php if ($user->isAuth()) { ?>             <!-- registered user -->
                                                             <?php if ($isMemberMamaClub) { ?>
                                                                 <a href="#"
                                                                    class="addCart<? if ($arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false): ?> disabled<? endif; ?>"
