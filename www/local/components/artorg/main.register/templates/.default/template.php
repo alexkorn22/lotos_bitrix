@@ -14,7 +14,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 	<p class="registerText"><?=GetMessage("REGISTER_TEXT")?></p>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" id='dataField'>
 	<div class="row">
 		<div class="col-md-6 col-xs-12">
 			<div class="bx-auth container_register">
