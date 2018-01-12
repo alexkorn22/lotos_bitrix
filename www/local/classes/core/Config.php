@@ -17,7 +17,8 @@ class Config
     protected $data = [];
     public $debug = false;
     protected $default = [
-        "countPropertyElements" => 3
+        "countPropertyElements" => 3,
+        "mClubGroupOfUsersId" => 9
     ];
 
     public function __construct()
