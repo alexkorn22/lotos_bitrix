@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("О магазине");
+$APPLICATION->SetTitle("Интернет-магазин бытовой химии и косметики lotos24");
 ?><h1>О магазине</h1>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 

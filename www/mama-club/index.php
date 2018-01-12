@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Title");
+$APPLICATION->SetTitle("Мама kлуб");
 ?><div class="mama_club_decoration">
 	<div class="partner">
 		<div class="logotype_partner">
@@ -10,6 +10,8 @@ $APPLICATION->SetTitle("Title");
  <img width="371" src="/local/templates/dresscodeV2/artorg/images/mama_club_banner.png" height="226"><br>
 		</div>
 	</div>
+
+    <br/>
 	<p>Программа "Мама-клуб"</p>
     <p>Приветствуем Вас, дорогие мамы!</p>
 
@@ -45,4 +47,35 @@ $APPLICATION->SetTitle("Title");
 
     <p>*акции действуют до окончания товара</p>
 </div>
+<?$APPLICATION->IncludeComponent(
+    "dresscode:offers.product",
+    "slideMamaClub",
+    array(
+        "CACHE_TIME" => "3600000",
+        "CACHE_TYPE" => "Y",
+        "COMPONENT_TEMPLATE" => "slideMamaClub",
+        "ELEMENTS_COUNT" => "6",
+        "HIDE_MEASURES" => "N",
+        "HIDE_NOT_AVAILABLE" => "N",
+        "IBLOCK_ID" => "10",
+        "IBLOCK_TYPE" => "catalog",
+        "PICTURE_HEIGHT" => "200",
+        "PICTURE_WIDTH" => "220",
+        "PRODUCT_PRICE_CODE" => array(
+
+        ),
+        "PROP_NAME" => "UCHASTVUET_V_MAMA_KLUB",
+        "TITLE_BLOCK" => "Товары \"Мама Клуба\" ",
+        "PROP_VALUE" => array(
+            0 => "_560",
+        ),
+        "SORT_PROPERTY_NAME" => "SORT",
+        "SORT_VALUE" => "ASC",
+        "ITEMS_NEWS" => "Y"
+    ),
+    false,
+    array(
+        "ACTIVE_COMPONENT" => "Y"
+    )
+);?>
  <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
