@@ -22,10 +22,7 @@ class UserTools
     }
 
     public function isAuth(){
-        if($this->getUserId()){
-            return true;
-        }
-        return false;
+       return $this->user->IsAuthorized();
     }
     protected function getDataUser($field) {
 
