@@ -14,7 +14,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 	<p class="registerText"><?=GetMessage("REGISTER_TEXT")?></p>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" id='inputFieldMClub'>
 	<div class="row">
 		<div class="col-md-6 col-xs-12">
 			<div class="bx-auth container_register">
@@ -87,7 +87,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 								<li>
 									<div class="MClub <? if (!isset($arResult['CHECKED_IS_MCLUB']) && $_GET['fromMamaClub']!='true'){ echo 'hidden';}?>" >
 										<label>
-											<span class="bx-authform-starrequired">*</span>Номер карты участника Мама-клуб
+											<span class="bx-authform-starrequired">*</span>Номер карты участника Мама-клуб (13 Цифр)
 										</label>
 										<input type="text" name="UF_NUMBER_MCLUB" maxlength="255" value="<?=$arResult["UF_NUMBER_MCLUB"]?>" />
 									</div>

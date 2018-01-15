@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Мама kлуб");
+$APPLICATION->SetTitle("Мама-клуб");
 ?><div class="mama_club_decoration">
 	<div class="partner">
 		<div class="logotype_partner">
@@ -65,7 +65,7 @@ $APPLICATION->SetTitle("Мама kлуб");
 
         ),
         "PROP_NAME" => "UCHASTVUET_V_MAMA_KLUB",
-        "TITLE_BLOCK" => "Товары \"Мама Клуба\" ",
+        "TITLE_BLOCK" => "Товары  «Мама-клуба» ",
         "PROP_VALUE" => array(
             0 => "_560",
         ),

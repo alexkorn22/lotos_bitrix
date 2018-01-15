@@ -1,0 +1,23 @@
+.slideStyles{
+  .productList{
+    & > li {
+      .addCart.activeMamaClub {
+        margin-left: 3px;
+        margin-right: auto;
+        width: 92%;
+        text-align: center;
+        padding: 4px 11px 4px 6px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+
+
+.titleMClub{
+  font-size: 24pt;
+  color: $lightGreen;
+  margin-left: 8px;
+  padding-bottom: 5px;
+}

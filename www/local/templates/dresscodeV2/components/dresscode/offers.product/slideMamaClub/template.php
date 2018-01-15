@@ -13,7 +13,7 @@ $propName         = $arParams['PROP_NAME'];
     <div id="topSalesCaption">
         <div class="wrapper">
             <div class="items">
-                <p><?= $arParams['TITLE_BLOCK'] ?></p>
+                <div class="titleMClub"><?= $arParams['TITLE_BLOCK'] ?></div>
                 <div class="tab item">
                     <div id="<?= $propName ?>" class="slideStyles">
                         <div class="wrap">
@@ -91,12 +91,12 @@ $propName         = $arParams['PROP_NAME'];
                                                                             class="icon"><?= GetMessage("FASTBACK_LABEL") ?>
                                                                 </a>
                                                             <?php } else { ?>
-                                                                <a href="/personal/" class="addCart">Активировать карту
-                                                                    Мама Клуба</a>
+                                                                <a href="/personal/" class="addCart activeMamaClub">Активировать карту
+                                                                    Мама Клуба  </a>
                                                             <?php } ?>
                                                         <?php } else { ?>
-                                                            <a href="/register/index.php?fromMamaClub=true" class="addCart">Активировать
-                                                                карту Мама Клуба</a>
+                                                            <a href="/register/index.php?fromMamaClub=true&#inputFieldMClub" class="addCart activeMamaClub">Активировать
+                                                                карту Мама Клуба  </a>
                                                         <?php } ?>
 
                                                 <? else: ?>     <!-- if no price available -->
