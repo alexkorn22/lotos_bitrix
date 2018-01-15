@@ -18,7 +18,8 @@ class Config
     public $debug = false;
     protected $default = [
         "countPropertyElements" => 3,
-        "mClubGroupOfUsersId" => 9
+        "mClubGroupOfUsersId" => 9,
+        "firstDigitsMClubCard"=>'3000100'
     ];
 
     public function __construct()
