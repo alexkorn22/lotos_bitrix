@@ -98,7 +98,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_REQUEST["register_submit_bu
     if (isset($_REQUEST['UF_NUMBER_MCLUB']) && !empty($_REQUEST['UF_NUMBER_MCLUB'])) {
         $valid = new Validator(trim($_REQUEST['UF_NUMBER_MCLUB']));
         $valid->validateEan13();
-        if (!$valid->isValid) {
+        $compareValue = App::$config->firstDigitsMClubCard;
+        if (!$valid->isValid  || !$valid->checkFirstDigitsMClubCard($compareValue)) {
             $arResult["ERRORS"]['UF_NUMBER_MCLUB'] = 'Неправильный формат номера карты Мама клуб';
         }
     }

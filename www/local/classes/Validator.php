@@ -20,6 +20,15 @@ class Validator{
         }
     }
 
+    public function checkFirstDigitsMClubCard($compareValue){
+        $length      = strlen($compareValue);
+        $firstDigits = mb_substr($this->valueForValidate, 0, $length);
+        if($firstDigits == $compareValue){
+            return true;
+        }
+        return false;
+    }
+
     protected function dataValidateEan13($digits){
 
         $originalcheck = false;
