@@ -91,12 +91,12 @@ $propName         = $arParams['PROP_NAME'];
                                                                             class="icon"><?= GetMessage("FASTBACK_LABEL") ?>
                                                                 </a>
                                                             <?php } else { ?>
-                                                                <a href="/personal/"  id="activeMamaClub" class="addCart">Активировать карту
-                                                                    Мама Клуба</a>
+                                                                <a href="/personal/" class="addCart activeMamaClub">Активировать карту
+                                                                    Мама Клуба  </a>
                                                             <?php } ?>
                                                         <?php } else { ?>
-                                                            <a href="/register/index.php?fromMamaClub=true&#inputFieldMClub" id="activeMamaClub" class="addCart">Активировать
-                                                                карту Мама Клуба</a>
+                                                            <a href="/register/index.php?fromMamaClub=true&#inputFieldMClub" class="addCart activeMamaClub">Активировать
+                                                                карту Мама Клуба  </a>
                                                         <?php } ?>
 
                                                 <? else: ?>     <!-- if no price available -->
