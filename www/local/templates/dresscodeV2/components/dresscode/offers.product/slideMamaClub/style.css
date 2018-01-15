@@ -75,28 +75,3 @@
 .slideStyles .slideBtnRight:active{
 	background-position: -70px -70px;
 }
-
-.activMamaClub{
-	margin-left: auto;
-	margin-right: auto;
-	width: 92%;
-	text-align: center;
-	-webkit-transition: all 0.2s ease-in-out;
-	-o-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-	text-decoration: none;
-	display: inline-block;
-	padding: 4px 12px;
-	color: #ffffff;
-	background: #27c148;
-	height: 21px;
-	line-height: 21px;
-	border-radius: 0;
-}
-
-.titleMClub{
-	font-size: 24pt;
-	color: #00a650;
-	text-align: center;
-	padding-bottom: 5px;
-}
