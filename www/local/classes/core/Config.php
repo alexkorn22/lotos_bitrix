@@ -11,6 +11,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  * @property string scriptGoogleAnalytiks;
  * @property string scriptGoogleTagHead;
  * @property string scriptGoogleTagBody;
+ * @property string telegramChatTestSite;
  */
 class Config
 {
@@ -19,11 +20,11 @@ class Config
     protected $default = [
         "countPropertyElements" => 3,
         "mClubGroupOfUsersId" => 9,
-        "firstDigitsMClubCard"=>'3000100'
+        "firstDigitsMClubCard"=>'3000100',
+        "telegramChatTestSite"=>'-226178797'
     ];
 
-    public function __construct()
-    {
+    public function __construct(){
         $debug = COption::GetOptionString("grain.customsettings", 'debug');
         if ($debug == 'Y') {
             $this->debug = true;
@@ -31,9 +32,7 @@ class Config
         $this->readFileConfig();
     }
 
-    protected function readFileConfig()
-    {
-
+    protected function readFileConfig(){
         if (!$this->debug) {
             return;
         }
@@ -48,8 +47,7 @@ class Config
         }
     }
 
-    public function __get($name)
-    {
+    public function __get($name){
         if (!isset($this->data[$name])) {
             $this->data[$name] = COption::GetOptionString("grain.customsettings", $name);
         }
@@ -60,8 +58,7 @@ class Config
     }
 
 
-    public function setDebug($debug)
-    {
+    public function setDebug($debug){
         $adminDebug = "N";
         if($debug){
             $adminDebug = "Y";
@@ -97,6 +94,5 @@ class Config
         }
         return App::$config->{$chatName};
     }
-
 
 }
