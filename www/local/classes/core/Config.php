@@ -57,7 +57,6 @@ class Config
         return $this->data[$name];
     }
 
-
     public function setDebug($debug){
         $adminDebug = "N";
         if($debug){
@@ -77,8 +76,6 @@ class Config
         }
         return NULL;
     }
-
-
 
     public function getTelegramChatCallBack(){
       return $this->getChatId('telegramChatCallBack');
