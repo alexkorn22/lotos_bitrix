@@ -13,10 +13,7 @@ class Validator{
 
     public function validateCardMClub(){
         $this->isValid = false ;
-        $validateEan13       = $this->validateEan13();
-        $ValidateFirstDigits = $this->checkFirstDigitsMClubCard();
-
-        if($validateEan13 && $ValidateFirstDigits){
+        if($this->validateEan13() && $this->checkFirstDigitsMClubCard()){
             $this->isValid = true;
         }
 
