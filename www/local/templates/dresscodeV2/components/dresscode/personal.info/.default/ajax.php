@@ -12,6 +12,7 @@
 	){
 		global $USER;
 		$userID = $USER->GetID();
+        $userGroupsId =  CUser::GetUserGroup($userID);
 		if($userID){
 			$NAME            = explode(" ", htmlspecialchars($_GET["FIO"]));
 			$EMAIL           = htmlspecialchars($_GET["EMAIL"]);
@@ -26,7 +27,7 @@
 
 			$tools = new UserTools($USER);
 			$dataMClub = $tools->getDataMClub();
-			$checkMClub = $dataMClub["UF_CHECK_M_CLUB"];
+//			$checkMClub = $dataMClub["UF_CHECK_M_CLUB"];
 			$isMClub = $dataMClub["UF_IS_MCLUB"];
 //			$mClub = $dataMClub["UF_NUMBER_MCLUB"];
 
@@ -45,7 +46,7 @@
 			);
 
 			//если пользователь впервые вводит номер Мама клуб
-			if (!empty($numberMClub) && !$isMClub && !$checkMClub) {
+			if (!empty($numberMClub) && !$isMClub) {
 				if (empty($PERSONAL_MOBILE)) {
 					$result = array(
 						"message" => "Требуется заполнение телефона для участия в Мама клуб",
@@ -65,11 +66,16 @@
 					);
 					echo jsonEn($result);
 					exit();
+				}else{
+					//valid card number
+                    array_push($userGroupsId,9) ;
+                    $fields["UF_IS_MCLUB"] 		  = '1' ;
+                    $fields["GROUP_ID"]    		  = $userGroupsId ;
 				}
-				$checkMClub = 1;
+//				$checkMClub = 1;
 
 			}
-			if ($isMClub || $checkMClub) {
+			if ($isMClub) {
 				if (empty($PERSONAL_MOBILE)) {
 					$result = array(
 						"message" => "Требуется заполнение телефона для участия в Мама клуб",
@@ -80,7 +86,7 @@
 					exit();
 				}
 			}
-			$fields["UF_CHECK_M_CLUB"] = $checkMClub;
+//			$fields["UF_CHECK_M_CLUB"] = $checkMClub;
 			if (!empty($numberMClub) && empty($dataMClub['UF_NUMBER_MCLUB'])) {
 				$fields["UF_NUMBER_MCLUB"] = $numberMClub;
 			}
