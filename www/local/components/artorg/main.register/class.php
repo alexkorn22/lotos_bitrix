@@ -97,5 +97,4 @@ class MainRegister extends CBitrixComponent {
         }
     }
 
-
 }

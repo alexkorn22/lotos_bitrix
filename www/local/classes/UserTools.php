@@ -119,15 +119,12 @@ class UserTools
         return implode(' ', $res);
     }
     public function isMemberMamaClub(){
-        $user = new CUser;
         $userGroupsId               = CUser::GetUserGroup($this->getUserId());
         $mClubGroupOfUsersId        = App::$config->mClubGroupOfUsersId;
         if(in_array($mClubGroupOfUsersId,$userGroupsId)){
-            $user->Update($this->user->GetID(), ['UF_IS_MCLUB'=>'1']);
             return true;
         }
 
-        $user->Update($this->user->GetID(), ['UF_IS_MCLUB'=>'0']);
         return false;
     }
 
