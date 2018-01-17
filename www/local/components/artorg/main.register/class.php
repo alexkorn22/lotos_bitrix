@@ -88,13 +88,10 @@ class MainRegister extends CBitrixComponent {
         }
 
     }
-    public function setDataMClub(){
+    public function setDataMClub($value){
+        global $USER;
         $user     = new CUser;
-        $userTool = new UserTools;
-        $user->Update($userTool->user->GetID(), ['UF_IS_MCLUB'=>'0']);
-        if($userTool->isMemberMamaClub()){
-            $user->Update($userTool->user->GetID(), ['UF_IS_MCLUB'=>'1']);
-        }
+        $user->Update($USER->GetID(), ['UF_IS_MCLUB'=>$value]);
     }
 
 }

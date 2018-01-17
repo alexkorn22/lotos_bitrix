@@ -7,11 +7,17 @@
 
 ?>
 <?
+
 	global $USER;	
 	include(dirname(__FILE__)."/functions.php");
-
 	if ($getUserCity = dwGetCity(BX_UTF)){
 		$CITY_NAME = $getUserCity["CITY"][1];
+	}
+
+	setDataMClub('0');
+	$userTool = new UserTools;
+	if($userTool->isMemberMamaClub()){
+		setDataMClub('1');
 	}
 
 	$rsUser = CUser::GetByID($USER->GetID());

@@ -78,7 +78,6 @@ $arResult["VALUES"] = array();
 $arResult["ERRORS"] = array();
 $register_done = false;
 $this->setAuthServices();
-$this->setDataMClub();
 // register user
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_REQUEST["register_submit_button"]) && !$USER->IsAuthorized())
 {
@@ -239,6 +238,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_REQUEST["register_submit_bu
 			ExecuteModuleEventEx($arEvent, array(&$arResult['VALUES']));
 	}
 }
+
+$this->setDataMClub();
 
 // if user is registered - redirect him to backurl or to success_page; currently added users too
 

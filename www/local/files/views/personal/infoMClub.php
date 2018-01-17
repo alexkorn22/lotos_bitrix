@@ -5,8 +5,6 @@
  */
 $inputType = 'hidden';
 $number = '';
-$user   = new UserTools();
-$user->isMemberMamaClub();
 ?>
 <span class="heading">Мама клуб</span>
 <? if ($dataUser['UF_IS_MCLUB']):?>

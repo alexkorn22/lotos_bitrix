@@ -44,4 +44,11 @@
 
 	}
 
+
+function setDataMClub($value){
+    global $USER;
+    $user     = new CUser;
+    $user->Update($USER->GetID(), ['UF_IS_MCLUB'=>$value]);
+}
+
 ?>
