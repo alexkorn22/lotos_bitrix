@@ -78,6 +78,7 @@ $arResult["VALUES"] = array();
 $arResult["ERRORS"] = array();
 $register_done = false;
 $this->setAuthServices();
+$this->setDataMClub();
 // register user
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_REQUEST["register_submit_button"]) && !$USER->IsAuthorized())
 {
