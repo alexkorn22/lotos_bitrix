@@ -8,7 +8,7 @@ $number = '';
 $user = new UserTools;
 ?>
 <span class="heading">Мама клуб</span>
-<? if ($user->isMemberMamaClub()):?>
+<? if ($user->isMamaClub()):?>
     <p>Вы состоите в Мама-клубе</p>
 <?else:?>
     <label>Введите номер карты участника Мама-клуба</label>

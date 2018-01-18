@@ -12,7 +12,6 @@
 	){
 		global $USER;
 		$userID = $USER->GetID();
-        $userGroupsId =  CUser::GetUserGroup($userID);
 		if($userID){
 			$NAME            = explode(" ", htmlspecialchars($_GET["FIO"]));
 			$EMAIL           = htmlspecialchars($_GET["EMAIL"]);
@@ -69,7 +68,7 @@
 
 
 			}
-			if ($tools->isMemberMamaClub()) {
+			if ($tools->isMamaClub()) {
 				if (empty($PERSONAL_MOBILE)) {
 					$result = array(
 						"message" => "Требуется заполнение телефона для участия в Мама клуб",
