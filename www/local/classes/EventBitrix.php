@@ -3,8 +3,8 @@
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 class EventBitrix {
 
-    public function onBeforeUserAdd(&$arFields) {
-        UserTools::updateMClub($arFields);
+    public function onBeforeUserAdd(&$arParams) {
+        UserTools::updateMClub($arParams);
     }
 
 
