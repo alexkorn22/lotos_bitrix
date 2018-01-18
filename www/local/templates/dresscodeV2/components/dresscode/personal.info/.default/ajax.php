@@ -44,7 +44,7 @@
 			);
 
 			//если пользователь впервые вводит номер Мама клуб
-			if (!empty($numberMClub) && !$tools->isMemberMamaClub()) {
+			if (!empty($numberMClub)) {
 				if (empty($PERSONAL_MOBILE)) {
 					$result = array(
 						"message" => "Требуется заполнение телефона для участия в Мама клуб",

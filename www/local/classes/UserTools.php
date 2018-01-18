@@ -8,6 +8,28 @@ class UserTools
 {
     public $user;
     protected $data;
+
+
+    static function updateMClub(&$arParams){
+        $arParams['UF_NUMBER_MCLUB'] = trim($arParams['UF_NUMBER_MCLUB']);
+        $MClubGroupId = App::$config->mClubGroupOfUsersId;
+
+        if (!empty($arParams['UF_NUMBER_MCLUB'])) {
+            $arParams['GROUP_ID'][]=[
+                'GROUP_ID'=>$MClubGroupId,
+                'DATE_ACTIVE_FROM'=>'',
+                'DATE_ACTIVE_TO'=>'',
+            ];
+        }else{
+            for ($i=0; $i<count($arParams['GROUP_ID']);$i++){
+                if($arParams['GROUP_ID'][$i]['GROUP_ID'] == '9'){
+                    unset($arParams['GROUP_ID'][$i]);
+                }
+            }
+        }
+    }
+
+
     public function __construct($user = false){
         if (!$user) {
             global $USER;
