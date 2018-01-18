@@ -4,23 +4,29 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 class EventBitrix {
 
     public function onAfterUserAdd(&$arFields) {
-        global $USER;
-        $userId = $USER->GetID();
-        $userGroupsId = CUser::GetUserGroup($userId);
-        array_push($userGroupsId,9) ;
-        $isMClub = 0;
-
         $arFields['UF_NUMBER_MCLUB'] = trim($arFields['UF_NUMBER_MCLUB']);
         if (!empty($arFields['UF_NUMBER_MCLUB'])) {
-            $isMClub = 1;
+           $this->addUserToMClub($arFields['ID']);
         }
+    }
+
+
+    public function onAfterUserUpdate(&$arFields){
+        $arFields['UF_NUMBER_MCLUB'] = trim($arFields['UF_NUMBER_MCLUB']);
+        if (!empty($arFields['UF_NUMBER_MCLUB'])) {
+            $this->addUserToMClub($arFields['ID']);
+        }
+    }
+
+
+    protected function addUserToMClub($userId){
+        $userGroupsId = CUser::GetUserGroup($userId);
+        array_push($userGroupsId,9) ;
         $fields = [
-            'UF_IS_MCLUB' => $isMClub,
             'GROUP_ID'    => $userGroupsId
         ];
-
         $user = new CUser;
-        return $user->Update($arFields['ID'], $fields);
+        return $user->Update($userId, $fields);
     }
 
 

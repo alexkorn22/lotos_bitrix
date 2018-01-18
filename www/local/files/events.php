@@ -5,6 +5,12 @@ function cOnAfterUserAdd(&$arFields) {
     $event->onAfterUserAdd($arFields);
 }
 
+AddEventHandler("main", "OnAfterUserUpdate",'cOnAfterUserUpdate');
+function cOnAfterUserUpdate(&$arFields) {
+    $event = new EventBitrix();
+    $event->onAfterUserUpdate($arFields);
+}
+
 AddEventHandler("socialservices", "OnUserLoginSocserv",'cOnUserLoginSocserv');
 function cOnUserLoginSocserv($socservUserFields){
     $event = new EventBitrix();
