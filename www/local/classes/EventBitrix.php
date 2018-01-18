@@ -3,6 +3,8 @@
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 class EventBitrix {
 
+    protected $memberMClub = false;
+
     public function onAfterUserAdd(&$arFields) {
         $arFields['UF_NUMBER_MCLUB'] = trim($arFields['UF_NUMBER_MCLUB']);
         if (!empty($arFields['UF_NUMBER_MCLUB'])) {
@@ -13,7 +15,7 @@ class EventBitrix {
 
     public function onAfterUserUpdate(&$arFields){
         $arFields['UF_NUMBER_MCLUB'] = trim($arFields['UF_NUMBER_MCLUB']);
-        if (!empty($arFields['UF_NUMBER_MCLUB'])) {
+        if (!empty($arFields['UF_NUMBER_MCLUB']) && $this->memberMClub == false) {
             $this->addUserToMClub($arFields['ID']);
         }
     }
@@ -26,7 +28,9 @@ class EventBitrix {
             'GROUP_ID'    => $userGroupsId
         ];
         $user = new CUser;
-        return $user->Update($userId, $fields);
+        if($user->Update($userId, $fields)){
+            $this->memberMClub = true;
+        }
     }
 
 

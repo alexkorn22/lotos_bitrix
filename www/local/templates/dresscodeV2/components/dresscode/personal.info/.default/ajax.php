@@ -66,7 +66,7 @@
 					exit();
 				}
 
-//				$checkMClub = 1;
+
 
 			}
 			if ($tools->isMemberMamaClub()) {
@@ -80,7 +80,7 @@
 					exit();
 				}
 			}
-//			$fields["UF_CHECK_M_CLUB"] = $checkMClub;
+
 			if (!empty($numberMClub) && empty($dataMClub['UF_NUMBER_MCLUB'])) {
 				$fields["UF_NUMBER_MCLUB"] = $numberMClub;
 			}
