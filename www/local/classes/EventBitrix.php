@@ -3,18 +3,16 @@
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 class EventBitrix {
 
-    public function onAfterUserAdd(&$arFields) {
-        $checkMClub = 0;
-        $arFields['UF_NUMBER_MCLUB'] = trim($arFields['UF_NUMBER_MCLUB']);
-        if (!empty($arFields['UF_NUMBER_MCLUB'])) {
-            $checkMClub = 1;
-        }
-        $fields = [
-            'UF_CHECK_M_CLUB' => $checkMClub,
-        ];
-        $user = new CUser;
-        return $user->Update($arFields['ID'], $fields);
+    public function onBeforeUserAdd(&$arParams) {
+        UserTools::updateMClub($arParams);
     }
+
+
+    public function onBeforeUserUpdate(&$arParams){
+       UserTools::updateMClub($arParams);
+    }
+
+
 
     public function onUserLoginSocserv($socservUserFields) {
         if (!$_SESSION['register_from_socserv']) {

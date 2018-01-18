@@ -8,6 +8,27 @@ class UserTools
 {
     public $user;
     protected $data;
+
+
+    static function updateMClub(&$arParams){
+        $arParams['UF_NUMBER_MCLUB'] = trim($arParams['UF_NUMBER_MCLUB']);
+
+        if (empty($arParams['UF_NUMBER_MCLUB'])) {
+            for ($i=0; $i<count($arParams['GROUP_ID']);$i++){
+                if($arParams['GROUP_ID'][$i]['GROUP_ID'] ==  App::$config->mClubGroupOfUsersId){
+                    unset($arParams['GROUP_ID'][$i]);
+                }
+            }
+        }else{
+            $arParams['GROUP_ID'][]=[
+                'GROUP_ID'=> App::$config->mClubGroupOfUsersId,
+                'DATE_ACTIVE_FROM'=>'',
+                'DATE_ACTIVE_TO'=>'',
+            ];
+        }
+    }
+
+
     public function __construct($user = false){
         if (!$user) {
             global $USER;
@@ -118,7 +139,7 @@ class UserTools
         $res = [$values['LAST_NAME'],$values['NAME'],$values['SECOND_NAME']];
         return implode(' ', $res);
     }
-    public function isMemberMamaClub(){
+    public function isMamaClub(){
         $userGroupsId               = CUser::GetUserGroup($this->getUserId());
         $mClubGroupOfUsersId        = App::$config->mClubGroupOfUsersId;
         if(in_array($mClubGroupOfUsersId,$userGroupsId)){

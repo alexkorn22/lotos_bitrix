@@ -5,12 +5,11 @@
  */
 $inputType = 'hidden';
 $number = '';
+$user = new UserTools;
 ?>
 <span class="heading">Мама клуб</span>
-<? if ($dataUser['UF_IS_MCLUB']):?>
+<? if ($user->isMamaClub()):?>
     <p>Вы состоите в Мама-клубе</p>
-<?elseif ($dataUser['UF_CHECK_M_CLUB'] == 1):?>
-    <p>Ваш номер карты участника Мама-клуба проверяется</p>
 <?else:?>
     <label>Введите номер карты участника Мама-клуба</label>
     <?$inputType = 'text';?>

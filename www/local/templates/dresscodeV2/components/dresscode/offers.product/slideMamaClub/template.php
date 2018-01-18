@@ -2,7 +2,7 @@
 $this->setFrameMode(true);
 
 $user             = new UserTools();
-$isMemberMamaClub = $user->isMemberMamaClub();
+$isMemberMamaClub = $user->isMamaClub();
 $groupId          = $arResult['groupId'];
 $propName         = $arParams['PROP_NAME'];
 

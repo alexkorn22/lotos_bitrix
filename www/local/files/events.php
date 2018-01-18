@@ -1,8 +1,14 @@
 <?php
-AddEventHandler("main", "OnAfterUserAdd",'cOnAfterUserAdd');
-function cOnAfterUserAdd(&$arFields) {
+AddEventHandler("main", "OnBeforeUserAdd",'cOnBeforeUserAdd');
+function cOnBeforeUserAdd(&$arParams) {
     $event = new EventBitrix();
-    $event->onAfterUserAdd($arFields);
+    $event->onBeforeUserAdd($arParams);
+}
+
+AddEventHandler("main", "OnBeforeUserUpdate",'conBeforeUserUpdate');
+function conBeforeUserUpdate(&$arParams) {
+    $event = new EventBitrix();
+    $event->onBeforeUserUpdate($arParams);
 }
 
 AddEventHandler("socialservices", "OnUserLoginSocserv",'cOnUserLoginSocserv');
