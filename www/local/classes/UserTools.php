@@ -12,20 +12,19 @@ class UserTools
 
     static function updateMClub(&$arParams){
         $arParams['UF_NUMBER_MCLUB'] = trim($arParams['UF_NUMBER_MCLUB']);
-        $MClubGroupId = App::$config->mClubGroupOfUsersId;
 
-        if (!empty($arParams['UF_NUMBER_MCLUB'])) {
-            $arParams['GROUP_ID'][]=[
-                'GROUP_ID'=>$MClubGroupId,
-                'DATE_ACTIVE_FROM'=>'',
-                'DATE_ACTIVE_TO'=>'',
-            ];
-        }else{
+        if (empty($arParams['UF_NUMBER_MCLUB'])) {
             for ($i=0; $i<count($arParams['GROUP_ID']);$i++){
-                if($arParams['GROUP_ID'][$i]['GROUP_ID'] == '9'){
+                if($arParams['GROUP_ID'][$i]['GROUP_ID'] ==  App::$config->mClubGroupOfUsersId){
                     unset($arParams['GROUP_ID'][$i]);
                 }
             }
+        }else{
+            $arParams['GROUP_ID'][]=[
+                'GROUP_ID'=> App::$config->mClubGroupOfUsersId,
+                'DATE_ACTIVE_FROM'=>'',
+                'DATE_ACTIVE_TO'=>'',
+            ];
         }
     }
 
