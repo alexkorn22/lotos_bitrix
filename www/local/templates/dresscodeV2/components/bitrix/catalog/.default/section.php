@@ -88,6 +88,8 @@ $this->setFrameMode(true);
 <?php $category = new Category(10,$arCurSection['ID'] );?>
 <?if(!isset($_GET['group_mama_club'])):?>
     <h1><?=$category->getValueHOne();?></h1>
+<?else:?>
+    <h1>Мама клуб</h1>
 <?endif;?>
 
 <?if(!empty($arResult["SECTION_BANNERS"])):?>

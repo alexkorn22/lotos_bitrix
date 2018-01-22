@@ -12,7 +12,7 @@ $ds = new DataStore();
 <?php
     
     $user = new UserTools;
-    $hrefMClubBuyBtn = $user->getHrefMClubBuyBtn($_GET);
+    $hrefMClubBuyBtn = $user->getHrefMClubBuyBtn();
 ?>
 
 	<div class="items productList">
@@ -72,7 +72,7 @@ $ds = new DataStore();
 								<?endif;?>
 							</a>
 						<?endif;?>
-                            <?if(isset($_GET['group_mama_club']) && !$user->isMamaClub()):?>
+                            <?if($user->showCustomBuyBtn()):?>
                                 <a href="<?=$hrefMClubBuyBtn?>" class="addCart">В мама клуб</a>
                             <?else:?>
                                 <a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
@@ -81,7 +81,7 @@ $ds = new DataStore();
 						<a class="price"><?=GetMessage("REQUEST_PRICE_LABEL")?></a>
 						<a href="#" class="addCart disabled requestPrice" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="" class="icon"><?=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?></a>
 					<?endif;?>
-                    <?if(!(isset($_GET['group_mama_club']) && !$user->isMamaClub())):?>
+                    <?if(!$user->showCustomBuyBtn()):?>
                         <div class="optional">
                             <div class="row">
                                 <a href="#" class="fastBack label<?if(empty($arElement["MIN_PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>

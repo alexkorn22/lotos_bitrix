@@ -77,7 +77,7 @@ $useAvailable = false;
 				</div>
 				<div class="column">
 					<?if(!empty($arElement["MIN_PRICE"])):?>
-                        <?if(isset($_GET['group_mama_club']) && !$user->isMamaClub()):?>
+                        <?if($user->showCustomBuyBtn()):?>
                             <a href="<?=$hrefMClubBuyBtn?>" class="addCart">В мама клуб</a>
                         <?else:?>
                             <a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
@@ -85,7 +85,7 @@ $useAvailable = false;
 						<a href="#" class="addCart disabled requestPrice" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="" class="icon"><?=GetMessage("TABLE_REQUEST_PRICE_BUTTON_LABEL")?></a>
 					<?endif;?>
 				</div>
-        <?if(!(isset($_GET['group_mama_club']) && !$user->isMamaClub())):?>
+        <?if(!$user->showCustomBuyBtn()):?>
                     <div class="column">
                         <div class="optional">
                             <div class="row">
