@@ -78,4 +78,22 @@ $APPLICATION->SetTitle("Мама-клуб");
         "ACTIVE_COMPONENT" => "Y"
     )
 );?>
- <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<div style="background: lightblue; border-radius: 20px;">
+    <br/>
+    <a href="/catalog/?group_mama_club=003">
+        <img src="/local/templates/dresscodeV2/artorg/images/mama_club_imgs/product1.png" alt="" height="300" width="301">
+    </a>
+    <a href="/catalog/?group_mama_club=004">
+        <img src="/local/templates/dresscodeV2/artorg/images/mama_club_imgs/product2.jpg" alt="" height="300" width="301">
+    </a>
+    <a href="/catalog/?group_mama_club=005">
+        <img src="/local/templates/dresscodeV2/artorg/images/mama_club_imgs/product3.jpg" alt="" height="300" width="301">
+    </a>
+    <a href="/catalog/?group_mama_club=006">
+        <img src="/local/templates/dresscodeV2/artorg/images/mama_club_imgs/product2.jpg" alt="" height="300" width="301">
+    </a>
+    <br/><br/>
+</div>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+
