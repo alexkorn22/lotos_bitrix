@@ -6,6 +6,9 @@ $this->setFrameMode(true);?>
 	if ($arParams["DISPLAY_TOP_PAGER"]){
 		?><? echo $arResult["NAV_STRING"]; ?><?
 	}
+
+    $user = new UserTools;
+    $hrefMClubBuyBtn = $user->getHrefMClubBuyBtn($_GET);
 ?>
 	<div id="catalogLineList">
 		<?foreach($arResult["ITEMS"] as $arElement):?>
@@ -114,21 +117,27 @@ $this->setFrameMode(true);?>
 					</div>
 					<div class="resizeColumn">
 						<?if(!empty($arElement["MIN_PRICE"])):?>
-							<a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
+                            <?if(isset($_GET['group_mama_club']) && !$user->isMamaClub()):?>
+                                <a href="<?=$hrefMClubBuyBtn?>" class="addCart">В мама клуб</a>
+                            <?else:?>
+                                <a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
+                            <?endif;?>
 						<?else:?>
 							<a href="#" class="addCart disabled requestPrice" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="" class="icon"><?=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?></a>
 						<?endif;?>
 					</div>
-					<div class="resizeColumn last">
-						<div class="optional">
-							<div class="row">
-								<a href="#" class="fastBack label<?if(empty($arElement["MIN_PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>
-							</div>
-							<div class="row">
+                     <?if(!(isset($_GET['group_mama_club']) && !$user->isMamaClub())):?>
+                        <div class="resizeColumn last">
+                            <div class="optional">
+                                <div class="row">
+                                    <a href="#" class="fastBack label<?if(empty($arElement["MIN_PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>
+                                </div>
+                                <div class="row">
 
-							</div>						
-					</div>	
-					</div>
+                                </div>
+                        </div>
+                        </div>
+                     <?endif;?>
 					<?if(!empty($arElement["PROPERTIES"]["CML2_ARTICLE"]["VALUE"])):?>
 						<div class="article">
 							<?=GetMessage("CATALOG_ART_LABEL")?><?=$arElement["PROPERTIES"]["CML2_ARTICLE"]["VALUE"]?>

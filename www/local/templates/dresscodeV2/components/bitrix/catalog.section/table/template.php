@@ -8,6 +8,9 @@ $useAvailable = false;
 	if ($arParams["DISPLAY_TOP_PAGER"]){
 		?><? echo $arResult["NAV_STRING"]; ?><?
 	}
+
+    $user = new UserTools;
+    $hrefMClubBuyBtn = $user->getHrefMClubBuyBtn($_GET);
 ?>
 
 	<div id="catalogTableList">
@@ -74,22 +77,27 @@ $useAvailable = false;
 				</div>
 				<div class="column">
 					<?if(!empty($arElement["MIN_PRICE"])):?>
-						<a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>	
-					<?else:?>
+                        <?if(isset($_GET['group_mama_club']) && !$user->isMamaClub()):?>
+                            <a href="<?=$hrefMClubBuyBtn?>" class="addCart">В мама клуб</a>
+                        <?else:?>
+                            <a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
+                        <?endif;?>					<?else:?>
 						<a href="#" class="addCart disabled requestPrice" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="" class="icon"><?=GetMessage("TABLE_REQUEST_PRICE_BUTTON_LABEL")?></a>
 					<?endif;?>
 				</div>
-				<div class="column">
-					<div class="optional">
-						<div class="row">
-							<a href="#" class="fastBack label<?if(empty($arElement["MIN_PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>
-<!--							<a href="#" class="addCompare label" data-id="--><?//=$arElement["ID"]?><!--">-->
-<!--								<img src="--><?//=SITE_TEMPLATE_PATH?><!--/images/compare.png" alt="" class="icon">-->
-<!--								--><?//=GetMessage("COMPARE_LABEL")?>
-<!--							</a>-->
-						</div>
-					</div>
-				</div>
+        <?if(!(isset($_GET['group_mama_club']) && !$user->isMamaClub())):?>
+                    <div class="column">
+                        <div class="optional">
+                            <div class="row">
+                                <a href="#" class="fastBack label<?if(empty($arElement["MIN_PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>
+    <!--							<a href="#" class="addCompare label" data-id="--><?//=$arElement["ID"]?><!--">-->
+    <!--								<img src="--><?//=SITE_TEMPLATE_PATH?><!--/images/compare.png" alt="" class="icon">-->
+    <!--								--><?//=GetMessage("COMPARE_LABEL")?>
+    <!--							</a>-->
+                            </div>
+                        </div>
+                    </div>
+        <?endif;?>
 				<div class="column">
 					<div class="optional">
 						<div class="row">
