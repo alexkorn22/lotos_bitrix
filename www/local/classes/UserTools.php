@@ -28,6 +28,21 @@ class UserTools
         }
     }
 
+    public function getHrefMClubBuyBtn(){
+        $hrefMClubBuyBtn = '/register/index.php?fromMamaClub=true&#inputFieldMClub';
+        if ($this->isAuth()) {
+            $hrefMClubBuyBtn = '/personal/';
+        }
+        return $hrefMClubBuyBtn;
+    }
+
+    public function showCustomBuyBtn(){
+        if(isset($_GET['group_mama_club']) && !$this->isMamaClub()){
+            return true;
+        }
+        return false;
+    }
+
 
     public function __construct($user = false){
         if (!$user) {
