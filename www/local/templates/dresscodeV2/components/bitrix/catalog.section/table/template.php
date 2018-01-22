@@ -10,7 +10,7 @@ $useAvailable = false;
 	}
 
     $user = new UserTools;
-    $hrefMClubBuyBtn = $user->getHrefMClubBuyBtn($_GET);
+    $hrefMClubBuyBtn = $user->getHrefMClubBuyBtn();
 ?>
 
 	<div id="catalogTableList">
