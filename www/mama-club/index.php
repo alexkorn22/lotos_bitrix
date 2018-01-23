@@ -3,25 +3,74 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Мама-клуб");
 ?>
 <?php
-$products = [
-    '001'=>'product1.jpg',
-    '002'=>'product2.jpg',
-    '003'=>'product3.jpg',
-    '004'=>'product4.jpg',
-    '005'=>'product5.jpg',
-    '006'=>'product6.jpg',
-    '007'=>'product7.jpg',
-    '008'=>'product8.jpg',
-    '009'=>[
-        'product9.jpg',
-        'product10.jpg',
-        'product11.jpg',
-        'product13.jpg',
-        'product14.jpg',
-        'product15.jpg',
-        'product16.jpg',
-        'product17.jpg'
-    ]
+$ImgMClubPath = '/local/templates/dresscodeV2/artorg/images/mama_club_imgs/';
+$groups = [
+    [
+        'code' => '001',
+        'img' => 'product1.jpg',
+    ],
+    [
+        'code' => '002',
+        'img' => 'product1.jpg',
+    ],
+    [
+        'code' => '003',
+        'img' => 'product1.jpg.',
+    ],
+    [
+        'code' => '004',
+        'img' => 'product10.jpg',
+    ],
+    [
+        'code' => '005',
+        'img' => 'product10.jpg',
+    ],
+    [
+        'code' => '006',
+        'img' => 'product6.jpg',
+    ],
+    [
+        'code' => '007',
+        'img' => 'product7.jpg',
+    ],
+    [
+        'code' => '008',
+        'img' => 'product8.jpg',
+    ],
+    [
+        'code' => '009',
+        'img' => 'product9.jpg',
+    ],
+    [
+        'code' => '010',
+        'img' => 'product10.jpg',
+    ],
+    [
+        'code' => '011',
+        'img' => 'product11.jpg',
+    ],
+    [
+        'code' => '014',
+        'img' => 'product14.jpg',
+    ],
+    [
+        'code' => '013',
+        'img' => 'product13.jpg',
+    ],
+    [
+        'code' => '015',
+        'img' => 'product15.jpg',
+    ],
+    [
+        'code' => '016',
+        'img' => 'product16.jpg',
+    ],
+    [
+        'code' => '017',
+        'img' => 'product17.jpg',
+    ],
+
+
 ];
 ?>
 
@@ -29,19 +78,20 @@ $products = [
 	<div class="partner">
 		<div class="logotype_partner">
 		</div>
-		<div class="label_partner">
-            <span style="font-size: 36pt;"><span style="color: #00a650;">Программа «Мама-клуб»</span><span style="color: #00a650;"></span></span><br>
+		<div class="label_partner headerMClub">
+            Программа «Мама-клуб»
         </div>
 
 
 <br/>
 <div class="mClubMainImg">
-    <img src="/local/templates/dresscodeV2/artorg/images/mama_club_imgs/mainPhoto.jpg">
+    <img src="<?=$ImgMClubPath?>mainPhoto1.jpg">
     <div class="mclubMainText">
+        <b class="header">Вітаємо вас, дорогі мами !</b><br/>
         У вашій родині відбулася, або незабаром відбудеться радісна подія - поява малюка.<br/>
          Ми прагнемо допомогти та розділити радість материнства з вами.
         </br>Приєднуйтесь до програми «Мама-клуб» мережі магазинів Лотос, та здійснюйте покупки з відчутною економією!<br/>
-        *Акційна пропозиція діє з  <b style="color:green;">01.01.18 - 31.03.18</b>
+        *Акційна пропозиція діє з  <b class="date">01.01.18 - 31.03.18</b>
     </div>
 </div>
 
@@ -76,28 +126,16 @@ $products = [
         "ACTIVE_COMPONENT" => "N"
     )
 );?>
-<div id="photosMClub">
-    <div class="limiter">
+<div class="photosMClub">
         <div class="itemContainer">
-            <?php foreach($products as $key=>$value){ ?>
-                <?if(is_array($value)):?>
-                    <?php foreach ($value as $img){?>
-                        <div class="item">
-                            <a href="/catalog/?group_mama_club=<?=$key?>">
-                                <img src="/local/templates/dresscodeV2/artorg/images/mama_club_imgs/<?=$img?>" alt="">
-                            </a>
-                        </div>
-                    <?php }?>
-                <?else:?>
+            <? foreach($groups as $group): ?>
                     <div class="item">
-                        <a href="/catalog/?group_mama_club=<?=$key?>">
-                            <img src="/local/templates/dresscodeV2/artorg/images/mama_club_imgs/<?=$value?>" alt="">
+                        <a href="/catalog/?group_mama_club=<?=$group['code']?>">
+                            <img src="<?=$ImgMClubPath?><?=$group['img']?>" alt="">
                         </a>
                     </div>
-                <?endif;?>
-            <?php }?>
+            <?endforeach;?>
          </div>
-    </div>
 </div>
 <br>
 

@@ -23,24 +23,13 @@
   padding-bottom: 5px;
 }
 
-#photosMClub {
-  display: block;
+.photosMClub {
   background-color: lightblue;
   border-radius: 20px;
-  padding: 30px 0 20px 0;
-  .item {
-    height: 100%;
-    display: inline-block;
-    box-sizing: content-box;
-    //width: 24%;
+  padding: 30px 10px 20px 10px;
     img{
       width: 100%;
     }
-    margin-right: 12px;
-    &:last-child{
-      margin-right: 0px;
-    }
-  }
   .itemContainer {
     @include row-flex;
     @include justify-content-sm(center);
@@ -56,12 +45,29 @@
   position: relative;
   text-align: center;
   color: black;
+
+  .mclubMainText{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: large;
+    .date{
+      color: green;
+    }
+    .header{
+      text-align: left ;
+      font-size: 26pt;
+      color: green;
+    }
+  }
+
 }
 
-.mclubMainText{
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: large;
+.headerMClub{
+  font-size: 36pt;
+  color: $lightGreen;
 }
+
+
+
