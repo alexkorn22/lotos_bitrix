@@ -85,7 +85,7 @@ $groups = [
 
 <br/>
 <div class="mClubMainImg">
-            <img style="width: 100%" src="<?=$ImgMClubPath?>mainPhoto1.jpg">
+            <img src="<?=$ImgMClubPath?>mainPhoto1.jpg">
         <div class="mclubMainText">
             <b class="header">Вітаємо вас, дорогі мами !</b><br/>
             У вашій родині відбулася, або незабаром відбудеться радісна подія - поява малюка.<br/>
@@ -95,37 +95,6 @@ $groups = [
         </div>
 </div>
 
-        <?$APPLICATION->IncludeComponent(
-    "dresscode:offers.product",
-    "slideMamaClub",
-    array(
-        "CACHE_TIME" => "3600000",
-        "CACHE_TYPE" => "Y",
-        "COMPONENT_TEMPLATE" => "slideMamaClub",
-        "ELEMENTS_COUNT" => "6",
-        "HIDE_MEASURES" => "N",
-        "HIDE_NOT_AVAILABLE" => "N",
-        "IBLOCK_ID" => "10",
-        "IBLOCK_TYPE" => "catalog",
-        "PICTURE_HEIGHT" => "200",
-        "PICTURE_WIDTH" => "220",
-        "PRODUCT_PRICE_CODE" => array(
-
-        ),
-        "PROP_NAME" => "UCHASTVUET_V_MAMA_KLUB",
-        "TITLE_BLOCK" => "Товары  «Мама-клуба» ",
-        "PROP_VALUE" => array(
-            0 => "_560",
-        ),
-        "SORT_PROPERTY_NAME" => "SORT",
-        "SORT_VALUE" => "ASC",
-        "ITEMS_NEWS" => "Y"
-    ),
-    false,
-    array(
-        "ACTIVE_COMPONENT" => "N"
-    )
-);?>
 <div class="photosMClub">
         <div class="itemContainer">
             <? foreach($groups as $group): ?>

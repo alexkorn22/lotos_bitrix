@@ -47,19 +47,13 @@
   color: black;
   width: auto;
 
-  .itemContainer {
-    @include row-flex;
-    @include justify-content-sm(center);
-    .item {
-      @include col;
-      @include size(3);
-      @include size-sm(6);
-    }
+  img{
+    width: 100%;
   }
 
   .mclubMainText{
     position: absolute;
-    top: 55%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
@@ -76,7 +70,7 @@
 }
 
 .headerMClub{
-  font-size: 36pt;
+  font-size: 4vw;
   color: $lightGreen;
 }
 
