@@ -22,14 +22,17 @@ class PriceProducts {
 
     protected function fillMotherClubForProduct($product) {
 
-        if (isset($product['MIN_PRICE'])) {
+        if (isset($product['MIN_PRICE'])){
             $product["MIN_PRICE"]["motherClub"] = false;
-            if ($product['MIN_PRICE']['PRICE_ID'] == $this->typeMotherClub['id']) {
+            if ($product['MIN_PRICE']['PRICE_ID'] == $this->typeMotherClub['id'] || isset($_GET['group_mama_club'])){
+                $priceMClub = GetCatalogProductPrice($product['ID'], $this->typeMotherClub['id']);
                 $oldPrice = $product['PRICES']['BASE']['PRINT_VALUE'];
-                $product["MIN_PRICE"]["PRINT_VALUE"] = $oldPrice;
+                $product['MIN_PRICE']['PRICE_ID']    = $this->typeMotherClub['id'];
+                $product["MIN_PRICE"]["PRINT_VALUE"] = $priceMClub['PRICE'];
                 $product["MIN_PRICE"]["PRINT_DISCOUNT_DIFF"] = $oldPrice;
                 $product["MIN_PRICE"]["motherClub"] = true;
             }
+
         } else {
             $product["PRICE"]["motherClub"] = false;
             if ($product['PRICE']['PRICE']['ID'] == $this->typeMotherClub['id']) {
