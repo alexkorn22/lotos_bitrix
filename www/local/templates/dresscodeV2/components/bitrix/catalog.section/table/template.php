@@ -51,7 +51,7 @@ $useAvailable = false;
 				<?endif;?>
 				<div class="column">
 					<?if(!empty($arElement["MIN_PRICE"])):?>
-						<?if($arElement["COUNT_PRICES"] > 1):?>
+						<?if($user->showCustomBuyBtn()):?>
 							<a href="#" class="price getPricesWindow" data-id="<?=$arElement["ID"]?>">
 								<span class="priceIcon"></span><?=$arElement["MIN_PRICE"]["PRINT_DISCOUNT_VALUE"]?>
 								<?if($arParams["HIDE_MEASURES"] != "Y" && !empty($arResult["MEASURES"][$arElement["CATALOG_MEASURE"]]["SYMBOL_RUS"])):?>
