@@ -40,7 +40,7 @@ class PriceProducts {
             }
         }
 
-        // если не авторизован или не учасник мама клуба.
+        // если нет цены мама клуба и нужно её показывать :
         if($product['MIN_PRICE']['PRICE_ID'] != $this->typeMotherClub['id'] && isset($_GET['group_mama_club'])){
             $priceMClub = GetCatalogProductPrice($product['ID'], $this->typeMotherClub['id']);
             $product["MIN_PRICE"]["PRINT_VALUE"]          =  $product['PRICES']['BASE']['PRINT_VALUE'];
