@@ -91,7 +91,7 @@ $this->setFrameMode(true);?>
 				<div class="column">
 					<div class="resizeColumn">
 						<?if(!empty($arElement["MIN_PRICE"])):?>
-							<?if($user->isSetGroupMClub() || $arElement["COUNT_PRICES"] > 1 ):?>
+							<?if($user->isSetParamGroupMClub() || $arElement["COUNT_PRICES"] > 1 ):?>
 								<a href="#" class="price getPricesWindow" data-id="<?=$arElement["ID"]?>">
 									<span class="priceIcon"></span><?=$arElement["MIN_PRICE"]["PRINT_DISCOUNT_VALUE"]?>
 									<?if($arParams["HIDE_MEASURES"] != "Y" && !empty($arResult["MEASURES"][$arElement["CATALOG_MEASURE"]]["SYMBOL_RUS"])):?>

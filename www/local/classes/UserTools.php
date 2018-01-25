@@ -37,13 +37,13 @@ class UserTools
     }
 
     public function showCustomBuyBtn(){
-        if($this->isSetGroupMClub() && !$this->isMamaClub()){
+        if($this->isSetParamGroupMClub() && !$this->isMamaClub()){
             return true;
         }
         return false;
     }
 
-    public function isSetGroupMClub(){
+    public function isSetParamGroupMClub(){
         return isset($_GET['group_mama_club']);
     }
 
