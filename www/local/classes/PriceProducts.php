@@ -40,11 +40,12 @@ class PriceProducts {
             }
         }
 
-        // Не авторойяован
+        // если не авторизован или не учасник мама клуба.
         if($product['MIN_PRICE']['PRICE_ID'] != $this->typeMotherClub['id'] && isset($_GET['group_mama_club'])){
             $priceMClub = GetCatalogProductPrice($product['ID'], $this->typeMotherClub['id']);
-            $product["MIN_PRICE"]["PRINT_VALUE"] =  $priceMClub['PRICE'];
-            $product["MIN_PRICE"]["PRINT_DISCOUNT_DIFF"] = $priceMClub['PRICE'];
+            $product["MIN_PRICE"]["PRINT_VALUE"]          =  $product['PRICES']['BASE']['PRINT_VALUE'];
+            $product["MIN_PRICE"]["PRINT_DISCOUNT_DIFF"]  =  $priceMClub['PRICE'];
+            $product["MIN_PRICE"]["PRINT_DISCOUNT_VALUE"] =  $priceMClub['PRICE'];
         }
 
 
