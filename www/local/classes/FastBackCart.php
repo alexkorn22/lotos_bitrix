@@ -277,10 +277,10 @@ class FastBackCart{
             array("ORDER_ID" => $this->idOrder),
             false,
             false,
-            ['PRICE']
+            ['PRICE','QUANTITY']
         );
         while ($arBasketItems = $dbBasketItems->Fetch()) {
-            $total += $arBasketItems['PRICE'];
+            $total += $arBasketItems['PRICE']*$arBasketItems['QUANTITY'];
         }
         return $total;
     }
