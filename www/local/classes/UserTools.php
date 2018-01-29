@@ -10,23 +10,47 @@ class UserTools
     protected $data;
 
 
-    static function updateMClub(&$arParams){
-        $arParams['UF_NUMBER_MCLUB'] = trim($arParams['UF_NUMBER_MCLUB']);
+    public function __construct($user = false){
+        if (!$user) {
+            global $USER;
+            $this->user = $USER;
+        } else {
+            $this->user = $user;
+        }
+    }
 
+    public static function updateMClub(&$arParams){
+        $arParams['UF_NUMBER_MCLUB'] = trim($arParams['UF_NUMBER_MCLUB']);
+        $keyMClub = self::getKeyMClub($arParams);
         if (empty($arParams['UF_NUMBER_MCLUB'])) {
-            for ($i=0; $i<count($arParams['GROUP_ID']);$i++){
-                if($arParams['GROUP_ID'][$i]['GROUP_ID'] ==  App::$config->mClubGroupOfUsersId){
-                    unset($arParams['GROUP_ID'][$i]);
-                }
+            if($keyMClub !== false){
+                unset($arParams['GROUP_ID'][$keyMClub]);
+                $arParams['UF_DATE_REG_MCLUB']='';
             }
         }else{
+            if($keyMClub !== false){
+                return;
+            }
+            // add user to group mama club
             $arParams['GROUP_ID'][]=[
                 'GROUP_ID'=> App::$config->mClubGroupOfUsersId,
                 'DATE_ACTIVE_FROM'=>'',
                 'DATE_ACTIVE_TO'=>'',
             ];
+            // update registration date for mama club
+            $arParams['UF_DATE_REG_MCLUB'] = date("d.m.Y h:i:s");
         }
     }
+
+    protected static function getKeyMClub($arParams){
+        for ($i=0; $i<count($arParams['GROUP_ID']);$i++){
+            if($arParams['GROUP_ID'][$i]['GROUP_ID'] ==  App::$config->mClubGroupOfUsersId){
+                return $i;
+            }
+        }
+        return false;
+    }
+
 
     public function getHrefMClubBuyBtn(){
         $hrefMClubBuyBtn = '/register/index.php?fromMamaClub=true&#inputFieldMClub';
@@ -47,15 +71,6 @@ class UserTools
         return isset($_GET['group_mama_club']);
     }
 
-
-    public function __construct($user = false){
-        if (!$user) {
-            global $USER;
-            $this->user = $USER;
-        } else {
-            $this->user = $user;
-        }
-    }
 
     public function getUserId(){
         return $this->user->GetID();
