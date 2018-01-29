@@ -15,7 +15,6 @@
 }
 
 
-
 .titleMClub{
   font-size: 24pt;
   color: $lightGreen;
@@ -75,5 +74,16 @@
   padding-bottom: 30px;
 }
 
+.buyCertificate{
+  display:inline-block;
+  text-decoration: none;
+  padding: 20px;
+  color: $white;
+  background: $lighterGreen;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
 
-
+.center{
+  text-align: center;
+}
