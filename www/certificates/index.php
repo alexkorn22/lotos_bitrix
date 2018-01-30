@@ -25,7 +25,7 @@ $APPLICATION->SetTitle("Подарочные сертификаты");
 <div class="certificate-img">
     <img src="/local/templates/dresscodeV2/artorg/images/sertificate3.png"><br>
 </div>
-<div class="center">
+<div class="certificate-btn">
     <a href="/catalog/podarochnye_sertifikaty/" class="buyCertificate">Купить подарочные сертификаты</a>
 </div>
 

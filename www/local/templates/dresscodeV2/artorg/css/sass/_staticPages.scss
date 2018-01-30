@@ -75,7 +75,6 @@
 }
 
 .buyCertificate{
-  display:inline-block;
   text-decoration: none;
   padding: 20px;
   color: $white;
@@ -84,6 +83,7 @@
   margin-bottom: 5px;
 }
 
-.center{
-  text-align: center;
+.certificate-btn{
+  display:flex;
+  justify-content: center;
 }
