@@ -55,7 +55,7 @@
       margin-left: 90px;
       padding: 5px;
       width: 20%;
-      @media(max-width: $break_sm) {
+      @include sm-block {
         margin-left: 20px;
       }
     }
@@ -88,7 +88,7 @@
       font-size: 2vw;
       color: green;
     }
-    @media(max-width: $break_sm) {
+    @include sm-block {
       top: 28%;
     }
   }
