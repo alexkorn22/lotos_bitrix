@@ -40,31 +40,81 @@
   }
 }
 
+
 .mClubMainImg{
   position: relative;
   text-align: center;
   color: black;
   width: auto;
 
-  img{
-    width: 100%;
+ .logoMClub{
+    text-align: right;
+    margin-left: 60px;
+    padding:5px;
+    width: 20%;
+   @media(max-width: 780px){
+     margin-left: 20px;
+   }
   }
 
-  .mclubMainText{
+  .heading{
+    text-align: left;
+    margin-left: 60px;
+    margin-bottom: 10px;
+
+    img {
+      padding: 5px;
+      width: 20%;
+    }
+    @media(max-width: 780px) {
+      margin-left: 20px;
+    }
+
+    .buyCertificate{
+      position: absolute;
+      right:10%;
+      top:3%;
+      padding: 10px;
+      font-size: 1.1vw;
+    }
+
+  }
+
+  img{
+    width : 90%;
+    height: 90%;
+  }
+
+
+  .textFirstPhoto{
+    text-align: left;
     position: absolute;
-    top: 53%;
-    left: 50%;
+    top: 23%;
+    left: 70%;
     transform: translate(-50%, -50%);
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     white-space: nowrap;
     .date{
       color: green;
     }
     .header{
-      font-size: 2.5vw;
+      font-size: 2vw;
       color: green;
     }
+    @media(max-width: 780px) {
+      top: 28%;
+    }
   }
+
+  .textSecondPhoto{
+    text-align: left;
+    position: absolute;
+    top: 80%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3vw;
+  }
+
 
 }
 
