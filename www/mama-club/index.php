@@ -81,9 +81,9 @@ $groups = [
 
 
 
-<div class="mClubMainImg">
+<div class="mClubMainImgs">
     <div class="heading">
-        <img class="logoMClub" src="<?=$ImgMClubPath?>logomclub.jpg">
+        <img src="<?=$ImgMClubPath?>logomclub.jpg">
         <a href="/personal/" class="buyCertificate">Активировать карту мама клуба</a>
     </div>
 

@@ -41,33 +41,23 @@
 }
 
 
-.mClubMainImg{
+.mClubMainImgs{
   position: relative;
   text-align: center;
   color: black;
   width: auto;
 
- .logoMClub{
-    text-align: right;
-    margin-left: 60px;
-    padding:5px;
-    width: 20%;
-   @media(max-width: 780px){
-     margin-left: 20px;
-   }
-  }
-
   .heading{
     text-align: left;
-    margin-left: 60px;
     margin-bottom: 10px;
 
     img {
+      margin-left: 90px;
       padding: 5px;
       width: 20%;
-    }
-    @media(max-width: 780px) {
-      margin-left: 20px;
+      @media(max-width: 760px) {
+        margin-left: 20px;
+      }
     }
 
     .buyCertificate{
@@ -94,14 +84,11 @@
     transform: translate(-50%, -50%);
     font-size: 1.6vw;
     white-space: nowrap;
-    .date{
-      color: green;
-    }
     .header{
       font-size: 2vw;
       color: green;
     }
-    @media(max-width: 780px) {
+    @media(max-width: 760px) {
       top: 28%;
     }
   }
