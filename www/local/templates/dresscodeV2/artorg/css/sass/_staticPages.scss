@@ -80,7 +80,9 @@
   color: $white;
   background: $lighterGreen;
   border-radius: 3px;
-  margin-bottom: 5px;
+  &:hover{
+    opacity: .9;
+  }
 }
 
 .certificate-btn{

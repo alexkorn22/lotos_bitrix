@@ -1,6 +1,7 @@
 /*BEGIN footer*/
 #footer {
   margin-bottom: 85px;
+  margin-top:10px;
   @include sm(margin-bottom, 75px);
   @include xs(margin-bottom, 45px);
   #rowFooter #leftFooter{
