@@ -55,7 +55,7 @@
       margin-left: 90px;
       padding: 5px;
       width: 20%;
-      @media(max-width: 760px) {
+      @media(max-width: $break_sm) {
         margin-left: 20px;
       }
     }
@@ -88,7 +88,7 @@
       font-size: 2vw;
       color: green;
     }
-    @media(max-width: 760px) {
+    @media(max-width: $break_sm) {
       top: 28%;
     }
   }
