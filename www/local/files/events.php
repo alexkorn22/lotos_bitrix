@@ -24,6 +24,13 @@ function cOnAdminTabControlBegin(&$form){
 }
 
 
+AddEventHandler("catalog", "OnBeforePriceUpdate","cOnBeforePriceUpdate");
+function cOnBeforePriceUpdate($ID,&$arFields){
+    $event = new EventBitrix();
+    $event->OnBeforePriceUpdate($arFields);
+}
+
+
 
 
 

@@ -13,6 +13,54 @@ class EventBitrix {
     }
 
 
+    public function OnBeforePriceUpdate(&$arFields){
+        $isProductMClub = $this->IsProductMClub($arFields['PRODUCT_ID']);
+        // ID prices  :
+       $IDs = $this->getIdPrices($arFields['PRODUCT_ID']);
+        // Delete price mama club :
+       if($arFields['CATALOG_GROUP_ID'] == 2 && !$isProductMClub){
+           CPrice::DeleteByProduct($arFields['PRODUCT_ID'],$IDs);
+       }
+
+    }
+
+    protected function IsProductMClub($productId){
+        $iBlockId = CIBlockElement::GetIBlockByID($productId);
+        $dbMClubProp = CIBlockElement::GetProperty($iBlockId,
+            intval($productId),
+            array("sort" => "asc"),
+            Array("CODE" => "UCHASTVUET_V_MAMA_KLUB")
+        );
+        while($arNextMClubProp = $dbMClubProp->Fetch()){
+            $idPropertyMClub =  $arNextMClubProp["VALUE"] ;
+        }
+        if($idPropertyMClub != '560'){ // товар не участвует в мама клуб
+            return false;
+        }
+        return true;
+    }
+
+    protected function getIdPrices($productId){
+        $db_res = CPrice::GetList(
+            array(),
+            array(
+                "PRODUCT_ID" => $productId,
+                "!CATALOG_GROUP_ID" => 2
+            ),
+            false,
+            false,
+            ['ID']
+        );
+        while ($ar_res = $db_res->Fetch())
+        {
+            $res[] = $ar_res;
+        }
+        foreach ($res as $id){
+            $IDs[] = $id['ID'];
+        }
+
+        return $IDs ;
+    }
 
     public function onUserLoginSocserv($socservUserFields) {
         if (!$_SESSION['register_from_socserv']) {
