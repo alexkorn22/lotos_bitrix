@@ -15,7 +15,7 @@ $groups = [
     ],
     [
         'code' => '003',
-        'img' => 'product3.jpg.',
+        'img' => 'product3.jpg',
     ],
     [
         'code' => '004',
