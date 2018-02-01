@@ -16,10 +16,10 @@ class EventBitrix {
     public function OnBeforePriceUpdate(&$arFields){
         $isProductMClub = $this->IsProductMClub($arFields['PRODUCT_ID']);
         // ID prices  :
-       $IDs = $this->getIdPrices($arFields['PRODUCT_ID']);
+       $IdPrices = $this->getIdPrices($arFields['PRODUCT_ID']);
         // Delete price mama club :
        if($arFields['CATALOG_GROUP_ID'] == 2 && !$isProductMClub){
-           CPrice::DeleteByProduct($arFields['PRODUCT_ID'],$IDs);
+           CPrice::DeleteByProduct($arFields['PRODUCT_ID'],$IdPrices);
        }
 
     }
@@ -56,10 +56,10 @@ class EventBitrix {
             $res[] = $ar_res;
         }
         foreach ($res as $id){
-            $IDs[] = $id['ID'];
+            $IdPrices[] = $id['ID'];
         }
 
-        return $IDs ;
+        return $IdPrices ;
     }
 
     public function onUserLoginSocserv($socservUserFields) {
