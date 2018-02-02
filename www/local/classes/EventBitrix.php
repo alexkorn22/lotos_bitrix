@@ -17,7 +17,7 @@ class EventBitrix {
         // ID prices  :
        $IdPrices = $this->getIdPrices($arFields['PRODUCT_ID']);
         // Delete price mama club :
-       if($arFields['CATALOG_GROUP_ID'] == 2){
+       if($arFields['CATALOG_GROUP_ID'] == App::$config->typeMotherClubId){
            CPrice::DeleteByProduct($arFields['PRODUCT_ID'],$IdPrices);
        }
     }
@@ -28,7 +28,7 @@ class EventBitrix {
             array(),
             array(
                 "PRODUCT_ID" => $productId,
-                "!CATALOG_GROUP_ID" => 2
+                "!CATALOG_GROUP_ID" => App::$config->typeMotherClubId
             ),
             false,
             false,
