@@ -14,31 +14,14 @@ class EventBitrix {
 
 
     public function OnBeforePriceUpdate(&$arFields){
-        $isProductMClub = $this->IsProductMClub($arFields['PRODUCT_ID']);
         // ID prices  :
        $IdPrices = $this->getIdPrices($arFields['PRODUCT_ID']);
         // Delete price mama club :
-       if($arFields['CATALOG_GROUP_ID'] == 2 && !$isProductMClub){
+       if($arFields['CATALOG_GROUP_ID'] == 2){
            CPrice::DeleteByProduct($arFields['PRODUCT_ID'],$IdPrices);
        }
-
     }
 
-    protected function IsProductMClub($productId){
-        $iBlockId = CIBlockElement::GetIBlockByID($productId);
-        $dbMClubProp = CIBlockElement::GetProperty($iBlockId,
-            intval($productId),
-            array("sort" => "asc"),
-            Array("CODE" => "UCHASTVUET_V_MAMA_KLUB")
-        );
-        while($arNextMClubProp = $dbMClubProp->Fetch()){
-            $idPropertyMClub =  $arNextMClubProp["VALUE"] ;
-        }
-        if($idPropertyMClub != '560'){ // товар не участвует в мама клуб
-            return false;
-        }
-        return true;
-    }
 
     protected function getIdPrices($productId){
         $db_res = CPrice::GetList(
