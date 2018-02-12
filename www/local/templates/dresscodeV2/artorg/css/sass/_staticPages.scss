@@ -23,11 +23,12 @@
 }
 
 .photosMClub {
-  background-color: lightblue;
+  background-color: #ffffff;
   border-radius: 20px;
   padding: 30px 10px 20px 10px;
     img{
-      width: 100%;
+      height: 100%;
+      max-width: 100%;
     }
   .itemContainer {
     @include row-flex;
@@ -35,7 +36,93 @@
     .item {
       @include col;
       @include size(3);
-      @include size-sm(6);
+      @include size-sm(12);
+
+      margin-bottom: 20px;
+
+      height: 390px !important;
+
+      &:nth-child(-n+4) {
+        height: 390px !important;
+      }
+      
+      &:hover {
+        position: relative;
+        .tabloid {
+          height: auto;
+          z-index: 3;
+          background-color: #fff;
+          box-shadow: 1px 1px 6px rgba(0,0,0, 0.2);
+          border: 1px solid #e7e8ea;
+        }
+      }
+
+      .tabloid {
+        border: 1px solid #e7e8ea;
+        position: relative;
+        overflow: hidden;
+        padding: 12px 12px 25px 12px;
+        height: 355px;
+        z-index: 1;
+        transition: all 0.2s;
+
+        .picture {
+          position: relative;
+          display: block;
+          text-align: center;
+          height: 245px;
+          line-height: 240px;
+        }
+
+        .title {
+          margin: 7px 0;
+          .name {
+            text-decoration: none;
+            color: $black;
+            transition: all 0.5s;
+            &:hover {
+              color: $lighterGreen;
+            }
+          }
+        }
+
+        .sale {
+          margin: 30px 0;
+          display: flex;
+          justify-content: flex-end;
+          span {
+            color: $white;
+            font-size: 28px;
+            background-image: url(../../images/mama_club_imgs/bg-sale.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            font-family: $MainFontBold;
+            padding: 10px;
+          }
+        }
+
+        .details-item {
+          display: flex;
+          justify-content: center;
+          width:100%;
+          margin-top: 30px;
+          .details-lnk {
+            text-decoration: none;
+            color: $white;
+            background-color: $green;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 4px;
+            padding: 20px 30px;
+            transition: all 0.5s;
+            &:hover {
+              background-color: $lighterGreen;
+            }
+          }
+        }
+      }
+
     }
   }
 }
@@ -43,7 +130,7 @@
 
 .mClubMainImgs{
   position: relative;
-  text-align: center;
+  //text-align: center;
   color: black;
   width: auto;
 
@@ -73,13 +160,14 @@
   img{
     width : 90%;
     height: 90%;
+    margin-bottom: 30px;
   }
 
 
   .textFirstPhoto{
     text-align: left;
     position: absolute;
-    top: 23%;
+    top: 28%;
     left: 70%;
     transform: translate(-50%, -50%);
     font-size: 1.6vw;
@@ -96,10 +184,54 @@
   .textSecondPhoto{
     text-align: left;
     position: absolute;
-    top: 80%;
+    top: 82%;
     left: 65%;
     transform: translate(-50%, -50%);
     font-size: 1.3vw;
+  }
+
+
+  .header-banner2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    @include sm-block {
+      flex-direction: column;
+    }
+    .left-content {
+      flex:   0   2   40%;
+      background-image: url(../../images/mama_club_imgs/baby_carriage.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      height: 100%;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .right-content {
+      flex:   1   1   60%;
+      background-image: url(../../images/mama_club_imgs/bg-header-banner.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      @include sm-block {
+        background-size: cover;
+      }
+      span {
+        text-align: left;
+        max-width: 50%;
+        @include sm-block {
+          max-width: 80%;
+          font-size: 9px;
+        }
+      }
+    }
   }
 
 
