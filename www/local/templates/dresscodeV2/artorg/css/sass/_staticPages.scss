@@ -76,6 +76,7 @@
 
         .title {
           margin: 7px 0;
+          height: 35px;
           .name {
             text-decoration: none;
             color: $black;
@@ -130,7 +131,6 @@
 
 .mClubMainImgs{
   position: relative;
-  //text-align: center;
   color: black;
   width: auto;
 
@@ -145,14 +145,20 @@
       @include sm-block {
         margin-left: 20px;
       }
+      @include xs-block {
+        visibility: hidden;
+      }
     }
 
     .buyCertificate{
       position: absolute;
       right:10%;
       top:3%;
-      padding: 10px;
-      font-size: 1.1vw;
+      padding: 20px 15px;
+      font-size: 18px;
+      @include sm-block {
+        font-size: 14px;
+      }
     }
 
   }
@@ -190,14 +196,56 @@
     font-size: 1.3vw;
   }
 
+  .header-banner1{
+    background-image: url(../../images/mama_club_imgs/mainmclub1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 340px;
+    width: 100%;
+    margin: 30px 0 60px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    @include sm-block {
+      height: 225px;
+    }
+    @include xs-block {
+      height: 150px;
+      margin: 30px 0 15px 0;
+    }
+    .right-content {
+      flex:   1   1   60%;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      span {
+        font-size: 20px;
+        padding-top: 20px;
+        @include sm-block {
+          font-size: 14px;
+        }
+        @include xs-block {
+          font-size: 9px;
+        }
+      }
+    }
+    .left-content {
+      flex:   0   2   40%;
+    }
+  }
 
   .header-banner2 {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 250px;
+    margin-bottom: 50px;
     @include sm-block {
       flex-direction: column;
+    }
+    @include xs-block {
+      margin-bottom: 20px;
     }
     .left-content {
       flex:   0   2   40%;
