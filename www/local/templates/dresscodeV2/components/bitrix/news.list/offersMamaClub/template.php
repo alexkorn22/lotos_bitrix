@@ -3,7 +3,7 @@
 ?>
 <div class="photosMClub">
     <div class="itemContainer">
-            <?foreach ($arResult["ITEMS"] as $arElement):?>
+            <?foreach ($arResult['GROUPS_MAMA_CLUB'] as $arElement):?>
                 <div class="item">
                     <div class="tabloid">
                         <a href="/catalog/?group_mama_club=<?=$arElement['groupMamaClub']?>" class="picture">
@@ -11,7 +11,7 @@
                         </a>
                         <div class="title">
                             <a href="/catalog/?group_mama_club=<?=$arElement['groupMamaClub']?>" class="name">
-                                <span><?=$arElement["NAME"]?></span>
+                                <span><?=$arElement["name"]?></span>
                             </a>
                         </div>
                         <div class="sale">
