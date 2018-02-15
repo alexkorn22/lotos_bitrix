@@ -11,12 +11,12 @@
             <?foreach ($arColumn["ITEMS"] as $ix => $arElement):?>
                 <?$image =  CFile::ResizeImageGet($arElement["PREVIEW_PICTURE"], array("width" => 430, "height" => 250), BX_RESIZE_IMAGE_PROPORTIONAL, false);?>
                 <?php
-                $db_props = CIBlockElement::GetProperty(13, $arElement["ID"], "sort", "asc", array());
+                $db_props = CIBlockElement::GetProperty($arParams['IBLOCK_ID'], $arElement["ID"], "sort", "asc", array());
                 while($ar_props = $db_props->Fetch()){
-                    if($ar_props['ID']=='101'){
+                    if($ar_props['CODE']=='group_mama_club'){
                         $groupMamaClub = $ar_props['VALUE'];
                     }
-                    if($ar_props['ID']=='102'){
+                    if($ar_props['CODE']=='sale'){
                         $sale = $ar_props['VALUE'];
                     }
                 }
