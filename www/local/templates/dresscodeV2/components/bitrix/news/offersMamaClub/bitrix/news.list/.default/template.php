@@ -3,7 +3,7 @@
 ?>
 
 <?foreach($arResult["ITEMS"] as $ixd => $arElement):?>
-    <?$arColumns[$ixd%3]["ITEMS"][] = $arElement;?>
+    <?$arColumns[$ixd]["ITEMS"][] = $arElement;?>
 <?endforeach;?>
 <div class="photosMClub">
     <div class="itemContainer">

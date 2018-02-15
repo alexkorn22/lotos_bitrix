@@ -52,8 +52,7 @@ $APPLICATION->IncludeComponent(
     Array(
         "IBLOCK_TYPE" => 'offers',
         "IBLOCK_ID" => '13',
-    ),
-    $component
+    )
 );
 ?>
 
