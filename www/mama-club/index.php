@@ -47,7 +47,7 @@ $ImgMClubPath = '/local/templates/dresscodeV2/artorg/images/mama_club_imgs/';
 
 <?
 $APPLICATION->IncludeComponent(
-    "bitrix:news",
+    "bitrix:news.list",
     "offersMamaClub",
     Array(
         "IBLOCK_TYPE" => 'offers',
