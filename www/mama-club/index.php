@@ -50,8 +50,8 @@ $APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "offersMamaClub",
     Array(
-        "IBLOCK_TYPE" => 'offers',
-        "IBLOCK_ID" => '13',
+        "IBLOCK_TYPE" => 'info',
+        "IBLOCK_ID" => '14',
     )
 );
 ?>

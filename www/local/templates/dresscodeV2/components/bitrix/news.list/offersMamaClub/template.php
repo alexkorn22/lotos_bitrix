@@ -3,23 +3,15 @@
 ?>
 <div class="photosMClub">
     <div class="itemContainer">
-            <?foreach ($arResult["ITEMS"] as $arElement):?>
-                <?$image =  CFile::ResizeImageGet($arElement["PREVIEW_PICTURE"], array("width" => 430, "height" => 250), BX_RESIZE_IMAGE_PROPORTIONAL, false);?>
-                <?php
-                $db_props = CIBlockElement::GetProperty($arParams['IBLOCK_ID'], $arElement["ID"], "sort", "asc", array());
-                while($ar_props = $db_props->Fetch()){
-                    if($ar_props['CODE']=='group_mama_club'){
-                        $groupMamaClub = $ar_props['VALUE'];
-                    }
-                    if($ar_props['CODE']=='sale'){
-                        $sale = $ar_props['VALUE'];
-                    }
-                }
+            <?foreach ($arResult["ITEMS"] as $arElement):
+                    $groupMamaClub = $arResult[$arElement['ID']]['groupMamaClub'];
+                    $sale          = $arResult[$arElement['ID']]['sale'] ;
+                    $imageSrc      = $arResult[$arElement['ID']]['imageSrc'] ;
                 ?>
                 <div class="item">
                     <div class="tabloid">
                         <a href="/catalog/?group_mama_club=<?=$groupMamaClub?>" class="picture">
-                            <img src="<?=$image["src"]?>" alt="">
+                            <img src="<?=$imageSrc?>" alt="">
                         </a>
                         <div class="title">
                             <a href="/catalog/?group_mama_club=<?=$groupMamaClub?>" class="name">
