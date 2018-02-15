@@ -1,14 +1,9 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 	$this->setFrameMode(true);
 ?>
-
-<?foreach($arResult["ITEMS"] as $ixd => $arElement):?>
-    <?$arColumns[$ixd]["ITEMS"][] = $arElement;?>
-<?endforeach;?>
 <div class="photosMClub">
     <div class="itemContainer">
-        <?foreach ($arColumns as $key => $arColumn):?>
-            <?foreach ($arColumn["ITEMS"] as $ix => $arElement):?>
+            <?foreach ($arResult["ITEMS"] as $arElement):?>
                 <?$image =  CFile::ResizeImageGet($arElement["PREVIEW_PICTURE"], array("width" => 430, "height" => 250), BX_RESIZE_IMAGE_PROPORTIONAL, false);?>
                 <?php
                 $db_props = CIBlockElement::GetProperty($arParams['IBLOCK_ID'], $arElement["ID"], "sort", "asc", array());
@@ -42,6 +37,5 @@
                     </div>
                 </div>
             <?endforeach;?>
-        <?endforeach;?>
     </div>
 </div>
