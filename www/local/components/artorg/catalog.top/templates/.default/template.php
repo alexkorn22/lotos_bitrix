@@ -24,7 +24,7 @@ $this->setFrameMode(true);?>
 						?>
 						<li>
 							<div class="item product" data-price-code="<?=implode("||", $arParams["PRICE_CODE"])?>">
-						
+
 								<div class="tooltip">
 									<?if(!empty($arElement["PROPERTIES"]["OFFERS"]["VALUE"])):?>
 										<div class="markerContainer">

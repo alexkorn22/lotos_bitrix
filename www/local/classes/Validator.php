@@ -10,14 +10,34 @@ class Validator{
         $this->valueForValidate = $valueForValidate;
     }
 
+
+    public function validateCardMClub(){
+        $this->isValid = false ;
+        if($this->validateEan13() && $this->checkFirstDigitsMClubCard()){
+            $this->isValid = true;
+        }
+
+    }
+
     public function validateEan13(){
-        $this->isValid = false;
         $data = $this->dataValidateEan13($this->valueForValidate);
         if (isset($data['checksum']) && isset($data['originalcheck'])) {
             if ($data['checksum'] == $data['originalcheck']) {
-                $this->isValid = true;
+                return true;
             }
         }
+        return false;
+    }
+
+
+    public function checkFirstDigitsMClubCard(){
+        $compareValue = App::$config->firstDigitsMClubCard;
+        $length      = strlen($compareValue);
+        $firstDigits = mb_substr($this->valueForValidate, 0, $length);
+        if($firstDigits == $compareValue){
+            return true;
+        }
+        return false;
     }
 
     protected function dataValidateEan13($digits){

@@ -51,7 +51,7 @@ $(window).on("ready", function(event){
 
 		var $_this = $(this);
 		if(!$_this.hasClass("removed")){
-		
+
 			__menuFirstOpenTimeoutID = setTimeout(function(){
 				if($_this.is(":hover")){
 					clearTimeout(__menuFirstOpenTimeoutID);
@@ -131,7 +131,7 @@ $(window).on("ready", function(event){
 	});
 
 	var dropCatalog = function(event){
-		$("#mainMenu").slideToggle();
+		$("#containerMainMenu").slideToggle();
 		return event.preventDefault();
 	};
 

@@ -86,3 +86,5 @@ www/bitrix/managed_cache
 www/bitrix/stack_cache
 
 www/local/templates/dresscodeV2/artorg/css/dist/*
+
+/www/local/bxApi/*
