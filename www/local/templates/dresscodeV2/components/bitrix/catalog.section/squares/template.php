@@ -9,6 +9,11 @@ $ds = new DataStore();
 		?><? echo $arResult["NAV_STRING"]; ?><?
 	}
 ?>
+<?php
+    
+    $user = new UserTools;
+    $hrefMClubBuyBtn = $user->getHrefMClubBuyBtn();
+?>
 
 	<div class="items productList">
 		<?foreach ($arResult["ITEMS"] as $index => $arElement):?>
@@ -47,7 +52,7 @@ $ds = new DataStore();
 					$tmpArElement = $arElement["MIN_PRICE"];
 					?>
 					<?if(!empty($arElement["MIN_PRICE"])):?>
-						<?if($arElement["COUNT_PRICES"] > 1):?>
+						<?if($user->isSetParamGroupMClub() || $arElement["COUNT_PRICES"] > 1 ):?>
 							<a href="#" class="price getPricesWindow" data-id="<?=$arElement["ID"]?>">
 								<span class="priceIcon"></span><?=$arElement["MIN_PRICE"]["PRINT_DISCOUNT_VALUE"]?>
 								<?if($arParams["HIDE_MEASURES"] != "Y" && !empty($arResult["MEASURES"][$arElement["CATALOG_MEASURE"]]["SYMBOL_RUS"])):?>
@@ -67,19 +72,25 @@ $ds = new DataStore();
 								<?endif;?>
 							</a>
 						<?endif;?>
-						<a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
+                            <?if($user->showCustomBuyBtn()):?>
+                                <a href="<?=$hrefMClubBuyBtn?>" class="addCart">В мама клуб</a>
+                            <?else:?>
+                                <a href="#" class="addCart<?if($arElement["CAN_BUY"] === false || $arElement["CAN_BUY"] === "N"):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/incart.png" alt="" class="icon"><?=GetMessage("ADDCART_LABEL")?></a>
+                            <?endif;?>
 					<?else:?>
 						<a class="price"><?=GetMessage("REQUEST_PRICE_LABEL")?></a>
 						<a href="#" class="addCart disabled requestPrice" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/request.png" alt="" class="icon"><?=GetMessage("REQUEST_PRICE_BUTTON_LABEL")?></a>
 					<?endif;?>
-					<div class="optional">
-						<div class="row">
-							<a href="#" class="fastBack label<?if(empty($arElement["MIN_PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>
-						</div>
-						<div class="row">
+                    <?if(!$user->showCustomBuyBtn()):?>
+                        <div class="optional">
+                            <div class="row">
+                                <a href="#" class="fastBack label<?if(empty($arElement["MIN_PRICE"]) || $arElement["CAN_BUY"] === "N" || $arElement["CAN_BUY"] === false):?> disabled<?endif;?>" data-id="<?=$arElement["ID"]?>"><img src="<?=SITE_TEMPLATE_PATH?>/images/fastBack.png" alt="" class="icon"><?=GetMessage("FASTBACK_LABEL")?></a>
+                            </div>
+                            <div class="row">
 
-						</div>						
-					</div>
+                            </div>
+                        </div>
+                    <?endif;?>
 					<?if(!empty($arElement["SKU_PRODUCT"])):?>
 						<?if(!empty($arElement["SKU_PROPERTIES"]) && $level = 1):?>
 							<?foreach ($arElement["SKU_PROPERTIES"] as $propName => $arNextProp):?>

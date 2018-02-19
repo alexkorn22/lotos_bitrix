@@ -1,6 +1,18 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);
 ?>
+<?php
+
+    $showAllSections= 'N';
+    $sectionUrl = $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"];
+    if(isset($_GET['group_mama_club'])){
+        global $arrFilter;
+        $arrFilter['PROPERTY']= ['group_mama_club'=>$_GET['group_mama_club']];
+        $showAllSections = 'Y';
+        $sectionUrl = $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"].'?group_mama_club='.$_GET['group_mama_club'];
+    }
+
+?>
 <?
 	App::$ds->useFooterTabs = false;
 		if (CModule::IncludeModule("iblock")){
@@ -73,11 +85,16 @@ $this->setFrameMode(true);
 			}
 		}
 	?>
+
 <?php $category = new Category(10,$arCurSection['ID'] );
 
 //$APPLICATION->GetViewContent("sotbit_seometa_h1")
 ?>
+<?if(!isset($_GET['group_mama_club'])):?>
 <h1><?=$APPLICATION->ShowViewContent("sotbit_seometa_h1")?></h1>
+<?else:?>
+    <h1>Мама клуб</h1>
+<?endif;?>
 
 <?if(!empty($arResult["SECTION_BANNERS"])):?>
 		<div id="catalog-section-banners">
@@ -118,7 +135,7 @@ $this->setFrameMode(true);
 					"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
 					"COUNT_ELEMENTS" => $arParams["SECTION_COUNT_ELEMENTS"],
 					"TOP_DEPTH" => 1,
-					"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
+					"SECTION_URL" => $sectionUrl,
 					"VIEW_MODE" => $arParams["SECTIONS_VIEW_MODE"],
 					"SHOW_PARENT_NAME" => $arParams["SECTIONS_SHOW_PARENT_NAME"],
 					"HIDE_SECTION_NAME" => (isset($arParams["SECTIONS_HIDE_SECTION_NAME"]) ? $arParams["SECTIONS_HIDE_SECTION_NAME"] : "N"),
@@ -402,6 +419,7 @@ $this->setFrameMode(true);
 
 				"SECTION_ID" => $arResult["VARIABLES"]["SECTION_ID"],
 				"SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
+                "SHOW_ALL_WO_SECTION" => $showAllSections,
 				"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
 				"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["element"],
 				'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],

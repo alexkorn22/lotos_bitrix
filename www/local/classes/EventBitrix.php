@@ -3,17 +3,46 @@
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 class EventBitrix {
 
-    public function onAfterUserAdd(&$arFields) {
-        $checkMClub = 0;
-        $arFields['UF_NUMBER_MCLUB'] = trim($arFields['UF_NUMBER_MCLUB']);
-        if (!empty($arFields['UF_NUMBER_MCLUB'])) {
-            $checkMClub = 1;
+    public function onBeforeUserAdd(&$arParams) {
+        UserTools::updateMClub($arParams);
+    }
+
+
+    public function onBeforeUserUpdate(&$arParams){
+       UserTools::updateMClub($arParams);
+    }
+
+
+    public function OnBeforePriceUpdate(&$arFields){
+        // ID prices  :
+       $IdPrices = $this->getIdPrices($arFields['PRODUCT_ID']);
+        // Delete price mama club :
+       if($arFields['CATALOG_GROUP_ID'] == App::$config->typeMotherClubId){
+           CPrice::DeleteByProduct($arFields['PRODUCT_ID'],$IdPrices);
+       }
+    }
+
+
+    protected function getIdPrices($productId){
+        $db_res = CPrice::GetList(
+            array(),
+            array(
+                "PRODUCT_ID" => $productId,
+                "!CATALOG_GROUP_ID" => App::$config->typeMotherClubId
+            ),
+            false,
+            false,
+            ['ID']
+        );
+        while ($ar_res = $db_res->Fetch())
+        {
+            $res[] = $ar_res;
         }
-        $fields = [
-            'UF_CHECK_M_CLUB' => $checkMClub,
-        ];
-        $user = new CUser;
-        return $user->Update($arFields['ID'], $fields);
+        foreach ($res as $id){
+            $IdPrices[] = $id['ID'];
+        }
+
+        return $IdPrices ;
     }
 
     public function onUserLoginSocserv($socservUserFields) {

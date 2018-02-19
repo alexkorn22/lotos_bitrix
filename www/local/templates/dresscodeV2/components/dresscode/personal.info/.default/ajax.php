@@ -26,9 +26,7 @@
 
 			$tools = new UserTools($USER);
 			$dataMClub = $tools->getDataMClub();
-			$checkMClub = $dataMClub["UF_CHECK_M_CLUB"];
-			$isMClub = $dataMClub["UF_IS_MCLUB"];
-//			$mClub = $dataMClub["UF_NUMBER_MCLUB"];
+
 
 			$user = new CUser;
 			$fields = Array(
@@ -45,7 +43,7 @@
 			);
 
 			//если пользователь впервые вводит номер Мама клуб
-			if (!empty($numberMClub) && !$isMClub && !$checkMClub) {
+			if (!empty($numberMClub)) {
 				if (empty($PERSONAL_MOBILE)) {
 					$result = array(
 						"message" => "Требуется заполнение телефона для участия в Мама клуб",
@@ -56,7 +54,7 @@
 					exit();
 				}
 				$valid = new Validator($numberMClub);
-				$valid->validateEan13();
+				$valid->validateCardMClub();
 				if (!$valid->isValid) {
 					$result = array(
 						"message" => "Неправильный формат номера карты Мама клуб",
@@ -66,10 +64,11 @@
 					echo jsonEn($result);
 					exit();
 				}
-				$checkMClub = 1;
+
+
 
 			}
-			if ($isMClub || $checkMClub) {
+			if ($tools->isMamaClub()) {
 				if (empty($PERSONAL_MOBILE)) {
 					$result = array(
 						"message" => "Требуется заполнение телефона для участия в Мама клуб",
@@ -80,7 +79,7 @@
 					exit();
 				}
 			}
-			$fields["UF_CHECK_M_CLUB"] = $checkMClub;
+
 			if (!empty($numberMClub) && empty($dataMClub['UF_NUMBER_MCLUB'])) {
 				$fields["UF_NUMBER_MCLUB"] = $numberMClub;
 			}

@@ -58,41 +58,52 @@ class FastBackCart{
     }
 
     public function sendMsgToTelegram(){
-        if(CModule::IncludeModule("justdevelop.morder"))
-        {
-            $chat = "";
 
-            $message = "Поступил заказ № ".$this->idOrder."\n";
-            $message .= "(необходимо уточнить детали заказа)."."\n";
-            $message .= "\n";
-            $message .= "Состав заказа: "."\n";
+        $orderData = [
+            'orderId'   => $this->idOrder,
+            'userName'  => $this->nameUser,
+            'phone'     => $this->phoneUser,
+            'comment'   => $this->messageUser,
+            'orders'    => $this->getMessageOrder()
+        ];
 
-            $arBasketOrder = array("PRICE" => "ASC");
-            $arBasketUser = array("FUSER_ID" => $this->idBasketUser, "LID" => $this->personItem["LID"], "ORDER_ID" => $this->idOrder);
-            $arBasketSelect = array("ID", "CALLBACK_FUNC", "MODULE", "PRODUCT_ID", "QUANTITY", "DELAY",
-                "CAN_BUY", "PRICE", "WEIGHT", "NAME", "CURRENCY", "CATALOG_XML_ID", "VAT_RATE",
-                "NOTES", "DISCOUNT_PRICE", "PRODUCT_PROVIDER_CLASS", "DIMENSIONS", "TYPE", "SET_PARENT_ID", "DETAIL_PAGE_URL", "*"
-            );
-            $dbBasketItems = CSaleBasket::GetList(
-                $arBasketOrder,
-                $arBasketUser,
-                false,
-                false,
-                $arBasketSelect
-            );
+        $alert = new Alert($orderData);
 
-            while ($arItems = $dbBasketItems->Fetch()){
-                $message .= $arItems["NAME"]." : ".$arItems["QUANTITY"]." : ".$arItems["PRICE"]."\n";
-            }
+        $pattern  = "Поступил заказ № %orderId% \n";
+        $pattern .= "(необходимо уточнить детали заказа)."."\n";
+        $pattern .= "\n"; //
+        $pattern .= "Состав заказа: "."\n";
+        $pattern .= "%orders%";
+        $pattern .= "\n";
+        $pattern .= "Покупатель: %userName% \n";
+        $pattern .= "Телефон: %phone%\n";
+        $pattern .= "Сообщение: %comment% \n";
 
-            $message .= "\n";
-            $message .= "Покупатель: ".$this->nameUser."\n";
-            $message .= "Телефон: ".$this->phoneUser."\n";
-            $message .= "Сообщение: ".$this->messageUser."\n";
+        $alert->parseText($pattern);
+        $alert->sendTelegram(App::$config->getTelegramChatCallBack());
 
-            $sms = new JUSTDEVELOP_Send;
-            $sms->Send_SMS($chat, $message);
+    }
+
+    protected function getMessageOrder () {
+
+        $orders = '' ;
+        $arBasketOrder = array("PRICE" => "ASC");
+        $arBasketUser = array("FUSER_ID" => $this->idBasketUser, "LID" => $this->personItem["LID"], "ORDER_ID" => $this->idOrder);
+        $arBasketSelect = array("QUANTITY","PRICE","NAME");
+        $dbBasketItems = CSaleBasket::GetList(
+            $arBasketOrder,
+            $arBasketUser,
+            false,
+            false,
+            $arBasketSelect
+        );
+
+        while ($arItems = $dbBasketItems->Fetch()){
+            $orders .= "Продукт: {$arItems['NAME']},\nКоличство: {$arItems['QUANTITY']},\nЦена: {$arItems['PRICE']} \n";
         }
+
+        return $orders;
+
     }
 
     public function setData($data) {
@@ -266,10 +277,10 @@ class FastBackCart{
             array("ORDER_ID" => $this->idOrder),
             false,
             false,
-            ['PRICE']
+            ['PRICE','QUANTITY']
         );
         while ($arBasketItems = $dbBasketItems->Fetch()) {
-            $total += $arBasketItems['PRICE'];
+            $total += $arBasketItems['PRICE']*$arBasketItems['QUANTITY'];
         }
         return $total;
     }
